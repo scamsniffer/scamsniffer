@@ -6,7 +6,7 @@ async function getAndReport() {
   const needReportDomains = await DomainSummary.findAll({
     limit: 10,
     where: {
-      needReport: 1,
+      // needReport: 1,
       reported: 0,
     },
   });
@@ -24,6 +24,8 @@ async function getAndReport() {
     if (domainUrls.length) {
       const reportUrl = domainUrls[0].link;
       await reportScam(reportUrl);
+      needReportDomain.reported = 1
+      await needReportDomain.save()
       reported++
     }
   }

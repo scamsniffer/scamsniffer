@@ -2,8 +2,8 @@ import builtInDatabase from './database/lite.json'
 import type { PostDetail, ScamResult, Database } from './types'
 import fetch from 'isomorphic-fetch'
 
-// const REPORT_ENDPOINT = 'http://api.scamsniffer.io/report'
-const REPORT_ENDPOINT_DEV = 'http://localhost:8081/report'
+const REPORT_ENDPOINT = 'https://api.scamsniffer.io/report'
+const REPORT_ENDPOINT_DEV = 'http://localhost/report'
 const remoteDatabase = 'https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json'
 const miniumWordsLength = 4 
 const callToActionsKeywords = [
@@ -232,7 +232,7 @@ const REPORT_CACHE: string[] = []
 const CACHE_SIZE = 100;
 
 export async function reportScam(result: ScamResult) {
-    const API_ENDPOINT = REPORT_ENDPOINT_DEV 
+    const API_ENDPOINT = typeof process !== 'undefined' && process.env.DEV ? REPORT_ENDPOINT_DEV : REPORT_ENDPOINT
     const postId = result.post.id
     if (REPORT_CACHE.length > CACHE_SIZE) {
         REPORT_CACHE.shift();
