@@ -25,6 +25,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:wght@500&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
   <style>
         html, body {
             /* font-family: 'VT323', monospace; */
@@ -224,6 +227,7 @@
                         <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">How do we
                             fight?</p>
                         <!-- <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.</p> -->
+                       
                         <div class="mt-12 mb-12 pt-10">
                             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                                 <div class="pt-6">
@@ -301,6 +305,7 @@
 
                             </div>
                         </div>
+                        <p class="mt-16"><img class="mt-10 mx-auto" style="height: 745px;" src="assets/banner.png?asas" /></p>
                     </div>
                 </div>
 
@@ -337,6 +342,111 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="max-w-4xl bg-gray-50 mx-auto text-center" style="border-top: 1px solid #eee"></div>
+                <div id="summary-list" class="bg-gray-50 pb-10">
+                    <div class="bg-graxy-50 bg-xwhite pt-12 sm:pt-16" v-if="report">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 divide-y divide-dashed">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Realtime Summary
+                                </h2>
+                                <!-- <p class="mt-3 text-xl text-gray-500 sm:mt-4"></p> -->
+                            </div>
+                        </div>
+                        <div class="mt-10 pb-12 sm:pb-16">
+                            <div class="relative">
+                                <!-- <div class="absolute inset-0 h-1/2 bg-gray-50"></div> -->
+                                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                    <div class="max-w-4xl mx-auto">
+                                        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-2">
+                                            <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                                                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Protected</dt>
+                                                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ report.summary.total }}</dd>
+                                            </div>
+                                            <div
+                                                class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                                                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Reported</dt>
+                                                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ report.summary.reported }}</dd>
+                                            </div>
+                                            <!-- <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                                                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Calories</dt>
+                                                <dd class="order-1 text-5xl font-extrabold text-indigo-600">100k</dd>
+                                            </div> -->
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+<div class="max-w-6xl mx-auto">
+                    <div class="rounded-lg bg-white sm:grid sm:grid-cols-2">
+                        <div class="flex flex-col p-6 text-center">
+                                <!-- This example requires Tailwind CSS v2.0+ -->
+                                <h2 class="text-1xl text-left font-extrabold text-gray-500 sm:text-2xl mb-8">Recent Reported</h2>
+                                <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                                    <ul role="list" class="divide-y divide-gray-200" >
+                                        <li v-for="reported in report.recentReported">
+                                            <a :href="'https://'+reported.host" target="_blank" class="block hover:bg-gray-50">
+                                                <div class="flex  px-4 py-4 sm:px-6">
+                                                    <img class="h-6 w-6 rounded-full mr-2"
+                                                        :src="'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://'+reported.host+'&size=128'"
+                                                        alt="">
+                                                    <div class="flex-1 space-y-1">
+                                                        <div class="flex items-center justify-between">
+                                                            <h3 class="text-sm text-gray-600  font-medium">{{ reported.host }}</h3>
+                                                            <p class="text-sm text-gray-500">
+                                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                                    fill="currentColor" aria-hidden="true">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                        clip-rule="evenodd" />
+                                                                </svg>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <!-- More items... -->
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="flex flex-col p-6 text-center">
+                            <h2 class="text-1xl text-left font-extrabold text-gray-500 sm:text-2xl mb-8">Recent Detected</h2>
+                            <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                                <ul role="list" class="divide-y divide-gray-200">
+                                    <li v-for="reported in report.recentScams">
+                                        <a :href="reported.link" target="_blank" class="block hover:bg-gray-50">
+                                        <div class="flex  px-4 py-4 sm:px-6">
+                                            <img class="h-6 w-6 rounded-full mr-2"
+                                                :src="'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://'+reported.host+'&size=128'"
+                                                alt="">
+                                            <div class="flex-1 space-y-1">
+                                                <div class="flex items-center justify-between">
+                                                    <h3 class="text-sm text-gray-600 font-medium">{{ reported.topDomain }}</h3>
+                                                    <p class="text-sm text-gray-500">
+                                                        {{ reported.fromNow}}
+                                                        <!-- {{ reported.project }} -->
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </li>
+                            
+                                    <!-- More items... -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+</div>
+                
+
+
+                    <!-- {{ report }} -->
                 </div>
             </main>
 
@@ -519,6 +629,30 @@
 
         </div>
     </div>
+
+    <script>
+        new Vue({
+                el: '#summary-list',
+                data: {
+                    report: null
+                },
+                mounted() {
+                    this.loadData();
+                },
+                methods: {
+                    async loadData() {
+                        const { data } = await axios.get('https://api.scamsniffer.io/getStatus')
+                        data.recentScams = data.recentScams.map(_ => {
+                            _.fromNow = moment(_.createdAt).fromNow()
+                            return _
+                        }).slice(0, 4)
+                        data.recentReported =  data.recentReported.slice(0, 4)
+                        this.report = data
+                        this.loading = false;
+                    },
+                }
+            })
+    </script>
 
 </body>
 
