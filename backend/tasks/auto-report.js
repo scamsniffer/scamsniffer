@@ -1,5 +1,6 @@
 const { DomainSummary, ScamList } = require("../schema");
 const { reportScam } = require("../reporter");
+const { increaseCount } = require('../utils/summary');
 
 async function getAndReport() {
   const needReportDomains = await DomainSummary.findAll({
