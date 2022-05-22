@@ -3254,12 +3254,6 @@
             "twitterUsername": null
         },
         {
-            "slug": "binancecoin",
-            "name": "Binance Coin",
-            "externalUrl": "https://www.bnbchain.world/en",
-            "twitterUsername": "binance"
-        },
-        {
             "slug": "ripple",
             "name": "XRP",
             "externalUrl": "https://ripple.com/xrp/",
@@ -3828,12 +3822,6 @@
             "name": "Fei USD",
             "externalUrl": "https://fei.money/",
             "twitterUsername": "feiprotocol"
-        },
-        {
-            "slug": "wbnb",
-            "name": "Wrapped BNB",
-            "externalUrl": "https://www.binance.org/",
-            "twitterUsername": null
         },
         {
             "slug": "chain-2",

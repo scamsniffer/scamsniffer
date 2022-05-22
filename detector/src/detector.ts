@@ -175,19 +175,27 @@ export class Detector {
     database: Database;
     lastFetch: number | null;
     databaseUrl: string;
+    fetching: boolean;
 
     constructor({ onlyBuiltIn = true, databaseUrl = null }) {
         this.onlyBuiltIn = onlyBuiltIn
         this.database = builtInDatabase
         this.databaseUrl = databaseUrl || remoteDatabase
         this.lastFetch = null
+        this.fetching = false
     }
 
     async update() {
-        const timeLeft = this.lastFetch ? Date.now() - this.lastFetch : 0
-        if (timeLeft > 1000 * 60 * 5) {
-            return
+
+        if (this.fetching) return;
+        if (this.lastFetch) {
+            const timeLeft = Date.now() - this.lastFetch
+            if (timeLeft < 1000 * 60 * 5) {
+                return
+            }
         }
+
+        this.fetching = true;
 
         try {
             const req = await fetch(this.databaseUrl)
@@ -196,6 +204,8 @@ export class Detector {
         } catch(e) {
             console.error('fetch from remote failed', e)
         }
+
+        this.fetching = false;
         this.lastFetch = Date.now()
     }
 
