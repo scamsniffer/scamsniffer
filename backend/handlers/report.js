@@ -2,8 +2,6 @@ const { ScamList, DomainSummary, TwitterSummary, Summary } = require("../schema"
 const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require('../utils/summary')
 
-
-
 async function reportScam(req, res) {
   console.log(req.body);
   const item = req.body;
@@ -65,4 +63,43 @@ async function reportScam(req, res) {
   });
 }
 
-module.exports = reportScam;
+
+async function getStatus(req, res) {
+  const [allSummary, recentDetected, recentReported, recentScams] =
+    await Promise.all([
+      Summary.findAll({
+        raw: true,
+      }),
+      DomainSummary.findAll({
+        limit: 20,
+        order: [["id", "desc"]],
+      }),
+      DomainSummary.findAll({
+        limit: 20,
+        where: {
+          reported: 1,
+        },
+        order: [["id", "desc"]],
+      }),
+      ScamList.findAll({
+        limit: 20,
+        where: {
+        },
+        order: [["id", "desc"]],
+      }),
+    ]);
+
+  res.json({
+    summary: allSummary.reduce((all, item) => {
+      all[item.key] = item.counts;
+      return all
+    }, {}),
+    recentDetected,
+    recentReported,
+  });
+}
+
+module.exports = {
+  reportScam,
+  getStatus
+};
