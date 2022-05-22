@@ -1,0 +1,23 @@
+{
+  "name": "@scamsniffer/plugin",
+  "private": true,
+  "exports": {
+    ".": {
+      "webpack": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@masknet/web3-providers": "workspace:*",
+    "@masknet/plugin-infra": "workspace:*",
+    "@masknet/typed-message": "workspace:*",
+    "@masknet/icons": "workspace:*",
+    "@masknet/shared-base": "workspace:*",
+    "@masknet/theme": "workspace:*",
+    "@masknet/web3-shared-evm": "workspace:*",
+    "@masknet/shared-base-ui": "workspace:*",
+    "react-use": "^17.3.2",
+    "ts-results": "^3.3.0"
+  }
+}

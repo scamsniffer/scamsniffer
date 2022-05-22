@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "axios-https-proxy-fix": "^0.17.1",
+    "body-parser": "^1.19.1",
+    "cheerio": "^1.0.0-rc.10",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.5.1",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.1",
+    "express-cluster": "^0.0.5",
+    "express-history-api-fallback": "^2.2.1",
+    "html-metadata": "^1.7.1",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "node-cron": "^3.0.0",
+    "open": "^8.4.0",
+    "open-graph": "^0.2.6",
+    "parse-domain": "^3.0.4",
+    "route-cache": "^0.4.7",
+    "sequelize": "^6.12.0-beta.1",
+    "sequelize-handlers": "^1.0.7",
+    "sqlite3": "^5.0.2",
+    "ttl-cache": "^1.0.2",
+    "websocket": "^1.0.34",
+    "ws": "^8.4.0"
+  }
+}
