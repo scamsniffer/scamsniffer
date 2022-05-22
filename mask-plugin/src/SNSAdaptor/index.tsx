@@ -2,8 +2,11 @@
 import { base } from '../base'
 import { type Plugin, usePluginWrapper, usePostInfoDetails } from '@masknet/plugin-infra/content-script'
 import { extractTextFromTypedMessage } from '@masknet/typed-message'
-import { detectScam, ScamResult } from '../detector'
+import type { ScamResult } from '@scamsniffer/detector'
 import ScamAlert from './ScamAlert'
+import { PluginScamRPC } from '../messages'
+import { useAsync } from 'react-use'
+import { useState } from 'react'
 
 function Renderer(props: React.PropsWithChildren<{ project: ScamResult }>) {
     usePluginWrapper(true)
@@ -12,10 +15,6 @@ function Renderer(props: React.PropsWithChildren<{ project: ScamResult }>) {
 
 const sns: Plugin.SNSAdaptor.Definition = {
     ...base,
-    init(signal) {
-        console.debug('ScamSniffer plugin has been loaded.')
-        signal.addEventListener('abort', () => console.debug('Example plugin has been terminated'))
-    },
     PostInspector: function Component() {
         const links = usePostInfoDetails.mentionedLinks()
         const author = usePostInfoDetails.author()
@@ -29,7 +28,13 @@ const sns: Plugin.SNSAdaptor.Definition = {
             links,
             content: message.some ? message.val : null,
         }
-        const scamProject = detectScam(postDetail)
+        const [scamProject, setScamProject] = useState<ScamResult | null>(null)
+        useAsync(async () => {
+            const scamProject = await PluginScamRPC.detectScam(postDetail)
+            if (scamProject) {
+                setScamProject(scamProject)
+            }
+        }, [])
         return scamProject ? <Renderer project={scamProject} /> : null
     },
 }

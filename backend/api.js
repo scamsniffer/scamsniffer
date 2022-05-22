@@ -5,7 +5,7 @@ const { ModelHandler } = require('sequelize-handlers')
 const bodyParser = require('body-parser')
 const app = express()
 
-const { ScamList, DomainSummary, TwitterSummary } = require("./schema");
+const { ScamList, Summary, DomainSummary, TwitterSummary } = require("./schema");
 const reportScam = require("./handlers/report");
 
 app.use(cors())
@@ -20,11 +20,13 @@ const Handlers = {
   ScamList: new ModelHandler(ScamList),
   DomainSummary: new ModelHandler(DomainSummary),
   TwitterSummary: new ModelHandler(TwitterSummary),
+  Summary: new ModelHandler(Summary),
 };
 
-app.get("/ScamList", Handlers.ScamList.query());
-app.get("/DomainSummary", Handlers.DomainSummary.query());
-app.get("/TwitterSummary", Handlers.TwitterSummary.query());
+app.get("/scamList", Handlers.ScamList.query());
+app.get("/domainSummary", Handlers.DomainSummary.query());
+app.get("/twitterSummary", Handlers.TwitterSummary.query());
+app.get("/summary", Handlers.Summary.query());
 app.post("/report", reportScam);
 
 app.get("*", async (req, res) => {

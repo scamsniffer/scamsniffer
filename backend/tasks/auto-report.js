@@ -10,6 +10,7 @@ async function getAndReport() {
     },
   });
 
+  let reported = 0
   for (let index = 0; index < needReportDomains.length; index++) {
     const needReportDomain = needReportDomains[index];
     const domainUrls = await ScamList.findAll({
@@ -22,9 +23,11 @@ async function getAndReport() {
     if (domainUrls.length) {
       const reportUrl = domainUrls[0].link;
       await reportScam(reportUrl);
+      reported++
     }
   }
 
+  await increaseCount("reported", reported);
   console.log("found", needReportDomains.length);
   setTimeout(getAndReport, 10 * 1000);
 }

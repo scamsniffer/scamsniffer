@@ -37,4 +37,15 @@ Note: Private Mint also available for None Otherdeed NFT holders.
 #Otherside #Kodas`,
     links: ["http://otheraside.com/koda"],
   },
+  {
+    "id": "retweet:1528260015185879042",
+    "nickname": "adidas Originals",
+    "userId": "NFTAdidas",
+    "links": [
+        "https://metaverse-adidas.io",
+        "https://metaverse-adidas.io",
+        "https://t.co/W1eeHmfPyH"
+    ],
+    "content": "The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse"
+}
 ];

@@ -3240,18 +3240,6 @@
         "twitterUsername": "AnatomySAC"
     },
     {
-        "slug": "bitcoin",
-        "name": "Bitcoin",
-        "externalUrl": "https://bitcoin.org/",
-        "twitterUsername": "Bitcoin"
-    },
-    {
-        "slug": "ethereum",
-        "name": "Ethereum",
-        "externalUrl": "https://www.ethereum.org",
-        "twitterUsername": "ethereum"
-    },
-    {
         "slug": "tether",
         "name": "Tether",
         "externalUrl": "https://tether.to",

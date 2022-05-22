@@ -4,23 +4,20 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import LinkIcon from '@mui/icons-material/Link'
 import Checkbox from '@mui/material/Checkbox'
 import DescriptionIcon from '@mui/icons-material/Description'
-
-import type { ScamResult } from '../detector'
+import type { ScamResult } from '@scamsniffer/detector'
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert'
 import { PluginScamRPC } from '../messages'
 import { useAsync } from 'react-use'
-import { useState, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { openWindow } from '@masknet/shared-base-ui'
 
-// import Avatar from 'boring-avatars'
-// import { useAsyncRetry } from 'react-use'
 const useStyles = makeStyles()((theme) => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         overflow: 'hidden',
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
     },
     icon: {
         verticalAlign: '-6px',
@@ -28,8 +25,8 @@ const useStyles = makeStyles()((theme) => ({
     },
     list: {
         padding: 0,
-        borderTop: '1px solid rgb(51, 51, 51)',
-        borderBottom: '1px solid rgb(51, 51, 51)',
+        borderTop: '1px solid rgb(109 157 231 / 15%)',
+        borderBottom: '1px solid rgb(109 157 231 / 15%)',
     },
     scam: {
         padding: theme.spacing(2),
@@ -41,16 +38,16 @@ const useStyles = makeStyles()((theme) => ({
     },
     report: {
         // fontSize: '13px',
-        '& span': { fontSize: 13, color: MaskColorVar.normalText, lineHeight: 1.75 },
+        '& span': { fontSize: 13, color: '#666', lineHeight: 1.75 },
     },
     desc: {
         margin: '15px 0 7px',
-        color: MaskColorVar.normalText,
+        color: '#888',
         fontSize: '14px',
         textAlign: 'center',
     },
     highlight: {
-        color: MaskColorVar.linkText,
+        color: '#333',
     },
     title: {
         fontFamily: 'Poppins',
@@ -64,23 +61,28 @@ const useStyles = makeStyles()((theme) => ({
         color: MaskColorVar.redMain,
     },
 }))
+
 const ScamAlert = ({ result }: { result: ScamResult }) => {
     const { classes } = useStyles()
     const [autoReport, setAutoReport] = useState(false)
 
-    useCallback(() => {
+    useEffect(() => {
+        console.log('autoReport', autoReport)
         if (autoReport) {
-            PluginScamRPC.reportScam(result)
+            PluginScamRPC.sendReportScam(result)
         }
-        PluginScamRPC.enableAutoReport(autoReport)
     }, [autoReport])
+
+    const handleClick = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => {
+        if (!checked) return
+        setAutoReport(true)
+        // PluginScamRPC.sendReportScam(result)
+        PluginScamRPC.enableAutoReport(true)
+    }
 
     useAsync(async () => {
         const enabled = await PluginScamRPC.isAutoReportEnabled()
-        if (enabled) {
-            PluginScamRPC.reportScam(result)
-        }
-        if (autoReport !== enabled) setAutoReport(enabled)
+        setAutoReport(enabled)
     }, [])
     return (
         <div className={classes.root}>
@@ -92,20 +94,20 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
                 <List className={classes.list}>
                     <ListItemButton>
                         <ListItemIcon>
-                            <DescriptionIcon />
+                            <DescriptionIcon className={classes.highlight} />
                         </ListItemIcon>
                         <ListItemText className={classes.highlight} primary={result.name} />
                     </ListItemButton>
                     <ListItemButton onClick={() => openWindow(`https://twitter.com/${result.twitterUsername}`)}>
                         <ListItemIcon>
-                            <TwitterIcon />
+                            <TwitterIcon className={classes.highlight} />
                         </ListItemIcon>
                         <ListItemText className={classes.highlight} primary={result.twitterUsername} />
                     </ListItemButton>
                     {result.externalUrl ? (
                         <ListItemButton onClick={() => openWindow(result.externalUrl)}>
                             <ListItemIcon>
-                                <LinkIcon />
+                                <LinkIcon className={classes.highlight} />
                             </ListItemIcon>
                             <ListItemText className={classes.highlight} primary={result.externalUrl} />
                         </ListItemButton>
@@ -117,10 +119,8 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
                 {!autoReport ? (
                     <FormControlLabel
                         className={classes.report}
-                        control={
-                            <Checkbox checked={autoReport} onChange={(event) => setAutoReport(event.target.checked)} />
-                        }
-                        label="Auto report the scam links to MetaMask phishing-detect"
+                        control={<Checkbox checked={autoReport} onChange={handleClick} />}
+                        label="Auto report the scam links to MetaMask"
                     />
                 ) : null}
             </div>

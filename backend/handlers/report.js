@@ -1,5 +1,8 @@
-const { ScamList, DomainSummary, TwitterSummary } = require("../schema");
+const { ScamList, DomainSummary, TwitterSummary, Summary } = require("../schema");
 const { getTopDomain } = require("../utils/domain");
+const { increaseCount } = require('../utils/summary')
+
+
 
 async function reportScam(req, res) {
   console.log(req.body);
@@ -54,6 +57,8 @@ async function reportScam(req, res) {
       count: 1,
     });
   }
+
+  await increaseCount("total");
 
   res.json({
     msg: "reported",

@@ -2,6 +2,8 @@ import builtInProjects from './database/lite.json'
 import type { PostDetail, ScamResult, Project } from './types'
 import fetch from 'isomorphic-fetch'
 
+// const REPORT_ENDPOINT = 'http://api.scamsniffer.io/report'
+const REPORT_ENDPOINT_DEV = 'http://localhost:8081/report'
 const remoteDatabase = 'https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json'
 const miniumWordsLength = 4 
 const callToActionsKeywords = [
@@ -23,6 +25,13 @@ function compareName(name: string, name2: string) {
     name = name.toLowerCase()
     name2 = name2.toLowerCase()
     return name.includes(name2)
+}
+
+// adidas Originals
+// adidas Originals Into the Metaverse
+function matchNameInWords(nickName: string, projectName: string) {
+    const words = nickName.split(' ')
+    return words.length > 1 && projectName.toLowerCase().includes(nickName.toLowerCase())
 }
 
 function compareUserId(id: string, id2: string) {
@@ -62,9 +71,9 @@ async function _detectScam(post: PostDetail, allProjects: Array<Project>): Promi
     if (links.length === 0) return null
 
     const flags = {
-        checkName: false,
-        checkUserId: false,
-        checkContent: true
+        checkName: true,
+        checkUserId: true,
+        checkContent: false
     }
 
     // check nick name
@@ -83,6 +92,11 @@ async function _detectScam(post: PostDetail, allProjects: Array<Project>): Promi
 
         if (!matchProject) {
             matchProject = allProjects.find((_) => compareName(nickname, _.name))
+        }
+
+        if (!matchProject) {
+            // careful
+            matchProject = allProjects.find((_) => matchNameInWords(nickname, _.name))
         }
 
         if (matchProject?.twitterUsername && userId) {
@@ -184,8 +198,13 @@ export class Detector {
     }
 
     async detectScam(post: PostDetail): Promise<ScamResult | null> {
-        if (!this.onlyBuiltIn) await this.update();
-        return _detectScam(post, this.allProjects)
+       try {
+            if (!this.onlyBuiltIn) await this.update();
+            return await _detectScam(post, this.allProjects)
+       } catch(e) {
+           console.error('error', e)
+       }
+       return null
     }
 }
 
@@ -194,4 +213,33 @@ export const detector = new Detector({})
 
 export async function detectScam(post: PostDetail): Promise<ScamResult | null> {
     return detector.detectScam(post)
+}
+
+
+const REPORT_CACHE: string[] = []
+const CACHE_SIZE = 100;
+
+export async function reportScam(result: ScamResult) {
+    const API_ENDPOINT = REPORT_ENDPOINT_DEV 
+    const postId = result.post.id
+    if (REPORT_CACHE.length > CACHE_SIZE) {
+        REPORT_CACHE.shift();
+    }
+    if (postId && REPORT_CACHE.includes(postId)) {
+        return 
+    }
+    try {
+        await fetch(API_ENDPOINT, {
+            mode: 'cors',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+                Accept: 'application/json',
+            },
+            body: JSON.stringify(result),
+        })
+    } catch (error) {
+        console.error('report failed')
+    }
+    if (postId) REPORT_CACHE.push(postId)
 }
