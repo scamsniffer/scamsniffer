@@ -1,5 +1,5 @@
-import builtInProjects from './database/lite.json'
-import type { PostDetail, ScamResult, Project } from './types'
+import builtInDatabase from './database/lite.json'
+import type { PostDetail, ScamResult, Database } from './types'
 import fetch from 'isomorphic-fetch'
 
 // const REPORT_ENDPOINT = 'http://api.scamsniffer.io/report'
@@ -64,9 +64,10 @@ function verifyProjectMeta(project: any, post: PostDetail) {
 }
 
 
-async function _detectScam(post: PostDetail, allProjects: Array<Project>): Promise<ScamResult | null> {
+async function _detectScam(post: PostDetail, database: Database): Promise<ScamResult | null> {
     // console.log('detectScam', post)
     const { nickname, content, userId, links } = post
+    const allProjects = database.ProjectList
     // links
     if (links.length === 0) return null
 
@@ -171,36 +172,37 @@ async function _detectScam(post: PostDetail, allProjects: Array<Project>): Promi
 export class Detector {
 
     onlyBuiltIn: boolean;
-    allProjects: Array<Project>;
+    database: Database;
     lastFetch: number | null;
-    database: string;
+    databaseUrl: string;
 
-    constructor({ onlyBuiltIn = true, database = null }) {
+    constructor({ onlyBuiltIn = true, databaseUrl = null }) {
         this.onlyBuiltIn = onlyBuiltIn
-        this.allProjects = builtInProjects
-        this.database = database || remoteDatabase
+        this.database = builtInDatabase
+        this.databaseUrl = databaseUrl || remoteDatabase
         this.lastFetch = null
     }
 
     async update() {
         const timeLeft = this.lastFetch ? Date.now() - this.lastFetch : 0
-        if (timeLeft < 1000 * 60 * 10) {
+        if (timeLeft > 1000 * 60 * 5) {
             return
         }
-       try {
-            const req = await fetch(this.database)
+
+        try {
+            const req = await fetch(this.databaseUrl)
             const remoteData = await req.json()
-            this.allProjects = remoteData 
-       } catch(e) {
-           console.error('fetch from remote failed', e)
-       }
+            this.database = remoteData 
+        } catch(e) {
+            console.error('fetch from remote failed', e)
+        }
         this.lastFetch = Date.now()
     }
 
     async detectScam(post: PostDetail): Promise<ScamResult | null> {
        try {
-            if (!this.onlyBuiltIn) await this.update();
-            return await _detectScam(post, this.allProjects)
+            if (!this.onlyBuiltIn) this.update();
+            return await _detectScam(post, this.database)
        } catch(e) {
            console.error('error', e)
        }

@@ -20,3 +20,9 @@ export type Project = {
     externalUrl: string | null;
     twitterUsername: string | null;
 }
+
+export type Database = {
+    ProjectList: Project[],
+    BlackList: string[],
+    genTime: number
+}
