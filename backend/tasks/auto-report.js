@@ -28,7 +28,7 @@ async function getAndReport() {
     }
   }
 
-  await increaseCount("reported", reported);
+  if (reported) await increaseCount("reported", reported);
   console.log("found", needReportDomains.length);
   setTimeout(getAndReport, 10 * 1000);
 }
