@@ -83,8 +83,18 @@ async function getStatus(req, res) {
       }),
       ScamList.findAll({
         limit: 20,
-        where: {
-        },
+        attributes: [
+          "id",
+          "link",
+          "topDomain",
+          "twitter",
+          "nickname",
+          "createdAt",
+          "projectUrl",
+          "projectTwitter",
+          "project",
+        ],
+        where: {},
         order: [["id", "desc"]],
       }),
     ]);
@@ -92,10 +102,11 @@ async function getStatus(req, res) {
   res.json({
     summary: allSummary.reduce((all, item) => {
       all[item.key] = item.counts;
-      return all
+      return all;
     }, {}),
     recentDetected,
     recentReported,
+    recentScams,
   });
 }
 
