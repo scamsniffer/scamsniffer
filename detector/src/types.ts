@@ -9,6 +9,7 @@ export type PostDetail = {
 export type ScamResult = {
     slug: string;
     name: string;
+    matchType: string,
     externalUrl: string | null;
     twitterUsername: string | null;
     post: PostDetail;
@@ -21,8 +22,14 @@ export type Project = {
     twitterUsername: string | null;
 }
 
+export type BlackList = {
+    twitter: string[]
+    domains: string[]
+}
+
 export type Database = {
     ProjectList: Project[],
-    BlackList: string[],
+    BlackList: BlackList,
+    commonWords: string[]
     genTime: number
 }

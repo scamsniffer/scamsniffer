@@ -1,5 +1,21 @@
 {
-    "BlackList": [],
+    "BlackList": {
+        "twitter": [
+           
+        ],
+        "domains": []
+    },
+    "commonWords": [
+        "bitcoin",
+        "binance",
+        "stake",
+        "quant",
+        "chain",
+        "cusdt",
+        "cusdc",
+        "erc20",
+        "terra"
+    ],
     "ProjectList": [
         {
             "slug": "cryptopunks",
