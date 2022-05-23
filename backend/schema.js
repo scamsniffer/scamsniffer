@@ -26,6 +26,7 @@ const ScamList = sequelize.define(
     topDomain: Sequelize.STRING,
     type: Sequelize.STRING,
     host: Sequelize.STRING,
+    matchType: Sequelize.STRING,
     tweet: Sequelize.STRING,
     twitter: Sequelize.STRING,
     nickname: Sequelize.STRING,

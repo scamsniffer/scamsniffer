@@ -4,6 +4,7 @@ const { increaseCount } = require('../utils/summary')
 
 async function reportScam(req, res) {
   console.log(req.body);
+  // await ScamList.sync({ alter: true });
   const item = req.body;
   const { post } = item;
   const link = post.links[0];
@@ -19,6 +20,7 @@ async function reportScam(req, res) {
     nickname: post.nickname,
     content: post.content,
     project: item.name,
+    matchType: item.matchType,
     projectTwitter: item.twitterUsername,
     projectUrl: item.externalUrl,
   };
