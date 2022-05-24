@@ -28,8 +28,9 @@ export type BlackList = {
 }
 
 export type Database = {
-    ProjectList: Project[],
-    BlackList: BlackList,
-    commonWords: string[]
-    genTime: number
-}
+  ProjectList: Project[]
+  BlackList: BlackList
+  commonWords: string[]
+  callToActionsKeywords: string[]
+  genTime: number
+};

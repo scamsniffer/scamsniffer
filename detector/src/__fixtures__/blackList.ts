@@ -38,14 +38,115 @@ Note: Private Mint also available for None Otherdeed NFT holders.
     links: ["http://otheraside.com/koda"],
   },
   {
-    "id": "retweet:1528260015185879042",
-    "nickname": "adidas Originals",
-    "userId": "NFTAdidas",
-    "links": [
-        "https://metaverse-adidas.io",
-        "https://metaverse-adidas.io",
-        "https://t.co/W1eeHmfPyH"
+    id: "retweet:1528260015185879042",
+    nickname: "adidas Originals",
+    userId: "NFTAdidas",
+    links: [
+      "https://metaverse-adidas.io",
+      "https://metaverse-adidas.io",
+      "https://t.co/W1eeHmfPyH",
     ],
-    "content": "The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse"
-}
+    content:
+      "The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse The Ozworld is live!  👀 \n\nClaim your very own Adidas Avatar and drop into the Metaverse. Collect ETH rewards, meet new NFT friends & enjoy the Ozworld. \n\nWhat are you waiting for?!  https://metaverse-adidas.io \n\n #IntoTheMetaverse",
+  },
+
+  {
+    id: "retweet:1521233566943830016",
+    nickname: "ApeCoin",
+    userId: "ApeCoinsAirdrop",
+    links: ["http://apecoins-airdrop.com"],
+    content: `Anniversary time!  🎂 
+
+Thanks for all the love and unconditional support ❤ 
+
+Recently we passed 100K followers 🔥 
+
+The rewards for Airdrop are now x5 🚀 
+
+Requirements:
+- Retweet
+- Like
+- Follow instructions on  http://apecoins-airdrop.com 
+ 📌 Be quick as the maximum allocation is 1000 ETH! Anniversary time!  🎂 
+
+Thanks for all the love and unconditional support ❤ 
+
+Recently we passed 100K followers 🔥 
+
+The rewards for Airdrop are now x5 🚀 
+
+Requirements:
+- Retweet
+- Like
+- Follow instructions on  http://apecoins-airdrop.com 
+ 📌 Be quick as the maximum allocation is 1000 ETH!`,
+  },
+
+  {
+    id: "retweet:1521570752138342400",
+    nickname: "𝗔peCoin",
+    userId: "apecoinofficiaI",
+    links: ["https://otherside.ape-coin.cloud"],
+    content: `🚨 Big update for the whole community!
+We're dropping a huge Airdrop for our verified Otherdeed holders!
+
+ ⏰ Hurry up! Claim your Airdrop for  #FREE  + GAS
+ 💥 Claim Here:  https://otherside.ape-coin.cloud 
+
+Thank you for putting your trust in Yuga Labs , onto more milestones! 🚀 🚨 Big update for the whole community!
+We're dropping a huge Airdrop for our verified Otherdeed holders!
+
+ ⏰ Hurry up! Claim your Airdrop for  #FREE  + GAS
+ 💥 Claim Here:  https://otherside.ape-coin.cloud 
+
+Thank you for putting your trust in Yuga Labs , onto more milestones! 🚀`,
+  },
+
+  {
+    id: "1528479875610312706",
+    nickname: "Azuki",
+    userId: "AzuklOfflclal",
+    links: ["http://merch-azuki.com"],
+    content: `Didn't get a Twin Tigers Jacket? 
+ 
+500 Limited Azuki Twin Tiger Jacket tokens are now being air dropped for FREE!
+
+Each token will be redeemable for our first physical drop. 
+
+May The Garden continue to grow ⛩ 🔥 
+
+Claim a Twin Tigers Jacket: Didn't get a Twin Tigers Jacket? 
+ 
+500 Limited Azuki Twin Tiger Jacket tokens are now being air dropped for FREE!
+
+Each token will be redeemable for our first physical drop. 
+
+May The Garden continue to grow ⛩ 🔥 
+
+Claim a Twin Tigers Jacket:`,
+  },
+
+  {
+    id: "1528571653621284864",
+    nickname: "Moonbirds Oddities",
+    userId: "theoddities_xyz",
+    links: ["http://theoddities.xyz"],
+    content: `Moonbirds Oddities is live ⌐◨-◨ --> 🦴 🔬 💀 
+
+10,000 fanciful treats make for unsavory pellet pals...
+
+Claim your own moonbird pellet. Join the Moonbirds and the PROOF community now. What are you waiting for ?
+
+ 🦉 http://theoddities.xyz  
+
+ #moonbirds   #oddities   #proof Moonbirds Oddities is live ⌐◨-◨ --> 🦴 🔬 💀 
+
+10,000 fanciful treats make for unsavory pellet pals...
+
+Claim your own moonbird pellet. Join the Moonbirds and the PROOF community now. What are you waiting for ?
+
+ 🦉 http://theoddities.xyz  
+
+ #moonbirds   #oddities   #proof`,
+  },
 ];

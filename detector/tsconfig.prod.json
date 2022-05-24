@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "ESNext",
         "moduleResolution": "node",
-        "target": "es2015",
+        "target": "ES2021",
         "outDir": "dist",
         "rootDir": "",
         "baseUrl": "./src",

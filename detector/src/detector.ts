@@ -6,13 +6,6 @@ const REPORT_ENDPOINT = 'https://api.scamsniffer.io/report'
 const REPORT_ENDPOINT_DEV = 'http://localhost/report'
 const remoteDatabase = 'https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json'
 const miniumWordsLength = 4 
-const callToActionsKeywords = [
-    'Mint',
-    'minting',
-    'Supply',
-    'GIVEAWAY',
-    'claim'
-]
 
 function includeName(name: string, projectName: string) {
     name = name.toLowerCase()
@@ -55,9 +48,11 @@ function verifyProjectMeta(project: any, post: PostDetail) {
         externalUrl
     } = project
 
-    const { userId, links } = post
+    const { userId, links,  content } = post
     if (!userId) return true
     if (!twitterUsername) return true
+
+   
     let isSame = compareUserId(twitterUsername, userId)
     // TODO verify links
     if (!isSame) {
@@ -67,6 +62,9 @@ function verifyProjectMeta(project: any, post: PostDetail) {
         })
         isSame = hasOfficialLinks.length == 0
     }
+
+   
+
     return isSame
 }
 
@@ -74,7 +72,12 @@ function verifyProjectMeta(project: any, post: PostDetail) {
 async function _detectScam(post: PostDetail, database: Database): Promise<ScamResult | null> {
     // console.log('detectScam', post)
     const { nickname, content, userId, links } = post
-    const { ProjectList: allProjects, commonWords, BlackList } = database
+    const {
+      ProjectList: allProjects,
+      commonWords,
+      BlackList,
+      callToActionsKeywords,
+    } = database;
     // links
     if (links.length === 0) return null
     let matchType = 'unknown'
@@ -83,6 +86,18 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
         checkName: true,
         checkUserId: true,
         checkContent: false
+    }
+    let callActionScore = 0
+
+    if (content) {
+        callActionScore = callToActionsKeywords.map(keyword => {
+            const isMatch = compareText(keyword, content)
+            return isMatch ? 2 : 0
+        }).reduce((totalScore: number, score) => totalScore + score, 0)
+    }
+
+    if (callActionScore === 0) {
+        return null
     }
 
     const twitterInBlackList = BlackList.twitter.find(id => id === userId)
@@ -99,7 +114,7 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
 
     const skipCheck = nickname && userId ? commonWords.find(word => nickname.includes(word) || userId.includes(word)) : false;
     if (skipCheck) {
-        console.log('skip check')
+        // console.log('skip check')
         return null
     }
 
@@ -109,26 +124,26 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
         // full match
         matchProject = allProjects.find((_) => _.name === nickname)
         matchType = 'name_full_match'
-        console.log('name_full_match')
+        // console.log('name_full_match')
 
         if (!matchProject && userId) {
             matchProject = allProjects.find((_) => _.twitterUsername && includeNameCheck(userId, _.twitterUsername))
             matchType = 'userId_match_twitter'
-            console.log('userId_match_twitter')
+            // console.log('userId_match_twitter')
         }
 
 
         if (!matchProject) {
             matchProject = allProjects.find((_) => compareName(nickname, _.name))
             matchType = 'nickname_match_name'
-            console.log(matchType)
+            // console.log(matchType)
         }
 
         if (!matchProject) {
             // careful
             matchProject = allProjects.find((_) => matchNameInWords(nickname, _.name))
             matchType = 'nickname_match_name_words'
-            console.log(matchType)
+            // console.log(matchType)
         }
 
         if (matchProject?.twitterUsername && userId) {
@@ -148,7 +163,7 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
     if (userId !== undefined  && flags.checkUserId) {
         const matchProject = allProjects.find((_) => _.twitterUsername && includeName(userId, _.twitterUsername))
         matchType = 'userId_match_twitter_name'
-        console.log(matchType)
+        // console.log(matchType)
         if (matchProject?.twitterUsername && userId) {
             const verified = verifyProjectMeta(matchProject, post)
             if (!verified) {
@@ -189,7 +204,7 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
             if (projectsWithScore[0].callScore == 0) return null
             const verified = verifyProjectMeta(matchProject, post)
             matchType = 'content_match'
-            console.log(matchType)
+            // console.log(matchType)
             if (!verified) {
                 return {
                     ...matchProject,
