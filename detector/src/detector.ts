@@ -88,16 +88,17 @@ function verifyProjectMeta(project: any, post: PostDetail) {
    
     let isSame = compareUserId(twitterUsername, userId)
     // TODO verify links
-    if (!isSame) {
-        const domainDetail = getTopDomain(externalUrl);
-        if (domainDetail && domainDetail.topDomain) {
-            const domain = domainDetail.topDomain;
-            const hasOfficialLinks = links.map((link) => {
-                return link.indexOf(domain) > -1;
-            });
-            isSame = hasOfficialLinks.length == 0;
-        }
-    }
+    // if (isSame) {
+    //     const domainDetail = getTopDomain(externalUrl);
+    //     if (domainDetail && domainDetail.topDomain) {
+    //         const domain = domainDetail.topDomain;
+    //         const hasOfficialLinks = links.filter((link) => {
+    //             return link.indexOf(domain) > -1;
+    //         });
+    //         isSame = hasOfficialLinks.length !== 0 && links.length > 0;
+    //         console.log("isSame", hasOfficialLinks);
+    //     }
+    // }
     return isSame
 }
 

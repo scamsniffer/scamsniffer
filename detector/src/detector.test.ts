@@ -23,6 +23,8 @@ describe("Detector", () => {
             const result = await detector.detectScam(BLACK_LIST[index]);
             if (result) {
                 listScam.push(result)
+            } else {
+                console.log(BLACK_LIST[index]);
             }
         }
         // console.log(listScam.length,  BLACK_LIST.length === listScam.length)
