@@ -37,12 +37,11 @@ const useStyles = makeStyles()((theme) => ({
         marginTop: '5px',
     },
     report: {
-        // fontSize: '13px',
-        '& span': { fontSize: 13, color: '#666', lineHeight: 1.75 },
+        '& span': { fontSize: 13, color: '#888', lineHeight: 1.75 },
     },
     desc: {
         margin: '15px 0 7px',
-        color: '#888',
+        color: '#777',
         fontSize: '14px',
         textAlign: 'center',
     },
@@ -67,17 +66,14 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
     const [autoReport, setAutoReport] = useState(false)
 
     useEffect(() => {
-        console.log('autoReport', autoReport)
         if (autoReport) {
             PluginScamRPC.sendReportScam(result)
         }
     }, [autoReport])
 
     const handleClick = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => {
-        if (!checked) return
-        setAutoReport(true)
-        // PluginScamRPC.sendReportScam(result)
-        PluginScamRPC.enableAutoReport(true)
+        setAutoReport(checked)
+        PluginScamRPC.enableAutoReport(checked)
     }
 
     useAsync(async () => {
@@ -98,12 +94,14 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
                         </ListItemIcon>
                         <ListItemText className={classes.highlight} primary={result.name} />
                     </ListItemButton>
-                    <ListItemButton onClick={() => openWindow(`https://twitter.com/${result.twitterUsername}`)}>
-                        <ListItemIcon>
-                            <TwitterIcon className={classes.highlight} />
-                        </ListItemIcon>
-                        <ListItemText className={classes.highlight} primary={result.twitterUsername} />
-                    </ListItemButton>
+                    {result.twitterUsername ? (
+                        <ListItemButton onClick={() => openWindow(`https://twitter.com/${c}`)}>
+                            <ListItemIcon>
+                                <TwitterIcon className={classes.highlight} />
+                            </ListItemIcon>
+                            <ListItemText className={classes.highlight} primary={result.twitterUsername} />
+                        </ListItemButton>
+                    ) : null}
                     {result.externalUrl ? (
                         <ListItemButton onClick={() => openWindow(result.externalUrl)}>
                             <ListItemIcon>
@@ -116,13 +114,11 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
                 <Typography className={classes.desc}>Be careful what you visit and sign !</Typography>
             </div>
             <div className={classes.reportWrapper}>
-                {!autoReport ? (
-                    <FormControlLabel
-                        className={classes.report}
-                        control={<Checkbox checked={autoReport} onChange={handleClick} />}
-                        label="Auto report the scam links to MetaMask"
-                    />
-                ) : null}
+                <FormControlLabel
+                    className={classes.report}
+                    control={<Checkbox checked={autoReport} onChange={handleClick} />}
+                    label="Auto report the scam links to MetaMask"
+                />
             </div>
         </div>
     )

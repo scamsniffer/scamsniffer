@@ -1,11 +1,45 @@
 import builtInDatabase from './database/lite.json'
 import type { PostDetail, ScamResult, Database } from './types'
 import fetch from 'isomorphic-fetch'
+// import { parseDomain, ParseResultType } from "parse-domain"
+import urlParser from 'url'
 
 const REPORT_ENDPOINT = 'https://api.scamsniffer.io/report'
 const REPORT_ENDPOINT_DEV = 'http://localhost/report'
 const remoteDatabase = 'https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json'
 const miniumWordsLength = 4 
+
+// function getTopDomain(url: string) {
+//   let topDomain = null;
+//   const host = urlParser.parse(url).host;
+//   if (host === null) return null
+//   const parseResult = parseDomain(host);
+//   switch (parseResult.type) {
+//     case ParseResultType.Listed: {
+//       const { hostname, domain, topLevelDomains } = parseResult;
+//       topDomain = [domain].concat(topLevelDomains).join(".");
+//       break;
+//     }
+//     case ParseResultType.Reserved:
+//     case ParseResultType.NotListed: {
+//       const { hostname } = parseResult;
+//       break;
+//     }
+//     // default:
+//     //   throw new Error(`${host} is an ip address or invalid domain`);
+//   }
+//   return {
+//     topDomain,
+//     host,
+//   };
+// }
+
+function getTopDomain(url: string) {
+    const host = urlParser.parse(url).host;
+    return {
+      topDomain: host,
+    };
+}
 
 function includeName(name: string, projectName: string) {
     name = name.toLowerCase()
@@ -51,26 +85,23 @@ function verifyProjectMeta(project: any, post: PostDetail) {
     const { userId, links,  content } = post
     if (!userId) return true
     if (!twitterUsername) return true
-
    
     let isSame = compareUserId(twitterUsername, userId)
     // TODO verify links
     if (!isSame) {
-        const domain = externalUrl.replace('https://', '').replace('http://', '');;
-        const hasOfficialLinks = links.map(link => {
-            return link.indexOf(domain) > -1
-        })
-        isSame = hasOfficialLinks.length == 0
+        const domainDetail = getTopDomain(externalUrl);
+        if (domainDetail && domainDetail.topDomain) {
+            const domain = domainDetail.topDomain;
+            const hasOfficialLinks = links.map((link) => {
+                return link.indexOf(domain) > -1;
+            });
+            isSame = hasOfficialLinks.length == 0;
+        }
     }
-
-   
-
     return isSame
 }
 
-
 async function _detectScam(post: PostDetail, database: Database): Promise<ScamResult | null> {
-    // console.log('detectScam', post)
     const { nickname, content, userId, links } = post
     const {
       ProjectList: allProjects,
@@ -124,32 +155,26 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
         // full match
         matchProject = allProjects.find((_) => _.name === nickname)
         matchType = 'name_full_match'
-        // console.log('name_full_match')
 
         if (!matchProject && userId) {
             matchProject = allProjects.find((_) => _.twitterUsername && includeNameCheck(userId, _.twitterUsername))
             matchType = 'userId_match_twitter'
-            // console.log('userId_match_twitter')
         }
-
 
         if (!matchProject) {
             matchProject = allProjects.find((_) => compareName(nickname, _.name))
             matchType = 'nickname_match_name'
-            // console.log(matchType)
         }
 
         if (!matchProject) {
             // careful
             matchProject = allProjects.find((_) => matchNameInWords(nickname, _.name))
             matchType = 'nickname_match_name_words'
-            // console.log(matchType)
         }
 
         if (matchProject?.twitterUsername && userId) {
             const verified = verifyProjectMeta(matchProject, post)
             if (!verified) {
-                // console.log('scam', matchProject, links)
                 return {
                     ...matchProject,
                     matchType,
@@ -163,7 +188,6 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
     if (userId !== undefined  && flags.checkUserId) {
         const matchProject = allProjects.find((_) => _.twitterUsername && includeName(userId, _.twitterUsername))
         matchType = 'userId_match_twitter_name'
-        // console.log(matchType)
         if (matchProject?.twitterUsername && userId) {
             const verified = verifyProjectMeta(matchProject, post)
             if (!verified) {
@@ -204,7 +228,6 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
             if (projectsWithScore[0].callScore == 0) return null
             const verified = verifyProjectMeta(matchProject, post)
             matchType = 'content_match'
-            // console.log(matchType)
             if (!verified) {
                 return {
                     ...matchProject,
@@ -300,7 +323,6 @@ export async function reportScam(result: ScamResult) {
             body: JSON.stringify(result),
         })
     } catch (error) {
-        console.error('report failed')
     }
     if (postId) REPORT_CACHE.push(postId)
 }
