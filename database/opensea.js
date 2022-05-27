@@ -1,5 +1,5 @@
-async function fetchRanking(cursor = null, volume = "THIRTY_DAY_VOLUME") {
-    const uid = localStorage.getItem("ajs_user_id");
+async function fetchRanking(cursor = null, volume = "SEVEN_DAY_VOLUME") {
+  const uid = localStorage.getItem("ajs_user_id");
   const req = await fetch("https://api.opensea.io/graphql/", {
     headers: {
       accept: "*/*",
@@ -108,7 +108,7 @@ function wait(ms) {
 async function getTopCollections() {
   allCollections = window.allCollections || [];
   let cursor = null;
-  for (let index = 0; index < 100; index++) {
+  for (let index = 0; index < 10; index++) {
     const res = await fetchRanking(cursor);
     res.data.rankings.edges.forEach((_) => {
       allCollections.push({
@@ -147,7 +147,7 @@ async function getTopCollections() {
       detail,
     });
   }
-  const collectionProjects = parsedCollections
+  collectionProjects = parsedCollections
     .filter((_) => _.detail)
     .map((_) => ({
       slug: _.collection.slug,
