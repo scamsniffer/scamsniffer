@@ -12568,7 +12568,19 @@
       "name": "BOBO DEGEN APOCALYPSE",
       "externalUrl": "https://www.bobodegenapocalypse.com",
       "twitterUsername": "bobo_degen"
+    },
+    {
+      "slug": "unseen-universe-official",
+      "name": "UNSEEN UNIVERSE Official",
+      "externalUrl": "https://the-art-of-progress.com/",
+      "twitterUsername": "rftpclub"
+    },
+    {
+      "slug": "clashpets-game-pass",
+      "name": "ClashPets Game Pass",
+      "externalUrl": "http://Mint.Clashpets.com",
+      "twitterUsername": "ClashPets"
     }
   ],
-  "genTime": 1653625331273
+  "genTime": 1653703497887
 }
