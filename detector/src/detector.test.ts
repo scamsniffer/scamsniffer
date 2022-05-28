@@ -24,7 +24,7 @@ describe("Detector", () => {
             if (result) {
                 listScam.push(result)
             } else {
-                console.log(BLACK_LIST[index]);
+                console.log(BLACK_LIST[index], result);
             }
         }
         // console.log(listScam.length,  BLACK_LIST.length === listScam.length)

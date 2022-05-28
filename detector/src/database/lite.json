@@ -9,7 +9,8 @@
         "minting",
         "Supply",
         "GIVEAWAY",
-        "claim"
+        "claim",
+        "cₗₐᵢₘ"
     ],
     "commonWords": [
         "bitcoin",
@@ -12238,7 +12239,349 @@
             "name": "Pika",
             "externalUrl": "https://pikacrypto.com/",
             "twitterUsername": "PikaCrypto_"
+        },
+        {
+            "slug": "goblintownwtf",
+            "name": "goblintown.wtf",
+            "externalUrl": "https://goblintown.wtf/",
+            "twitterUsername": "goblintownwtf"
+        },
+        {
+            "slug": "trippin-ape-tribe-solana",
+            "name": "Trippin’ Ape Tribe",
+            "externalUrl": null,
+            "twitterUsername": null
+        },
+        {
+            "slug": "chimpersnft",
+            "name": "Chimpers",
+            "externalUrl": "https://www.chimpers.xyz/",
+            "twitterUsername": "ChimpersNFT"
+        },
+        {
+            "slug": "ainightbirds",
+            "name": "AINightbirds",
+            "externalUrl": "https://nightbirds.ai/",
+            "twitterUsername": "aimoonbirds"
+        },
+        {
+            "slug": "moonbirds-oddities",
+            "name": "Moonbirds Oddities",
+            "externalUrl": null,
+            "twitterUsername": null
+        },
+        {
+            "slug": "bokinftofficial",
+            "name": "Boki",
+            "externalUrl": "http://boki.art",
+            "twitterUsername": "BokiNFT"
+        },
+        {
+            "slug": "gene-sis-the-girls-of-armament",
+            "name": "GENE_SIS: The Girls of Armament",
+            "externalUrl": "http://tgoagenesis.com",
+            "twitterUsername": "GENESIS_SENSHI"
+        },
+        {
+            "slug": "okaybearsyachtclub",
+            "name": "Okay Bears Yacht Club",
+            "externalUrl": "http://okaybearsyachtclub.art",
+            "twitterUsername": "OkayBearsYC"
+        },
+        {
+            "slug": "cardboard-citizens-solana",
+            "name": "Cardboard Citizens",
+            "externalUrl": "https://www.cardboardcitizen.com/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "kith-friends",
+            "name": "Kith Friends",
+            "externalUrl": "https://invisiblefriends.io/kith-friends",
+            "twitterUsername": null
+        },
+        {
+            "slug": "bunnies-n-homies-club",
+            "name": "Bunnies N Homies Club",
+            "externalUrl": "https://bunniesnhomies.io/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "okayduckyachtclub",
+            "name": "Okay Duck Yacht Club",
+            "externalUrl": null,
+            "twitterUsername": "OkayDuckYC"
+        },
+        {
+            "slug": "idz",
+            "name": "IDZ",
+            "externalUrl": "https://app.rarible.com/collection/0x211838a8a587b02de8a02a6edafbfd7277c317d4",
+            "twitterUsername": "IDZ_01"
+        },
+        {
+            "slug": "regulated-solana",
+            "name": "ReGuLaTeD",
+            "externalUrl": "https://www.regulatednft.io/",
+            "twitterUsername": "RegulatedNFT"
+        },
+        {
+            "slug": "verblabsofficial",
+            "name": "Verb: Chapter One",
+            "externalUrl": "http://verblabs.io",
+            "twitterUsername": "verb_labs"
+        },
+        {
+            "slug": "rektguy",
+            "name": "rektguy",
+            "externalUrl": "http://osf.art/rektguy",
+            "twitterUsername": "osf_nft"
+        },
+        {
+            "slug": "og-atadians",
+            "name": "OG Atadia",
+            "externalUrl": "https://www.atadia.io/",
+            "twitterUsername": "atadia_io"
+        },
+        {
+            "slug": "admit-one",
+            "name": "Admit One",
+            "externalUrl": "https://g.money",
+            "twitterUsername": "Admit0001"
+        },
+        {
+            "slug": "cypher-drop-1",
+            "name": "Collider Craftworks - Cypher Drop #1",
+            "externalUrl": "https://cypher.collider.gg/",
+            "twitterUsername": "ColliderCraft"
+        },
+        {
+            "slug": "the-uncanny-country-club",
+            "name": "The Uncanny Country Club",
+            "externalUrl": "https://theuncanny.io",
+            "twitterUsername": "TheUncannyClub"
+        },
+        {
+            "slug": "famous-fox-federation",
+            "name": "Famous Fox Federation",
+            "externalUrl": "https://www.famousfoxes.com/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "strange-times-ahal-magi",
+            "name": "Strange Times By Ahal & Magi",
+            "externalUrl": "https://www.strangetimesnft.com/",
+            "twitterUsername": "NFTStrangeTimes"
+        },
+        {
+            "slug": "bbrcofficial-ivyboys",
+            "name": "BBRC - IVY BOYS",
+            "externalUrl": "http://bbrc.io",
+            "twitterUsername": "BBRCOfficial"
+        },
+        {
+            "slug": "trippykidz-solana",
+            "name": "TrippyKidz",
+            "externalUrl": "https://trippykidz.net/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "flowerfam-fam-official",
+            "name": "Flower Fam - Official",
+            "externalUrl": "https://flowerfam.earth/",
+            "twitterUsername": "FlowerFamNFT"
+        },
+        {
+            "slug": "the-dooplicator",
+            "name": "Dooplicator",
+            "externalUrl": "https://doodles.app/dooplicator",
+            "twitterUsername": null
+        },
+        {
+            "slug": "goblin-grlz",
+            "name": "Goblin Grlz",
+            "externalUrl": "https://twitter.com/goblingrlzwtf",
+            "twitterUsername": "goblingrlzwtf"
+        },
+        {
+            "slug": "popopopopopo",
+            "name": "popoPOPOpopo",
+            "externalUrl": null,
+            "twitterUsername": "P0PO_P0PO"
+        },
+        {
+            "slug": "probably-nothing",
+            "name": "Probably Nothing Genesis",
+            "externalUrl": "http://probablynothing.io",
+            "twitterUsername": "probablynothing"
+        },
+        {
+            "slug": "apereunion",
+            "name": "Ape Reunion",
+            "externalUrl": "https://www.apereunion.xyz/#/",
+            "twitterUsername": "ApeReunion"
+        },
+        {
+            "slug": "karafuru-gachapon",
+            "name": "Karafuru Gachapon",
+            "externalUrl": "http://3d.karafuru.io",
+            "twitterUsername": "KarafuruNFT"
+        },
+        {
+            "slug": "klaydicegenesis-official",
+            "name": "KLAYDICE GENESIS-OFFICIAL",
+            "externalUrl": "https://www.klaydice.io/",
+            "twitterUsername": "klaydice"
+        },
+        {
+            "slug": "ganja-gators-solana",
+            "name": "Ganja Gators",
+            "externalUrl": "https://www.solflowers.io/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "moonly-solana",
+            "name": "Moonly Solana",
+            "externalUrl": "https://moon.ly/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "curiositiesnft",
+            "name": "Official Curiosities",
+            "externalUrl": "http://curiositiesnft.com",
+            "twitterUsername": "CuriositiesNFT"
+        },
+        {
+            "slug": "twintigersjacket",
+            "name": "Twin Tigers Jacket",
+            "externalUrl": "http://azuki.com/twintigersjacket",
+            "twitterUsername": "locationtba"
+        },
+        {
+            "slug": "plurofficial",
+            "name": "PLUR Official",
+            "externalUrl": "http://plur.io",
+            "twitterUsername": "plurapeclub"
+        },
+        {
+            "slug": "proof-of-cncpts",
+            "name": "Proof of CNCPTS",
+            "externalUrl": "http://cncpts.com",
+            "twitterUsername": null
+        },
+        {
+            "slug": "cheers-up-period",
+            "name": "Cheers UP Period",
+            "externalUrl": "https://www.cryptonatty.io",
+            "twitterUsername": "CryptoNatty_io"
+        },
+        {
+            "slug": "killabears",
+            "name": "KILLABEARS",
+            "externalUrl": "http://killabears.com",
+            "twitterUsername": "killabearsnft"
+        },
+        {
+            "slug": "japanesebornapesociety",
+            "name": "Japanese Born Ape Society",
+            "externalUrl": "https://www.japanesebornapesociety.com/",
+            "twitterUsername": "Japanese_BAPES"
+        },
+        {
+            "slug": "bobo-degen-apocalypse",
+            "name": "BOBO DEGEN APOCALYPSE",
+            "externalUrl": "https://www.bobodegenapocalypse.com",
+            "twitterUsername": "bobo_degen"
+        },
+        {
+            "slug": "zooverse-operation-nature",
+            "name": "ZooVerse Operation Nature",
+            "externalUrl": "https://www.zvoperationnature.com",
+            "twitterUsername": "Zooversenft"
+        },
+        {
+            "slug": "murloctown",
+            "name": "murloctown",
+            "externalUrl": "https://murloctown.wtf/",
+            "twitterUsername": "murloctown_wtf"
+        },
+        {
+            "slug": "moon-goons-official",
+            "name": "Moon Goons Official",
+            "externalUrl": null,
+            "twitterUsername": "MoonGoonswtf"
+        },
+        {
+            "slug": "crypto-doctors",
+            "name": "Crypto Doctors Official",
+            "externalUrl": "https://cryptodoctors.io/",
+            "twitterUsername": "doctorsnft"
+        },
+        {
+            "slug": "communi3",
+            "name": "Communi3",
+            "externalUrl": "https://nft.communi3.io/",
+            "twitterUsername": "communi3_io"
+        },
+        {
+            "slug": "regulars",
+            "name": "Regulars",
+            "externalUrl": "https://regular.world",
+            "twitterUsername": "regulars_nft"
+        },
+        {
+            "slug": "footballcritter",
+            "name": "footballcritter",
+            "externalUrl": "https://footballcritter.com/",
+            "twitterUsername": "footballcritter"
+        },
+        {
+            "slug": "everythingiown",
+            "name": "Everything I Own",
+            "externalUrl": "http://stardrop.art",
+            "twitterUsername": "evrythngiown"
+        },
+        {
+            "slug": "bearbox-eth",
+            "name": "BearBox | Mint Live 0.009ETH",
+            "externalUrl": "https://bearhood.eth.limo/",
+            "twitterUsername": "BearhoodNFT"
+        },
+        {
+            "slug": "bearhood",
+            "name": "BearHood | Mint Live 0.009ETH",
+            "externalUrl": "https://bearhood.eth.limo/",
+            "twitterUsername": "BearhoodNFT"
+        },
+        {
+            "slug": "joker-charlie-club-genesis",
+            "name": "Joker Charlie Club Genesis",
+            "externalUrl": "https://jokercharlieclub.com/",
+            "twitterUsername": "JokerCharlieNFT"
+        },
+        {
+            "slug": "bobo-degen-apocalypse",
+            "name": "BOBO DEGEN APOCALYPSE",
+            "externalUrl": "https://www.bobodegenapocalypse.com",
+            "twitterUsername": "bobo_degen"
+        },
+        {
+            "slug": "bobo-degen-apocalypse",
+            "name": "BOBO DEGEN APOCALYPSE",
+            "externalUrl": "https://www.bobodegenapocalypse.com",
+            "twitterUsername": "bobo_degen"
+        },
+        {
+            "slug": "unseen-universe-official",
+            "name": "UNSEEN UNIVERSE Official",
+            "externalUrl": "https://the-art-of-progress.com/",
+            "twitterUsername": "rftpclub"
+        },
+        {
+            "slug": "clashpets-game-pass",
+            "name": "ClashPets Game Pass",
+            "externalUrl": "http://Mint.Clashpets.com",
+            "twitterUsername": "ClashPets"
         }
     ],
-    "genTime": 1653214921796
+    "genTime": 1653703497887
 }

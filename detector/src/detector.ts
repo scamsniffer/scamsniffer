@@ -119,39 +119,48 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
         checkUserId: true,
         checkContent: false
     }
-    let callActionScore = 0
 
-    if (content) {
-        callActionScore = callToActionsKeywords.map(keyword => {
-            const isMatch = compareText(keyword, content)
-            return isMatch ? 2 : 0
-        }).reduce((totalScore: number, score) => totalScore + score, 0)
-    }
+    const twitterInBlackList = BlackList.twitter.find((id) =>
+      id.includes(`${userId}:`)
+    );
 
-    if (callActionScore === 0) {
-        return null
-    }
-
-    const twitterInBlackList = BlackList.twitter.find(id => id === userId)
     if (twitterInBlackList) {
-        return {
-            slug: 'blocked',
-            name: 'Twitter blocked',
-            externalUrl: null,
-            twitterUsername: null,
+        const [twitter, projectSlug] = twitterInBlackList.split(":");
+        const project = allProjects.find((_) => _.slug === projectSlug);
+        if (project) {
+          return {
+            ...project,
+            matchType: "twitter_in_black_list",
             post,
-            matchType: 'twitter_in_black_list',
+          };
         }
     }
 
+    let matchProject = null;
+    let callActionScore = 0;
+    if (content) {
+      callActionScore = callToActionsKeywords
+        .map((keyword) => {
+          const isMatch = compareText(keyword, content);
+          return isMatch ? 2 : 0;
+        })
+        .reduce((totalScore: number, score) => totalScore + score, 0);
+    }
+
+  
+    if (callActionScore === 0) {
+      return null;
+    }
+
+   
+
+
     const skipCheck = nickname && userId ? commonWords.find(word => nickname.includes(word) || userId.includes(word)) : false;
     if (skipCheck) {
-        // console.log('skip check')
         return null
     }
 
     // check nick name
-    let matchProject = null
     if (nickname !== null && flags.checkName) {
         // full match
         matchProject = allProjects.find((_) => _.name === nickname)
