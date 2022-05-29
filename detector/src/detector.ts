@@ -152,8 +152,6 @@ async function _detectScam(post: PostDetail, database: Database): Promise<ScamRe
       return null;
     }
 
-   
-
 
     const skipCheck = nickname && userId ? commonWords.find(word => nickname.includes(word) || userId.includes(word)) : false;
     if (skipCheck) {
