@@ -6,14 +6,20 @@ export type PostDetail = {
     links: string[];
 }
 
+export type CallActionTest = {
+  callActionScore: number;
+  matchWords: string[];
+};
+
 export type ScamResult = {
-    slug: string;
-    name: string;
-    matchType: string,
-    externalUrl: string | null;
-    twitterUsername: string | null;
-    post: PostDetail;
-}
+  slug: string;
+  name: string;
+  matchType: string;
+  externalUrl: string | null;
+  twitterUsername: string | null;
+  post: PostDetail;
+  callActionTest?: CallActionTest | null
+};
 
 export type Project = {
     slug: string;

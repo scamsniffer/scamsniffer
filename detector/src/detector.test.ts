@@ -3,6 +3,8 @@ import { TEST_TWEETS } from "./__fixtures__/testTweets";
 import { BLACK_LIST } from './__fixtures__/blackList'
 import fs from 'fs';
 
+jest.setTimeout(60 * 1000)
+
 describe("Detector", () => {
   const detector = new Detector({});
   describe("detectScam", () => {
@@ -11,7 +13,9 @@ describe("Detector", () => {
         for (let index = 0; index < TEST_TWEETS.length; index++) {
             const result = await detector.detectScam(TEST_TWEETS[index]);
             if (result) {
+                console.log(TEST_TWEETS[index], result);
                 listScam.push(result)
+            } else {
             }
         }
         expect(listScam.length).toEqual(0);
