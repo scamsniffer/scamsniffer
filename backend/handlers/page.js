@@ -13,21 +13,18 @@ async function detectUrl(req, res) {
         host: parsed.host,
       },
     });
-
     const needRefresh = forceDetect
       ? true
       : domainStat
       ? Date.now() - domainStat.lastDetect > 60 * 1000 * 60 * 3
       : true;
-
     await increaseCount("total");
-
+    console.log("needRefresh", needRefresh);
     if (!needRefresh) {
       return {
         isBlack: domainStat.isBlack,
       };
     }
-
     const { data } = await axios.get(process.env.DETECTOR_ENDPOINT, {
       params: {
         link: link,
