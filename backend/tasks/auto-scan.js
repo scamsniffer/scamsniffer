@@ -37,7 +37,7 @@ async function detectRecentDomain() {
     }
   }
 
-  setTimeout(detectRecentDomain, 1000 * 60 * 10);
+  setTimeout(detectRecentDomain, 1000 * 60 * 60 * 2);
 }
 
 detectRecentDomain();
