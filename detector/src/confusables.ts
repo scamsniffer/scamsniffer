@@ -34,7 +34,7 @@ export function clean(str: string) {
     .replace(/[\u200B-\u200D\uFEFF\u2063]/g, "");
 }
 
-function compareTwoStrings(first: string, second: string) {
+export function compareTwoStrings(first: string, second: string) {
   first = first.replace(/\s+/g, "");
   second = second.replace(/\s+/g, "");
 

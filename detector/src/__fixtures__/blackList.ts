@@ -170,4 +170,19 @@ Claim a Twin Tigers Jacket:`,
     content:
       "More 1000 gₒbbₗᵢₙ !\nＷË ＷІᏞᏞ  ₒｆｆēｒ Α   ᏚêⅭₒnժ ᚱéⅼëáｓê\n gₒbbₗᵢₙₛ ₐᎥʀḍᏒop\n\nｃⅼαᵢᛖ ｙоｕｒ gₒbbₗᵢₙₛ ｎОｗ :\n https://goblintown.gift \n\nΟｎｌｙ   Ｌᵢｍᵢtｅｄ   ｃₕₐrₐｃtｅrｓ.  ₐvₐᵢｌａｌｅ    ｂｅ    ｑｕᵢｃｋ\nMₐke sₒme nₒise in GGGGGTown",
   },
+  {
+    id: "1531390288207695872",
+    nickname: "rektOSF",
+    userId: "nft_osf",
+    links: [
+      "https://osf-nft.art",
+      "https://opensea.io/collection/rektguy",
+      "https://osf-nft.art",
+      "https://opensea.io/collection/rektguy",
+      "https://osf-nft.art/",
+      "https://t.co/7xxy8c87q7",
+    ],
+    content:
+      "monthly Airdrop for RLD and rektguy nft holders ... will be available 48hours from now!\n\nclaim at  https://osf-nft.art \n\n https://opensea.io/collection/rektguy… monthly Airdrop for RLD and rektguy nft holders ... will be available 48hours from now!\n\nclaim at  https://osf-nft.art \n\n https://opensea.io/collection/rektguy…",
+  },
 ];

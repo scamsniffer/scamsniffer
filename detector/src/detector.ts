@@ -3,7 +3,7 @@ import type { PostDetail, ScamResult, Database } from "./types";
 import fetch from "isomorphic-fetch";
 // import { parseDomain, ParseResultType } from "parse-domain"
 import urlParser from "url";
-import { fixWordsIfHasUnicode } from "./confusables";
+import { fixWordsIfHasUnicode, compareTwoStrings } from "./confusables";
 
 const REPORT_ENDPOINT = "https://api.scamsniffer.io/report";
 const REPORT_ENDPOINT_DEV = "http://localhost/report";
@@ -145,6 +145,13 @@ async function computeCallToScore(
   };
 }
 
+
+function getDomain(url: string) {
+  const regex = /(?:[\w-]+\.)+[\w-]+/;
+  const result = regex.exec(url)
+  return result && result[0]
+}
+
 async function _detectScam(
   post: PostDetail,
   database: Database
@@ -168,6 +175,7 @@ async function _detectScam(
   const flags = {
     checkName: true,
     checkUserId: true,
+    checkBySim: true,
     checkContent: false,
   };
 
@@ -311,6 +319,73 @@ async function _detectScam(
       }
     }
   }
+
+  if (flags.checkBySim && nickname && userId) {
+    const similarProjects = allProjects
+      .map((_) => {
+        let score = 0;
+        let matchItems = [];
+        let simLimit = 0.5;
+        const projectDomain = _.externalUrl && getDomain(_.externalUrl);
+        const compareItems: [string, string, number][] = [
+          [_.name, nickname, 1],
+        ];
+
+        if (_.twitterUsername) {
+          compareItems.push([_.twitterUsername, userId, 1]);
+        }
+        const nameInContent = content && content.split(" ").includes(_.name);
+        if (nameInContent) {
+          score += 5;
+        }
+        let hasSimLink = false;
+        const uniqueLinks: string[] = [];
+        links.forEach((link: string) => {
+          if (!uniqueLinks.includes(link)) {
+            uniqueLinks.push(link);
+          }
+        });
+
+        if (projectDomain) {
+          uniqueLinks.forEach((_) => {
+            const linkDomain = getDomain(_);
+            if (linkDomain) compareItems.push([linkDomain, projectDomain, 2]);
+          });
+        }
+
+        for (let index = 0; index < compareItems.length; index++) {
+          const [string1, string2, type] = compareItems[index];
+          const sim =
+            (string1 && string2 && compareTwoStrings(string1, string2)) || 0;
+          score += sim > simLimit ? 5 : 0;
+          if (sim > simLimit) matchItems.push(compareItems[index]);
+          if (type == 2) hasSimLink = true;
+        }
+
+        return {
+          hasSimLink,
+          matchItems,
+          project: _,
+          score,
+        };
+      })
+      .filter((_) => _.score > 10)
+      .sort((a, b) => b.score - a.score);
+
+    if (similarProjects.length) {
+      matchProject = similarProjects[0].project;
+      matchType = "check_by_sim";
+      if (similarProjects[0].hasSimLink) {
+        return {
+          ...matchProject,
+          matchType,
+          post,
+          callActionTest,
+        };
+      }
+    }
+  }
+  
   return null;
 }
 
