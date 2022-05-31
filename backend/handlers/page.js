@@ -3,7 +3,7 @@ const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require("../utils/summary");
 const axios = require("axios");
 
-const detectTimeout = 60 * 1000 * 60 * 1;
+const detectTimeout = 60 * 1000 * 60 * 6;
 const DetectorVersion = '0.0.2'
 
 async function detectUrl(req, res) {
