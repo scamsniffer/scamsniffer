@@ -43,7 +43,7 @@ async function detectUrl(req, res) {
       host: parsed.host,
       detail: JSON.stringify(data),
       linkAddress: data.error ? null : data.hackerAddress.join(","),
-      actions: data.error ? null : data.actions.join(","),
+      actions: data.error ? null : data.uniqueActions.join(","),
     });
 
     if (domainStat) {
