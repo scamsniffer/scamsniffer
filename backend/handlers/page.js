@@ -21,9 +21,9 @@ async function detectUrl(req, res) {
     await increaseCount("total");
     console.log("needRefresh", needRefresh);
     if (!needRefresh) {
-      return {
+      return res.json({
         isBlack: domainStat.isBlack,
-      };
+      });
     }
     const { data } = await axios.get(process.env.DETECTOR_ENDPOINT, {
       params: {

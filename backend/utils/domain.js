@@ -9,13 +9,13 @@ function getTopDomain(url) {
     case ParseResultType.Listed: {
       const { hostname, domain, topLevelDomains } = parseResult;
       topDomain = [domain].concat(topLevelDomains).join(".");
-      console.log(`${hostname} belongs to ${topLevelDomains.join(".")}`);
+      // console.log(`${hostname} belongs to ${topLevelDomains.join(".")}`);
       break;
     }
     case ParseResultType.Reserved:
     case ParseResultType.NotListed: {
       const { hostname } = parseResult;
-      console.log(`${hostname} is a reserved or unknown domain`);
+      // console.log(`${hostname} is a reserved or unknown domain`);
       break;
     }
     default:
