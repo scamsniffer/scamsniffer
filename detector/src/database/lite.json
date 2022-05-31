@@ -12580,7 +12580,67 @@
             "name": "ClashPets Game Pass",
             "externalUrl": "http://Mint.Clashpets.com",
             "twitterUsername": "ClashPets"
+        },
+        {
+            "slug": "elftown-wtf",
+            "name": "Elftown.wtf",
+            "externalUrl": "http://Elftown.wtf",
+            "twitterUsername": "ElftownWTF"
+        },
+        {
+            "slug": "jikan-studios",
+            "name": "Jikan Studios",
+            "externalUrl": "https://www.jikanstudios.io/",
+            "twitterUsername": "JIKANSTUDIOS"
+        },
+        {
+            "slug": "officialflipprtool",
+            "name": "Flippr Access Pass",
+            "externalUrl": "https://flipprtool.com",
+            "twitterUsername": "FlipprTool"
+        },
+        {
+            "slug": "tigerbobnft-genesis",
+            "name": "Tigerbob NFT Genesis Collection",
+            "externalUrl": "https://tigerbob.io",
+            "twitterUsername": "tigerbobNFT"
+        },
+        {
+            "slug": "projectatmosv1",
+            "name": "Project Atmos Genesis",
+            "externalUrl": "https://www.bloqparty.xyz/",
+            "twitterUsername": "ProjectAtmos"
+        },
+        {
+            "slug": "yureioffcial",
+            "name": "Yurei: The Lost Spirit",
+            "externalUrl": "https://www.yureispirit.xyz/",
+            "twitterUsername": "YureiSpirit"
+        },
+        {
+            "slug": "thelostapes",
+            "name": "The Lost Apes",
+            "externalUrl": "https://thelostapes.com/",
+            "twitterUsername": "TheLostApesNFT"
+        },
+        {
+            "slug": "goblinai",
+            "name": "GoblinAi",
+            "externalUrl": "https://twitter.com/goblintownai",
+            "twitterUsername": "goblintownai"
+        },
+        {
+            "slug": "minionsilhouete",
+            "name": "MinionSilhouete",
+            "externalUrl": "http://minion-silhouetelfg.com",
+            "twitterUsername": "MinionSilhouete"
+        },
+        {
+            "slug": "cryptoninjapartners",
+            "name": "CryptoNinja Partners",
+            "externalUrl": "https://www.ninja-dao.com/cnp",
+            "twitterUsername": "CryptoNinja_NFT"
         }
     ],
-    "genTime": 1653703497887
+    "genTime": 1653913008874
 }
