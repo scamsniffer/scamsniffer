@@ -1,18 +1,26 @@
-const express = require('express')
-const compression = require('compression')
-const cors = require('cors')
-const { ModelHandler } = require('sequelize-handlers')
-const bodyParser = require('body-parser')
-const app = express()
+require("dotenv").config();
 
-const { ScamList, Summary, DomainSummary, TwitterSummary } = require("./schema");
+const express = require("express");
+const compression = require("compression");
+const cors = require("cors");
+const { ModelHandler } = require("sequelize-handlers");
+const bodyParser = require("body-parser");
+const app = express();
+
+const {
+  ScamList,
+  Summary,
+  DomainSummary,
+  TwitterSummary,
+} = require("./schema");
 const { reportScam, getStatus } = require("./handlers/report");
+const { detectUrl } = require("./handlers/page");
 
-app.use(cors())
-app.use(compression())
+app.use(cors());
+app.use(compression());
 app.use(
   bodyParser.json({
-    limit: '10mb'
+    limit: "10mb",
   })
 );
 
@@ -28,13 +36,13 @@ app.get("/domainSummary", Handlers.DomainSummary.query());
 app.get("/twitterSummary", Handlers.TwitterSummary.query());
 app.get("/summary", Handlers.Summary.query());
 app.get("/getStatus", getStatus);
+app.get("/detect", detectUrl);
 app.post("/report", reportScam);
 
-;
 app.get("*", async (req, res) => {
-  res.send("Hello")
-})
+  res.send("Hello");
+});
 
 module.exports = {
-  app
-}
+  app,
+};

@@ -1,9 +1,4 @@
 
-const {
-  ScamList,
-  Summary,
-  DomainSummary,
-  TwitterSummary,
-} = require("./schema");
+const { init } = require("./schema");
 
-ScamList.sync({ alter: true });
+init();
