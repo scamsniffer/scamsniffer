@@ -3,6 +3,8 @@ const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require("../utils/summary");
 const axios = require("axios");
 
+const detectTimeout = 60 * 1000 * 60 * 3;
+
 async function detectUrl(req, res) {
   const link = req.query.link;
   const forceDetect = req.query.forceDetect;
@@ -16,7 +18,7 @@ async function detectUrl(req, res) {
     const needRefresh = forceDetect
       ? true
       : domainStat
-      ? Date.now() - domainStat.lastDetect > 60 * 1000 * 60 * 3
+      ? Date.now() - domainStat.lastDetect > detectTimeout
       : true;
     await increaseCount("total");
     console.log("needRefresh", needRefresh);
@@ -32,7 +34,7 @@ async function detectUrl(req, res) {
     });
 
     const detectResult = {
-      isBlack: data.uniqueActions.length > 0 ? 1 : 0,
+      isBlack: data.error ? 0 : data.uniqueActions.length > 0 ? 1 : 0,
       lastDetect: Date.now(),
     };
 
