@@ -4,6 +4,7 @@ const { increaseCount } = require("../utils/summary");
 const axios = require("axios");
 
 const detectTimeout = 60 * 1000 * 60 * 1;
+const DetectorVersion = '0.0.1'
 
 async function detectUrl(req, res) {
   const link = req.query.link;
@@ -18,7 +19,9 @@ async function detectUrl(req, res) {
     const needRefresh = forceDetect
       ? true
       : domainStat
-      ? Date.now() - domainStat.lastDetect > detectTimeout
+      ? Date.now() - domainStat.lastDetect > detectTimeout &&
+        domainStat.lastDetectVer &&
+        domainStat.lastDetectVer === DetectorVersion
       : true;
     await increaseCount("total");
     console.log("needRefresh", needRefresh);
@@ -34,8 +37,16 @@ async function detectUrl(req, res) {
     });
 
     const detectResult = {
-      isBlack: domainStat && !forceDetect ? domainStat.isBlack : data.error ? 0 : data.uniqueActions.length > 0 ? 1 : 0,
+      isBlack:
+        domainStat && !forceDetect
+          ? domainStat.isBlack
+          : data.error
+          ? 0
+          : data.uniqueActions.length > 0
+          ? 1
+          : 0,
       lastDetect: Date.now(),
+      lastDetectVer: DetectorVersion,
     };
 
     await DetectHistory.create({
