@@ -97,11 +97,16 @@ const DetectHistory = sequelize.define(
     link: Sequelize.STRING,
     host: Sequelize.STRING,
     detail: Sequelize.STRING,
+    linkAddress: Sequelize.STRING,
+    actions: Sequelize.STRING,
   },
   {
     indexes: [
       {
         fields: ["host"],
+      },
+      {
+        fields: ["actions", "host", "linkAddress"],
       },
     ],
   }
