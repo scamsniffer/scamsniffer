@@ -19,7 +19,7 @@ async function detectUrl(req, res) {
     const needRefresh = forceDetect
       ? true
       : domainStat
-      ? Date.now() - domainStat.lastDetect > detectTimeout &&
+      ? Date.now() - domainStat.lastDetect > detectTimeout ||
         domainStat.lastDetectVer !== DetectorVersion
       : true;
     await increaseCount("total");
