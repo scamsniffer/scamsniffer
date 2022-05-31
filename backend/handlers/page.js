@@ -34,7 +34,7 @@ async function detectUrl(req, res) {
     });
 
     const detectResult = {
-      isBlack: data.error ? 0 : data.uniqueActions.length > 0 ? 1 : 0,
+      isBlack: domainStat && !forceDetect ? domainStat.isBlack : data.error ? 0 : data.uniqueActions.length > 0 ? 1 : 0,
       lastDetect: Date.now(),
     };
 
