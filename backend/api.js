@@ -12,6 +12,7 @@ const {
   Summary,
   DomainSummary,
   TwitterSummary,
+  DetectHistory,
 } = require("./schema");
 const { reportScam, getStatus } = require("./handlers/report");
 const { detectUrl } = require("./handlers/page");
@@ -29,12 +30,14 @@ const Handlers = {
   DomainSummary: new ModelHandler(DomainSummary),
   TwitterSummary: new ModelHandler(TwitterSummary),
   Summary: new ModelHandler(Summary),
+  DetectHistory: new ModelHandler(DetectHistory),
 };
 
 app.get("/scamList", Handlers.ScamList.query());
 app.get("/domainSummary", Handlers.DomainSummary.query());
 app.get("/twitterSummary", Handlers.TwitterSummary.query());
 app.get("/summary", Handlers.Summary.query());
+app.get("/detectHistory", Handlers.DetectHistory.query());
 app.get("/getStatus", getStatus);
 app.get("/detect", detectUrl);
 app.post("/report", reportScam);
