@@ -12641,7 +12641,43 @@
       "name": "CryptoNinja Partners",
       "externalUrl": "https://www.ninja-dao.com/cnp",
       "twitterUsername": "CryptoNinja_NFT"
+    },
+    {
+      "slug": "akumu-dragonz",
+      "name": "Akumu Dragonz",
+      "externalUrl": "https://akumudragonz.io",
+      "twitterUsername": "AkumuDragonz"
+    },
+    {
+      "slug": "rarelandnft",
+      "name": "Rare Land NFT",
+      "externalUrl": "http://mlabs.land",
+      "twitterUsername": "mlabs_one"
+    },
+    {
+      "slug": "illdoit",
+      "name": "Buy this NFT or I'll do it",
+      "externalUrl": null,
+      "twitterUsername": "IlldoitNFT"
+    },
+    {
+      "slug": "gents-croquet-club-official",
+      "name": "Gents Croquet Club",
+      "externalUrl": "http://gentscroquetclub.com",
+      "twitterUsername": "croquetclubnft"
+    },
+    {
+      "slug": "memurs-official",
+      "name": "Memurs - Official",
+      "externalUrl": "http://memursnft.com",
+      "twitterUsername": "MemursNFT"
+    },
+    {
+      "slug": "solful",
+      "name": "Solful",
+      "externalUrl": "https://solful.io/",
+      "twitterUsername": "SolfulNFT"
     }
   ],
-  "genTime": 1653913008874
+  "genTime": 1654049679548
 }
