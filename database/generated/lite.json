@@ -9,7 +9,8 @@
     "minting",
     "Supply",
     "GIVEAWAY",
-    "claim"
+    "claim",
+    "eligible"
   ],
   "commonWords": [
     "bitcoin",
