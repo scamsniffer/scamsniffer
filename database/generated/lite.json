@@ -12677,7 +12677,67 @@
       "name": "Solful",
       "externalUrl": "https://solful.io/",
       "twitterUsername": "SolfulNFT"
+    },
+    {
+      "slug": "pieceofshit-wtf",
+      "name": "ill poop it nft",
+      "externalUrl": "https://pieceofshit.wtf/",
+      "twitterUsername": "pieceofshit_wtf"
+    },
+    {
+      "slug": "zombietown-wtf-official",
+      "name": "zombiestown.wtf",
+      "externalUrl": "http://zombiestown.wtf",
+      "twitterUsername": "zombiestownwtf"
+    },
+    {
+      "slug": "boringone",
+      "name": "Boring One",
+      "externalUrl": "https://mint.boredboy.art/",
+      "twitterUsername": "BoringOneNFT"
+    },
+    {
+      "slug": "hobotownwtf",
+      "name": "hobotown.wtf",
+      "externalUrl": "http://www.hobotown.wtf/",
+      "twitterUsername": "hobotownwtf"
+    },
+    {
+      "slug": "karafuru-x-hypebeast-x-atmos",
+      "name": "Karafuru x HYPEBEAST x atmos",
+      "externalUrl": "https://3d.karafuru.io",
+      "twitterUsername": "KarafuruNFT"
+    },
+    {
+      "slug": "luppyclubofficial",
+      "name": "LuppyclubOfficial",
+      "externalUrl": "https://luppynft.com/",
+      "twitterUsername": "luppy_nft"
+    },
+    {
+      "slug": "quantum-curated",
+      "name": "Quantum Curated",
+      "externalUrl": "https://quantum.art",
+      "twitterUsername": "QuantumNFT"
+    },
+    {
+      "slug": "never-fear-truth-by-jd",
+      "name": "Never Fear Truth  by Johnny Depp",
+      "externalUrl": "http://www.neverfeartruth.com",
+      "twitterUsername": "JohnnyDeppNFT"
+    },
+    {
+      "slug": "goblinpisswtf",
+      "name": "goblinpisswtf",
+      "externalUrl": "https://goblinpisswtf.xyz/",
+      "twitterUsername": "goblinpiss_wtf"
+    },
+    {
+      "slug": "gtburgerswtf",
+      "name": "gtburgers.wtf",
+      "externalUrl": "https://goblintownburgers.xyz",
+      "twitterUsername": "gtburgerswtf"
     }
   ],
-  "genTime": 1654049679548
+  "genTime": 1654213776597
 }
