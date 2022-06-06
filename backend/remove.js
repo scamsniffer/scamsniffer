@@ -5,7 +5,7 @@ const { Op } = require('sequelize')
 DomainSummary.destroy({
   where: {
     topDomain: {
-      [Op.in]: ["premint.xyz", 'synthetix.io', "fractal.is", "nexustracker.io", 'nftgo.io', 'twitter.com', 't.co'],
+      [Op.in]: ["premint.xyz", 'synthetix.io', "fractal.is", "nexustracker.io", 'nftgo.io', 'twitter.com', 't.co', "youtube.com", "etherscan.io"],
     },
   },
 });
