@@ -3,7 +3,7 @@ import { TEST_TWEETS } from "./__fixtures__/testTweets";
 import { BLACK_LIST } from './__fixtures__/blackList'
 import fs from 'fs';
 
-jest.setTimeout(60 * 1000)
+jest.setTimeout(100 * 1000)
 
 describe("Detector", () => {
   const detector = new Detector({});

@@ -1,8 +1,8 @@
 export type PostDetail = {
     id?: string;
-    userId: string | undefined;
-    nickname: string | null;
-    content: string | null;
+    userId?: string | undefined;
+    nickname?: string | null;
+    content?: string | null;
     links: string[];
 }
 
@@ -39,4 +39,11 @@ export type Database = {
   commonWords: string[]
   callToActionsKeywords: string[]
   genTime: number
+};
+
+export type DomainDetail = {
+  topDomain: string | null;
+  domainName: string | null;
+  topLevelDomainsName: string[] | null;
+  host: string | null;
 };

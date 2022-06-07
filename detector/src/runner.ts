@@ -1,0 +1,54 @@
+import { Detector } from "./detector";
+import { TEST_TWEETS } from "./__fixtures__/testTweets";
+import { BLACK_LIST } from "./__fixtures__/blackList";
+
+async function testWhite() {
+    const detector = new Detector({});
+     const listScam = [];
+     for (let index = 0; index < TEST_TWEETS.length; index++) {
+        const startTime = Date.now();
+       const result = await detector.detectScam(TEST_TWEETS[index]);
+       const spend = Date.now() - startTime;
+       if (result) {
+         console.log(TEST_TWEETS[index], result);
+         listScam.push(result);
+       } else {
+       }
+       console.log("spend", spend, index, TEST_TWEETS[index].links, 'isWhite', result === null);
+     }
+
+     console.log(TEST_TWEETS.length, listScam.length);
+}
+
+
+async function testBlack() {
+    const detector = new Detector({});
+   const listScam = [];
+   for (let index = 0; index < BLACK_LIST.length; index++) {
+       const startTime = Date.now();
+     const result = await detector.detectScam(BLACK_LIST[index]);
+      const spend = Date.now() - startTime;
+     if (result) {
+       listScam.push(result);
+     } else {
+       console.log(BLACK_LIST[index], result);
+     }
+     console.log(
+       "spend",
+       spend,
+       index,
+       BLACK_LIST[index].links,
+       "isBlack",
+       result !== null
+     );
+   }
+   console.log(listScam.length, BLACK_LIST.length);
+}
+
+
+async function test() {
+    await testWhite();
+    await testBlack();
+}
+
+test();

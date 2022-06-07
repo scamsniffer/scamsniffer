@@ -185,4 +185,38 @@ Claim a Twin Tigers Jacket:`,
     content:
       "monthly Airdrop for RLD and rektguy nft holders ... will be available 48hours from now!\n\nclaim at  https://osf-nft.art \n\n https://opensea.io/collection/rektguy… monthly Airdrop for RLD and rektguy nft holders ... will be available 48hours from now!\n\nclaim at  https://osf-nft.art \n\n https://opensea.io/collection/rektguy…",
   },
+  {
+    id: "1531422259474313220",
+    nickname: "ApeCoin DAO",
+    userId: "YugaApeCoin",
+    links: [
+      "https://app-apecoin.com/token/claim",
+      "https://app-apecoin.com/token/claim",
+      "https://app-apecoin.com/token/claim",
+      "https://app-apecoin.com/token/claim",
+      "https://t.co/BkOxu4EPHg",
+    ],
+    content:
+      "🚨  The bear market has been brutal...  😬 \n\nTo make it at least a little bit better, we have decided to drop $20 Million of  $APE  from the dev wallet to the NFT community! \n\nAll traders/holders are eligible to participate.\n\n➔  https://app-apecoin.com/token/claim \n➔  https://app-apecoin.com/token/claim 🚨  The bear market has been brutal...  😬 \n\nTo make it at least a little bit better, we have decided to drop $20 Million of  $APE  from the dev wallet to the NFT community! \n\nAll traders/holders are eligible to participate.\n\n➔  https://app-apecoin.com/token/claim \n➔  https://app-apecoin.com/token/claim",
+  },
+  {
+    id: "1532462848789647360",
+    nickname: "goblintown",
+    userId: "nftgoblintown",
+    links: [
+      "https://goblintown.world",
+      "https://goblintown.world",
+      "https://goblintown.world",
+      "https://goblintown.world",
+      "https://t.co/gZLlLWO9tp",
+    ],
+    content:
+      "GM\n\nIt's time to let the goblins out the cage!!\n\nWe are releasing the 1,000 goblins that were reserved by us to the community.\n\nAs always, this is a free airdrop, you only need to pay the fee of current ETH gas.\n\n->  https://goblintown.world \n->  https://goblintown.world GM\n\nIt's time to let the goblins out the cage!!\n\nWe are releasing the 1,000 goblins that were reserved by us to the community.\n\nAs always, this is a free airdrop, you only need to pay the fee of current ETH gas.\n\n->  https://goblintown.world \n->  https://goblintown.world",
+  },
+  // {
+  //   links: ["http://gobilintown.wtf/"],
+  // },
+  // {
+  //   links: ["https://stepnshoesbox.com/"],
+  // },
 ];

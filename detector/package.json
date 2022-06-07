@@ -25,7 +25,7 @@
         "confusables": "^1.1.0",
         "cspell-lib": "^6.0.0",
         "isomorphic-fetch": "^3.0.0",
-        "parse-domain": "^7.0.0",
+        "parse-domain": "3.0.3",
         "ts-jest": "^28.0.2",
         "ts-node": "^10.8.0"
     },
