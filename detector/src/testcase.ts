@@ -10,11 +10,12 @@ async function testWhite() {
        const result = await detector.detectScam(TEST_TWEETS[index]);
        const spend = Date.now() - startTime;
        if (result) {
-         console.log(TEST_TWEETS[index], result);
+         console.error("shouldWhite", TEST_TWEETS[index], result);
          listScam.push(result);
        } else {
+
        }
-       console.log("spend", spend, index, TEST_TWEETS[index].links, 'isWhite', result === null);
+       console.log("spend", spend, index, 'isWhite', result === null);
      }
 
      console.log(TEST_TWEETS.length, listScam.length);
@@ -31,13 +32,12 @@ async function testBlack() {
      if (result) {
        listScam.push(result);
      } else {
-       console.log(BLACK_LIST[index], result);
+       console.error('shouldBlack', BLACK_LIST[index], result);
      }
      console.log(
        "spend",
        spend,
        index,
-       BLACK_LIST[index].links,
        "isBlack",
        result !== null
      );
