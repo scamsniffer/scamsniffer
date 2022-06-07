@@ -506,14 +506,15 @@ async function _detectScam(
               domainSim.linkDomain.topDomain,
             ]);
             if (!domainMeta) continue;
-              const registerDays = domainMeta.events
-                .filter((_: any) => _.eventAction === "registration")
-                .map((_: any) => Date.now() - new Date(_.eventDate).getTime())
-                .sort((a: number, b: number) => b - a)
-                .map((timestamp: number) =>
-                  Math.floor(timestamp / 1000 / 86400)
-                );
+            const registerDays = domainMeta.events
+              .filter((_: any) => _.eventAction === "registration")
+              .map((_: any) => Date.now() - new Date(_.eventDate).getTime())
+              .sort((a: number, b: number) => b - a)
+              .map((timestamp: number) =>
+                Math.floor(timestamp / 1000 / 86400)
+              );
 
+            console.log("registerDays", registerDays);
             const isRecentRegister =
               registerDays.length && registerDays[0] < 90;
             if (isRecentRegister) {

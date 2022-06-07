@@ -47,7 +47,7 @@ async function testBlack() {
 
 
 async function test() {
-    await testWhite();
+    // await testWhite();
     await testBlack();
 }
 
