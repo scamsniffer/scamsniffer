@@ -175,8 +175,8 @@ async function getDomainMeta(domains: string[]) {
       domains[0]
   );
   const res = await req.json();
-  console.log(res);
-  return res.data
+  // console.log(res);
+  return res
 }
 
 async function _detectScam(
@@ -506,7 +506,7 @@ async function _detectScam(
             const domainMeta = await getDomainMeta([
               domainSim.linkDomain.topDomain,
             ]);
-            console.log("domainMeta", domainMeta);
+            // console.log("domainMeta", domainMeta);
             if (!domainMeta) continue;
             const registerDays = domainMeta.events
               .filter((_: any) => _.eventAction === "registration")
