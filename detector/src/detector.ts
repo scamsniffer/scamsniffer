@@ -505,6 +505,7 @@ async function _detectScam(
             const domainMeta = await getDomainMeta([
               domainSim.linkDomain.topDomain,
             ]);
+            console.log("domainMeta", domainMeta);
             if (!domainMeta) continue;
             const registerDays = domainMeta.events
               .filter((_: any) => _.eventAction === "registration")
