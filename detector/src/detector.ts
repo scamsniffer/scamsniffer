@@ -520,8 +520,8 @@ async function _detectScam(
               similarProject = domainSim;
               break;
             }
-          } catch (error) {
-            console.log('error', error)
+          } catch (er) {
+            console.log("failed", er);
           }
         }
 
