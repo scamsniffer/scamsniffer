@@ -213,10 +213,10 @@ Claim a Twin Tigers Jacket:`,
     content:
       "GM\n\nIt's time to let the goblins out the cage!!\n\nWe are releasing the 1,000 goblins that were reserved by us to the community.\n\nAs always, this is a free airdrop, you only need to pay the fee of current ETH gas.\n\n->  https://goblintown.world \n->  https://goblintown.world GM\n\nIt's time to let the goblins out the cage!!\n\nWe are releasing the 1,000 goblins that were reserved by us to the community.\n\nAs always, this is a free airdrop, you only need to pay the fee of current ETH gas.\n\n->  https://goblintown.world \n->  https://goblintown.world",
   },
-  // {
-  //   links: ["http://gobilintown.wtf/"],
-  // },
-  // {
-  //   links: ["https://stepnshoesbox.com/"],
-  // },
+  {
+    links: ["http://gobilintown.wtf/"],
+  },
+  {
+    links: ["https://stepnshoesbox.com/"],
+  },
 ];
