@@ -175,6 +175,7 @@ async function getDomainMeta(domains: string[]) {
       domains[0]
   );
   const res = await req.json();
+  console.log(res);
   return res.data
 }
 
