@@ -474,7 +474,7 @@ async function _detectScam(
               .map((projectWithDomain) => {
                 const aString = projectWithDomain.domain.domainName;
                 const bString = linkDomain.domainName;
-                const simSizeThreshold = 5;
+                const simSizeThreshold = 4;
 
                 let sim = 0;
                 let contain = false;
