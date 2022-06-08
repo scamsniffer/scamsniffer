@@ -171,11 +171,9 @@ function getDomain(url: string) {
 async function getDomainMeta(domains: string[]) {
   console.log("getDomainMeta", domains[0]);
   const req = await fetch(
-    `https://whois.scamsniffer.workers.dev/?https://` +
-      domains[0]
+    `https://whois.scamsniffer.io/?` + domains[0]
   );
   const res = await req.json();
-  // console.log(res);
   return res
 }
 
@@ -508,17 +506,21 @@ async function _detectScam(
             ]);
             // console.log("domainMeta", domainMeta);
             if (!domainMeta) continue;
-            const registerDays = domainMeta.events
-              .filter((_: any) => _.eventAction === "registration")
-              .map((_: any) => Date.now() - new Date(_.eventDate).getTime())
-              .sort((a: number, b: number) => b - a)
-              .map((timestamp: number) =>
-                Math.floor(timestamp / 1000 / 86400)
-              );
+            // const registerDays = domainMeta.events
+            //   .filter((_: any) => _.eventAction === "registration")
+            //   .map((_: any) => Date.now() - new Date(_.eventDate).getTime())
+            //   .sort((a: number, b: number) => b - a)
+            //   .map((timestamp: number) =>
+            //     Math.floor(timestamp / 1000 / 86400)
+            //   );
 
-            console.log("registerDays", registerDays);
+            // console.log("registerDays", registerDays);
             const isRecentRegister =
-              registerDays.length && registerDays[0] < 90;
+              domainMeta.data &&
+              domainMeta.data.creationDate &&
+               Math.floor(Date.now() - new Date(domainMeta.data.creationDate).getTime()/ 1000 / 86400);
+            // const isRecentRegister =
+            //   registerDays.length && registerDays[0] < 90;
             if (isRecentRegister) {
               similarProject = domainSim;
               break;
