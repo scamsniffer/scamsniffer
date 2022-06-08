@@ -518,7 +518,7 @@ async function _detectScam(
             const isRecentRegister =
               domainMeta.data &&
               domainMeta.data.creationDate &&
-               Math.floor(Date.now() - new Date(domainMeta.data.creationDate).getTime()/ 1000 / 86400);
+               Math.floor((Date.now() - new Date(domainMeta.data.creationDate).getTime() ) / 1000 / 86400) < 90;
             // const isRecentRegister =
             //   registerDays.length && registerDays[0] < 90;
             if (isRecentRegister) {
