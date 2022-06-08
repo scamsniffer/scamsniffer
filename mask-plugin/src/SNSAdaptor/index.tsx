@@ -4,6 +4,7 @@ import { type Plugin, usePluginWrapper, usePostInfoDetails } from '@masknet/plug
 import { extractTextFromTypedMessage } from '@masknet/typed-message'
 import type { ScamResult } from '@scamsniffer/detector'
 import ScamAlert from './ScamAlert'
+import ReportButton from './ReportButton'
 import { PluginScamRPC } from '../messages'
 import { useAsync } from 'react-use'
 import { useState } from 'react'
@@ -15,6 +16,7 @@ function Renderer(props: React.PropsWithChildren<{ project: ScamResult }>) {
 
 const sns: Plugin.SNSAdaptor.Definition = {
     ...base,
+    init(signal) {},
     PostInspector: function Component() {
         const links = usePostInfoDetails.mentionedLinks()
         const author = usePostInfoDetails.author()
@@ -36,6 +38,9 @@ const sns: Plugin.SNSAdaptor.Definition = {
             }
         }, [])
         return scamProject ? <Renderer project={scamProject} /> : null
+    },
+    PostActions() {
+        return <ReportButton />
     },
 }
 
