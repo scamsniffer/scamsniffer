@@ -474,19 +474,16 @@ async function _detectScam(
               .map((projectWithDomain) => {
                 const aString = projectWithDomain.domain.domainName;
                 const bString = linkDomain.domainName;
-                const simThreshold = 5;
+                const simSizeThreshold = 5;
 
                 let sim = 0;
                 let contain = false;
-
                 if (aString) {
-                  contain =
-                    bString.length > simThreshold && bString.includes(aString);
-                  sim =
-                    aString.length > simThreshold &&
-                    bString.length > simThreshold
-                      ? compareTwoStrings(aString, bString)
-                      : 0;
+                  let canDoSimTest =
+                    bString.length > simSizeThreshold &&
+                    aString.length > simSizeThreshold;
+                  contain = canDoSimTest && bString.includes(aString);
+                  sim = canDoSimTest ? compareTwoStrings(aString, bString) : 0;
                 }
                 return {
                   contain,
