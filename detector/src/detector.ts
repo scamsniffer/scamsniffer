@@ -172,7 +172,7 @@ function getDomain(url: string) {
 }
 
 async function getDomainMeta(domains: string[]) {
-  console.log("getDomainMeta", domains[0]);
+  // console.log("getDomainMeta", domains[0]);
   const req = await fetch(`https://whois.scamsniffer.io/?` + domains[0]);
   const res = await req.json();
   return res;
@@ -538,7 +538,7 @@ async function _detectScam(
             break;
           }
         } catch (er) {
-          console.log("failed", er);
+          console.error("check failed", er);
         }
       }
 
