@@ -497,6 +497,7 @@ async function _detectScam(
 
         // const domains
         let similarProject = null;
+        let creationDaysOfDomain = -1;
         for (let index = 0; index < domainResult.length; index++) {
           const domainSim = domainResult[index];
           if (!domainSim) continue;
@@ -515,10 +516,13 @@ async function _detectScam(
             //   );
 
             // console.log("registerDays", registerDays);
+            creationDaysOfDomain = domainMeta.data ? Math.floor(
+              (Date.now() - new Date(domainMeta.data.creationDate).getTime()) /
+                1000 /
+                86400
+            ) : -1;
             const isRecentRegister =
-              domainMeta.data &&
-              domainMeta.data.creationDate &&
-               Math.floor((Date.now() - new Date(domainMeta.data.creationDate).getTime() ) / 1000 / 86400) < 90;
+              creationDaysOfDomain != -1 && creationDaysOfDomain < 90;
             // const isRecentRegister =
             //   registerDays.length && registerDays[0] < 90;
             if (isRecentRegister) {
@@ -532,7 +536,7 @@ async function _detectScam(
 
         if (similarProject) {
           const matchProject = similarProject.projectWithDomain.project;
-          const matchType = "match_by_domain_sim";
+          const matchType = "match_by_domain_sim_days:" + creationDaysOfDomain;
           return {
             ...matchProject,
             matchType,
