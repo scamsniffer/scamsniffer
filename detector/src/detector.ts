@@ -522,7 +522,7 @@ async function _detectScam(
                 86400
             ) : -1;
             const isRecentRegister =
-              creationDaysOfDomain != -1 && creationDaysOfDomain < 90;
+              creationDaysOfDomain != -1 && creationDaysOfDomain < 40;
             // const isRecentRegister =
             //   registerDays.length && registerDays[0] < 90;
             if (isRecentRegister) {
