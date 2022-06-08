@@ -18,7 +18,7 @@ async function testWhite() {
        console.log("spend", spend, index, 'isWhite', result === null);
      }
 
-     console.log(TEST_TWEETS.length, listScam.length);
+     console.log(TEST_TWEETS.length, listScam, listScam);
 }
 
 
@@ -42,7 +42,7 @@ async function testBlack() {
        result !== null
      );
    }
-   console.log(listScam.length, BLACK_LIST.length);
+   console.log(listScam.length, BLACK_LIST.length, listScam);
 }
 
 
