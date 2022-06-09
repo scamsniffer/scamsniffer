@@ -12865,7 +12865,91 @@
       "name": "Bulls & Apes Project - Genesis",
       "externalUrl": "https://www.bullsandapesproject.com",
       "twitterUsername": "BullsApesProj"
+    },
+    {
+      "slug": "begin-as-nothing",
+      "name": "Begin as Nothing",
+      "externalUrl": null,
+      "twitterUsername": "BeginAsNothing"
+    },
+    {
+      "slug": "pablos-lol",
+      "name": "pablos.lol",
+      "externalUrl": "https://pablos.lol/",
+      "twitterUsername": "pabloslol"
+    },
+    {
+      "slug": "xwolf",
+      "name": "XWolf",
+      "externalUrl": "http://xwolf.xyz",
+      "twitterUsername": "xwolf_xwarwolf"
+    },
+    {
+      "slug": "dgnkdz",
+      "name": "Degen Kidz",
+      "externalUrl": "http://degenlabz.xyz",
+      "twitterUsername": "DegenLabz"
+    },
+    {
+      "slug": "grimbogs-by-bedbugs",
+      "name": "grimbogs by bedbugs",
+      "externalUrl": "http://bedbugsnft.com",
+      "twitterUsername": "BedbugsNFT"
+    },
+    {
+      "slug": "cheers-up",
+      "name": "Cheers UP Official",
+      "externalUrl": "https://www.cryptonatty.io",
+      "twitterUsername": "CryptoNatty_io"
+    },
+    {
+      "slug": "boredassgoblins",
+      "name": "boredassgoblins",
+      "externalUrl": "https://boredassgoblins.wtf/",
+      "twitterUsername": "boredassgoblins"
+    },
+    {
+      "slug": "shitplunger",
+      "name": "ShitPlunger",
+      "externalUrl": "https://pieceofshit.wtf/",
+      "twitterUsername": "pieceofshit_wtf"
+    },
+    {
+      "slug": "zimmy-raiders",
+      "name": "Zimmy Raiders",
+      "externalUrl": "http://zimmyraiders.io",
+      "twitterUsername": "zimmyraiders"
+    },
+    {
+      "slug": "catbloxpumacapsule",
+      "name": "CatBlox X PUMA Capsule",
+      "externalUrl": "https://www.catblox.xyz",
+      "twitterUsername": "CatBloxStudios"
+    },
+    {
+      "slug": "goda-mint-pass",
+      "name": "The GODA Mint Pass",
+      "externalUrl": "http://thegoda.io",
+      "twitterUsername": "TheGoda_io"
+    },
+    {
+      "slug": "godly-legion",
+      "name": "GODLY LEGION",
+      "externalUrl": null,
+      "twitterUsername": "legiongodlynft"
+    },
+    {
+      "slug": "dobies-collection",
+      "name": "Dobies Collection",
+      "externalUrl": null,
+      "twitterUsername": "DobiesNFT"
+    },
+    {
+      "slug": "rebelsindsgs",
+      "name": "Rebels In Disguise : Generative Collection",
+      "externalUrl": "https://rebelsindisguise.co",
+      "twitterUsername": "REBELSinDSGS"
     }
   ],
-  "genTime": 1654530775702
+  "genTime": 1654756753381
 }
