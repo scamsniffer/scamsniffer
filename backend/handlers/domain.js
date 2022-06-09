@@ -2,9 +2,10 @@ const { lookup } = require("./whois");
 const parseRawData = require("./whois/parsed");
 
 async function lookupDomain(req, res) {
+    let data = null
   try {
     const domain = req.query.domain;
-    const data = await new Promise((resolve, reject) => {
+    data = await new Promise((resolve, reject) => {
       lookup(domain, { timeout: 10 * 1000 }, (err, data) => {
         if (err) {
           return reject(err);
@@ -19,6 +20,7 @@ async function lookupDomain(req, res) {
   } catch (e) {
     console.log("failed", e);
     res.json({
+        raw: data,
       error: e.toString(),
     });
   }
