@@ -63,6 +63,10 @@ const DomainSummary = sequelize.define(
     },
     lastDetect: Sequelize.INTEGER,
     lastDetectVer: Sequelize.STRING,
+    registrar: Sequelize.STRING,
+    creationDate: Sequelize.DATE,
+    expirationDate: Sequelize.DATE,
+    lastUpdatedDate: Sequelize.DATE,
     needReport: {
       type: Sequelize.TINYINT,
       defaultValue: 0,
