@@ -16,7 +16,7 @@ const {
 } = require("./schema");
 const { reportScam, getStatus } = require("./handlers/report");
 const { detectUrl } = require("./handlers/page");
-
+const { lookupDomain } = require("./handlers/domain");
 app.use(cors());
 app.use(compression());
 app.use(
@@ -40,6 +40,7 @@ app.get("/summary", Handlers.Summary.query());
 app.get("/detectHistory", Handlers.DetectHistory.query());
 app.get("/getStatus", getStatus);
 app.get("/detect", detectUrl);
+app.get("/whois/lockup", lookupDomain);
 app.post("/report", reportScam);
 
 app.get("*", async (req, res) => {
