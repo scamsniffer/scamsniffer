@@ -40,7 +40,7 @@ app.get("/summary", Handlers.Summary.query());
 app.get("/detectHistory", Handlers.DetectHistory.query());
 app.get("/getStatus", getStatus);
 app.get("/detect", detectUrl);
-app.get("/whois/lockup", lookupDomain);
+app.get("/whois/lookup", lookupDomain);
 app.post("/report", reportScam);
 
 app.get("*", async (req, res) => {
