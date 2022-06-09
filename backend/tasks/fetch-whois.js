@@ -7,8 +7,11 @@ async function checkAndUpdate(item) {
     const { data: result } = await axios.get(
       `https://whois.scamsniffer.io/?${item.topDomain}`
     );
-    const { data } = result;
-    if (data) {
+    const { data, error } = result;
+    if (error) {
+      item.needReport = 6;
+    }
+    if (data && !error) {
       const creationDaysOfDomain = Math.floor(
         (Date.now() - new Date(data.creationDate).getTime()) / 1000 / 86400
       );
