@@ -1,6 +1,7 @@
 const axios = require("axios");
 const { DomainSummary } = require("../schema");
 const API = `https://api.scamsniffer.io/detect`;
+const { Op } = require('sequelize')
 
 async function checkAndUpdate(item) {
   try {
@@ -38,7 +39,9 @@ async function detectRecentDomain() {
   const recentDomains = await DomainSummary.findAll({
     limit: 12,
     where: {
-      needReport: 0,
+      needReport: {
+        [Op.in]: [0, 6]
+      },
     },
     order: [["id", "desc"]],
   });
