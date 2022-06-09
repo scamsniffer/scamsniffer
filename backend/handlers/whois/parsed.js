@@ -25,7 +25,7 @@ var orgRegex = {
   domainName: "Domain Name: *([^\\s]+)",
   registrar: "Registrar: *(.+)",
   updatedDate: "Updated Date: *(.+)",
-  creationDate: "Creation Date: *(.+)",
+  creationDate: "Creati on Date: *(.+)",
   expirationDate: "Expir\\w+ Date: *(.+)",
   status: "Status: *(.+)",
   notFound: "^NOT FOUND",
@@ -427,12 +427,15 @@ var parseRawData = function (rawData, domain) {
     result.isAvailable = false;
   }
 
-  // console.log('rawData: "' + rawData + '"');
-  // console.log('result ' + JSON.stringify(result));
-
-  // Check to make sure certain fields are set for unknown TLDs to ensure the default pattern matching worked
-  // If not then throw TLD not supported error.
+  if (rawData.indexOf("is available for registration") > -1) {
+    result.isAvailable = true;
+  }
   if (unknownTLD) {
+    // console.log('rawData: "' + rawData + '"');
+    // console.log('result ' + JSON.stringify(result));
+
+    // Check to make sure certain fields are set for unknown TLDs to ensure the default pattern matching worked
+    // If not then throw TLD not supported error.
     if (!result.isAvailable) {
       if (
         !result.hasOwnProperty("creationDate") ||
