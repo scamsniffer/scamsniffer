@@ -12925,7 +12925,31 @@
       "name": "CatBlox X PUMA Capsule",
       "externalUrl": "https://www.catblox.xyz",
       "twitterUsername": "CatBloxStudios"
+    },
+    {
+      "slug": "goda-mint-pass",
+      "name": "The GODA Mint Pass",
+      "externalUrl": "http://thegoda.io",
+      "twitterUsername": "TheGoda_io"
+    },
+    {
+      "slug": "godly-legion",
+      "name": "GODLY LEGION",
+      "externalUrl": null,
+      "twitterUsername": "legiongodlynft"
+    },
+    {
+      "slug": "dobies-collection",
+      "name": "Dobies Collection",
+      "externalUrl": null,
+      "twitterUsername": "DobiesNFT"
+    },
+    {
+      "slug": "rebelsindsgs",
+      "name": "Rebels In Disguise : Generative Collection",
+      "externalUrl": "https://rebelsindisguise.co",
+      "twitterUsername": "REBELSinDSGS"
     }
   ],
-  "genTime": 1654694890520
+  "genTime": 1654756525914
 }
