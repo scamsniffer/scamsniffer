@@ -9,6 +9,7 @@
     "cron": "^1.8.2",
     "dotenv": "^10.0.0",
     "ethers": "^5.5.1",
+    "underscore": "^1.12.1",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.1",
     "express-cluster": "^0.0.5",
