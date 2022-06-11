@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "premint",
+      "name": "PREMINT",
+      "externalUrl": "https://www.premint.xyz/",
+      "twitterUsername": "premint_nft"
+    },
+    {
       "slug": "cryptopunks",
       "name": "CryptoPunks",
       "externalUrl": "https://www.larvalabs.com/cryptopunks",
