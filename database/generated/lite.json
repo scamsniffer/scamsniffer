@@ -141,6 +141,48 @@
       "twitterUsername": "OccultTower"
     },
     {
+      "slug": "beanzofficial",
+      "name": "BEANZ Official",
+      "externalUrl": null,
+      "twitterUsername": "AzukiOfficial"
+    },
+    {
+      "slug": "dobies-collection",
+      "name": "Dobies Collection",
+      "externalUrl": null,
+      "twitterUsername": "DobiesNFT"
+    },
+    {
+      "slug": "we-are-all-going-to-die",
+      "name": "We Are All Going to Die",
+      "externalUrl": null,
+      "twitterUsername": "wagdie_eth"
+    },
+    {
+      "slug": "troll-townwtf",
+      "name": "troll-town.wtf",
+      "externalUrl": null,
+      "twitterUsername": "troll_town_wtf"
+    },
+    {
+      "slug": "begin-as-nothing",
+      "name": "Begin as Nothing",
+      "externalUrl": null,
+      "twitterUsername": "BeginAsNothing"
+    },
+    {
+      "slug": "godly-legion",
+      "name": "GODLY LEGION",
+      "externalUrl": null,
+      "twitterUsername": "legiongodlynft"
+    },
+    {
+      "slug": "tower-of-the-occult",
+      "name": "Tower of the Occult",
+      "externalUrl": null,
+      "twitterUsername": "OccultTower"
+    },
+    {
       "slug": "trippin-ape-tribe-solana",
       "name": "Trippin’ Ape Tribe",
       "externalUrl": "https://trippinapetribe.xyz",
@@ -34209,5 +34251,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1654920283284
+  "genTime": 1654923985254
 }
