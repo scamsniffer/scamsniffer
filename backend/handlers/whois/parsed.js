@@ -139,6 +139,13 @@ var euRegex = {
   notFound: "Status: AVAILABLE",
 };
 
+var ggRegex = {
+  domainName: "Domain: *([^\\n\\r]+)",
+  registrar: "Registrar: *\\n *Name: *([^\\n\\r]+)",
+  creationDate: "Registered on \\s*(.+)",
+};
+
+
 var eeRegex = {
   domainName: "Domain: *[\\n\\r]+s*name: *([^\\n\\r]+)",
   status: "Domain: *[\\n\\r]+\\s*name: *[^\\n\\r]+\\sstatus: *([^\\n\\r]+)",
@@ -365,6 +372,8 @@ var parseRawData = function (rawData, domain) {
     domainRegex = isRegex;
   } else if (domain.endsWith(".co")) {
     domainRegex = coRegex;
+  } else if (domain.endsWith(".gg")) {
+    domainRegex = ggRegex;
   } else {
     domainRegex = defaultRegex;
     unknownTLD = true;
