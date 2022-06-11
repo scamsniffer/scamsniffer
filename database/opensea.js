@@ -363,12 +363,14 @@
     console.log("collectionProjects", collectionProjects);
   }
 
-  async function fetcDelta() {
+  async function fetchDelta() {
     const isRun = localStorage.getItem("fetch_delat") !== null;
     if (isRun) {
-      return;
+      const isRecent =
+        Date.now() - localStorage.getItem("fetch_delat") < 60 * 1000 * 10;
+      if (isRecent) return;
     }
-    localStorage.setItem("fetch_delat", 1);
+    localStorage.setItem("fetch_delat", Date.now());
     try {
       const req = await fetch(remoteData);
       const database = await req.json();
@@ -377,7 +379,15 @@
       const parsedCollections = [];
       const delayTime = 1;
       const newCollections = collections.filter(
-        (_) => !ProjectList.find((c) => c.slug === _.slug)
+        (_) => {
+          const matchProject = ProjectList.find((c) => c.slug === _.slug);
+          if (
+            matchProject && (matchProject.twitterUsername == null || matchProject.externalUrl == null) 
+          ) {
+            return true
+          }
+          return matchProject === null;
+        }
       );
       for (let index = 0; index < newCollections.length; index++) {
         const collection = newCollections[index];
@@ -407,7 +417,10 @@
             .slice(0, 3)
             .map((_) => _.name)
             .join(", ");
-        database.ProjectList = database.ProjectList.concat(collectionProjects);
+        database.ProjectList = [].concat(
+          collectionProjects,
+          database.ProjectList
+        );
         database.genTime = Date.now();
         await updateDatabase(database, commietMesage);
       } else {
@@ -416,11 +429,11 @@
     } catch (e) {
       alert(e);
     }
-    localStorage.removeItem("fetch_delat");
+    // localStorage.removeItem("fetch_delat");
   }
 
   async function autoFetchTask() {
-    await fetcDelta();
+    await fetchDelta();
     setTimeout(autoFetchTask, 60 * 1000 * 60);
   }
   autoFetchTask();

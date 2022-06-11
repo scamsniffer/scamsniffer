@@ -60,7 +60,7 @@ async function loadList(page = 0) {
 // }
 
 (async () => {
-    const maxPage = 15;
+    const maxPage = 50;
     allMarkets = []
     for (let index = 0; index < maxPage; index++) {
         const list = await loadList(index)
