@@ -6,7 +6,7 @@ async function getAndReport() {
   const needReportDomains = await DomainSummary.findAll({
     limit: 10,
     where: {
-      needReport: 2,
+      needReport: 1,
       reported: 0,
     },
   });
