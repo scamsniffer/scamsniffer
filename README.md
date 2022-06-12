@@ -5,7 +5,7 @@
 </a>
 <!-- markdownlint-enable no-inline-html first-line-heading -->
 
-# Scam Sniffer
+*****
 
 Scam Sniffer is a plugin build upon Mask Network which can help us against with the scammers
 
