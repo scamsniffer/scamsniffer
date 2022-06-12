@@ -27,6 +27,306 @@
   ],
   "ProjectList": [
     {
+      "name": "Just Ape.",
+      "slug": "justape",
+      "externalUrl": "https://justape.co",
+      "twitterUsername": "justape_"
+    },
+    {
+      "name": "Great Goats",
+      "slug": "great__goats",
+      "externalUrl": "https://greatgoats.io/",
+      "twitterUsername": "greatgoatsnft"
+    },
+    {
+      "name": "Okay Bears",
+      "slug": "okay_bears",
+      "externalUrl": "https://www.okaybears.com",
+      "twitterUsername": "okaybears"
+    },
+    {
+      "name": "Vandal City",
+      "slug": "vandal_city",
+      "externalUrl": "https://www.vandalcity.io/",
+      "twitterUsername": "VandalCityCorp"
+    },
+    {
+      "name": "Trippin' Ape Tribe",
+      "slug": "trippin_ape_tribe",
+      "externalUrl": "https://www.trippinapetribe.xyz/",
+      "twitterUsername": "TrippinApeNFT"
+    },
+    {
+      "name": "DeGods",
+      "slug": "degods",
+      "externalUrl": "https://degods.com/",
+      "twitterUsername": "degodsnft"
+    },
+    {
+      "name": "Blocksmith Labs",
+      "slug": "blocksmith_labs",
+      "externalUrl": "https://www.blocksmithlabs.com/",
+      "twitterUsername": "blocksmithlabs"
+    },
+    {
+      "name": "MegaWobs by Wobblebug",
+      "slug": "wobblebug",
+      "externalUrl": "https://wobblebug.info",
+      "twitterUsername": "wobblebug"
+    },
+    {
+      "name": "Genesis Genopet Habitats",
+      "slug": "genesis_genopets_habitats",
+      "externalUrl": "http://genopets.me/",
+      "twitterUsername": "genopets"
+    },
+    {
+      "name": "GhostKidDAO",
+      "slug": "ghost_kid_dao",
+      "externalUrl": "https://www.ghostkid.io/",
+      "twitterUsername": "GhostKidDAO"
+    },
+    {
+      "name": "Cubist Collective",
+      "slug": "cubistnft",
+      "externalUrl": "https://cubistcollective.com/",
+      "twitterUsername": "CubistNFT"
+    },
+    {
+      "name": "SkelliesDAO",
+      "slug": "skelliesdao",
+      "externalUrl": "https://www.skelliesdao.net/",
+      "twitterUsername": "SkelliesDAO"
+    },
+    {
+      "name": "FatCats Capital",
+      "slug": "fatcats_capital",
+      "externalUrl": "https://fatcatscapital.com/",
+      "twitterUsername": "FatCatsCapital"
+    },
+    {
+      "name": "Shin Sengoku",
+      "slug": "shin_sengoku",
+      "externalUrl": "",
+      "twitterUsername": "shinsengokuNFT"
+    },
+    {
+      "name": "SHROUD",
+      "slug": "shroud",
+      "externalUrl": "",
+      "twitterUsername": "ShroudedNFT"
+    },
+    {
+      "name": "Communi3: Mad Scientists",
+      "slug": "communi3",
+      "externalUrl": "",
+      "twitterUsername": "communi3_io"
+    },
+    {
+      "name": "Susanoo",
+      "slug": "susanoo",
+      "externalUrl": "https://susanoo.io",
+      "twitterUsername": "Susanoo50"
+    },
+    {
+      "name": "Ghostface GEN 2",
+      "slug": "ghostface_gen_2",
+      "externalUrl": "https://www.ghostfacelabs.com/",
+      "twitterUsername": "GhostfaceNFT"
+    },
+    {
+      "name": "SOL Decoder",
+      "slug": "soldecoder",
+      "externalUrl": "https://soldecoder.app/",
+      "twitterUsername": "SOL_Decoder"
+    },
+    {
+      "name": "Hello Pantha",
+      "slug": "hello_pantha",
+      "externalUrl": "https://hellopantha.com/",
+      "twitterUsername": "HelloPantha"
+    },
+    {
+      "name": "Looties",
+      "slug": "looties",
+      "externalUrl": "",
+      "twitterUsername": "LootiesNFT"
+    },
+    {
+      "name": "CETS ON CRECK",
+      "slug": "cets_on_creck",
+      "externalUrl": "https://cetsoncreck.com/",
+      "twitterUsername": "CetsOnCreck"
+    },
+    {
+      "name": "Famous Fox Federation",
+      "slug": "famous_fox_federation",
+      "externalUrl": "https://famousfoxes.com",
+      "twitterUsername": "famousfoxfed"
+    },
+    {
+      "name": "Genopets",
+      "slug": "genopets",
+      "externalUrl": "",
+      "twitterUsername": ""
+    },
+    {
+      "name": "OG Atadians",
+      "slug": "atadians",
+      "externalUrl": "https://atadia.io",
+      "twitterUsername": "atadia_io"
+    },
+    {
+      "name": "Suteki",
+      "slug": "suteki",
+      "externalUrl": "https://www.suteki.io/",
+      "twitterUsername": "Suteki_NFT"
+    },
+    {
+      "name": "Kaizoku Mechanics",
+      "slug": "kaizoku_mechanics",
+      "externalUrl": "https://www.kaizokumechanics.io",
+      "twitterUsername": "k_mechanics"
+    },
+    {
+      "name": "The Catalina Whale Mixer",
+      "slug": "the_catalina_whale_mixer",
+      "externalUrl": "https://www.catalinawhalemixer.com/",
+      "twitterUsername": "catalinawhales"
+    },
+    {
+      "name": "Degenerate Ape Academy",
+      "slug": "degenerate_ape_academy",
+      "externalUrl": "https://www.degenape.academy/",
+      "twitterUsername": "DegenApeAcademy"
+    },
+    {
+      "name": "Moonly",
+      "slug": "moonly",
+      "externalUrl": "https://moon.ly",
+      "twitterUsername": "moonlynft"
+    },
+    {
+      "name": "Jikan Studios",
+      "slug": "jikan",
+      "externalUrl": "https://jikanstudios.io",
+      "twitterUsername": "JIKANSTUDIOS"
+    },
+    {
+      "name": "Meta Hunters",
+      "slug": "meta_hunters",
+      "externalUrl": "https://www.metahuntersnft.com",
+      "twitterUsername": "metahuntersnft?s=21&t=MhHbjQCWaiLvs98JH6XxdA"
+    },
+    {
+      "name": "Kirin Kingdom",
+      "slug": "kirin_kingdom",
+      "externalUrl": "https://kirin-kingdom.com/",
+      "twitterUsername": "Kirin_Kingdom"
+    },
+    {
+      "name": "Bohemia",
+      "slug": "bohemia_",
+      "externalUrl": "https://www.bohemia.gallery/",
+      "twitterUsername": "BohemiaArtFair"
+    },
+    {
+      "name": "Stoned Ape Crew",
+      "slug": "stoned_ape_crew",
+      "externalUrl": "https://stonedapecrew.com",
+      "twitterUsername": "StonedApeCrew"
+    },
+    {
+      "name": "Smart Sea Society",
+      "slug": "smart_sea_society",
+      "externalUrl": "https://www.smartseasociety.com/",
+      "twitterUsername": "SmartSeaSociety"
+    },
+    {
+      "name": "Droid Capital",
+      "slug": "droid_capital",
+      "externalUrl": "https://droidcapital.net/",
+      "twitterUsername": "droidcapital"
+    },
+    {
+      "name": "Solana Monkey Business",
+      "slug": "solana_monkey_business",
+      "externalUrl": "",
+      "twitterUsername": ""
+    },
+    {
+      "name": "Chorles's Sacraments",
+      "slug": "spores",
+      "externalUrl": "https://www.trippinapetribe.xyz/",
+      "twitterUsername": "TrippinApeNFT"
+    },
+    {
+      "name": "Fantastic Flippers",
+      "slug": "fantastic_flippers",
+      "externalUrl": "",
+      "twitterUsername": "FantasticFlipp"
+    },
+    {
+      "name": "SOLFUL",
+      "slug": "solful",
+      "externalUrl": "https://solful.io/",
+      "twitterUsername": "SolfulNFT"
+    },
+    {
+      "name": "Transdimensional Fox Federation",
+      "slug": "transdimensional_fox_federation",
+      "externalUrl": "",
+      "twitterUsername": ""
+    },
+    {
+      "name": "Lost Boy Club",
+      "slug": "lostboyclub",
+      "externalUrl": "",
+      "twitterUsername": "LOSTBOY_CLUB"
+    },
+    {
+      "name": "Tatsumeeko: Meekolony Pass",
+      "slug": "meekolony",
+      "externalUrl": "https://www.tatsumeeko.com/meekolony",
+      "twitterUsername": "meekolony"
+    },
+    {
+      "name": "TombStoned High Society",
+      "slug": "tombstoned",
+      "externalUrl": "https://www.tombstoned.xyz/",
+      "twitterUsername": "TombStonedHS"
+    },
+    {
+      "name": "Photo Finish",
+      "slug": "photo_finish",
+      "externalUrl": "",
+      "twitterUsername": "photofinishgame?s=20"
+    },
+    {
+      "name": "Bot Head",
+      "slug": "bothead",
+      "externalUrl": "https://bothead.io",
+      "twitterUsername": "Bot_Head_NFT"
+    },
+    {
+      "name": "Taiyo Robotics",
+      "slug": "taiyo_robotics",
+      "externalUrl": "https://taiyorobotics.com/",
+      "twitterUsername": "TaiyoRobotics"
+    },
+    {
+      "name": "SolRarity - Rarikeys",
+      "slug": "rarikeys",
+      "externalUrl": "https://solrarity.app",
+      "twitterUsername": "SolRarity_"
+    },
+    {
+      "name": "Smoke Heads",
+      "slug": "smokeheads",
+      "externalUrl": "https://smokeheads.io/",
+      "twitterUsername": "smokeheadsnft"
+    },
+    {
       "slug": "premint",
       "name": "PREMINT",
       "externalUrl": "https://www.premint.xyz/",
