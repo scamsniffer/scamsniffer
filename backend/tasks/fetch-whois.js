@@ -2,6 +2,7 @@ const axios = require("axios");
 const { DomainSummary } = require("../schema");
 const API = `https://api.scamsniffer.io/detect`;
 const { Op } = require('sequelize')
+const dayLimit = 20;
 
 async function checkAndUpdate(item) {
   try {
@@ -22,7 +23,7 @@ async function checkAndUpdate(item) {
       item.registrar = data.registrar;
       item.lastUpdatedDate = data.updatedDate;
 
-      if (creationDaysOfDomain < 30) {
+      if (creationDaysOfDomain < dayLimit) {
         item.needReport = 1;
       } else {
         item.needReport = 2;
