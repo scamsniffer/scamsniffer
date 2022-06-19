@@ -82,6 +82,7 @@ async function detectUrl(req, res) {
       isBlack: detectResult.isBlack,
     });
   } catch (e) {
+    console.error('error', e)
     res.json({
         error: e.toString()
     }); 
