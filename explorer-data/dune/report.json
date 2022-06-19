@@ -1,0 +1,1132 @@
+{
+  "linkers": {
+    "\\x368d5aa463c1523b54c273eefb17e3e664ad29f7": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x5a3407deb15d21ac08f6f5c50e6184b56b73636f": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x268db1a4803ef83bea92c8ab9e7f7b3d29cfdbc2": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x1163e1bdbdcb19b0a6637b76ceef4d5276162387": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x6dca22e6fa3e3a1dac39756ea0d7c0bfc3c72277": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xb026c4df232649f689a954b9cdfdea31047748d3": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xf471ca1f4bb0005c1c072a04e6a5d68fc98ac4c9": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x3da336601df9dccb0203f57922c919649a8981d8": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xf237b6d94b7965b8704be07310b3a482713ea989": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x92dde69936e27607476206dd61ad251093919c4a": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x7171f569e2728702236116ad8a6e25c2c0575677": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x452400942a5c8ac78d364837a01f539c387032be": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xe1a90aeea02477074f79f1853bcb4280a9b13076": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xff1349a2da386974e07262d35a46bc2e3d4ddfec": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x6a37240b02bd40199ce9acdb4b35c3386be0670b": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x069318856aed8d295536c1bc45295572dd6e36f5": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\xfd8c6d16c36db5ab4f5839257cd29e6d3dd45b5a": "0x3da336601dF9DCCb0203f57922C919649A8981d8",
+    "\\x1e146355d7fbf6b1615b4dedb7f515b6531557cc": "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572",
+    "\\x24b63e111c66272c838d0cca3e899ea1f0a64fce": "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572",
+    "\\x2ff73c3c58b05729eef52d51c7e44dbaaf735d91": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\xc1e83260ba7e592dd44764b83a62277a94b6cbab": "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572",
+    "\\x578fde24036085df4aeeb07da9e469f13941c957": "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572",
+    "\\x3435178e61336bd1368c9261c99741618eca0585": "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572",
+    "\\x3bafe44f9437652dec4aa7295a3ab700515a19e0": "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB",
+    "\\xaa01c987952db328de3aee15a06f38c7981ae8fb": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02": "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB",
+    "\\xccb6d6dcbd42d572aac069053c84d60f6a91b141": "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB",
+    "\\x8ca82bb2406d23775d8a94d6d32e0b153227c079": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\xb5affa37c3fb6ca0cdd77ed9bfe423b644a9a7cd": "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB",
+    "\\x101864c31fabacb4138400d121ac07253e482da8": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x023302d5f1a7c671e04b6770b80fa381bb9f52f3": "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB",
+    "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6": "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+    "\\xd3ed4e39917805550a3fe4bfbc02455fee945e9d": "0xd3ED4E39917805550A3fE4bFbC02455FEe945e9D",
+    "\\xcebdb7d808aaeb86419b51c0ce92ad74037970f4": "0xd3ED4E39917805550A3fE4bFbC02455FEe945e9D",
+    "\\x077180381571c6c825cbaf761a57c19e87e86170": "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+    "\\x0402841a13ada1ad5c5e8dc3ddc5496dade7329c": "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+    "\\x92c582a59582ae1c150e69125b2ea08e7594b6c9": "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+    "\\x96e1f25fc52d2a380685c95ad64a88833f908fb4": "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+    "\\x474741e2d2c0a223b7e1c49db6b5b8c8d6e0affb": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\x8dc472c69b061fc82e23eb26d8578ad3e705c1d1": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\xbeebb41e235dd301622b1458441d2dd5b6049729": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\x0e0c34ab19454a16f481d40d244b6ce1c3099b5a": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\x8931516e929f4c3a5aff67dd9cc4e5d2b11a37a0": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\x05532aedddc2c4efb10e03dd6a3fe210bc5f582a": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\x141e96378c49a76fa60e87b2bef95d8a94e095a0": "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+    "\\xd2faaf4e3cf1d0cdacc7006851323f8f24fbbb56": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\xefc419d241c5493716f8383d5bf49ffbf0c65e9c": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\x2f35c7983d7bd79fbab2c58c684cd050c41abba8": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\xe00f3a94fec61b53d804249c507ec10df4dbc39b": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\xd546aecba38aba6cf8b8070d20edc50e4de3f86d": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\x3d67b36b0561263cdc46063819498932e74b5684": "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+    "\\x9e55c339054425bc06b9a22705772e444cb5cd6c": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x344fe9f763caaf65c7e2ef1add5f4e5c9c684e05": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x000a4e3884895dad3436214ca1f57647fb352455": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x4dba22c61b8818c94de797680840d25b1e2623b4": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\xc04032bcbcce4d43ef978cc808f1d2da5c0db3c3": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x74d8672f0ad83545a68cb438a5a33645317a2d6c": "0x4DBa22C61B8818c94dE797680840d25B1E2623B4",
+    "\\x4d097fa542d45fc8871e65ce19f568677fd8af7f": "0xe455395Bd3468069e0F506E22e13F61666EBa36A",
+    "\\xe455395bd3468069e0f506e22e13f61666eba36a": "0xe455395Bd3468069e0F506E22e13F61666EBa36A",
+    "\\x40881dd5b6482854fc01d010ed99fd346f0608b1": "0x40881dD5B6482854Fc01d010ed99fd346f0608B1",
+    "\\xe192aacbeba8afab8fe10eb637f838f8d06684ce": "0x4c3C6fda65cec9Fe3Fe341e3c494811207Af8Ba3",
+    "\\xbc4def958a7da5990c4baab653d790f90946c747": "0x880693f6fa17395914a9C6f280f6aF6eEC6Ea195",
+    "\\x4c3c6fda65cec9fe3fe341e3c494811207af8ba3": "0x4c3C6fda65cec9Fe3Fe341e3c494811207Af8Ba3",
+    "\\x4721fcf90fe83f86bffa4e5f224694299b075c32": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\x2972eae9922e57db8e60df69b756943314499c3e": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\xe53fde7c5c8e6c6ea6d891c7af7f2d2417b3893b": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\x301e1c94fccf7c1451fc25683cf2f641cda5f68a": "0x880693f6fa17395914a9C6f280f6aF6eEC6Ea195",
+    "\\xfc751cf450d0d101e9623cc9f70ce7ed34a5f5af": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\x8918657b5a9f2b8789a9c976e7239a3a4a7d16d9": "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+    "\\x880693f6fa17395914a9c6f280f6af6eec6ea195": "0x880693f6fa17395914a9C6f280f6aF6eEC6Ea195",
+    "\\x68cd875cf91f37d2038593563d5c313762b0079f": "0x880693f6fa17395914a9C6f280f6aF6eEC6Ea195",
+    "\\x7e4384ad48860ae13107b8c8a2b877191edfe2a6": "0x7e4384AD48860AE13107b8c8A2B877191edFe2a6",
+    "\\x9e55f15ed879256c7a48c6f5bd799b2249fad04a": "0x7e4384AD48860AE13107b8c8A2B877191edFe2a6",
+    "\\x5aaf521411379ba4cddcfd7e24f8ef71881c6305": "0x6831176e6d49Ae91016EBb276598C1f227a7AE52",
+    "\\xe42a6fa53acacc4ae817b020985b4018169bc0ca": "0x6831176e6d49Ae91016EBb276598C1f227a7AE52",
+    "\\xde9eada7159a4a5c4fb1d568cfc9ed09bac7b02c": "0x6831176e6d49Ae91016EBb276598C1f227a7AE52",
+    "\\x0572bf64c12cab0b2760972823f84307b1f3b22a": "0x6831176e6d49Ae91016EBb276598C1f227a7AE52"
+  },
+  "attack_receivers": [
+    "\\x368d5aa463c1523b54c273eefb17e3e664ad29f7",
+    "\\x5a3407deb15d21ac08f6f5c50e6184b56b73636f",
+    "\\x268db1a4803ef83bea92c8ab9e7f7b3d29cfdbc2",
+    "\\x1163e1bdbdcb19b0a6637b76ceef4d5276162387",
+    "\\x6dca22e6fa3e3a1dac39756ea0d7c0bfc3c72277",
+    "\\xb026c4df232649f689a954b9cdfdea31047748d3",
+    "\\xf471ca1f4bb0005c1c072a04e6a5d68fc98ac4c9",
+    "\\x3da336601df9dccb0203f57922c919649a8981d8",
+    "\\xf237b6d94b7965b8704be07310b3a482713ea989",
+    "\\x92dde69936e27607476206dd61ad251093919c4a",
+    "\\x7171f569e2728702236116ad8a6e25c2c0575677",
+    "\\x452400942a5c8ac78d364837a01f539c387032be",
+    "\\xe1a90aeea02477074f79f1853bcb4280a9b13076",
+    "\\xff1349a2da386974e07262d35a46bc2e3d4ddfec",
+    "\\x6a37240b02bd40199ce9acdb4b35c3386be0670b",
+    "\\x069318856aed8d295536c1bc45295572dd6e36f5",
+    "\\xfd8c6d16c36db5ab4f5839257cd29e6d3dd45b5a",
+    "\\x1e146355d7fbf6b1615b4dedb7f515b6531557cc",
+    "\\x24b63e111c66272c838d0cca3e899ea1f0a64fce",
+    "\\x2ff73c3c58b05729eef52d51c7e44dbaaf735d91",
+    "\\xc1e83260ba7e592dd44764b83a62277a94b6cbab",
+    "\\x578fde24036085df4aeeb07da9e469f13941c957",
+    "\\x3435178e61336bd1368c9261c99741618eca0585",
+    "\\x3bafe44f9437652dec4aa7295a3ab700515a19e0",
+    "\\xaa01c987952db328de3aee15a06f38c7981ae8fb",
+    "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+    "\\xccb6d6dcbd42d572aac069053c84d60f6a91b141",
+    "\\x8ca82bb2406d23775d8a94d6d32e0b153227c079",
+    "\\xb5affa37c3fb6ca0cdd77ed9bfe423b644a9a7cd",
+    "\\x101864c31fabacb4138400d121ac07253e482da8",
+    "\\x023302d5f1a7c671e04b6770b80fa381bb9f52f3",
+    "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+    "\\xd3ed4e39917805550a3fe4bfbc02455fee945e9d",
+    "\\xcebdb7d808aaeb86419b51c0ce92ad74037970f4",
+    "\\x077180381571c6c825cbaf761a57c19e87e86170",
+    "\\x0402841a13ada1ad5c5e8dc3ddc5496dade7329c",
+    "\\x92c582a59582ae1c150e69125b2ea08e7594b6c9",
+    "\\x96e1f25fc52d2a380685c95ad64a88833f908fb4",
+    "\\x474741e2d2c0a223b7e1c49db6b5b8c8d6e0affb",
+    "\\x8dc472c69b061fc82e23eb26d8578ad3e705c1d1",
+    "\\xbeebb41e235dd301622b1458441d2dd5b6049729",
+    "\\x0e0c34ab19454a16f481d40d244b6ce1c3099b5a",
+    "\\x8931516e929f4c3a5aff67dd9cc4e5d2b11a37a0",
+    "\\x05532aedddc2c4efb10e03dd6a3fe210bc5f582a",
+    "\\x141e96378c49a76fa60e87b2bef95d8a94e095a0",
+    "\\xd2faaf4e3cf1d0cdacc7006851323f8f24fbbb56",
+    "\\xefc419d241c5493716f8383d5bf49ffbf0c65e9c",
+    "\\x2f35c7983d7bd79fbab2c58c684cd050c41abba8",
+    "\\xe00f3a94fec61b53d804249c507ec10df4dbc39b",
+    "\\xd546aecba38aba6cf8b8070d20edc50e4de3f86d",
+    "\\x3d67b36b0561263cdc46063819498932e74b5684",
+    "\\x9e55c339054425bc06b9a22705772e444cb5cd6c",
+    "\\x344fe9f763caaf65c7e2ef1add5f4e5c9c684e05",
+    "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+    "\\x000a4e3884895dad3436214ca1f57647fb352455",
+    "\\x4dba22c61b8818c94de797680840d25b1e2623b4",
+    "\\xc04032bcbcce4d43ef978cc808f1d2da5c0db3c3",
+    "\\x74d8672f0ad83545a68cb438a5a33645317a2d6c",
+    "\\x4d097fa542d45fc8871e65ce19f568677fd8af7f",
+    "\\xe455395bd3468069e0f506e22e13f61666eba36a",
+    "\\x40881dd5b6482854fc01d010ed99fd346f0608b1",
+    "\\xe192aacbeba8afab8fe10eb637f838f8d06684ce",
+    "\\xbc4def958a7da5990c4baab653d790f90946c747",
+    "\\x4c3c6fda65cec9fe3fe341e3c494811207af8ba3",
+    "\\x4721fcf90fe83f86bffa4e5f224694299b075c32",
+    "\\x2972eae9922e57db8e60df69b756943314499c3e",
+    "\\xe53fde7c5c8e6c6ea6d891c7af7f2d2417b3893b",
+    "\\x301e1c94fccf7c1451fc25683cf2f641cda5f68a",
+    "\\xfc751cf450d0d101e9623cc9f70ce7ed34a5f5af",
+    "\\x8918657b5a9f2b8789a9c976e7239a3a4a7d16d9",
+    "\\x880693f6fa17395914a9c6f280f6af6eec6ea195",
+    "\\x68cd875cf91f37d2038593563d5c313762b0079f",
+    "\\x7e4384ad48860ae13107b8c8a2b877191edfe2a6",
+    "\\x9e55f15ed879256c7a48c6f5bd799b2249fad04a",
+    "\\x5aaf521411379ba4cddcfd7e24f8ef71881c6305",
+    "\\xe42a6fa53acacc4ae817b020985b4018169bc0ca",
+    "\\xde9eada7159a4a5c4fb1d568cfc9ed09bac7b02c",
+    "\\x0572bf64c12cab0b2760972823f84307b1f3b22a"
+  ],
+  "totalLostValueInETH": 64.87609000000003,
+  "totalTokens": 52,
+  "twitterUsers": [],
+  "topLostCollections": [
+    {
+      "name": "Otherdeed for Otherside",
+      "lostValue": 18.409999999999997,
+      "tokens": 7,
+      "victims": [
+        "0x5bbce58940e10a953ad691659c84b203167bfd3e",
+        "0x74d430673640c39e0d1141a5430f40c22d3f1ffe",
+        "0x8664b714ee145f12f69c7146d99d717ae6c1a1f2",
+        "0xdad19177128fc63b9de5aac7c9afb08ede8830dd",
+        "0xf8e4c363c10eee4ad50b1fafb19aba4643c48101",
+        "0x083cd964bc0397a233acd79c5e25409cdd73be0d",
+        "0x0e3bcd1efd366092248ac733af93f57fdaba5a12"
+      ]
+    },
+    {
+      "name": "Doodles",
+      "lostValue": 12.6,
+      "tokens": 1,
+      "victims": [
+        "0x767e47b65604305b1d81a756a003700c55bfe7d2"
+      ]
+    },
+    {
+      "name": "Meebits",
+      "lostValue": 12.299999999999999,
+      "tokens": 3,
+      "victims": [
+        "0x2970e851db41c76be622f9862d16c3310206451e",
+        "0x7c00c9f0e7aed440c0c730a9bd9ee4f49de20d5c",
+        "0xfd4d633bf8c27bf4ff83e2180592ba764aedd1ba"
+      ]
+    },
+    {
+      "name": "10KTF",
+      "lostValue": 6.399,
+      "tokens": 10,
+      "victims": [
+        "0x70412fa0515063f3435f008bf89c9d87edf26548",
+        "0x63f160ae33cf1b5a9b75c11ca7ea5a7c01a7627e"
+      ]
+    },
+    {
+      "name": "Invisible Friends",
+      "lostValue": 2.99,
+      "tokens": 1,
+      "victims": [
+        "0x7a147c88ba775c566366698a164ae018de9867b6"
+      ]
+    },
+    {
+      "name": "BEANZ Official",
+      "lostValue": 2.7,
+      "tokens": 2,
+      "victims": [
+        "0x6cf266157f268b8a32ee5f0df10a43a944d2fb10",
+        "0xbe69dde0a051e72e18871be52cf506e419058f11"
+      ]
+    },
+    {
+      "name": "Sappy Seals",
+      "lostValue": 1.935,
+      "tokens": 3,
+      "victims": [
+        "0x48ae3c4e1f933e781bf7bb444e32267fda5eaf4e",
+        "0x7813d37cb9d88a42c9a97b6deee1951eb5c08a21",
+        "0xccab108a65e134c5f76a7bf349b99374b17de2c7"
+      ]
+    },
+    {
+      "name": "The Art of Seasons",
+      "lostValue": 1.49,
+      "tokens": 1,
+      "victims": [
+        "0xcca6f823d1d4da10646ff397722dff94e825214f"
+      ]
+    },
+    {
+      "name": "IO: Imaginary Ones",
+      "lostValue": 1.08,
+      "tokens": 3,
+      "victims": [
+        "0x2e5e5064b9302e03c7dbe5f80b434cece61099d4",
+        "0x4981b305ed3f71f24345af979d9e651d5692e3b6",
+        "0x00000007d259e6b322766529ac387b53a1584724"
+      ]
+    },
+    {
+      "name": "VeeFriends Series 2",
+      "lostValue": 0.96,
+      "tokens": 2,
+      "victims": [
+        "0x49fc3b4cd2c7208b6b7e51e0d231fbdba9a18409",
+        "0x912c3afb20b8ac9c2a4f157a817db16a8bef4d6d"
+      ]
+    }
+  ],
+  "victim": [
+    {
+      "user": "0x767e47b65604305b1d81a756a003700c55bfe7d2",
+      "ens_name": [],
+      "lostValue": 12.6,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x767e47b65604305b1d81a756a003700c55bfe7d2",
+          "name": "Doodles",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 289,
+          "floorPrice": 12.6,
+          "lostValue": 12.6
+        }
+      ]
+    },
+    {
+      "user": "0x70412fa0515063f3435f008bf89c9d87edf26548",
+      "ens_name": [],
+      "lostValue": 5.7591,
+      "details": [
+        {
+          "counts": 9,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x70412fa0515063f3435f008bf89c9d87edf26548",
+          "name": "10KTF",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 106,
+          "floorPrice": 0.6399,
+          "lostValue": 5.7591
+        }
+      ]
+    },
+    {
+      "user": "0x2970e851db41c76be622f9862d16c3310206451e",
+      "ens_name": [],
+      "lostValue": 4.1,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x2970e851db41c76be622f9862d16c3310206451e",
+          "name": "Meebits",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 288,
+          "floorPrice": 4.1,
+          "lostValue": 4.1
+        }
+      ]
+    },
+    {
+      "user": "0x7c00c9f0e7aed440c0c730a9bd9ee4f49de20d5c",
+      "ens_name": [
+        "kryptonik.eth"
+      ],
+      "lostValue": 4.1,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-15T00:00:00+00:00",
+          "ens_name": [
+            "kryptonik.eth"
+          ],
+          "from": "0x7c00c9f0e7aed440c0c730a9bd9ee4f49de20d5c",
+          "name": "Meebits",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 288,
+          "floorPrice": 4.1,
+          "lostValue": 4.1
+        }
+      ]
+    },
+    {
+      "user": "0xfd4d633bf8c27bf4ff83e2180592ba764aedd1ba",
+      "ens_name": [],
+      "lostValue": 4.1,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-15T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xfd4d633bf8c27bf4ff83e2180592ba764aedd1ba",
+          "name": "Meebits",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 288,
+          "floorPrice": 4.1,
+          "lostValue": 4.1
+        }
+      ]
+    },
+    {
+      "user": "0x7a147c88ba775c566366698a164ae018de9867b6",
+      "ens_name": [],
+      "lostValue": 2.99,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-14T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x7a147c88ba775c566366698a164ae018de9867b6",
+          "name": "Invisible Friends",
+          "to": "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+          "rank": 258,
+          "floorPrice": 2.99,
+          "lostValue": 2.99
+        }
+      ]
+    },
+    {
+      "user": "0x5bbce58940e10a953ad691659c84b203167bfd3e",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x5bbce58940e10a953ad691659c84b203167bfd3e",
+          "name": "Otherdeed for Otherside",
+          "to": "\\x68cd875cf91f37d2038593563d5c313762b0079f",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0x74d430673640c39e0d1141a5430f40c22d3f1ffe",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x74d430673640c39e0d1141a5430f40c22d3f1ffe",
+          "name": "Otherdeed for Otherside",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0x8664b714ee145f12f69c7146d99d717ae6c1a1f2",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x8664b714ee145f12f69c7146d99d717ae6c1a1f2",
+          "name": "Otherdeed for Otherside",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0xdad19177128fc63b9de5aac7c9afb08ede8830dd",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xdad19177128fc63b9de5aac7c9afb08ede8830dd",
+          "name": "Otherdeed for Otherside",
+          "to": "\\x68cd875cf91f37d2038593563d5c313762b0079f",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0xf8e4c363c10eee4ad50b1fafb19aba4643c48101",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xf8e4c363c10eee4ad50b1fafb19aba4643c48101",
+          "name": "Otherdeed for Otherside",
+          "to": "\\x68cd875cf91f37d2038593563d5c313762b0079f",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0x083cd964bc0397a233acd79c5e25409cdd73be0d",
+      "ens_name": [],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-14T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x083cd964bc0397a233acd79c5e25409cdd73be0d",
+          "name": "Otherdeed for Otherside",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0x0e3bcd1efd366092248ac733af93f57fdaba5a12",
+      "ens_name": [
+        "wannabewhale.eth"
+      ],
+      "lostValue": 2.63,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-15T00:00:00+00:00",
+          "ens_name": [
+            "wannabewhale.eth"
+          ],
+          "from": "0x0e3bcd1efd366092248ac733af93f57fdaba5a12",
+          "name": "Otherdeed for Otherside",
+          "to": "\\x68cd875cf91f37d2038593563d5c313762b0079f",
+          "rank": 296,
+          "floorPrice": 2.63,
+          "lostValue": 2.63
+        }
+      ]
+    },
+    {
+      "user": "0xcca6f823d1d4da10646ff397722dff94e825214f",
+      "ens_name": [],
+      "lostValue": 1.49,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-14T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xcca6f823d1d4da10646ff397722dff94e825214f",
+          "name": "The Art of Seasons",
+          "to": "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+          "rank": 92,
+          "floorPrice": 1.49,
+          "lostValue": 1.49
+        }
+      ]
+    },
+    {
+      "user": "0x6cf266157f268b8a32ee5f0df10a43a944d2fb10",
+      "ens_name": [],
+      "lostValue": 1.35,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x6cf266157f268b8a32ee5f0df10a43a944d2fb10",
+          "name": "BEANZ Official",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 277,
+          "floorPrice": 1.35,
+          "lostValue": 1.35
+        }
+      ]
+    },
+    {
+      "user": "0xbe69dde0a051e72e18871be52cf506e419058f11",
+      "ens_name": [],
+      "lostValue": 1.35,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xbe69dde0a051e72e18871be52cf506e419058f11",
+          "name": "BEANZ Official",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 277,
+          "floorPrice": 1.35,
+          "lostValue": 1.35
+        }
+      ]
+    },
+    {
+      "user": "0x98fca56dac18c2b7639642000c4471eb836c2925",
+      "ens_name": [
+        "lianli.eth"
+      ],
+      "lostValue": 0.68,
+      "details": [
+        {
+          "counts": 2,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [
+            "lianli.eth"
+          ],
+          "from": "0x98fca56dac18c2b7639642000c4471eb836c2925",
+          "name": "Crypto Coven",
+          "to": "\\x000a4e3884895dad3436214ca1f57647fb352455",
+          "rank": 80,
+          "floorPrice": 0.34,
+          "lostValue": 0.68
+        }
+      ]
+    },
+    {
+      "user": "0x48ae3c4e1f933e781bf7bb444e32267fda5eaf4e",
+      "ens_name": [
+        "jpgjeff.eth"
+      ],
+      "lostValue": 0.645,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-12T00:00:00+00:00",
+          "ens_name": [
+            "jpgjeff.eth"
+          ],
+          "from": "0x48ae3c4e1f933e781bf7bb444e32267fda5eaf4e",
+          "name": "Sappy Seals",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 100,
+          "floorPrice": 0.645,
+          "lostValue": 0.645
+        }
+      ]
+    },
+    {
+      "user": "0x7813d37cb9d88a42c9a97b6deee1951eb5c08a21",
+      "ens_name": [],
+      "lostValue": 0.645,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-12T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x7813d37cb9d88a42c9a97b6deee1951eb5c08a21",
+          "name": "Sappy Seals",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 100,
+          "floorPrice": 0.645,
+          "lostValue": 0.645
+        }
+      ]
+    },
+    {
+      "user": "0xccab108a65e134c5f76a7bf349b99374b17de2c7",
+      "ens_name": [],
+      "lostValue": 0.645,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-12T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xccab108a65e134c5f76a7bf349b99374b17de2c7",
+          "name": "Sappy Seals",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 100,
+          "floorPrice": 0.645,
+          "lostValue": 0.645
+        }
+      ]
+    },
+    {
+      "user": "0x63f160ae33cf1b5a9b75c11ca7ea5a7c01a7627e",
+      "ens_name": [],
+      "lostValue": 0.6399,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-09T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x63f160ae33cf1b5a9b75c11ca7ea5a7c01a7627e",
+          "name": "10KTF",
+          "to": "\\xfc751cf450d0d101e9623cc9f70ce7ed34a5f5af",
+          "rank": 106,
+          "floorPrice": 0.6399,
+          "lostValue": 0.6399
+        }
+      ]
+    },
+    {
+      "user": "0x3d67b36b0561263cdc46063819498932e74b5684",
+      "ens_name": [],
+      "lostValue": 0.53,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x3d67b36b0561263cdc46063819498932e74b5684",
+          "name": "PXN: Ghost Division",
+          "to": "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+          "rank": 262,
+          "floorPrice": 0.53,
+          "lostValue": 0.53
+        },
+        {
+          "counts": 4,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x3d67b36b0561263cdc46063819498932e74b5684",
+          "name": "Art Blocks Curated",
+          "to": "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+          "rank": 295,
+          "floorPrice": null,
+          "lostValue": 0
+        }
+      ]
+    },
+    {
+      "user": "0x49fc3b4cd2c7208b6b7e51e0d231fbdba9a18409",
+      "ens_name": [
+        "买我发财哦老板.eth"
+      ],
+      "lostValue": 0.48,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [
+            "买我发财哦老板.eth"
+          ],
+          "from": "0x49fc3b4cd2c7208b6b7e51e0d231fbdba9a18409",
+          "name": "VeeFriends Series 2",
+          "to": "\\x024adee2b2dd52d0ff28b15a9f481da5b84eab02",
+          "rank": 226,
+          "floorPrice": 0.48,
+          "lostValue": 0.48
+        }
+      ]
+    },
+    {
+      "user": "0x912c3afb20b8ac9c2a4f157a817db16a8bef4d6d",
+      "ens_name": [
+        "clickpop.eth"
+      ],
+      "lostValue": 0.48,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [
+            "clickpop.eth"
+          ],
+          "from": "0x912c3afb20b8ac9c2a4f157a817db16a8bef4d6d",
+          "name": "VeeFriends Series 2",
+          "to": "\\xd3ed4e39917805550a3fe4bfbc02455fee945e9d",
+          "rank": 226,
+          "floorPrice": 0.48,
+          "lostValue": 0.48
+        }
+      ]
+    },
+    {
+      "user": "0xa2c73ccfe236890f1c975827134ccdee39ee4771",
+      "ens_name": [],
+      "lostValue": 0.4778,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xa2c73ccfe236890f1c975827134ccdee39ee4771",
+          "name": "0N1 Force",
+          "to": "\\x8ca82bb2406d23775d8a94d6d32e0b153227c079",
+          "rank": 267,
+          "floorPrice": 0.2688,
+          "lostValue": 0.2688
+        },
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xa2c73ccfe236890f1c975827134ccdee39ee4771",
+          "name": "Sneaky Vampire Syndicate",
+          "to": "\\x8ca82bb2406d23775d8a94d6d32e0b153227c079",
+          "rank": 213,
+          "floorPrice": 0.209,
+          "lostValue": 0.209
+        }
+      ]
+    },
+    {
+      "user": "0xc8cdd1edc7cdd932a17c7fbefe416b29a6b5ae45",
+      "ens_name": [],
+      "lostValue": 0.459,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-09T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xc8cdd1edc7cdd932a17c7fbefe416b29a6b5ae45",
+          "name": "3Landers",
+          "to": "\\xe00f3a94fec61b53d804249c507ec10df4dbc39b",
+          "rank": 250,
+          "floorPrice": 0.459,
+          "lostValue": 0.459
+        }
+      ]
+    },
+    {
+      "user": "0x2e5e5064b9302e03c7dbe5f80b434cece61099d4",
+      "ens_name": [],
+      "lostValue": 0.36,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x2e5e5064b9302e03c7dbe5f80b434cece61099d4",
+          "name": "IO: Imaginary Ones",
+          "to": "\\x8918657b5a9f2b8789a9c976e7239a3a4a7d16d9",
+          "rank": 137,
+          "floorPrice": 0.36,
+          "lostValue": 0.36
+        }
+      ]
+    },
+    {
+      "user": "0x4981b305ed3f71f24345af979d9e651d5692e3b6",
+      "ens_name": [],
+      "lostValue": 0.36,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x4981b305ed3f71f24345af979d9e651d5692e3b6",
+          "name": "IO: Imaginary Ones",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 137,
+          "floorPrice": 0.36,
+          "lostValue": 0.36
+        }
+      ]
+    },
+    {
+      "user": "0x00000007d259e6b322766529ac387b53a1584724",
+      "ens_name": [],
+      "lostValue": 0.36,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x00000007d259e6b322766529ac387b53a1584724",
+          "name": "IO: Imaginary Ones",
+          "to": "\\x301e1c94fccf7c1451fc25683cf2f641cda5f68a",
+          "rank": 137,
+          "floorPrice": 0.36,
+          "lostValue": 0.36
+        }
+      ]
+    },
+    {
+      "user": "0xb529c10199aaccb0cc417a53555fdd61ebd285e7",
+      "ens_name": [],
+      "lostValue": 0.345,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-13T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xb529c10199aaccb0cc417a53555fdd61ebd285e7",
+          "name": "Adam Bomb Squad",
+          "to": "\\x8918657b5a9f2b8789a9c976e7239a3a4a7d16d9",
+          "rank": 210,
+          "floorPrice": 0.345,
+          "lostValue": 0.345
+        }
+      ]
+    },
+    {
+      "user": "0xfb6df3b2cc383abee7070e36a982166e45f71289",
+      "ens_name": [],
+      "lostValue": 0.2688,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-12T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xfb6df3b2cc383abee7070e36a982166e45f71289",
+          "name": "0N1 Force",
+          "to": "\\x023302d5f1a7c671e04b6770b80fa381bb9f52f3",
+          "rank": 267,
+          "floorPrice": 0.2688,
+          "lostValue": 0.2688
+        }
+      ]
+    },
+    {
+      "user": "0x73c1851533ec949fb22df7e672e547e8404650a8",
+      "ens_name": [],
+      "lostValue": 0.2245,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-14T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x73c1851533ec949fb22df7e672e547e8404650a8",
+          "name": "Los Muertos World",
+          "to": "\\x8918657b5a9f2b8789a9c976e7239a3a4a7d16d9",
+          "rank": 27,
+          "floorPrice": 0.2245,
+          "lostValue": 0.2245
+        }
+      ]
+    },
+    {
+      "user": "0xcaf26f178d777a1a735b3cbb8a306101e06c4907",
+      "ens_name": [],
+      "lostValue": 0.19,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-10T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xcaf26f178d777a1a735b3cbb8a306101e06c4907",
+          "name": "Loser Club Official",
+          "to": "\\xd3ed4e39917805550a3fe4bfbc02455fee945e9d",
+          "rank": 32,
+          "floorPrice": 0.19,
+          "lostValue": 0.19
+        }
+      ]
+    },
+    {
+      "user": "0xd3ed4e39917805550a3fe4bfbc02455fee945e9d",
+      "ens_name": [],
+      "lostValue": 0.19,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0xd3ed4e39917805550a3fe4bfbc02455fee945e9d",
+          "name": "Loser Club Official",
+          "to": "\\x68da372a96aca53e159ae8d72d6ffa267780d3d6",
+          "rank": 32,
+          "floorPrice": 0.19,
+          "lostValue": 0.19
+        }
+      ]
+    },
+    {
+      "user": "0x5fa0c65e6e8f2d1ce5c7ba6e9a2d559031b81967",
+      "ens_name": [],
+      "lostValue": 0.16799,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-09T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x5fa0c65e6e8f2d1ce5c7ba6e9a2d559031b81967",
+          "name": "CatBlox Genesis Collection",
+          "to": "\\x6dca22e6fa3e3a1dac39756ea0d7c0bfc3c72277",
+          "rank": 86,
+          "floorPrice": 0.16799,
+          "lostValue": 0.16799
+        }
+      ]
+    },
+    {
+      "user": "0x6b46f0a41b18cdf803a9f91b3a6df5101629eed8",
+      "ens_name": [],
+      "lostValue": 0.165,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-09T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x6b46f0a41b18cdf803a9f91b3a6df5101629eed8",
+          "name": "DourDarcels",
+          "to": "\\xa0f6ff6aca3a401766f96356e822d92576a42cc5",
+          "rank": 125,
+          "floorPrice": 0.165,
+          "lostValue": 0.165
+        }
+      ]
+    },
+    {
+      "user": "0x8f8008aa1444966e83cb08752697ea7022e88d25",
+      "ens_name": [],
+      "lostValue": 0.16,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-11T00:00:00+00:00",
+          "ens_name": [],
+          "from": "0x8f8008aa1444966e83cb08752697ea7022e88d25",
+          "name": "Killer GF",
+          "to": "\\x101864c31fabacb4138400d121ac07253e482da8",
+          "rank": 211,
+          "floorPrice": 0.16,
+          "lostValue": 0.16
+        }
+      ]
+    },
+    {
+      "user": "0x9218a98c54b31befa734cfd2a469e34f68dad5e0",
+      "ens_name": [
+        "michaelrusakov.eth"
+      ],
+      "lostValue": 0.154,
+      "details": [
+        {
+          "counts": 1,
+          "day": "2022-06-09T00:00:00+00:00",
+          "ens_name": [
+            "michaelrusakov.eth"
+          ],
+          "from": "0x9218a98c54b31befa734cfd2a469e34f68dad5e0",
+          "name": "GENE_SIS: The Girls of Armament",
+          "to": "\\x96e1f25fc52d2a380685c95ad64a88833f908fb4",
+          "rank": 16,
+          "floorPrice": 0.154,
+          "lostValue": 0.154
+        }
+      ]
+    }
+  ],
+  "allAttackers": [
+    {
+      "host": "goblintown.gift",
+      "transferETH": [],
+      "approve": [
+        "0x3da336601dF9DCCb0203f57922C919649A8981d8"
+      ]
+    },
+    {
+      "host": "elftownz.wtf",
+      "transferETH": [],
+      "approve": [
+        "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572"
+      ]
+    },
+    {
+      "host": "beginasnothing.art",
+      "transferETH": [],
+      "approve": [
+        "0x3da336601dF9DCCb0203f57922C919649A8981d8"
+      ]
+    },
+    {
+      "host": "qobllmtown.wtf",
+      "transferETH": [
+        "0xaa01c987952db328de3aee15a06f38c7981ae8fb"
+      ],
+      "approve": [
+        "0xAa01c987952Db328De3aEe15A06F38c7981aE8FB"
+      ]
+    },
+    {
+      "host": "goblin-town.net",
+      "transferETH": [],
+      "approve": [
+        "0xd3ED4E39917805550A3fE4bFbC02455FEe945e9D"
+      ]
+    },
+    {
+      "host": "goblin-town.app",
+      "transferETH": [],
+      "approve": [
+        "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+        "0xd3ED4E39917805550A3fE4bFbC02455FEe945e9D"
+      ]
+    },
+    {
+      "host": "piecesofshit.wtf",
+      "transferETH": [],
+      "approve": [
+        "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+        "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572"
+      ]
+    },
+    {
+      "host": "get-goblin.town",
+      "transferETH": [],
+      "approve": [
+        "0x2F35C7983D7BD79fbaB2c58C684CD050C41AbBA8",
+        "0x2cBAc16b230dd3bFA0463785977EA0Ef954C4Bde",
+        "0x92c582a59582AE1C150e69125b2Ea08e7594b6c9",
+        "0xd3ED4E39917805550A3fE4bFbC02455FEe945e9D"
+      ]
+    },
+    {
+      "host": "nft-ftc.com",
+      "transferETH": [],
+      "approve": [
+        "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+        "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572"
+      ]
+    },
+    {
+      "host": "claimchimpersnft.xyz",
+      "transferETH": [],
+      "approve": [
+        "0xCc0b488dba202Cb0945DF6c49a1EDd69705Cb2b8"
+      ]
+    },
+    {
+      "host": "rektguy.art",
+      "transferETH": [],
+      "approve": [
+        "0xD23E368689ad3FaBa1817D220A56068e9527B600",
+        "0xA31573be292BD03d36DB137B6C2AB6eAA3d5e572"
+      ]
+    },
+    {
+      "host": "goblintown.live",
+      "transferETH": [],
+      "approve": [
+        "0xD23E368689ad3FaBa1817D220A56068e9527B600"
+      ]
+    },
+    {
+      "host": "goblintowm.wtf",
+      "transferETH": [],
+      "approve": [
+        "0x4DBa22C61B8818c94dE797680840d25B1E2623B4"
+      ]
+    },
+    {
+      "host": "goblintown.world",
+      "transferETH": [],
+      "approve": [
+        "0xe455395Bd3468069e0F506E22e13F61666EBa36A",
+        "0x40881dD5B6482854Fc01d010ed99fd346f0608B1",
+        "0x4c3C6fda65cec9Fe3Fe341e3c494811207Af8Ba3",
+        "0x4721FCf90fE83F86bfFa4e5f224694299b075c32",
+        "0x880693f6fa17395914a9C6f280f6aF6eEC6Ea195"
+      ]
+    },
+    {
+      "host": "app-apecoin.com",
+      "transferETH": [],
+      "approve": [
+        "0x7e4384AD48860AE13107b8c8A2B877191edFe2a6"
+      ]
+    },
+    {
+      "host": "goblintown.top",
+      "transferETH": [],
+      "approve": [
+        "0x73a6c0b87197d1306d4867bd3043C30DEa622c9d"
+      ]
+    },
+    {
+      "host": "osf-nft.art",
+      "transferETH": [],
+      "approve": [
+        "0x6831176e6d49Ae91016EBb276598C1f227a7AE52"
+      ]
+    }
+  ]
+}
