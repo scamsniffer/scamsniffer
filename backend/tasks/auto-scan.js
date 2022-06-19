@@ -13,7 +13,7 @@ async function detectDomain(link) {
 
 async function detectRecentDomain() {
   const recentDomains = await DomainSummary.findAll({
-    limit: 30,
+    limit: 20,
     order: [
         ['id', 'desc']
     ],
@@ -37,7 +37,7 @@ async function detectRecentDomain() {
     }
   }
 
-  setTimeout(detectRecentDomain, 1000 * 60 * 60 * 2);
+  setTimeout(detectRecentDomain, 1000 * 60 * 30);
 }
 
 detectRecentDomain();
