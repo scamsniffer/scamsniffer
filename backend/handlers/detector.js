@@ -1,6 +1,7 @@
 const { Detector } = require("@scamsniffer/detector");
 const { increaseCount } = require("../utils/summary");
 const { DomainSummary, DetectHistory, ScamList } = require("../schema");
+const { getTopDomain } = require("../utils/domain");
 
 const detector = new Detector({
   onlyBuiltIn: false,
