@@ -56,12 +56,27 @@ async function testLink() {
         // onlyLink: true
       })
     );
+
+   console.log( await detector.detectScam({
+      id: "1522002974624534528",
+      nickname: "Luis Naranjo",
+      userId: "luisnaranjo733",
+      content:
+        "If software supply chain attacks through npm don't scare the shit out of you, you're not paying close enough attention.\n" +
+        "\n" +
+        "@SocketSecurity sounds like an awesome product. I'll be using https://t.co/WjjoAF7Yq3 instead of https://t.co/5v5q2ja2Hc to browse npm packages going forward https://t.co/LM5O6hKRck",
+      links: [
+        "http://socket.dev",
+        "http://npmjs.org",
+        "https://twitter.com/SocketSecurity/status/1521876809339580418",
+      ],
+    }))
 }
 
 async function test() {
     await testWhite();
     await testBlack();
-    await testLink();
+    // await testLink();
 }
 
 test();

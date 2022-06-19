@@ -376,12 +376,12 @@ async function _detectScam(
 
 
     const projectsWithDomain: { project: Project; domain: DomainDetail }[] = [];
-    const scoreLimit = 5;
+    const scoreLimit = 10;
     const similarProjects = allProjects
       .map((_) => {
         let score = 0;
         let matchItems = [];
-        let simLimit = 0.45;
+        let simLimit = 0.65;
 
         const projectName = _.name;
         // const projectDomain = _.externalUrl && getDomain(_.externalUrl);
@@ -431,7 +431,7 @@ async function _detectScam(
             compareItems.push([
               domain.domainName,
               projectName.toLowerCase(),
-              2,
+              1,
             ]);
         });
 
@@ -456,7 +456,7 @@ async function _detectScam(
           score,
         };
       })
-      .filter((_) => _.score >= scoreLimit)
+      .filter((_) => _.score > scoreLimit)
       .sort((a, b) => b.score - a.score);
 
     if (similarProjects.length && (fuzzyTwitterCheck || options.onlyLink)) {
@@ -514,7 +514,6 @@ async function _detectScam(
                       : 0;
                   }
                 }
-
                 return {
                   contain,
                   projectWithDomain,
