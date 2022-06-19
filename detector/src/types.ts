@@ -18,7 +18,8 @@ export type ScamResult = {
   externalUrl: string | null;
   twitterUsername: string | null;
   post: PostDetail;
-  callActionTest?: CallActionTest | null
+  callActionTest?: CallActionTest | null;
+  domainMeta?: any
 };
 
 export type Project = {
@@ -45,5 +46,6 @@ export type DomainDetail = {
   topDomain: string | null;
   domainName: string | null;
   topLevelDomainsName: string[] | null;
+  subDomainsName: string[] | null;
   host: string | null;
 };

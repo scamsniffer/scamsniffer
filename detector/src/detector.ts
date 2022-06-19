@@ -18,16 +18,18 @@ const remoteDatabase =
   "https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json";
 const miniumWordsLength = 4;
 
-function getTopDomainFromUrl(url: string): DomainDetail | null {
+export function getTopDomainFromUrl(url: string): DomainDetail | null {
   let topDomain = null;
   let domainName = null;
   let topLevelDomainsName: string[] = [];
+  let subDomainsName: string[] = [];
   const host = urlParser.parse(url).host;
   if (host === null) return null;
   const parseResult = parseDomain(host);
   switch (parseResult.type) {
     case ParseResultType.Listed: {
-      const { hostname, domain, topLevelDomains } = parseResult;
+      const { hostname, domain, topLevelDomains, subDomains } = parseResult;
+      if (subDomains) subDomainsName = subDomains;
       topDomain = [domain].concat(topLevelDomains).join(".");
       if (domain) domainName = domain;
       if (topLevelDomains) topLevelDomainsName = topLevelDomains;
@@ -44,6 +46,7 @@ function getTopDomainFromUrl(url: string): DomainDetail | null {
   return {
     topDomain,
     domainName,
+    subDomainsName,
     topLevelDomainsName,
     host,
   };
@@ -172,7 +175,6 @@ function getDomain(url: string) {
 }
 
 async function getDomainMeta(domains: string[]) {
-  // console.log("getDomainMeta", domains[0]);
   const req = await fetch(`https://whois.scamsniffer.io/?` + domains[0]);
   const res = await req.json();
   return res;
@@ -180,7 +182,8 @@ async function getDomainMeta(domains: string[]) {
 
 async function _detectScam(
   post: PostDetail,
-  database: Database
+  database: Database,
+  options: any = {}
 ): Promise<ScamResult | null> {
   const { nickname, content, userId, links } = post;
   const {
@@ -367,22 +370,20 @@ async function _detectScam(
           });
 
         if (isInWhiteList) {
-          // console.log("isInWhiteList", link);
         }
       }
     });
 
-    if (!fuzzyTwitterCheck) {
-      // console.log(uniqueDomains);
-    }
 
     const projectsWithDomain: { project: Project; domain: DomainDetail }[] = [];
-
+    const scoreLimit = 5;
     const similarProjects = allProjects
       .map((_) => {
         let score = 0;
         let matchItems = [];
         let simLimit = 0.45;
+
+        const projectName = _.name;
         // const projectDomain = _.externalUrl && getDomain(_.externalUrl);
         const projectDomainDetail =
           _.externalUrl && getTopDomainFromUrl(_.externalUrl);
@@ -409,23 +410,37 @@ async function _detectScam(
 
         let hasSimLink = false;
 
-        if (projectDomainDetail && projectDomainDetail.domainName) {
-          uniqueDomains.forEach((domain) => {
-            if (projectDomainDetail.domainName)
-              compareItems.push([
-                domain.domainName,
-                projectDomainDetail.domainName,
-                2,
-              ]);
-          });
-        }
+        uniqueDomains.forEach((domain) => {
+          if (projectDomainDetail && projectDomainDetail.domainName) {
+            compareItems.push([
+              domain.domainName,
+              projectDomainDetail.domainName,
+              2,
+            ]);
+            if (projectDomainDetail.subDomainsName) {
+              if (projectDomainDetail.subDomainsName[0] != "www")
+                compareItems.push([
+                  domain.domainName,
+                  projectDomainDetail.subDomainsName[0],
+                  2,
+                ]);
+            }
+          }
+
+          if (projectName)
+            compareItems.push([
+              domain.domainName,
+              projectName.toLowerCase(),
+              2,
+            ]);
+        });
 
         for (let index = 0; index < compareItems.length; index++) {
           const [string1, string2, type] = compareItems[index];
           const sim =
             (string1 && string2 && compareTwoStrings(string1, string2)) || 0;
           score += sim > simLimit ? 5 : 0;
-          if (sim > simLimit && simLimit < 1)
+          if (sim > simLimit && simLimit <= 1)
             matchItems.push({
               item: compareItems[index],
               sim,
@@ -433,9 +448,6 @@ async function _detectScam(
           if (type == 2) hasSimLink = true;
         }
 
-        //  if (userId === "nft_osf" && matchItems.length) {
-        //    console.log(matchItems, compareItems);
-        //  }
         return {
           hasSimLink,
           matchItems,
@@ -444,10 +456,10 @@ async function _detectScam(
           score,
         };
       })
-      .filter((_) => _.score > 10)
+      .filter((_) => _.score >= scoreLimit)
       .sort((a, b) => b.score - a.score);
 
-    if (similarProjects.length && fuzzyTwitterCheck) {
+    if (similarProjects.length && (fuzzyTwitterCheck || options.onlyLink)) {
       matchProject = similarProjects[0].project;
       matchType = "check_by_sim";
       if (similarProjects[0].hasSimLink) {
@@ -464,15 +476,18 @@ async function _detectScam(
     const checkDomain = projectsWithDomain.length;
     if (checkDomain) {
       const simThreshold = 0.65;
+      const domainRegLimit = options.registerDays || 15;
       const domainResult = uniqueDomains.map((linkDomain) => {
         const domainInProjectList = projectsWithDomain.find(
           (_) => _.domain.topDomain === linkDomain.topDomain
         );
+
         const highSimilarProjects = domainInProjectList
           ? []
           : projectsWithDomain
               .map((projectWithDomain) => {
-                const aString = projectWithDomain.domain.domainName;
+                const subDomains = projectWithDomain.domain.subDomainsName;
+                let aString = projectWithDomain.domain.domainName;
                 const bString = linkDomain.domainName;
                 const simSizeThreshold = 4;
 
@@ -485,6 +500,21 @@ async function _detectScam(
                   contain = canDoSimTest && bString.includes(aString);
                   sim = canDoSimTest ? compareTwoStrings(aString, bString) : 0;
                 }
+
+                // subdomain-case  eg. murakamiflowers.kaikaikiki.com
+                if (sim < simSizeThreshold && subDomains && subDomains.length) {
+                  let aString = subDomains[0];
+                  if (aString != 'www') {
+                    let canDoSimTest =
+                      bString.length > simSizeThreshold &&
+                      aString.length > simSizeThreshold;
+                    contain = canDoSimTest && bString.includes(aString);
+                    sim = canDoSimTest
+                      ? compareTwoStrings(aString, bString)
+                      : 0;
+                  }
+                }
+
                 return {
                   contain,
                   projectWithDomain,
@@ -501,26 +531,17 @@ async function _detectScam(
           : null;
       });
 
-      // const domains
       let similarProject = null;
       let creationDaysOfDomain = -1;
+      let domainMeta = null
       for (let index = 0; index < domainResult.length; index++) {
         const domainSim = domainResult[index];
         if (!domainSim) continue;
         try {
-          const domainMeta = await getDomainMeta([
+          domainMeta = await getDomainMeta([
             domainSim.linkDomain.topDomain,
           ]);
-          // console.log("domainMeta", domainMeta);
           if (!domainMeta) continue;
-          // const registerDays = domainMeta.events
-          //   .filter((_: any) => _.eventAction === "registration")
-          //   .map((_: any) => Date.now() - new Date(_.eventDate).getTime())
-          //   .sort((a: number, b: number) => b - a)
-          //   .map((timestamp: number) =>
-          //     Math.floor(timestamp / 1000 / 86400)
-          //   );
-          // console.log("registerDays", registerDays);
           creationDaysOfDomain = domainMeta.data
             ? Math.floor(
                 (Date.now() -
@@ -530,9 +551,7 @@ async function _detectScam(
               )
             : -1;
           const isRecentRegister =
-            creationDaysOfDomain != -1 && creationDaysOfDomain < 40;
-          // const isRecentRegister =
-          //   registerDays.length && registerDays[0] < 90;
+            creationDaysOfDomain != -1 && creationDaysOfDomain < domainRegLimit;
           if (isRecentRegister) {
             similarProject = domainSim;
             break;
@@ -550,6 +569,7 @@ async function _detectScam(
           matchType,
           post,
           callActionTest,
+          domainMeta: domainMeta ? domainMeta.data : null,
         };
       }
     }
@@ -596,10 +616,10 @@ export class Detector {
     this.lastFetch = Date.now();
   }
 
-  async detectScam(post: PostDetail): Promise<ScamResult | null> {
+  async detectScam(post: PostDetail, options: any = {}): Promise<ScamResult | null> {
     try {
       if (!this.onlyBuiltIn) this.update();
-      return await _detectScam(post, this.database);
+      return await _detectScam(post, this.database, options);
     } catch (e) {
       console.error("error", e);
     }
@@ -609,14 +629,17 @@ export class Detector {
 
 export const detector = new Detector({});
 
-export async function detectScam(post: PostDetail): Promise<ScamResult | null> {
-  return detector.detectScam(post);
+export async function detectScam(post: PostDetail, options: any = {}): Promise<ScamResult | null> {
+  return detector.detectScam(post, options);
 }
 
-export async function detectScamByUrl(url: string): Promise<ScamResult | null> {
-  return detector.detectScam({
-    links: [url],
-  });
+export async function detectScamByUrl(url: string, options: any = {}): Promise<ScamResult | null> {
+  return detector.detectScam(
+    {
+      links: [url],
+    },
+    options
+  );
 }
 
 const REPORT_CACHE: string[] = [];
