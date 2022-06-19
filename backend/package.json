@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@scamsniffer/detector": "0.0.8",
     "axios": "^0.24.0",
     "axios-https-proxy-fix": "^0.17.1",
     "body-parser": "^1.19.1",
@@ -9,7 +10,6 @@
     "cron": "^1.8.2",
     "dotenv": "^10.0.0",
     "ethers": "^5.5.1",
-    "underscore": "^1.12.1",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.1",
     "express-cluster": "^0.0.5",
@@ -27,6 +27,7 @@
     "sequelize-handlers": "^1.0.7",
     "sqlite3": "^5.0.2",
     "ttl-cache": "^1.0.2",
+    "underscore": "^1.12.1",
     "websocket": "^1.0.34",
     "ws": "^8.4.0"
   }
