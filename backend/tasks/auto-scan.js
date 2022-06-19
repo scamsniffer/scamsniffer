@@ -30,6 +30,7 @@ async function detectRecentDomain() {
       });
 
       if (recentScams.length) {
+        console.log("detect", recentDomain.host);
         await detectDomain(recentScams[0].link);
       }
     } catch (e) {
