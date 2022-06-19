@@ -44,7 +44,7 @@ app.get("/getStatus", getStatus);
 app.get("/detect", detectUrl);
 app.get("/whois/lookup", lookupDomain);
 app.post("/report", reportScam);
-app.post("/detector/detectByUrl", detectByUrl);
+app.get("/detector/detectByUrl", detectByUrl);
 
 app.get("*", async (req, res) => {
   res.send("Hello");
