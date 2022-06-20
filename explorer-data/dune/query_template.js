@@ -357,7 +357,7 @@ order by counts desc
 const recent_tokens = `
 select
   contract_address,
-  "tokenId",
+  "tokenId"::TEXT,
   min(evt_block_time) as first_time
 from
   erc721."ERC721_evt_Transfer"
