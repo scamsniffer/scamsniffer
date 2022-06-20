@@ -19,7 +19,7 @@ export default function useCollections(
   const sortBy = router.query['sort']?.toString()
 
   const pathname =
-    !sortBy || sortBy && sortBy != 'all'
+    sortBy || sortBy && sortBy != 'all'
       ? `${DATA_BASE}/v1/summary_${sortBy}.json`
       : `${DATA_BASE}/v1/all.json`
 

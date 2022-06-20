@@ -202,18 +202,6 @@ export const getStaticProps: GetStaticProps<{
   const contract = params?.contract?.toString()
   const tokenId = params?.tokenId?.toString()
   
-
-  if (
-    COLLECTION &&
-    !COMMUNITY &&
-    !COLLECTION_SET_ID &&
-    COLLECTION.toLowerCase() !== contract?.toLowerCase()
-  ) {
-    return {
-      notFound: true,
-    }
-  }
-  
   const assetRes = await fetch(
     `${RESERVOIR_API_BASE}/v1/collections/${contract}/${tokenId}.json`
   )

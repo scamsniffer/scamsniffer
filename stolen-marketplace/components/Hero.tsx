@@ -42,7 +42,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
   const collection = fallback.collection;
   const tokens = fallback.tokens;
   const router = useRouter()
-  const stats = useCollectionStats(router, collectionId)
+  // const stats = useCollectionStats(router, collectionId)
   const [attribute, setAttribute] = useState<
     AttibuteModalProps['data']['attribute']
   >({
@@ -136,24 +136,6 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
     recipient: collection.data?.collection?.royalties?.recipient,
   }
 
-  const collectionData: CollectionModalProps['data'] = {
-    collection: {
-      id: collection?.data?.collection?.id,
-      image: '',
-      name: collection?.data?.collection?.name,
-      tokenCount: stats?.data?.stats?.tokenCount ?? 0,
-    },
-  }
-
-  const attributeData: AttibuteModalProps['data'] = {
-    collection: {
-      id: collection.data?.collection?.id,
-      image: collection?.data?.collection?.metadata?.imageUrl as string,
-      name: collection?.data?.collection?.name,
-      tokenCount: stats?.data?.stats?.tokenCount ?? 0,
-    },
-    attribute,
-  }
 
   let isLongDescription = false
   let descriptionHeight = '60px'

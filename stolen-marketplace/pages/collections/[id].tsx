@@ -75,10 +75,10 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
   //   localListings
   // )
 
-  const { collectionAttributes, ref: refCollectionAttributes } =
-    useCollectionAttributes(router, id)
+  // const { collectionAttributes, ref: refCollectionAttributes } =
+  //   useCollectionAttributes(router, id)
 
-  const attributes = useAttributes(id)
+  // const attributes = useAttributes(id)
 
   if (!CHAIN_ID) return null
 
@@ -227,13 +227,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                     </div>
                   )}
                 </div>
-                {router.query?.attribute_key ||
-                router.query?.attribute_key === '' ? (
-                  <ExploreTokens
-                    attributes={collectionAttributes}
-                    viewRef={refCollectionAttributes}
-                  />
-                ) : (
+                {(
                   <TokensGrid
                     tokens={tokens}
                     collectionId={id}
