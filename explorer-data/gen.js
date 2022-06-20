@@ -2,6 +2,7 @@ const tokens = require("./dune/stolen_tokens.json");
 const allCollections = require("./raw.json");
 const fs = require("fs");
 const _ = require("lodash");
+const moment = require('moment');
 
 const allTokens = tokens.map((_) => {
   const collection = allCollections.find((c) => {
@@ -20,6 +21,7 @@ const allTokens = tokens.map((_) => {
       detail.assetContracts.edges[0].node;
     // return contract && contract.address === _.contract_address;
     _.collection = {
+      floorPrice: detail.statsV2.floorPrice && detail.statsV2.floorPrice.unit,
       slug: collection.collection.slug,
       name: detail.name,
       description: detail.description,
@@ -36,28 +38,82 @@ const allTokens = tokens.map((_) => {
   return _;
 });
 
-const sumBySlug = allTokens.reduce((all, item) => {
-  all[item.collection.slug] = all[item.collection.slug] || [];
-  all[item.collection.slug].push(item);
-  return all;
-}, {});
 
-const topCollections = Object.keys(sumBySlug)
-  .map((slug) => {
-    const collection = allTokens.find((_) => _.collection.slug === slug);
-    return {
-      total: sumBySlug[slug].length,
-      ...collection.collection,
-    };
-  })
-  .sort((a, b) => b.total - a.total)
-  .slice(0, 100);
+function getCollection(offsetDay = 0) {
+  const timeLimit = moment().subtract("day", offsetDay);
+  const sumBySlug = allTokens.reduce((all, item) => {
+    const isIn =
+      offsetDay == 0
+        ? true
+        : moment(item.first_time).toDate().getTime() >
+          timeLimit.toDate().getTime(); 
+
+      console.log(
+        offsetDay,
+        isIn,
+      );
+    if (isIn) {
+       all[item.collection.slug] = all[item.collection.slug] || [];
+       all[item.collection.slug].push(item);
+    }
+    return all;
+  }, {});
+  return sumBySlug;
+}
+
+const sumBySlug = getCollection();
+
+
+function toSummary(sumBySlug, limit = 100) {
+  return Object.keys(sumBySlug)
+    .map((slug) => {
+      const collection = allTokens.find((_) => _.collection.slug === slug);
+      return {
+        total: sumBySlug[slug].length,
+        ...collection.collection,
+      };
+    })
+    .sort((a, b) => b.total - a.total);
+}
+
+
+const topCollections = toSummary(sumBySlug);
 
 fs.writeFileSync(
   "./data/summary.json",
   JSON.stringify(topCollections.slice(0, 100))
 );
 
+
+fs.writeFileSync(
+  "./data/all.json",
+  JSON.stringify(topCollections)
+);
+
+
+const weekSummary = getCollection(7);
+const daySummary = getCollection(1);
+const monthSummary = getCollection(30);
+
+fs.writeFileSync(
+  "./data/summary_1DayVolume.json",
+  JSON.stringify(toSummary(daySummary))
+);
+
+
+
+fs.writeFileSync(
+  "./data/summary_7DayVolume.json",
+  JSON.stringify(toSummary(weekSummary))
+);
+
+fs.writeFileSync(
+  "./data/summary_30DayVolume.json",
+  JSON.stringify(toSummary(monthSummary))
+);
+
+
+return;
 const dataCollections = [];
 Object.keys(sumBySlug)
   .map((slug) => {
