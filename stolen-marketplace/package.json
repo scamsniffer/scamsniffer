@@ -4,6 +4,7 @@
     "dev": "next dev",
     "prettier": "prettier --write .",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
