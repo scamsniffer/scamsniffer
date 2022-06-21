@@ -60,6 +60,29 @@ async function testLink() {
       )
     );
 
+     console.log(
+      await detector.detectScam(
+        {
+          links: ["http://gobilintown.wtf"],
+        },
+        {
+          // onlyLink: true
+        }
+      )
+    );
+    
+    console.log(
+      await detector.detectScam(
+        {
+          links: ["https://stepnshoesbox.com"],
+        },
+        {
+          // onlyLink: true
+        }
+      )
+    );
+
+
 //    console.log( await detector.detectScam({
 //       id: "1522002974624534528",
 //       nickname: "Luis Naranjo",

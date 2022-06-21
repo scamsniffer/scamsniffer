@@ -374,7 +374,6 @@ async function _detectScam(
       }
     });
 
-
     const projectsWithDomain: { project: Project; domain: DomainDetail }[] = [];
     const scoreLimit = 10;
     const similarProjects = allProjects
@@ -389,8 +388,6 @@ async function _detectScam(
           _.externalUrl && getTopDomainFromUrl(_.externalUrl);
         const compareItems: [string, string, number][] = [];
 
-
-        
         if (projectDomainDetail)
           projectsWithDomain.push({
             project: _,
@@ -415,8 +412,11 @@ async function _detectScam(
 
         uniqueDomains.forEach((domain) => {
           if (!isSame) {
-             isSame = projectDomainDetail &&
-               projectDomainDetail.topDomain === domain.topDomain ? true : false;
+            isSame =
+              projectDomainDetail &&
+              projectDomainDetail.topDomain === domain.topDomain
+                ? true
+                : false;
           }
 
           if (projectDomainDetail && projectDomainDetail.domainName) {
@@ -491,7 +491,10 @@ async function _detectScam(
     const checkDomain = projectsWithDomain.length;
     if (checkDomain) {
       const simThreshold = 0.65;
-      const domainRegLimit = options.registerDays || 15;
+      const domainRegLimit = options.registerDays || 20;
+      const simRegLimit = options.registerDaysSim || 60;
+      const simDayLimit = options.simDayLimit || 0.8;
+
       const domainResult = uniqueDomains.map((linkDomain) => {
         const domainInProjectList = projectsWithDomain.find(
           (_) => _.domain.topDomain === linkDomain.topDomain
@@ -519,7 +522,7 @@ async function _detectScam(
                 // subdomain-case  eg. murakamiflowers.kaikaikiki.com
                 if (sim < simSizeThreshold && subDomains && subDomains.length) {
                   let aString = subDomains[0];
-                  if (aString != 'www') {
+                  if (aString != "www") {
                     let canDoSimTest =
                       bString.length > simSizeThreshold &&
                       aString.length > simSizeThreshold;
@@ -537,24 +540,26 @@ async function _detectScam(
               })
               .sort((a, b) => b.sim - a.sim)
               .filter((_) => _.sim > simThreshold || _.contain);
+
+              // console.log("highSimilarProjects", highSimilarProjects[0]);
         return highSimilarProjects[0]
           ? {
               linkDomain,
+              sim: highSimilarProjects[0].sim,
               projectWithDomain: highSimilarProjects[0].projectWithDomain,
             }
           : null;
       });
 
+      // console.log(highSimilarProjects);
       let similarProject = null;
       let creationDaysOfDomain = -1;
-      let domainMeta = null
+      let domainMeta = null;
       for (let index = 0; index < domainResult.length; index++) {
         const domainSim = domainResult[index];
         if (!domainSim) continue;
         try {
-          domainMeta = await getDomainMeta([
-            domainSim.linkDomain.topDomain,
-          ]);
+          domainMeta = await getDomainMeta([domainSim.linkDomain.topDomain]);
           if (!domainMeta) continue;
           creationDaysOfDomain = domainMeta.data
             ? Math.floor(
@@ -565,7 +570,9 @@ async function _detectScam(
               )
             : -1;
           const isRecentRegister =
-            creationDaysOfDomain != -1 && creationDaysOfDomain < domainRegLimit;
+            creationDaysOfDomain != -1 &&
+            creationDaysOfDomain <
+              (domainSim.sim > simDayLimit ? simRegLimit : domainRegLimit);
           if (isRecentRegister) {
             similarProject = domainSim;
             break;
@@ -577,7 +584,11 @@ async function _detectScam(
 
       if (similarProject) {
         const matchProject = similarProject.projectWithDomain.project;
-        const matchType = "match_by_domain_sim_days:" + creationDaysOfDomain;
+        const matchType =
+          "match_by_domain_sim_days:" +
+          creationDaysOfDomain +
+          ":sim:" +
+          similarProject.sim.toFixed(2);
         return {
           ...matchProject,
           matchType,
@@ -630,7 +641,10 @@ export class Detector {
     this.lastFetch = Date.now();
   }
 
-  async detectScam(post: PostDetail, options: any = {}): Promise<ScamResult | null> {
+  async detectScam(
+    post: PostDetail,
+    options: any = {}
+  ): Promise<ScamResult | null> {
     try {
       if (!this.onlyBuiltIn) this.update();
       return await _detectScam(post, this.database, options);
@@ -643,11 +657,17 @@ export class Detector {
 
 export const detector = new Detector({});
 
-export async function detectScam(post: PostDetail, options: any = {}): Promise<ScamResult | null> {
+export async function detectScam(
+  post: PostDetail,
+  options: any = {}
+): Promise<ScamResult | null> {
   return detector.detectScam(post, options);
 }
 
-export async function detectScamByUrl(url: string, options: any = {}): Promise<ScamResult | null> {
+export async function detectScamByUrl(
+  url: string,
+  options: any = {}
+): Promise<ScamResult | null> {
   return detector.detectScam(
     {
       links: [url],
