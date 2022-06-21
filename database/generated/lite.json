@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "name": "CubeX",
+      "slug": "cubexnft",
+      "externalUrl": "https://cubex.gg",
+      "twitterUsername": "cubexnft"
+    },
+    {
       "name": "Just Ape.",
       "slug": "justape",
       "externalUrl": "https://justape.co",

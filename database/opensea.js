@@ -410,21 +410,31 @@
         }))
         .filter((_) => _.twitterUsername);
 
-      if (collectionProjects.length) {
+      const newCollectionProjects = collectionProjects.filter((_) => {
+        const exists = ProjectList.find((c) => c.slug === _.slug);
+        if (exists) {
+          const index = ProjectList.indexOf(exists);
+          ProjectList[index] = _;
+          // update collection
+        }
+        return !exists;
+      });
+
+      if (newCollectionProjects.length) {
         const commietMesage =
           "add " +
-          collectionProjects
+          newCollectionProjects
             .slice(0, 3)
             .map((_) => _.name)
             .join(", ");
         database.ProjectList = [].concat(
-          collectionProjects,
+          newCollectionProjects,
           database.ProjectList
         );
         database.genTime = Date.now();
         await updateDatabase(database, commietMesage);
       } else {
-        localStorage.setItem('msg', 'no one')
+        localStorage.setItem("msg", "no one");
       }
     } catch (e) {
       alert(e);
