@@ -273,7 +273,7 @@ async function _detectScam(
         matchType = "nickname_match_name_words";
       }
 
-      if (matchProject?.twitterUsername && userId) {
+      if (matchProject && matchProject.twitterUsername && userId) {
         const verified = verifyProjectMeta(matchProject, post);
         if (!verified) {
           return {
@@ -292,7 +292,7 @@ async function _detectScam(
         (_) => _.twitterUsername && includeName(userId, _.twitterUsername)
       );
       matchType = "userId_match_twitter_name";
-      if (matchProject?.twitterUsername && userId) {
+      if (matchProject && matchProject.twitterUsername && userId) {
         const verified = verifyProjectMeta(matchProject, post);
         if (!verified) {
           return {
@@ -417,6 +417,13 @@ async function _detectScam(
               projectDomainDetail.domainName,
               2,
             ]);
+            if (projectDomainDetail.topDomain) {
+              compareItems.push([
+                domain.domainName,
+                projectDomainDetail.topDomain,
+                2,
+              ]);
+            }
             if (projectDomainDetail.subDomainsName) {
               if (projectDomainDetail.subDomainsName[0] != "www")
                 compareItems.push([

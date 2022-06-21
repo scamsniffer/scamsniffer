@@ -3,7 +3,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es2015",
-        "outDir": "dist",
+        "outDir": "dist/cjs",
         "rootDir": "",
         "baseUrl": "./src",
         "composite": true,

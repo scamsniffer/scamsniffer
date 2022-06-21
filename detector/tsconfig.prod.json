@@ -3,7 +3,7 @@
         "module": "ESNext",
         "moduleResolution": "node",
         "target": "ES2021",
-        "outDir": "dist",
+        "outDir": "dist/esnext",
         "rootDir": "",
         "baseUrl": "./src",
         "composite": true,

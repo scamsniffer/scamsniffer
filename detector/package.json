@@ -1,8 +1,9 @@
 {
     "name": "@scamsniffer/detector",
-    "version": "0.0.8",
-    "main": "dist/src/index.js",
-    "types": "dist/src/index.d.ts",
+    "version": "0.0.10",
+    "main": "dist/cjs/src/index.js",
+    "module": "dist/esnext/src/index.js",
+    "types": "dist/esnext/src/index.d.ts",
     "license": "GPL",
     "engines": {
         "node": ">=16.6"
@@ -12,7 +13,7 @@
         "url": "https://github.com/scamsniffer/scamsniffer.git"
     },
     "scripts": {
-        "dev": "tsc",
+        "build:cjs": "tsc",
         "build": "tsc -P tsconfig.prod.json",
         "test": "jest --no-watchman",
         "lint-format": "prettier -c ./src/**/*.ts",
