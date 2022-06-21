@@ -414,11 +414,9 @@ async function _detectScam(
         let isSame = false;
 
         uniqueDomains.forEach((domain) => {
-
           if (!isSame) {
-             isSame =
-               projectDomainDetail &&
-               projectDomainDetail.topDomain === domain.topDomain;
+             isSame = projectDomainDetail &&
+               projectDomainDetail.topDomain === domain.topDomain ? true : false;
           }
 
           if (projectDomainDetail && projectDomainDetail.domainName) {
@@ -466,7 +464,7 @@ async function _detectScam(
         }
 
         return {
-          hasSimLink,
+          hasSimLink: isSame ? false : hasSimLink,
           matchItems,
           uniqueDomains,
           project: _,
