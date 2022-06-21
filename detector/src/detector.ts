@@ -389,6 +389,8 @@ async function _detectScam(
           _.externalUrl && getTopDomainFromUrl(_.externalUrl);
         const compareItems: [string, string, number][] = [];
 
+
+        
         if (projectDomainDetail)
           projectsWithDomain.push({
             project: _,
@@ -409,8 +411,16 @@ async function _detectScam(
         }
 
         let hasSimLink = false;
+        let isSame = false;
 
         uniqueDomains.forEach((domain) => {
+
+          if (!isSame) {
+             isSame =
+               projectDomainDetail &&
+               projectDomainDetail.topDomain === domain.topDomain;
+          }
+
           if (projectDomainDetail && projectDomainDetail.domainName) {
             compareItems.push([
               domain.domainName,
@@ -460,7 +470,7 @@ async function _detectScam(
           matchItems,
           uniqueDomains,
           project: _,
-          score,
+          score: isSame ? 0 : score,
         };
       })
       .filter((_) => _.score > scoreLimit)
