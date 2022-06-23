@@ -8,6 +8,20 @@ jest.setTimeout(100 * 1000)
 describe("Detector", () => {
   const detector = new Detector({});
   describe("detectScam", () => {
+    test("test nft check", async () => {
+        const result = await detector.checkNFTToken(
+          "0x0322f6f11a94cfb1b5b6e95e059d8deb2bf17d6a", '4524'
+        );
+       if (result === null) expect(1).toEqual(0);
+    });
+
+     test("test nft check white", async () => {
+       const result = await detector.checkNFTToken(
+         "0x0322f6f11a94cfb1b5b6e95e059d8deb2bf17d6a",
+         "4528"
+       );
+       if (result != null) expect(1).toEqual(0);
+     });
     test("test whiteList Tweets", async () => {
         const listScam = []
         for (let index = 0; index < TEST_TWEETS.length; index++) {
@@ -20,7 +34,6 @@ describe("Detector", () => {
         }
         expect(listScam.length).toEqual(0);
     });
-
     test("test blackList Tweets", async () => {
         const listScam = []
         for (let index = 0; index < BLACK_LIST.length; index++) {

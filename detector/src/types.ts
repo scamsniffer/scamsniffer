@@ -1,10 +1,18 @@
 export type PostDetail = {
-    id?: string;
-    userId?: string | undefined;
-    nickname?: string | null;
-    content?: string | null;
-    links: string[];
-}
+  id?: string;
+  userId?: string | undefined;
+  nickname?: string | null;
+  content?: string | null;
+  links: string[];
+  pageDetails?: PageDetail | null;
+};
+
+export type PageDetail = {
+  title: string;
+  metaHeads: any;
+  canonicalLink: string | null;
+  topSourceDomains: any[];
+};
 
 export type CallActionTest = {
   callActionScore: number;
@@ -48,4 +56,9 @@ export type DomainDetail = {
   topLevelDomainsName: string[] | null;
   subDomainsName: string[] | null;
   host: string | null;
+};
+
+export type NFTCheckResult = {
+  firstTime: string;
+  receivers: string[];
 };

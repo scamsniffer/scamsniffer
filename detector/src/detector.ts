@@ -6,11 +6,18 @@ import type {
   DomainDetail,
   ScamResult,
   Database,
+  NFTCheckResult
 } from "./types";
 import fetch from "isomorphic-fetch";
 import { parseDomain, ParseResultType } from "parse-domain";
 import urlParser from "url";
 import { fixWordsIfHasUnicode, compareTwoStrings } from "./confusables";
+
+const TOKEN_ENDPOINT =
+  "https://cdn.jsdelivr.net/gh/scamsniffer/explorer-database@main/data/v1";
+
+// const TOKEN_ENDPOINT =
+//   "https://raw.githubusercontent.com/scamsniffer/explorer-database/main/data/v1";
 
 const REPORT_ENDPOINT = "https://api.scamsniffer.io/report";
 const REPORT_ENDPOINT_DEV = "http://localhost/report";
@@ -185,7 +192,7 @@ async function _detectScam(
   database: Database,
   options: any = {}
 ): Promise<ScamResult | null> {
-  const { nickname, content, userId, links } = post;
+  const { nickname, content, userId, links, pageDetails } = post;
   const {
     ProjectList: allProjects,
     commonWords,
@@ -206,21 +213,24 @@ async function _detectScam(
     checkUserId: true,
     checkBySim: true,
     checkContent: false,
+    checkPage: true
   };
 
-  const twitterInBlackList = BlackList.twitter.find((id) =>
-    id.includes(`${userId}:`)
-  );
+  if (userId) {
+    const twitterInBlackList = BlackList.twitter.find((id) =>
+      id.includes(`${userId}:`)
+    );
 
-  if (twitterInBlackList) {
-    const [twitter, projectSlug] = twitterInBlackList.split(":");
-    const project = allProjects.find((_) => _.slug === projectSlug);
-    if (project) {
-      return {
-        ...project,
-        matchType: "twitter_in_black_list",
-        post,
-      };
+    if (twitterInBlackList) {
+      const [twitter, projectSlug] = twitterInBlackList.split(":");
+      const project = allProjects.find((_) => _.slug === projectSlug);
+      if (project) {
+        return {
+          ...project,
+          matchType: "twitter_in_black_list",
+          post,
+        };
+      }
     }
   }
 
@@ -343,6 +353,38 @@ async function _detectScam(
           return {
             ...matchProject,
             matchType,
+            post,
+            callActionTest,
+          };
+        }
+      }
+    }
+  }
+
+  if (flags.checkPage && pageDetails) {
+
+    let metaUrl = pageDetails.canonicalLink 
+    if (!metaUrl) {
+      const ogUrl = pageDetails.metaHeads["og:url"];
+      if (ogUrl) {
+        metaUrl = ogUrl;
+      }
+    }
+
+    if (metaUrl) {
+      const siteDomain = getTopDomainFromUrl(links[0]);
+      const metaDomain = getTopDomainFromUrl(metaUrl);
+      if (metaDomain && siteDomain && siteDomain.topDomain !== metaDomain.topDomain) {
+        const matchProject = allProjects.find(
+          (_) =>
+            _.externalUrl &&
+            metaDomain.topDomain &&
+            _.externalUrl.includes(metaDomain.topDomain)
+        );
+        if (matchProject) {
+          return {
+            ...matchProject,
+            matchType: "check_page_hit",
             post,
             callActionTest,
           };
@@ -652,6 +694,24 @@ export class Detector {
       console.error("error", e);
     }
     return null;
+  }
+
+  async checkNFTToken(
+    contract: string,
+    tokenId: string
+  ): Promise<NFTCheckResult | null> {
+    let result = null;
+    try {
+      const dataPath = `${TOKEN_ENDPOINT}/collections/${contract}/${tokenId}.json`;
+      const req = await fetch(dataPath);
+      const response = (await req.json()) as any;
+      const { chain_activity } = response;
+      result = {
+        firstTime: chain_activity.firstTime as string,
+        receivers: chain_activity.receivers as string[],
+      };
+    } catch (e) {}
+    return result;
   }
 }
 
