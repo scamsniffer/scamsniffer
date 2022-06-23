@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "name": "NFT.NYC",
+      "slug": "NFT_NYC",
+      "externalUrl": "https://www.nft.nyc",
+      "twitterUsername": "NFT_NYC"
+    },
+    {
       "name": "CubeX",
       "slug": "cubexnft",
       "externalUrl": "https://cubex.gg",
