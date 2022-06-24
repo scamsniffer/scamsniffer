@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "udder-chaos",
+      "name": "Udder Chaos",
+      "externalUrl": "https://www.udderchaos.io/",
+      "twitterUsername": "UdderChaosSOL"
+    },
+    {
       "slug": "gossamer-seed",
       "name": "Gossamer Seed",
       "externalUrl": "https://gossamer.world/",
@@ -34401,5 +34407,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656028967661
+  "genTime": 1656047343386
 }
