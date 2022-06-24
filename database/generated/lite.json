@@ -27,6 +27,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "gossamer-seed",
+      "name": "Gossamer Seed",
+      "externalUrl": "https://gossamer.world/",
+      "twitterUsername": "Gossamer_world"
+    },
+    {
+      "slug": "moonrunnersnft",
+      "name": "Moonrunners Official",
+      "externalUrl": "http://moonrunners.io",
+      "twitterUsername": "MoonrunnersNFT"
+    },
+    {
+      "slug": "de-generations-s",
+      "name": "De-Generations: S",
+      "externalUrl": "https://pieceofshit.wtf/",
+      "twitterUsername": "pieceofshit_wtf"
+    },
+    {
+      "slug": "noshitzone",
+      "name": "NoShitZone",
+      "externalUrl": "https://pieceofshit.wtf/",
+      "twitterUsername": "pieceofshit_wtf"
+    },
+    {
       "name": "NFT.NYC",
       "slug": "NFT_NYC",
       "externalUrl": "https://www.nft.nyc",
@@ -34377,5 +34401,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1654923985254
+  "genTime": 1656028967661
 }
