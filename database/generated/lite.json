@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "coldfellas",
+      "name": "Coldfellas Official",
+      "externalUrl": "http://Coldfellas.io",
+      "twitterUsername": "ColdfellasNFT"
+    },
+    {
       "slug": "lonelypop",
       "name": "LonelyPop",
       "externalUrl": "https://lonelypop.com",
@@ -34419,5 +34425,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656084685269
+  "genTime": 1656085554366
 }
