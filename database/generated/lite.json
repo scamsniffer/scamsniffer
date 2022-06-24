@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "lonelypop",
+      "name": "LonelyPop",
+      "externalUrl": "https://lonelypop.com",
+      "twitterUsername": "LonelyPopNFT"
+    },
+    {
       "slug": "itsnothing-nft",
       "name": "It's nothing.",
       "externalUrl": "https://itsnothing.xyz",
@@ -34413,5 +34419,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656072760359
+  "genTime": 1656084685269
 }
