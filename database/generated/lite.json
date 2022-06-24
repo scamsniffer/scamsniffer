@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "itsnothing-nft",
+      "name": "It's nothing.",
+      "externalUrl": "https://itsnothing.xyz",
+      "twitterUsername": "itsnothing_nft"
+    },
+    {
       "slug": "udder-chaos",
       "name": "Udder Chaos",
       "externalUrl": "https://www.udderchaos.io/",
@@ -34407,5 +34413,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656047343386
+  "genTime": 1656072760359
 }
