@@ -27,6 +27,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "aikovirtualnft",
+      "name": "A:\\Aiko Virtual",
+      "externalUrl": "https://aikovirtual.com",
+      "twitterUsername": "aikovirtual"
+    },
+    {
+      "slug": "bbyc-bored-bits-yacht-club",
+      "name": "BBYC Bored Bits Yacht Club",
+      "externalUrl": "https://www.boredbitsyachtclub.com/",
+      "twitterUsername": "BoredBitsNFT"
+    },
+    {
+      "slug": "adventuroushalflings",
+      "name": "ADVENTUROUS HALFLINGS (SOLD OUT)",
+      "externalUrl": "http://halflings.art",
+      "twitterUsername": "Halflington"
+    },
+    {
       "slug": "apedogwtf",
       "name": "apedog.wtf",
       "externalUrl": "http://apedog.wtf",
@@ -12629,8 +12647,8 @@
     {
       "slug": "trippin-ape-tribe-solana",
       "name": "Trippin’ Ape Tribe",
-      "externalUrl": null,
-      "twitterUsername": null
+      "externalUrl": "https://trippinapetribe.xyz",
+      "twitterUsername": "TrippinApeNFT"
     },
     {
       "slug": "chimpersnft",
@@ -34437,5 +34455,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656176168724
+  "genTime": 1656208994319
 }
