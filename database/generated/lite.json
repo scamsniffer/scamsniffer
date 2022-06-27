@@ -27,6 +27,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "mimicshhans",
+      "name": "Mimic Shhans",
+      "externalUrl": "http://mimicshhans.com",
+      "twitterUsername": "MimicShhans"
+    },
+    {
+      "slug": "n4nap",
+      "name": "Not For Noobs And Plebs",
+      "externalUrl": null,
+      "twitterUsername": "N4NAP_Eth"
+    },
+    {
+      "slug": "devilvalley",
+      "name": "devilvalley",
+      "externalUrl": "http://devilvalley.wtf",
+      "twitterUsername": "devilvalleywtf"
+    },
+    {
       "slug": "aikovirtualnft",
       "name": "A:\\Aiko Virtual",
       "externalUrl": "https://aikovirtual.com",
@@ -34455,5 +34473,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656208994319
+  "genTime": 1656327205773
 }
