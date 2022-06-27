@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "mrfoxreligion",
+      "name": "MrFoxReligion",
+      "externalUrl": "http://mrfox.cool",
+      "twitterUsername": "mrfoxnft"
+    },
+    {
       "slug": "mimicshhans",
       "name": "Mimic Shhans",
       "externalUrl": "http://mimicshhans.com",
@@ -34473,5 +34479,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656327205773
+  "genTime": 1656335192857
 }
