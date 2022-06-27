@@ -27,6 +27,78 @@
   ],
   "ProjectList": [
     {
+      "slug": "mimicshhans",
+      "name": "Mimic Shhans",
+      "externalUrl": "http://mimicshhans.com",
+      "twitterUsername": "MimicShhans"
+    },
+    {
+      "slug": "n4nap",
+      "name": "Not For Noobs And Plebs",
+      "externalUrl": null,
+      "twitterUsername": "N4NAP_Eth"
+    },
+    {
+      "slug": "devilvalley",
+      "name": "devilvalley",
+      "externalUrl": "http://devilvalley.wtf",
+      "twitterUsername": "devilvalleywtf"
+    },
+    {
+      "slug": "aikovirtualnft",
+      "name": "A:\\Aiko Virtual",
+      "externalUrl": "https://aikovirtual.com",
+      "twitterUsername": "aikovirtual"
+    },
+    {
+      "slug": "bbyc-bored-bits-yacht-club",
+      "name": "BBYC Bored Bits Yacht Club",
+      "externalUrl": "https://www.boredbitsyachtclub.com/",
+      "twitterUsername": "BoredBitsNFT"
+    },
+    {
+      "slug": "adventuroushalflings",
+      "name": "ADVENTUROUS HALFLINGS (SOLD OUT)",
+      "externalUrl": "http://halflings.art",
+      "twitterUsername": "Halflington"
+    },
+    {
+      "slug": "apedogwtf",
+      "name": "apedog.wtf",
+      "externalUrl": "http://apedog.wtf",
+      "twitterUsername": "apedogwtf"
+    },
+    {
+      "slug": "areyouseeingthis",
+      "name": "AreYouSeeingThis",
+      "externalUrl": null,
+      "twitterUsername": "AreUSeeingThis"
+    },
+    {
+      "slug": "coldfellas",
+      "name": "Coldfellas Official",
+      "externalUrl": "http://Coldfellas.io",
+      "twitterUsername": "ColdfellasNFT"
+    },
+    {
+      "slug": "lonelypop",
+      "name": "LonelyPop",
+      "externalUrl": "https://lonelypop.com",
+      "twitterUsername": "LonelyPopNFT"
+    },
+    {
+      "slug": "itsnothing-nft",
+      "name": "It's nothing.",
+      "externalUrl": "https://itsnothing.xyz",
+      "twitterUsername": "itsnothing_nft"
+    },
+    {
+      "slug": "udder-chaos",
+      "name": "Udder Chaos",
+      "externalUrl": "https://www.udderchaos.io/",
+      "twitterUsername": "UdderChaosSOL"
+    },
+    {
       "slug": "gossamer-seed",
       "name": "Gossamer Seed",
       "externalUrl": "https://gossamer.world/",
@@ -12593,8 +12665,8 @@
     {
       "slug": "trippin-ape-tribe-solana",
       "name": "Trippin’ Ape Tribe",
-      "externalUrl": null,
-      "twitterUsername": null
+      "externalUrl": "https://trippinapetribe.xyz",
+      "twitterUsername": "TrippinApeNFT"
     },
     {
       "slug": "chimpersnft",
@@ -34401,5 +34473,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656028967661
+  "genTime": 1656327205773
 }
