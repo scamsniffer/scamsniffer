@@ -27,6 +27,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "moonpepes",
+      "name": "MoonPepes",
+      "externalUrl": "https://nft-generator.art/mints/cl4x4b9qz64420gewb8028dzf",
+      "twitterUsername": "crevthor"
+    },
+    {
+      "slug": "kintduck",
+      "name": "KintDuck Flying Kite",
+      "externalUrl": "http://kintduck.xyz",
+      "twitterUsername": "kintduck"
+    },
+    {
+      "slug": "bapesfuture",
+      "name": "BAPES FUTURE",
+      "externalUrl": "https://bapes.xyz/",
+      "twitterUsername": "bapesclan"
+    },
+    {
+      "slug": "apileofbones",
+      "name": "apileofbones",
+      "externalUrl": null,
+      "twitterUsername": "TSummoned"
+    },
+    {
       "slug": "mrfoxreligion",
       "name": "MrFoxReligion",
       "externalUrl": "http://mrfox.cool",
@@ -34479,5 +34503,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656335192857
+  "genTime": 1656466507279
 }
