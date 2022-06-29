@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "exomon",
+      "name": "Exomon by Polychain Monsters",
+      "externalUrl": "https://www.exomon.xyz/",
+      "twitterUsername": "polychainmon"
+    },
+    {
       "slug": "moonpepes",
       "name": "MoonPepes",
       "externalUrl": "https://nft-generator.art/mints/cl4x4b9qz64420gewb8028dzf",
@@ -34503,5 +34509,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656466507279
+  "genTime": 1656507798061
 }
