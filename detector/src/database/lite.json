@@ -27,6 +27,174 @@
     ],
     "ProjectList": [
         {
+            "slug": "thepossessed",
+            "name": "The Possessed",
+            "externalUrl": "http://pssssd.xyz",
+            "twitterUsername": "ThePossessedNFT"
+        },
+        {
+            "slug": "genesis-box",
+            "name": "Genesis Box",
+            "externalUrl": "https://doodles.app/",
+            "twitterUsername": "doodles"
+        },
+        {
+            "slug": "godhatesnftees",
+            "name": "God Hates NFTees",
+            "externalUrl": "https://godhatesnftees.com/",
+            "twitterUsername": "GodHatesNFTees"
+        },
+        {
+            "slug": "wzrds",
+            "name": "WZRDS",
+            "externalUrl": null,
+            "twitterUsername": "WZRDSxyz"
+        },
+        {
+            "slug": "exomon",
+            "name": "Exomon by Polychain Monsters",
+            "externalUrl": "https://www.exomon.xyz/",
+            "twitterUsername": "polychainmon"
+        },
+        {
+            "slug": "moonpepes",
+            "name": "MoonPepes",
+            "externalUrl": "https://nft-generator.art/mints/cl4x4b9qz64420gewb8028dzf",
+            "twitterUsername": "crevthor"
+        },
+        {
+            "slug": "kintduck",
+            "name": "KintDuck Flying Kite",
+            "externalUrl": "http://kintduck.xyz",
+            "twitterUsername": "kintduck"
+        },
+        {
+            "slug": "bapesfuture",
+            "name": "BAPES FUTURE",
+            "externalUrl": "https://bapes.xyz/",
+            "twitterUsername": "bapesclan"
+        },
+        {
+            "slug": "apileofbones",
+            "name": "apileofbones",
+            "externalUrl": null,
+            "twitterUsername": "TSummoned"
+        },
+        {
+            "slug": "mrfoxreligion",
+            "name": "MrFoxReligion",
+            "externalUrl": "http://mrfox.cool",
+            "twitterUsername": "mrfoxnft"
+        },
+        {
+            "slug": "mimicshhans",
+            "name": "Mimic Shhans",
+            "externalUrl": "http://mimicshhans.com",
+            "twitterUsername": "MimicShhans"
+        },
+        {
+            "slug": "n4nap",
+            "name": "Not For Noobs And Plebs",
+            "externalUrl": null,
+            "twitterUsername": "N4NAP_Eth"
+        },
+        {
+            "slug": "devilvalley",
+            "name": "devilvalley",
+            "externalUrl": "http://devilvalley.wtf",
+            "twitterUsername": "devilvalleywtf"
+        },
+        {
+            "slug": "aikovirtualnft",
+            "name": "A:\\Aiko Virtual",
+            "externalUrl": "https://aikovirtual.com",
+            "twitterUsername": "aikovirtual"
+        },
+        {
+            "slug": "bbyc-bored-bits-yacht-club",
+            "name": "BBYC Bored Bits Yacht Club",
+            "externalUrl": "https://www.boredbitsyachtclub.com/",
+            "twitterUsername": "BoredBitsNFT"
+        },
+        {
+            "slug": "adventuroushalflings",
+            "name": "ADVENTUROUS HALFLINGS (SOLD OUT)",
+            "externalUrl": "http://halflings.art",
+            "twitterUsername": "Halflington"
+        },
+        {
+            "slug": "apedogwtf",
+            "name": "apedog.wtf",
+            "externalUrl": "http://apedog.wtf",
+            "twitterUsername": "apedogwtf"
+        },
+        {
+            "slug": "areyouseeingthis",
+            "name": "AreYouSeeingThis",
+            "externalUrl": null,
+            "twitterUsername": "AreUSeeingThis"
+        },
+        {
+            "slug": "coldfellas",
+            "name": "Coldfellas Official",
+            "externalUrl": "http://Coldfellas.io",
+            "twitterUsername": "ColdfellasNFT"
+        },
+        {
+            "slug": "lonelypop",
+            "name": "LonelyPop",
+            "externalUrl": "https://lonelypop.com",
+            "twitterUsername": "LonelyPopNFT"
+        },
+        {
+            "slug": "itsnothing-nft",
+            "name": "It's nothing.",
+            "externalUrl": "https://itsnothing.xyz",
+            "twitterUsername": "itsnothing_nft"
+        },
+        {
+            "slug": "udder-chaos",
+            "name": "Udder Chaos",
+            "externalUrl": "https://www.udderchaos.io/",
+            "twitterUsername": "UdderChaosSOL"
+        },
+        {
+            "slug": "gossamer-seed",
+            "name": "Gossamer Seed",
+            "externalUrl": "https://gossamer.world/",
+            "twitterUsername": "Gossamer_world"
+        },
+        {
+            "slug": "moonrunnersnft",
+            "name": "Moonrunners Official",
+            "externalUrl": "http://moonrunners.io",
+            "twitterUsername": "MoonrunnersNFT"
+        },
+        {
+            "slug": "de-generations-s",
+            "name": "De-Generations: S",
+            "externalUrl": "https://pieceofshit.wtf/",
+            "twitterUsername": "pieceofshit_wtf"
+        },
+        {
+            "slug": "noshitzone",
+            "name": "NoShitZone",
+            "externalUrl": "https://pieceofshit.wtf/",
+            "twitterUsername": "pieceofshit_wtf"
+        },
+        {
+            "name": "NFT.NYC",
+            "slug": "NFT_NYC",
+            "externalUrl": "https://www.nft.nyc",
+            "twitterUsername": "NFT_NYC"
+        },
+        {
+            "name": "CubeX",
+            "slug": "cubexnft",
+            "externalUrl": "https://cubex.gg",
+            "twitterUsername": "cubexnft"
+        },
+        {
             "name": "Just Ape.",
             "slug": "justape",
             "externalUrl": "https://justape.co",
@@ -1062,7 +1230,7 @@
             "slug": "chromie-squiggle-by-snowfro",
             "name": "Chromie Squiggle by Snowfro",
             "externalUrl": "https://www.artblocks.io/project/0",
-            "twitterUsername": null
+            "twitterUsername": "artblocks_io"
         },
         {
             "slug": "bears-deluxe-old",
@@ -12557,8 +12725,8 @@
         {
             "slug": "trippin-ape-tribe-solana",
             "name": "Trippin’ Ape Tribe",
-            "externalUrl": null,
-            "twitterUsername": null
+            "externalUrl": "https://trippinapetribe.xyz",
+            "twitterUsername": "TrippinApeNFT"
         },
         {
             "slug": "chimpersnft",
@@ -34365,5 +34533,5 @@
             "twitterUsername": "SwapdexO"
         }
     ],
-    "genTime": 1654923985254
+    "genTime": 1656729173328
 }

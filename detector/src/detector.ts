@@ -6,7 +6,7 @@ import type {
   DomainDetail,
   ScamResult,
   Database,
-  NFTCheckResult
+  NFTCheckResult,
 } from "./types";
 import fetch from "isomorphic-fetch";
 import { parseDomain, ParseResultType } from "parse-domain";
@@ -213,7 +213,7 @@ async function _detectScam(
     checkUserId: true,
     checkBySim: true,
     checkContent: false,
-    checkPage: true
+    checkPage: true,
   };
 
   if (userId) {
@@ -362,8 +362,7 @@ async function _detectScam(
   }
 
   if (flags.checkPage && pageDetails) {
-
-    let metaUrl = pageDetails.canonicalLink 
+    let metaUrl = pageDetails.canonicalLink;
     if (!metaUrl) {
       const ogUrl = pageDetails.metaHeads["og:url"];
       if (ogUrl) {
@@ -374,7 +373,11 @@ async function _detectScam(
     if (metaUrl) {
       const siteDomain = getTopDomainFromUrl(links[0]);
       const metaDomain = getTopDomainFromUrl(metaUrl);
-      if (metaDomain && siteDomain && siteDomain.topDomain !== metaDomain.topDomain) {
+      if (
+        metaDomain &&
+        siteDomain &&
+        siteDomain.topDomain !== metaDomain.topDomain
+      ) {
         const matchProject = allProjects.find(
           (_) =>
             _.externalUrl &&
@@ -504,7 +507,7 @@ async function _detectScam(
             });
           if (type == 2) hasSimLink = true;
         }
-
+        // if (_.slug === "gossamer-seed") console.log("matchItems", matchItems);
         return {
           hasSimLink: isSame ? false : hasSimLink,
           matchItems,
@@ -519,7 +522,8 @@ async function _detectScam(
     if (similarProjects.length && (fuzzyTwitterCheck || options.onlyLink)) {
       matchProject = similarProjects[0].project;
       matchType = "check_by_sim";
-      if (similarProjects[0].hasSimLink) {
+      const verified = verifyProjectMeta(matchProject, post);
+      if (similarProjects[0].hasSimLink && !verified) {
         return {
           ...matchProject,
           matchType,
@@ -530,6 +534,7 @@ async function _detectScam(
     }
 
     // const checkDomain = !fuzzyTwitterCheck && projectsWithDomain.length;
+    // console.log("projectsWithDomain", projectsWithDomain.length);
     const checkDomain = projectsWithDomain.length;
     if (checkDomain) {
       const simThreshold = 0.65;
@@ -583,7 +588,6 @@ async function _detectScam(
               .sort((a, b) => b.sim - a.sim)
               .filter((_) => _.sim > simThreshold || _.contain);
 
-              // console.log("highSimilarProjects", highSimilarProjects[0]);
         return highSimilarProjects[0]
           ? {
               linkDomain,
@@ -592,14 +596,18 @@ async function _detectScam(
             }
           : null;
       });
-
-      // console.log(highSimilarProjects);
+      // console.log(domainResult);
       let similarProject = null;
       let creationDaysOfDomain = -1;
       let domainMeta = null;
       for (let index = 0; index < domainResult.length; index++) {
         const domainSim = domainResult[index];
         if (!domainSim) continue;
+        // full match  xxx.com xxx.io
+        if (domainSim.sim === 1) {
+          similarProject = domainSim;
+          continue;
+        }
         try {
           domainMeta = await getDomainMeta([domainSim.linkDomain.topDomain]);
           if (!domainMeta) continue;
