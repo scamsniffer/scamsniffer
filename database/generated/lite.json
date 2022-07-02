@@ -27,6 +27,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "thepossessed",
+      "name": "The Possessed",
+      "externalUrl": "http://pssssd.xyz",
+      "twitterUsername": "ThePossessedNFT"
+    },
+    {
+      "slug": "genesis-box",
+      "name": "Genesis Box",
+      "externalUrl": "https://doodles.app/",
+      "twitterUsername": "doodles"
+    },
+    {
+      "slug": "godhatesnftees",
+      "name": "God Hates NFTees",
+      "externalUrl": "https://godhatesnftees.com/",
+      "twitterUsername": "GodHatesNFTees"
+    },
+    {
+      "slug": "wzrds",
+      "name": "WZRDS",
+      "externalUrl": null,
+      "twitterUsername": "WZRDSxyz"
+    },
+    {
       "slug": "exomon",
       "name": "Exomon by Polychain Monsters",
       "externalUrl": "https://www.exomon.xyz/",
@@ -1206,7 +1230,7 @@
       "slug": "chromie-squiggle-by-snowfro",
       "name": "Chromie Squiggle by Snowfro",
       "externalUrl": "https://www.artblocks.io/project/0",
-      "twitterUsername": null
+      "twitterUsername": "artblocks_io"
     },
     {
       "slug": "bears-deluxe-old",
@@ -34509,5 +34533,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656507798061
+  "genTime": 1656729173328
 }
