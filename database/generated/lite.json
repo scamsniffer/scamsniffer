@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "karma-monkey",
+      "name": "Karma Monkey",
+      "externalUrl": "https://onchainmonkey.com/",
+      "twitterUsername": "OnChainMonkey"
+    },
+    {
       "slug": "thepossessed",
       "name": "The Possessed",
       "externalUrl": "http://pssssd.xyz",
@@ -34533,5 +34539,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656729173328
+  "genTime": 1656736465534
 }
