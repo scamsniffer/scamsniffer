@@ -1,6 +1,6 @@
 {
     "name": "@scamsniffer/detector",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "exports": {
         "import": "dist/esnext/src/index.js",
         "require": "dist/cjs/src/index.js"
