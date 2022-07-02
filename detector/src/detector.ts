@@ -243,6 +243,7 @@ async function _detectScam(
   }
 
   const fuzzyTwitterCheck = content && callActionScore != 0;
+  const hasContext = content ? true : false;
 
   if (fuzzyTwitterCheck) {
     const skipCheck =
@@ -538,8 +539,8 @@ async function _detectScam(
     const checkDomain = projectsWithDomain.length;
     if (checkDomain) {
       const simThreshold = 0.65;
-      const domainRegLimit = options.registerDays || 20;
-      const simRegLimit = options.registerDaysSim || 60;
+      const domainRegLimit = options.registerDays || 10;
+      const simRegLimit = options.registerDaysSim || 30;
       const simDayLimit = options.simDayLimit || 0.8;
 
       const domainResult = uniqueDomains.map((linkDomain) => {
@@ -605,7 +606,12 @@ async function _detectScam(
         if (!domainSim) continue;
         // full match  xxx.com xxx.io
         if (domainSim.sim === 1) {
-          similarProject = domainSim;
+          if (hasContext) {
+            // in twitter context
+            if (fuzzyTwitterCheck) similarProject = domainSim;
+          } else {
+            similarProject = domainSim;
+          }
           continue;
         }
         try {
@@ -625,6 +631,7 @@ async function _detectScam(
               (domainSim.sim > simDayLimit ? simRegLimit : domainRegLimit);
           if (isRecentRegister) {
             similarProject = domainSim;
+            if (hasContext && !fuzzyTwitterCheck) similarProject = null;
             break;
           }
         } catch (er) {

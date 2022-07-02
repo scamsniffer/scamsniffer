@@ -27,6 +27,18 @@
     ],
     "ProjectList": [
         {
+            "slug": "foundation-app",
+            "name": "Foundation App",
+            "externalUrl": "https://foundation.app",
+            "twitterUsername": null
+        },
+        {
+            "slug": "karma-monkey",
+            "name": "Karma Monkey",
+            "externalUrl": "https://onchainmonkey.com/",
+            "twitterUsername": "OnChainMonkey"
+        },
+        {
             "slug": "thepossessed",
             "name": "The Possessed",
             "externalUrl": "http://pssssd.xyz",
@@ -2617,12 +2629,6 @@
             "name": "Eponym by ART AI",
             "externalUrl": "https://eponym.art-ai.com/",
             "twitterUsername": "EponymNFT"
-        },
-        {
-            "slug": "metaverse-hq",
-            "name": "Metaverse HQ",
-            "externalUrl": "https://discord.gg/VmbFQCEh64",
-            "twitterUsername": "Metaverse_HQ"
         },
         {
             "slug": "metroverse-blackout",
@@ -8155,12 +8161,6 @@
             "name": "Bella Protocol",
             "externalUrl": "https://bella.fi/",
             "twitterUsername": "BellaProtocol"
-        },
-        {
-            "slug": "mirror-protocol",
-            "name": "Mirror Protocol",
-            "externalUrl": "https://mirror.finance/",
-            "twitterUsername": "mirror_protocol"
         },
         {
             "slug": "solve-care",
@@ -19417,12 +19417,6 @@
             "name": "DATA",
             "externalUrl": "http://data.eco/",
             "twitterUsername": "@Blockchain_Data"
-        },
-        {
-            "slug": "palletone",
-            "name": "PalletOneToken",
-            "externalUrl": "https://pallet.one/",
-            "twitterUsername": "PalletOne_org"
         },
         {
             "slug": "delta-theta",
@@ -34533,5 +34527,5 @@
             "twitterUsername": "SwapdexO"
         }
     ],
-    "genTime": 1656729173328
+    "genTime": 1656736465534
 }
