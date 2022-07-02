@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "foundation-app",
+      "name": "Foundation App",
+      "externalUrl": "https://foundation.app",
+      "twitterUsername": null
+    },
+    {
       "slug": "karma-monkey",
       "name": "Karma Monkey",
       "externalUrl": "https://onchainmonkey.com/",
@@ -19411,12 +19417,6 @@
       "name": "DATA",
       "externalUrl": "http://data.eco/",
       "twitterUsername": "@Blockchain_Data"
-    },
-    {
-      "slug": "palletone",
-      "name": "PalletOneToken",
-      "externalUrl": "https://pallet.one/",
-      "twitterUsername": "PalletOne_org"
     },
     {
       "slug": "delta-theta",
