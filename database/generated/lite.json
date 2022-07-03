@@ -27,6 +27,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "dopeapeclub-1",
+      "name": "DopeApeClub",
+      "externalUrl": "https://dopeapeclub.xyz/",
+      "twitterUsername": "Dope_Ape_NFT"
+    },
+    {
+      "slug": "fsmfsm",
+      "name": "Flying Spaghetti Monster FSM",
+      "externalUrl": "http://fsm.cool",
+      "twitterUsername": "FSMcoolUN"
+    },
+    {
       "slug": "foundation-app",
       "name": "Foundation App",
       "externalUrl": "https://foundation.app",
@@ -2904,7 +2916,7 @@
       "slug": "nouns",
       "name": "Nouns",
       "externalUrl": "https://nouns.wtf",
-      "twitterUsername": null
+      "twitterUsername": "nounsdao"
     },
     {
       "slug": "theindifferentduck",
@@ -34527,5 +34539,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656736465534
+  "genTime": 1656864406646
 }
