@@ -41,7 +41,7 @@ app.get("/twitterSummary", Handlers.TwitterSummary.query());
 app.get("/summary", Handlers.Summary.query());
 app.get("/detectHistory", Handlers.DetectHistory.query());
 app.get("/getStatus", getStatus);
-app.get("/detect", detectUrl);
+app.all("/detect", detectUrl);
 app.get("/whois/lookup", lookupDomain);
 app.post("/report", reportScam);
 app.get("/detector/detectByUrl", detectByUrl);
