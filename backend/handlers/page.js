@@ -9,6 +9,16 @@ const DetectorVersion = '0.0.3'
 async function detectUrl(req, res) {
   const link = req.query.link;
   const forceDetect = req.query.forceDetect;
+  const item = req.body;
+
+  if (item) {
+    if (item.token != process.env.AUTH_TOKEN) {
+      return res.json({
+        error: 'auth failed'
+      })
+    }
+  }
+
   const parsed = getTopDomain(link);
   try {
     const domainStat = await DomainSummary.findOne({
@@ -29,7 +39,7 @@ async function detectUrl(req, res) {
         isBlack: domainStat.isBlack,
       });
     }
-    const { data } = await axios.get(process.env.DETECTOR_ENDPOINT, {
+    const { data } = item.data ? item : await axios.get(process.env.DETECTOR_ENDPOINT, {
       params: {
         link: link,
       },
