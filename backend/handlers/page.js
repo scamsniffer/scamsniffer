@@ -11,6 +11,8 @@ async function detectUrl(req, res) {
   const forceDetect = req.query.forceDetect;
   const item = req.body;
 
+  console.log(req.query);
+
   if (item) {
     if (item.token != process.env.AUTH_TOKEN) {
       return res.json({
