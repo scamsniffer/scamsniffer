@@ -13,7 +13,7 @@ async function detectDomain(link) {
 
 async function detectRecentDomain() {
   const recentDomains = await DomainSummary.findAll({
-    limit: 20,
+    limit: 50,
     order: [
         ['id', 'desc']
     ],
@@ -28,10 +28,11 @@ async function detectRecentDomain() {
           host: recentDomain.host,
         },
       });
-
       if (recentScams.length) {
         console.log("detect", recentDomain.host);
         await detectDomain(recentScams[0].link);
+      } else {
+        await detectDomain(`https://${recentDomain.host}`);
       }
     } catch (e) {
       console.log("error", e);
