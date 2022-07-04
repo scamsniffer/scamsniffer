@@ -27,6 +27,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "mekarhinos",
+      "name": "Meka Rhinos",
+      "externalUrl": "https://mekarhinos.io",
+      "twitterUsername": "MekaRhinos"
+    },
+    {
+      "slug": "xoxonft",
+      "name": "XOXO By Maya & Yehuda Devir",
+      "externalUrl": "http://xoxonft.io",
+      "twitterUsername": "xoxonft_io"
+    },
+    {
       "slug": "dopeapeclub-1",
       "name": "DopeApeClub",
       "externalUrl": "https://dopeapeclub.xyz/",
@@ -34539,5 +34551,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656864406646
+  "genTime": 1656909663861
 }
