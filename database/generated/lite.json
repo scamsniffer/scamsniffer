@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "nfttrader",
+      "name": "NFT Trader",
+      "externalUrl": "https://www.nfttrader.io/",
+      "twitterUsername": null
+    },
+    {
       "slug": "jungleking-nft",
       "name": "Jungle King Official",
       "externalUrl": "https://jungleking.app/#/",
