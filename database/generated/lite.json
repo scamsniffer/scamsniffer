@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "cyanotypes",
+      "name": "Justin Aversano - Twin Flames - Cyanotype Collection",
+      "externalUrl": "http://justinaversano.com",
+      "twitterUsername": "justinaversano"
+    },
+    {
       "slug": "nfttrader",
       "name": "NFT Trader",
       "externalUrl": "https://www.nfttrader.io/",
@@ -34563,5 +34569,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1656986913879
+  "genTime": 1657020501325
 }
