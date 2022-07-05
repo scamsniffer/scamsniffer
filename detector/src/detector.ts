@@ -36,6 +36,8 @@ export function getTopDomainFromUrl(url: string): DomainDetail | null {
   switch (parseResult.type) {
     case ParseResultType.Listed: {
       const { hostname, domain, topLevelDomains, subDomains } = parseResult;
+      // if (url.indexOf("io-0x13d8faf4a690f5aed2c529.in") > -1)
+      //   console.log("parseResult", parseResult);
       if (subDomains) subDomainsName = subDomains;
       topDomain = [domain].concat(topLevelDomains).join(".");
       if (domain) domainName = domain;
@@ -201,7 +203,11 @@ async function _detectScam(
   } = database;
 
   let outLinks = links.filter((link) => {
-    return !link.includes("twitter.com") && !link.includes("t.co");
+    return (
+      !link.includes("twitter.com") &&
+      !link.includes("t.co") &&
+      !link.includes("bit.ly")
+    );
   });
 
   // links
@@ -214,6 +220,7 @@ async function _detectScam(
     checkBySim: true,
     checkContent: false,
     checkPage: true,
+    checkSubdomain: true,
   };
 
   if (userId) {
@@ -399,7 +406,11 @@ async function _detectScam(
 
   if (flags.checkBySim) {
     const whitelistDomainList = metamaskDatabase.whitelist;
-    const uniqueDomains: { domainName: string; topDomain: string }[] = [];
+    const uniqueDomains: {
+      domainName: string;
+      topDomain: string;
+      subDomainsName: string[];
+    }[] = [];
     outLinks.forEach((link: string) => {
       const domainDetail = getTopDomainFromUrl(link);
       if (domainDetail && domainDetail.domainName && domainDetail.topDomain) {
@@ -413,6 +424,9 @@ async function _detectScam(
           uniqueDomains.push({
             domainName: domainDetail.domainName,
             topDomain: domainDetail.topDomain,
+            subDomainsName: domainDetail.subDomainsName
+              ? domainDetail.subDomainsName
+              : [],
           });
 
         if (isInWhiteList) {
@@ -486,6 +500,17 @@ async function _detectScam(
                   2,
                 ]);
             }
+
+            // if (domain.subDomainsName.length) {
+            //   const firstSubDomain = domain.subDomainsName[0];
+            //   if (firstSubDomain != "www") {
+            //     compareItems.push([
+            //       firstSubDomain,
+            //       projectDomainDetail.domainName,
+            //       2,
+            //     ]);
+            //   }
+            // }
           }
 
           if (projectName)
@@ -508,7 +533,9 @@ async function _detectScam(
             });
           if (type == 2) hasSimLink = true;
         }
-        // if (_.slug === "gossamer-seed") console.log("matchItems", matchItems);
+        // if (_.slug === "milady") {
+        //   console.log("matchItems", matchItems, uniqueDomains);
+        // }
         return {
           hasSimLink: isSame ? false : hasSimLink,
           matchItems,
@@ -559,18 +586,9 @@ async function _detectScam(
 
                 let sim = 0;
                 let contain = false;
-                if (aString) {
-                  let canDoSimTest =
-                    bString.length > simSizeThreshold &&
-                    aString.length > simSizeThreshold;
-                  contain = canDoSimTest && bString.includes(aString);
-                  sim = canDoSimTest ? compareTwoStrings(aString, bString) : 0;
-                }
 
-                // subdomain-case  eg. murakamiflowers.kaikaikiki.com
-                if (sim < simSizeThreshold && subDomains && subDomains.length) {
-                  let aString = subDomains[0];
-                  if (aString != "www") {
+                function checkMatchItems(aString: string, bString: string) {
+                  if (aString) {
                     let canDoSimTest =
                       bString.length > simSizeThreshold &&
                       aString.length > simSizeThreshold;
@@ -580,6 +598,31 @@ async function _detectScam(
                       : 0;
                   }
                 }
+
+                if (aString) {
+                  checkMatchItems(aString, bString);
+                }
+
+                // subdomain-case  eg. murakamiflowers.kaikaikiki.com
+                if (sim < simSizeThreshold && subDomains && subDomains.length) {
+                  let aString = subDomains[0];
+                  if (aString != "www") {
+                    checkMatchItems(aString, bString);
+                  }
+                }
+
+                // subdomain case  eg. nfttrader.io-0x13d8faf4a690f5aed2c529.in match nfttrader.io
+                const projectDomainName = projectWithDomain.domain.domainName;
+                if (
+                  sim < simSizeThreshold &&
+                  linkDomain.subDomainsName.length
+                ) {
+                  let linkSub = linkDomain.subDomainsName[0];
+                  if (linkSub != "www" && projectDomainName) {
+                    checkMatchItems(projectDomainName, linkSub);
+                  }
+                }
+
                 return {
                   contain,
                   projectWithDomain,

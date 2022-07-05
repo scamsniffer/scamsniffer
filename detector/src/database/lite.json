@@ -27,6 +27,42 @@
     ],
     "ProjectList": [
         {
+            "slug": "nfttrader",
+            "name": "NFT Trader",
+            "externalUrl": "https://www.nfttrader.io/",
+            "twitterUsername": null
+        },
+        {
+            "slug": "jungleking-nft",
+            "name": "Jungle King Official",
+            "externalUrl": "https://jungleking.app/#/",
+            "twitterUsername": "Jungleking_NFT"
+        },
+        {
+            "slug": "mekarhinos",
+            "name": "Meka Rhinos",
+            "externalUrl": "https://mekarhinos.io",
+            "twitterUsername": "MekaRhinos"
+        },
+        {
+            "slug": "xoxonft",
+            "name": "XOXO By Maya & Yehuda Devir",
+            "externalUrl": "http://xoxonft.io",
+            "twitterUsername": "xoxonft_io"
+        },
+        {
+            "slug": "dopeapeclub-1",
+            "name": "DopeApeClub",
+            "externalUrl": "https://dopeapeclub.xyz/",
+            "twitterUsername": "Dope_Ape_NFT"
+        },
+        {
+            "slug": "fsmfsm",
+            "name": "Flying Spaghetti Monster FSM",
+            "externalUrl": "http://fsm.cool",
+            "twitterUsername": "FSMcoolUN"
+        },
+        {
             "slug": "foundation-app",
             "name": "Foundation App",
             "externalUrl": "https://foundation.app",
@@ -2904,7 +2940,7 @@
             "slug": "nouns",
             "name": "Nouns",
             "externalUrl": "https://nouns.wtf",
-            "twitterUsername": null
+            "twitterUsername": "nounsdao"
         },
         {
             "slug": "theindifferentduck",
@@ -34527,5 +34563,5 @@
             "twitterUsername": "SwapdexO"
         }
     ],
-    "genTime": 1656736465534
+    "genTime": 1656986913879
 }
