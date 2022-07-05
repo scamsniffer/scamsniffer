@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "projectino",
+      "name": "Project Ino",
+      "externalUrl": "http://evalabs.xyz",
+      "twitterUsername": "theprojectINO"
+    },
+    {
       "slug": "cyanotypes",
       "name": "Justin Aversano - Twin Flames - Cyanotype Collection",
       "externalUrl": "http://justinaversano.com",
@@ -34563,5 +34569,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657020501325
+  "genTime": 1657026402455
 }
