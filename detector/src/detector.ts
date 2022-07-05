@@ -658,7 +658,7 @@ async function _detectScam(
           continue;
         }
         try {
-          domainMeta = await getDomainMeta([domainSim.linkDomain.topDomain]);
+          domainMeta = options.skipDomainMeta ?  null : await getDomainMeta([domainSim.linkDomain.topDomain]);
           if (!domainMeta) continue;
           creationDaysOfDomain = domainMeta.data
             ? Math.floor(
