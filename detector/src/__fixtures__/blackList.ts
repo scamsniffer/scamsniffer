@@ -219,4 +219,86 @@ Claim a Twin Tigers Jacket:`,
   {
     links: ["https://stepnshoesbox.com/"],
   },
+  {
+    links: ["https://goblendawn.wtf/"],
+    pageDetails: {
+      title: "goblintown",
+      metaHeads: {
+        "og:title": "goblintown",
+        "og:description":
+          "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
+        "og:url": "https://goblintown.wtf/",
+        "og:image": "https://goblintown.wtf/i/IMG_1017.jpg",
+        "og:site_name": "goblintown",
+        "og:locale": "en_US",
+        "og:type": "article",
+        "twitter:card": "photo",
+        "twitter:site": "@godlintownwtf",
+        "twitter:title": "goblintown",
+        "twitter:description":
+          "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
+        "twitter:image": "https://goblintown.wtf/i/IMG_1017.jpg?2",
+        "twitter:url": "https://goblintown.wtf/",
+        "twitter:creator": "@gobllintownwtf",
+        viewport: "width=device-width, initial-scale=1",
+      },
+      canonicalLink: null,
+      topSourceDomains: [
+        {
+          domain: "goblintown.wtf",
+          count: 458,
+        },
+        {
+          domain: "www.goblintown.wtf",
+          count: 5,
+        },
+      ],
+    },
+  },
+  {
+    links: ["https://otherside.contact/"],
+  },
+  {
+    links: ["https://nfttrader.io-0x13d8faf4a690f5aed2c529.in/"],
+  },
+  {
+    links: ["https://miladymaker.mintyoursnfts.com/"],
+  },
+  {
+    links: ["https://preemint.com/"],
+  },
+  {
+    links: ["https://thesaudisnft.premint.id/?=Freemint"],
+  },
+  {
+    links: ["https://play-otherside.org/"],
+  },
+  {
+    links: ["https://gossamerseed.world/"],
+    pageDetails: {
+      title: "Gossamer NFT Collection by BRON Hollywood Studio | Gossamer Seed",
+      metaHeads: {
+        robots: "index,follow",
+        description:
+          "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
+        "twitter:card": "summary_large_image",
+        "og:title": "Gossamer NFT Collection by BRON Hollywood Studio",
+        "og:description":
+          "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
+        "og:url": "https://gossamerseed.world",
+        "og:type": "website",
+        "og:image": "https://i.imgur.com/hIrMsdF.png",
+        "og:image:width": "1200",
+        "og:image:height": "640",
+        "og:locale": "en_IE",
+      },
+      canonicalLink: "https://gossamerseed.world/",
+      topSourceDomains: [
+        {
+          domain: "gossamerseed.world",
+          count: 4,
+        },
+      ],
+    },
+  },
 ];
