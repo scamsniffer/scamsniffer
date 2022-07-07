@@ -202,16 +202,21 @@ async function _detectScam(
     callToActionsKeywords,
   } = database;
 
+  // short links
   let outLinks = links.filter((link) => {
     return (
-      !link.includes("twitter.com") &&
-      !link.includes("t.co") &&
-      !link.includes("bit.ly")
+      !link.includes("twitter.com/") &&
+      !link.includes("t.co/") &&
+      !link.includes("bit.ly/")
     );
   });
 
   // links
-  if (outLinks.length === 0) return null;
+  if (outLinks.length === 0) {
+    console.error('no links')
+    return null;
+  }
+
   let matchType = "unknown";
 
   const flags = {
@@ -533,9 +538,6 @@ async function _detectScam(
             });
           if (type == 2) hasSimLink = true;
         }
-        // if (_.slug === "milady") {
-        //   console.log("matchItems", matchItems, uniqueDomains);
-        // }
         return {
           hasSimLink: isSame ? false : hasSimLink,
           matchItems,
@@ -561,8 +563,6 @@ async function _detectScam(
       }
     }
 
-    // const checkDomain = !fuzzyTwitterCheck && projectsWithDomain.length;
-    // console.log("projectsWithDomain", projectsWithDomain.length);
     const checkDomain = projectsWithDomain.length;
     if (checkDomain) {
       const simThreshold = 0.65;
@@ -597,6 +597,9 @@ async function _detectScam(
                       ? compareTwoStrings(aString, bString)
                       : 0;
                   }
+                  // if (projectWithDomain.project.slug === "premint") {
+                  //   console.log("project", [aString, bString, sim, contain]);
+                  // }
                 }
 
                 if (aString) {
@@ -604,7 +607,10 @@ async function _detectScam(
                 }
 
                 // subdomain-case  eg. murakamiflowers.kaikaikiki.com
-                if (sim < simSizeThreshold && subDomains && subDomains.length) {
+                if (sim < simThreshold && subDomains && subDomains.length) {
+                  // if (projectWithDomain.project.slug === "premint") {
+                  //   console.log("compare subdomain", sim, simThreshold);
+                  // }
                   let aString = subDomains[0];
                   if (aString != "www") {
                     checkMatchItems(aString, bString);
@@ -613,16 +619,16 @@ async function _detectScam(
 
                 // subdomain case  eg. nfttrader.io-0x13d8faf4a690f5aed2c529.in match nfttrader.io
                 const projectDomainName = projectWithDomain.domain.domainName;
-                if (
-                  sim < simSizeThreshold &&
-                  linkDomain.subDomainsName.length
-                ) {
+                if (sim < simThreshold && linkDomain.subDomainsName.length) {
                   let linkSub = linkDomain.subDomainsName[0];
                   if (linkSub != "www" && projectDomainName) {
                     checkMatchItems(projectDomainName, linkSub);
                   }
                 }
 
+                //  if (_.slug === "premint") {
+                //    console.log("matchItems", matchItems, uniqueDomains);
+                //  }
                 return {
                   contain,
                   projectWithDomain,
@@ -640,7 +646,7 @@ async function _detectScam(
             }
           : null;
       });
-      // console.log(domainResult);
+      
       let similarProject = null;
       let creationDaysOfDomain = -1;
       let domainMeta = null;

@@ -50,27 +50,49 @@
 //   //     }
 //   //   )
 //   // );
-//   console.log(
-//     await detector.detectScam(
-//       {
-//         links: ["https://nfttrader.io-0x13d8faf4a690f5aed2c529.in/"],
-//       },
-//       {
-//         // onlyLink: true
-//       }
-//     )
-//   );
+// //   console.log(
+// //     await detector.detectScam(
+// //       {
+// //         links: ["https://nfttrader.io-0x13d8faf4a690f5aed2c529.in/"],
+// //       },
+// //       {
+// //         // onlyLink: true
+// //       }
+// //     )
+// //   );
 
-//    console.log(
-//      await detector.detectScam(
-//        {
-//          links: ["https://miladymaker.mintyoursnfts.com/"],
-//        },
-//        {
-//          // onlyLink: true
-//        }
-//      )
-//    );
+// //    console.log(
+// //      await detector.detectScam(
+// //        {
+// //          links: ["https://miladymaker.mintyoursnfts.com/"],
+// //        },
+// //        {
+// //          // onlyLink: true
+// //        }
+// //      )
+// //    );
+
+//       console.log(
+//         await detector.detectScam(
+//           {
+//             links: ["https://preemint.com/"],
+//           },
+//           {
+//             // onlyLink: true
+//           }
+//         )
+//       );
+
+//        console.log(
+//          await detector.detectScam(
+//            {
+//              links: ["https://thesaudisnft.premint.id/?=Freemint"],
+//            },
+//            {
+//              // onlyLink: true
+//            }
+//          )
+//        );
 
 //   //  console.log(
 //   //    await detector.detectScam({
@@ -167,7 +189,7 @@
 // async function test() {
 //   await testWhite();
 //   await testBlack();
-// //   await testLink();
 // }
 
 // test();
+// // testLink();
