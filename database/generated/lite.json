@@ -27,6 +27,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "official-aneroverse",
+      "name": "AneroVerse Official",
+      "externalUrl": null,
+      "twitterUsername": "AneroVerse"
+    },
+    {
+      "slug": "copebears",
+      "name": "CopeBears",
+      "externalUrl": "http://copebear.lol",
+      "twitterUsername": "copebearlol"
+    },
+    {
+      "slug": "moondogplus",
+      "name": "MoonDogPlus",
+      "externalUrl": "http://moondogplus.xyz",
+      "twitterUsername": "moondogplus"
+    },
+    {
+      "slug": "chubbylittlejiras",
+      "name": "Chubby Little Jiras",
+      "externalUrl": "https://chubbylittlejiras.io/",
+      "twitterUsername": "ChubbyJiras"
+    },
+    {
       "slug": "projectino",
       "name": "Project Ino",
       "externalUrl": "http://evalabs.xyz",
@@ -34569,5 +34593,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657026402455
+  "genTime": 1657195219268
 }
