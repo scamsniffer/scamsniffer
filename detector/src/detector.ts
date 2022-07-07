@@ -597,7 +597,7 @@ async function _detectScam(
                       ? compareTwoStrings(aString, bString)
                       : 0;
                   }
-                  // if (projectWithDomain.project.slug === "premint") {
+                  // if (projectWithDomain.project.slug === "otherdeed") {
                   //   console.log("project", [aString, bString, sim, contain]);
                   // }
                 }
@@ -626,9 +626,6 @@ async function _detectScam(
                   }
                 }
 
-                //  if (_.slug === "premint") {
-                //    console.log("matchItems", matchItems, uniqueDomains);
-                //  }
                 return {
                   contain,
                   projectWithDomain,
@@ -641,6 +638,7 @@ async function _detectScam(
         return highSimilarProjects[0]
           ? {
               linkDomain,
+              contain: highSimilarProjects[0].contain,
               sim: highSimilarProjects[0].sim,
               projectWithDomain: highSimilarProjects[0].projectWithDomain,
             }
@@ -653,8 +651,12 @@ async function _detectScam(
       for (let index = 0; index < domainResult.length; index++) {
         const domainSim = domainResult[index];
         if (!domainSim) continue;
-        // full match  xxx.com xxx.io
-        if (domainSim.sim === 1) {
+        // full match xxx.com xxx.io
+        const isFullyMatch = domainSim.sim === 1;
+        // contain match cc-xxx.com xxx.io
+        const simAndMatch = domainSim.contain && domainSim.sim > 0.7;
+        // const hasContainAndSim = ;
+        if (isFullyMatch || simAndMatch) {
           if (hasContext) {
             // in twitter context
             if (fuzzyTwitterCheck) similarProject = domainSim;
@@ -664,14 +666,16 @@ async function _detectScam(
           continue;
         }
         try {
-          domainMeta = options.skipDomainMeta ?  null : await getDomainMeta([domainSim.linkDomain.topDomain]);
+          domainMeta = options.skipDomainMeta
+            ? null
+            : await getDomainMeta([domainSim.linkDomain.topDomain]);
           if (!domainMeta) continue;
-          creationDaysOfDomain = domainMeta.data
+          const domainDetail = domainMeta.data;
+          const createDate =
+            domainDetail.creationDate || domainDetail.updatedDate;
+          creationDaysOfDomain = createDate
             ? Math.floor(
-                (Date.now() -
-                  new Date(domainMeta.data.creationDate).getTime()) /
-                  1000 /
-                  86400
+                (Date.now() - new Date(createDate).getTime()) / 1000 / 86400
               )
             : -1;
           const isRecentRegister =
@@ -682,6 +686,8 @@ async function _detectScam(
             similarProject = domainSim;
             if (hasContext && !fuzzyTwitterCheck) similarProject = null;
             break;
+          } else {
+            // console.log("not recent", domainMeta);
           }
         } catch (er) {
           console.error("check failed", er);

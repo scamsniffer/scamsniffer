@@ -72,21 +72,34 @@
 // //      )
 // //    );
 
-//       console.log(
-//         await detector.detectScam(
-//           {
-//             links: ["https://preemint.com/"],
-//           },
-//           {
-//             // onlyLink: true
-//           }
-//         )
-//       );
+//     //   console.log(
+//     //     await detector.detectScam(
+//     //       {
+//     //         links: ["https://preemint.com/"],
+//     //       },
+//     //       {
+//     //         // onlyLink: true
+//     //       }
+//     //     )
+//     //   );
+
+//     //    console.log(
+//     //      await detector.detectScam(
+//     //        {
+//     //          links: ["https://thesaudisnft.premint.id/?=Freemint"],
+//     //        },
+//     //        {
+//     //          // onlyLink: true
+//     //        }
+//     //      )
+//     //    );
+
+
 
 //        console.log(
 //          await detector.detectScam(
 //            {
-//              links: ["https://thesaudisnft.premint.id/?=Freemint"],
+//              links: ["https://play-otherside.org/"],
 //            },
 //            {
 //              // onlyLink: true
@@ -94,6 +107,8 @@
 //          )
 //        );
 
+       
+      
 //   //  console.log(
 //   //    await detector.detectScam({
 //   //      id: "1542866407628701696",
@@ -191,5 +206,5 @@
 //   await testBlack();
 // }
 
-// test();
-// // testLink();
+// // test();
+// testLink();
