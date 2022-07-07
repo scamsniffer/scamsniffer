@@ -2,7 +2,7 @@
   "scripts": {
   },
   "dependencies": {
-    "@scamsniffer/detector": "0.0.17",
+    "@scamsniffer/detector": "0.0.18",
     "axios": "^0.24.0",
     "axios-https-proxy-fix": "^0.17.1",
     "body-parser": "^1.19.1",
