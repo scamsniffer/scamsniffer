@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "wagmiunited",
+      "name": "WAGMI United",
+      "externalUrl": "https://wagmiunited.com",
+      "twitterUsername": "WAGMIUnited"
+    },
+    {
       "slug": "wagmiarmy",
       "name": "OFFICIAL WAGMI ARMY",
       "externalUrl": "https://wagmiarmy.io/",
@@ -34623,5 +34629,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657295987844
+  "genTime": 1657312135959
 }
