@@ -27,7 +27,30 @@
   ],
   "ProjectList": [
     {
-
+      "slug": "wagmiarmy",
+      "name": "OFFICIAL WAGMI ARMY",
+      "externalUrl": "https://wagmiarmy.io/",
+      "twitterUsername": "wagmiarmynft"
+    },
+    {
+      "slug": "zenogakki-official-genesis",
+      "name": "Zenogakki: Birth Of Utopia",
+      "externalUrl": "https://zenogakki.io/",
+      "twitterUsername": "zenogakki"
+    },
+    {
+      "slug": "alibabaandfortythieves",
+      "name": "Alibaba And Forty Thieves",
+      "externalUrl": "http://alibabathieves.xyz/",
+      "twitterUsername": "Alibaba_Thieves"
+    },
+    {
+      "slug": "dirtbirdswtf",
+      "name": "dirtbirds.wtf",
+      "externalUrl": "http://dirtbirds.wtf",
+      "twitterUsername": "Dirt_Birds_NFT"
+    },
+    {
       "slug": "revoke-cash",
       "name": "Revoke.cash",
       "externalUrl": "https://revoke.cash/",
@@ -34600,5 +34623,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657195219268
+  "genTime": 1657295987844
 }
