@@ -27,6 +27,13 @@
   ],
   "ProjectList": [
     {
+
+      "slug": "revoke-cash",
+      "name": "Revoke.cash",
+      "externalUrl": "https://revoke.cash/",
+      "twitterUsername": "RevokeCash"
+    },
+    {
       "slug": "official-aneroverse",
       "name": "AneroVerse Official",
       "externalUrl": null,
