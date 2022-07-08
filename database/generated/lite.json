@@ -27,6 +27,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "minimenclub",
+      "name": "Minimen Official",
+      "externalUrl": "https://www.minimen.io/",
+      "twitterUsername": "minimenclub"
+    },
+    {
       "slug": "wagmiunited",
       "name": "WAGMI United",
       "externalUrl": "https://wagmiunited.com",
@@ -34629,5 +34635,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657312135959
+  "genTime": 1657319379081
 }
