@@ -27,6 +27,600 @@
   ],
   "ProjectList": [
     {
+      "slug": "binance.us",
+      "name": "Binance.US",
+      "externalUrl": "https://binance.us/",
+      "twitterUsername": "binanceus"
+    },
+    {
+      "slug": "ftx.us",
+      "name": "FTX",
+      "externalUrl": "https://ftx.us/",
+      "twitterUsername": "FTX_Official"
+    },
+    {
+      "slug": "coinmarketcap.com",
+      "name": "CoinMarketCap",
+      "externalUrl": "https://coinmarketcap.com/",
+      "twitterUsername": "CoinMarketCap"
+    },
+    {
+      "slug": "tradingview.com",
+      "name": "TradingView",
+      "externalUrl": "https://tradingview.com/",
+      "twitterUsername": "tradingview/"
+    },
+    {
+      "slug": "bybit.com",
+      "name": "Bybit",
+      "externalUrl": "https://bybit.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "phantom.app",
+      "name": " Phantom",
+      "externalUrl": "https://phantom.app/",
+      "twitterUsername": "phantom"
+    },
+    {
+      "slug": "solanart.io",
+      "name": "Solanart",
+      "externalUrl": "https://solanart.io/",
+      "twitterUsername": "SolanartNFT"
+    },
+    {
+      "slug": "kraken.com",
+      "name": "Kraken",
+      "externalUrl": "https://kraken.com/",
+      "twitterUsername": "krakenfx"
+    },
+    {
+      "slug": "huobi.com",
+      "name": "Huobi",
+      "externalUrl": "https://huobi.com/",
+      "twitterUsername": "HuobiGlobal"
+    },
+    {
+      "slug": "coinbase.com",
+      "name": "Coinbase",
+      "externalUrl": "https://coinbase.com/",
+      "twitterUsername": "coinbase"
+    },
+    {
+      "slug": "solana.fm",
+      "name": "SolanaFM",
+      "externalUrl": "https://solana.fm/",
+      "twitterUsername": "solanafm"
+    },
+    {
+      "slug": "solana.org",
+      "name": "Solana Foundation",
+      "externalUrl": "https://solana.org/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "investvoyager.com",
+      "name": "Voyager",
+      "externalUrl": "https://investvoyager.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "etherscan.io",
+      "name": "Etherscan",
+      "externalUrl": "https://etherscan.io/",
+      "twitterUsername": "etherscan"
+    },
+    {
+      "slug": "metaplex.com",
+      "name": "Metaplex",
+      "externalUrl": "https://metaplex.com/",
+      "twitterUsername": "NdamukongSuh"
+    },
+    {
+      "slug": "arbitrum.io",
+      "name": "Arbitrum",
+      "externalUrl": "https://arbitrum.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "zksync.io",
+      "name": "zkSync",
+      "externalUrl": "https://zksync.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "nansen.ai",
+      "name": "Nansen",
+      "externalUrl": "https://nansen.ai/",
+      "twitterUsername": "NFsTev_e"
+    },
+    {
+      "slug": "gate.io",
+      "name": "Gate.io",
+      "externalUrl": "https://gate.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "bitstamp.net",
+      "name": "Bitstamp",
+      "externalUrl": "https://bitstamp.net/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "bithumb.com",
+      "name": "bithumb",
+      "externalUrl": "https://bithumb.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "okx.com",
+      "name": "OKX",
+      "externalUrl": "https://okx.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "poloniex.com",
+      "name": "Poloniex",
+      "externalUrl": "https://poloniex.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "phemex.com",
+      "name": "Phemex",
+      "externalUrl": "https://phemex.com/",
+      "twitterUsername": "Phemex_official"
+    },
+    {
+      "slug": "apollox.finance",
+      "name": "ApolloX DEX",
+      "externalUrl": "https://apollox.finance/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "spooky.fi",
+      "name": "SpookySwap",
+      "externalUrl": "https://spooky.fi/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "xrpl.org",
+      "name": "XRPL.org",
+      "externalUrl": "https://xrpl.org/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "polygon.technology",
+      "name": "Polygon",
+      "externalUrl": "https://polygon.technology/",
+      "twitterUsername": "0xPolygon"
+    },
+    {
+      "slug": "polygon.community",
+      "name": "Polygon DAO",
+      "externalUrl": "https://polygon.community/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "chain.link",
+      "name": "Chainlink",
+      "externalUrl": "https://chain.link/",
+      "twitterUsername": "chainlink"
+    },
+    {
+      "slug": "algorand.com",
+      "name": "Algorand",
+      "externalUrl": "https://algorand.com/",
+      "twitterUsername": "Algorand"
+    },
+    {
+      "slug": "getmonero.org",
+      "name": "Monero",
+      "externalUrl": "https://getmonero.org/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "avalabs.org",
+      "name": "Ava Labs",
+      "externalUrl": "https://avalabs.org/",
+      "twitterUsername": "avalabsofficial?lang=en"
+    },
+    {
+      "slug": "hedera.com",
+      "name": "Hedera",
+      "externalUrl": "https://hedera.com/",
+      "twitterUsername": "hedera"
+    },
+    {
+      "slug": "ethlend.io",
+      "name": "ethlend",
+      "externalUrl": "https://ethlend.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "zapper.fi",
+      "name": "Zapper",
+      "externalUrl": "https://zapper.fi/",
+      "twitterUsername": "zapper_fi"
+    },
+    {
+      "slug": "blockchain.com",
+      "name": "Blockchain.com",
+      "externalUrl": "https://blockchain.com/",
+      "twitterUsername": "blockchain"
+    },
+    {
+      "slug": "myetherwallet.com",
+      "name": "MyEtherWallet",
+      "externalUrl": "https://myetherwallet.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "keplr.app",
+      "name": "Keplr Wallet",
+      "externalUrl": "https://keplr.app/",
+      "twitterUsername": "keplrwallet"
+    },
+    {
+      "slug": "sollet.io",
+      "name": "Solana SPL Token Wallet",
+      "externalUrl": "https://sollet.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "bitcoin.it",
+      "name": "Bitcoin Wiki",
+      "externalUrl": "https://bitcoin.it/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "exocharts.com",
+      "name": "ExoCharts",
+      "externalUrl": "https://exocharts.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "rapgodsnft.io",
+      "name": "RapGods NFT",
+      "externalUrl": "https://rapgodsnft.io/",
+      "twitterUsername": "rapgodnft"
+    },
+    {
+      "slug": "bt.io",
+      "name": "BitTorrent Chain",
+      "externalUrl": "https://bt.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "huobiwallet.com",
+      "name": "Huobi Wallet",
+      "externalUrl": "https://huobiwallet.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "enjin.io",
+      "name": "Enjin",
+      "externalUrl": "https://enjin.io/",
+      "twitterUsername": "enjin"
+    },
+    {
+      "slug": "0x.org",
+      "name": "0x",
+      "externalUrl": "https://0x.org/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "omg.network",
+      "name": "OMG Foundation",
+      "externalUrl": "https://omg.network/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "gnosis.io",
+      "name": "Gnosis",
+      "externalUrl": "https://gnosis.io/",
+      "twitterUsername": "gnosisdao"
+    },
+    {
+      "slug": "ankr.com",
+      "name": "Ankr Crypto",
+      "externalUrl": "https://ankr.com/",
+      "twitterUsername": "ankr"
+    },
+    {
+      "slug": "woo.org",
+      "name": "WOO Network",
+      "externalUrl": "https://woo.org/",
+      "twitterUsername": "WOOnetwork"
+    },
+    {
+      "slug": "digibyte.org",
+      "name": "DigiByte Blockchain",
+      "externalUrl": "https://digibyte.org/",
+      "twitterUsername": "jaredctate"
+    },
+    {
+      "slug": "ens.tools",
+      "name": "ENS.Tools",
+      "externalUrl": "https://ens.tools/",
+      "twitterUsername": "enstools"
+    },
+    {
+      "slug": "ens.vision",
+      "name": "ENS.Vision",
+      "externalUrl": "https://ens.vision/",
+      "twitterUsername": "ensvision"
+    },
+    {
+      "slug": "angrypitbullclub.io",
+      "name": "Angry Pitbull Club",
+      "externalUrl": "https://angrypitbullclub.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "angrypitbullclub.com",
+      "name": "Angry Pitbull Club",
+      "externalUrl": "https://angrypitbullclub.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "cryptozombies.io",
+      "name": "CryptoZombies",
+      "externalUrl": "https://cryptozombies.io/",
+      "twitterUsername": "loomnetwork"
+    },
+    {
+      "slug": "montanaof300.com",
+      "name": "montanaof300",
+      "externalUrl": "https://montanaof300.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "magiceden.io",
+      "name": "Magic Eden",
+      "externalUrl": "https://magiceden.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "proton.me",
+      "name": "Proton",
+      "externalUrl": "https://proton.me/",
+      "twitterUsername": "protonmail"
+    },
+    {
+      "slug": "trezor.io",
+      "name": "Trezor Hardware Wallet",
+      "externalUrl": "https://trezor.io/",
+      "twitterUsername": "Trezor"
+    },
+    {
+      "slug": "defiyield.app",
+      "name": "DEFIYIELD",
+      "externalUrl": "https://defiyield.app/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "bittrex.com",
+      "name": "Bittrex Global",
+      "externalUrl": "https://bittrex.com/",
+      "twitterUsername": "BittrexGlobal"
+    },
+    {
+      "slug": "rugzombie.io",
+      "name": "RugZombie",
+      "externalUrl": "https://rugzombie.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "buildclub.xyz",
+      "name": "BC Landing",
+      "externalUrl": "https://buildclub.xyz/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "oblivion.art",
+      "name": "Oblivion",
+      "externalUrl": "https://oblivion.art/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "exodus.com",
+      "name": "Exodus",
+      "externalUrl": "https://exodus.com/",
+      "twitterUsername": "exodus_io"
+    },
+    {
+      "slug": "rugpullfinder.io",
+      "name": "Rug Pull Finder",
+      "externalUrl": "https://rugpullfinder.io/",
+      "twitterUsername": "rugpullfinder"
+    },
+    {
+      "slug": "yuga.com",
+      "name": "Yuga Labs",
+      "externalUrl": "https://yuga.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "yugalabs.io",
+      "name": "Yuga Labs",
+      "externalUrl": "https://yugalabs.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "mycrypto.com",
+      "name": "MyCrypto",
+      "externalUrl": "https://mycrypto.com/",
+      "twitterUsername": "mycrypto"
+    },
+    {
+      "slug": "changelly.com",
+      "name": "changelly",
+      "externalUrl": "https://changelly.com/",
+      "twitterUsername": "changelly_team"
+    },
+    {
+      "slug": "gmx.io",
+      "name": "GMX",
+      "externalUrl": "https://gmx.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "cardanoscan.io",
+      "name": "Cardanoscan",
+      "externalUrl": "https://cardanoscan.io/",
+      "twitterUsername": "cardanoscanio"
+    },
+    {
+      "slug": "walletconnect.com",
+      "name": "WalletConnect",
+      "externalUrl": "https://walletconnect.com/",
+      "twitterUsername": "walletconnect"
+    },
+    {
+      "slug": "bayc.com",
+      "name": "bayc.com",
+      "externalUrl": "https://bayc.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "nightbirds.art",
+      "name": "AI Nightbirds",
+      "externalUrl": "https://nightbirds.art/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "deadgods.com",
+      "name": "DeadGods",
+      "externalUrl": "https://deadgods.com/",
+      "twitterUsername": "degodsnft"
+    },
+    {
+      "slug": "cryptopackagedgoods.com",
+      "name": "\"Crypto Packaged\" Goods",
+      "externalUrl": "https://cryptopackagedgoods.com/",
+      "twitterUsername": "stewartsc"
+    },
+    {
+      "slug": "elftown.wtf",
+      "name": "Elftown.wtf",
+      "externalUrl": "https://elftown.wtf/",
+      "twitterUsername": "elftownwtf"
+    },
+    {
+      "slug": "mousindahous.com",
+      "name": null,
+      "externalUrl": "https://mousindahous.com/",
+      "twitterUsername": "MousInDaHous"
+    },
+    {
+      "slug": "leavemealone.lol",
+      "name": "Leave Me Alone",
+      "externalUrl": "https://leavemealone.lol/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "blvck.com",
+      "name": "Blvck Paris",
+      "externalUrl": "https://blvck.com/",
+      "twitterUsername": "BlvckParis"
+    },
+    {
+      "slug": "mirror.xyz",
+      "name": "Mirror",
+      "externalUrl": "https://mirror.xyz/",
+      "twitterUsername": "viamirror"
+    },
+    {
+      "slug": "tokenproof.xyz",
+      "name": "tokenproof.xyz",
+      "externalUrl": "https://tokenproof.xyz/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "tickettool.xyz",
+      "name": "Ticket Tool",
+      "externalUrl": "https://tickettool.xyz/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "solanascan.io",
+      "name": "Solanascan",
+      "externalUrl": "https://solanascan.io/",
+      "twitterUsername": "solanascan"
+    },
+    {
+      "slug": "raritysniper.com",
+      "name": "Rarity Sniper",
+      "externalUrl": "https://raritysniper.com/",
+      "twitterUsername": "RaritySniperNFT"
+    },
+    {
+      "slug": "lens.xyz",
+      "name": "Lens Protocol",
+      "externalUrl": "https://lens.xyz/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "zkscan.io",
+      "name": "zkSync Block Explorer",
+      "externalUrl": "https://zkscan.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "startwithnervos.com",
+      "name": "Start With Nervos",
+      "externalUrl": "https://startwithnervos.com/",
+      "twitterUsername": "TheVanderWal"
+    },
+    {
+      "slug": "dovemetrics.com",
+      "name": "Dove Metrics",
+      "externalUrl": "https://dovemetrics.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "alphabot.app",
+      "name": "alphabot",
+      "externalUrl": "https://alphabot.app/",
+      "twitterUsername": "TheApeBilly"
+    },
+    {
+      "slug": "cryptopunks.app",
+      "name": "CryptoPunks",
+      "externalUrl": "https://cryptopunks.app/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "trontv.com",
+      "name": "TronTV",
+      "externalUrl": "https://trontv.com/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "tasties.io",
+      "name": "Tasties",
+      "externalUrl": "https://tasties.io/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "tradinglite.com",
+      "name": "TradingLite",
+      "externalUrl": "https://tradinglite.com/",
+      "twitterUsername": "tradinglite"
+    },
+    {
+      "slug": "creature.market",
+      "name": "Creature World",
+      "externalUrl": "https://creature.market/",
+      "twitterUsername": null
+    },
+    {
+      "slug": "mee6.xyz",
+      "name": "MEE6",
+      "externalUrl": "https://mee6.xyz/",
+      "twitterUsername": null
+    },
+    {
       "category": "Wallet",
       "slug": "metamask",
       "name": "MetaMask",
@@ -42,6 +636,42 @@
     },
     {
       "category": "Tool",
+      "slug": "minimenclub",
+      "name": "Minimen Official",
+      "externalUrl": "https://www.minimen.io/",
+      "twitterUsername": "minimenclub"
+    },
+    {
+      "slug": "wagmiunited",
+      "name": "WAGMI United",
+      "externalUrl": "https://wagmiunited.com",
+      "twitterUsername": "WAGMIUnited"
+    },
+    {
+      "slug": "wagmiarmy",
+      "name": "OFFICIAL WAGMI ARMY",
+      "externalUrl": "https://wagmiarmy.io/",
+      "twitterUsername": "wagmiarmynft"
+    },
+    {
+      "slug": "zenogakki-official-genesis",
+      "name": "Zenogakki: Birth Of Utopia",
+      "externalUrl": "https://zenogakki.io/",
+      "twitterUsername": "zenogakki"
+    },
+    {
+      "slug": "alibabaandfortythieves",
+      "name": "Alibaba And Forty Thieves",
+      "externalUrl": "http://alibabathieves.xyz/",
+      "twitterUsername": "Alibaba_Thieves"
+    },
+    {
+      "slug": "dirtbirdswtf",
+      "name": "dirtbirds.wtf",
+      "externalUrl": "http://dirtbirds.wtf",
+      "twitterUsername": "Dirt_Birds_NFT"
+    },
+    {
       "slug": "revoke-cash",
       "name": "Revoke.cash",
       "externalUrl": "https://revoke.cash/",
@@ -34602,5 +35232,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657195219268
+  "genTime": 1657319379081
 }
