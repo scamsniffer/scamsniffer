@@ -27,7 +27,21 @@
   ],
   "ProjectList": [
     {
-
+      "category": "Wallet",
+      "slug": "metamask",
+      "name": "MetaMask",
+      "externalUrl": "https://metamask.io/",
+      "twitterUsername": "metamask"
+    },
+    {
+      "category": "NFT Platform",
+      "slug": "opensea",
+      "name": "OpenSea",
+      "externalUrl": "https://opensea.io//",
+      "twitterUsername": "opensea"
+    },
+    {
+      "category": "Tool",
       "slug": "revoke-cash",
       "name": "Revoke.cash",
       "externalUrl": "https://revoke.cash/",
@@ -3112,12 +3126,6 @@
       "twitterUsername": "FortuneMagazine"
     },
     {
-      "slug": "ether-orcs-legacy-page",
-      "name": "Legacy Ether Orcs",
-      "externalUrl": "https://opensea.io/collection/ether-orcs",
-      "twitterUsername": null
-    },
-    {
       "slug": "rtfkt-x-jeffstaple",
       "name": "RTFKT x JeffStaple",
       "externalUrl": "http://www.rtfkt.com",
@@ -3265,12 +3273,6 @@
       "slug": "elevated-deconstructions-by-luxpris",
       "name": "Elevated Deconstructions by luxpris",
       "externalUrl": "https://www.artblocks.io/project/7",
-      "twitterUsername": null
-    },
-    {
-      "slug": "soulz-monogatari",
-      "name": "Do Not Buy! (Old Contract)",
-      "externalUrl": "https://opensea.io/collection/soulz-monogatari7777",
       "twitterUsername": null
     },
     {
