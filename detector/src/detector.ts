@@ -449,8 +449,14 @@ async function _detectScam(
 
         const projectName = _.name;
         // const projectDomain = _.externalUrl && getDomain(_.externalUrl);
-        const projectDomainDetail =
-          _.externalUrl && getTopDomainFromUrl(_.externalUrl);
+        if (_.domainDetail) {
+          // console.log('has index')
+        }
+        
+        const projectDomainDetail = _.domainDetail
+            ? _.domainDetail
+            : _.externalUrl && getTopDomainFromUrl(_.externalUrl);
+        
         const compareItems: [string, string, number][] = [];
 
         if (projectDomainDetail)
@@ -728,6 +734,21 @@ export class Detector {
     this.databaseUrl = databaseUrl || remoteDatabase;
     this.lastFetch = null;
     this.fetching = false;
+    this.buildIndex();
+  }
+
+  async buildIndex() {
+    const { ProjectList:allProjects } = this.database;
+    for (let index = 0; index < allProjects.length; index++) {
+      const allProject = allProjects[index];
+      if (allProject.domainDetail) {
+        continue;
+      }
+      const domainDetail = allProject.externalUrl && getTopDomainFromUrl(allProject.externalUrl);
+      if (domainDetail) {
+        allProject.domainDetail = domainDetail;
+      }
+    }
   }
 
   async update() {
@@ -745,6 +766,7 @@ export class Detector {
       const req = await fetch(this.databaseUrl);
       const remoteData = await req.json();
       this.database = remoteData;
+      await this.buildIndex();
     } catch (e) {
       console.error("fetch from remote failed", e);
     }

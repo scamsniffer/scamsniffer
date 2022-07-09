@@ -1,6 +1,6 @@
 {
     "name": "@scamsniffer/detector",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "main": "dist/cjs/src/index.js",
     "module": "dist/esnext/src/index.js",
     "types": "dist/esnext/src/index.d.ts",
@@ -16,6 +16,7 @@
         "build:cjs": "tsc",
         "build": "tsc -P tsconfig.prod.json",
         "test": "jest --no-watchman",
+        "performance-test": "jest --no-watchman performance",
         "lint-format": "prettier -c ./src/**/*.ts",
         "fix-format": "prettier -w ./src/**/*.ts"
     },

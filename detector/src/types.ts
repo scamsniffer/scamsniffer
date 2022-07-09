@@ -31,15 +31,16 @@ export type ScamResult = {
 };
 
 export type Project = {
-    slug: string;
-    name: string;
-    externalUrl: string | null;
-    twitterUsername: string | null;
-}
+  slug: string;
+  name: string;
+  externalUrl: string | null;
+  twitterUsername: string | null;
+  domainDetail?: DomainDetail;
+};
 
 export type BlackList = {
-    twitter: string[]
-    domains: string[]
+  twitter: string[]
+  domains: string[]
 }
 
 export type Database = {

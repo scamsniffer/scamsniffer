@@ -40,72 +40,72 @@
 
 // async function testLink() {
 //   const detector = new Detector({});
-//   console.log(
-//     await detector.detectScam(
-//       {
-//         links: ["https://otherside.contact/"],
-//       },
-//       {
-//         // onlyLink: true
-//       }
-//     )
-//   );
-//   console.log(
-//     await detector.detectScam(
-//       {
-//         links: ["https://nfttrader.io-0x13d8faf4a690f5aed2c529.in/"],
-//       },
-//       {
-//         // onlyLink: true
-//       }
-//     )
-//   );
+// //   console.log(
+// //     await detector.detectScam(
+// //       {
+// //         links: ["https://otherside.contact/"],
+// //       },
+// //       {
+// //         // onlyLink: true
+// //       }
+// //     )
+// //   );
+// //   console.log(
+// //     await detector.detectScam(
+// //       {
+// //         links: ["https://nfttrader.io-0x13d8faf4a690f5aed2c529.in/"],
+// //       },
+// //       {
+// //         // onlyLink: true
+// //       }
+// //     )
+// //   );
 
-//    console.log(
-//      await detector.detectScam(
-//        {
-//          links: ["https://miladymaker.mintyoursnfts.com/"],
-//        },
-//        {
-//          // onlyLink: true
-//        }
-//      )
-//    );
+// //    console.log(
+// //      await detector.detectScam(
+// //        {
+// //          links: ["https://miladymaker.mintyoursnfts.com/"],
+// //        },
+// //        {
+// //          // onlyLink: true
+// //        }
+// //      )
+// //    );
 
-//       console.log(
-//         await detector.detectScam(
-//           {
-//             links: ["https://preemint.com/"],
-//           },
-//           {
-//             // onlyLink: true
-//           }
-//         )
-//       );
+// //       console.log(
+// //         await detector.detectScam(
+// //           {
+// //             links: ["https://preemint.com/"],
+// //           },
+// //           {
+// //             // onlyLink: true
+// //           }
+// //         )
+// //       );
 
-//        console.log(
-//          await detector.detectScam(
-//            {
-//              links: ["https://thesaudisnft.premint.id/?=Freemint"],
-//            },
-//            {
-//              // onlyLink: true
-//            }
-//          )
-//        );
+// //        console.log(
+// //          await detector.detectScam(
+// //            {
+// //              links: ["https://thesaudisnft.premint.id/?=Freemint"],
+// //            },
+// //            {
+// //              // onlyLink: true
+// //            }
+// //          )
+// //        );
 
 
 
-//        console.log(
-//          await detector.detectScam(
-//            {
-//              links: ["https://play-otherside.org/"],
-//            },
-//            {
-//              // onlyLink: true
-//            }
-//          )
-//        );
+// //        console.log(
+// //          await detector.detectScam(
+// //            {
+// //              links: ["https://play-otherside.org/"],
+// //            },
+// //            {
+// //              // onlyLink: true
+// //            }
+// //          )
+// //        );
 
        
       
@@ -124,81 +124,91 @@
 // //      })
 // //    );
 
-//     console.log(
-//       await detector.detectScam(
-//         {
-//           links: ["https://goblendawn.wtf/"],
-//           pageDetails: {
-//             title: "goblintown",
-//             metaHeads: {
-//               "og:title": "goblintown",
-//               "og:description":
-//                 "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
-//               "og:url": "https://goblintown.wtf/",
-//               "og:image": "https://goblintown.wtf/i/IMG_1017.jpg",
-//               "og:site_name": "goblintown",
-//               "og:locale": "en_US",
-//               "og:type": "article",
-//               "twitter:card": "photo",
-//               "twitter:site": "@godlintownwtf",
-//               "twitter:title": "goblintown",
-//               "twitter:description":
-//                 "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
-//               "twitter:image": "https://goblintown.wtf/i/IMG_1017.jpg?2",
-//               "twitter:url": "https://goblintown.wtf/",
-//               "twitter:creator": "@gobllintownwtf",
-//               viewport: "width=device-width, initial-scale=1",
-//             },
-//             canonicalLink: null,
-//             topSourceDomains: [
-//               {
-//                 domain: "goblintown.wtf",
-//                 count: 458,
-//               },
-//               {
-//                 domain: "www.goblintown.wtf",
-//                 count: 5,
-//               },
-//             ],
-//           },
-//         },
-//         {
-//           // onlyLink: true
-//         }
-//       )
-//     );
+// //     console.log(
+// //       await detector.detectScam(
+// //         {
+// //           links: ["https://goblendawn.wtf/"],
+// //           pageDetails: {
+// //             title: "goblintown",
+// //             metaHeads: {
+// //               "og:title": "goblintown",
+// //               "og:description":
+// //                 "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
+// //               "og:url": "https://goblintown.wtf/",
+// //               "og:image": "https://goblintown.wtf/i/IMG_1017.jpg",
+// //               "og:site_name": "goblintown",
+// //               "og:locale": "en_US",
+// //               "og:type": "article",
+// //               "twitter:card": "photo",
+// //               "twitter:site": "@godlintownwtf",
+// //               "twitter:title": "goblintown",
+// //               "twitter:description":
+// //                 "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat?",
+// //               "twitter:image": "https://goblintown.wtf/i/IMG_1017.jpg?2",
+// //               "twitter:url": "https://goblintown.wtf/",
+// //               "twitter:creator": "@gobllintownwtf",
+// //               viewport: "width=device-width, initial-scale=1",
+// //             },
+// //             canonicalLink: null,
+// //             topSourceDomains: [
+// //               {
+// //                 domain: "goblintown.wtf",
+// //                 count: 458,
+// //               },
+// //               {
+// //                 domain: "www.goblintown.wtf",
+// //                 count: 5,
+// //               },
+// //             ],
+// //           },
+// //         },
+// //         {
+// //           // onlyLink: true
+// //         }
+// //       )
+// //     );
 
-//    console.log(
-//      await detector.detectScam({
-//        links: ["https://gossamerseed.world/"],
-//        pageDetails: {
-//          title:
-//            "Gossamer NFT Collection by BRON Hollywood Studio | Gossamer Seed",
-//          metaHeads: {
-//            robots: "index,follow",
-//            description:
-//              "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
-//            "twitter:card": "summary_large_image",
-//            "og:title": "Gossamer NFT Collection by BRON Hollywood Studio",
-//            "og:description":
-//              "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
-//            "og:url": "https://gossamerseed.world",
-//            "og:type": "website",
-//            "og:image": "https://i.imgur.com/hIrMsdF.png",
-//            "og:image:width": "1200",
-//            "og:image:height": "640",
-//            "og:locale": "en_IE",
-//          },
-//          canonicalLink: "https://gossamerseed.world/",
-//          topSourceDomains: [
-//            {
-//              domain: "gossamerseed.world",
-//              count: 4,
-//            },
-//          ],
-//        },
-//      })
-//    );
+// //    console.log(
+// //      await detector.detectScam({
+// //        links: ["https://gossamerseed.world/"],
+// //        pageDetails: {
+// //          title:
+// //            "Gossamer NFT Collection by BRON Hollywood Studio | Gossamer Seed",
+// //          metaHeads: {
+// //            robots: "index,follow",
+// //            description:
+// //              "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
+// //            "twitter:card": "summary_large_image",
+// //            "og:title": "Gossamer NFT Collection by BRON Hollywood Studio",
+// //            "og:description":
+// //              "Gossamer is an 8-part animated movie series interwoven with an NFT collection, by BRON; creators of The Joker, House of Gucci, & many more blockbusters.",
+// //            "og:url": "https://gossamerseed.world",
+// //            "og:type": "website",
+// //            "og:image": "https://i.imgur.com/hIrMsdF.png",
+// //            "og:image:width": "1200",
+// //            "og:image:height": "640",
+// //            "og:locale": "en_IE",
+// //          },
+// //          canonicalLink: "https://gossamerseed.world/",
+// //          topSourceDomains: [
+// //            {
+// //              domain: "gossamerseed.world",
+// //              count: 4,
+// //            },
+// //          ],
+// //        },
+// //      })
+// //    );
+
+// console.log(await detector.detectScam({
+//     "id": "1545388228663865344",
+//     "nickname": "CIA Officer",
+//     "userId": "officer_cia",
+//     "links": [
+//         "http://tranqui.xyz/posts/100-days-of-code"
+//     ],
+//     "content": "So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀 So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀"
+// }))
 // }
 
 // async function test() {
@@ -206,5 +216,5 @@
 //   await testBlack();
 // }
 
-// // test();
-// testLink();
+// test();
+// // testLink();
