@@ -96,6 +96,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "thesaudis",
+      "name": "The Saudis",
+      "externalUrl": "https://www.thesaudisnft.com",
+      "twitterUsername": "TheSaudisNFT"
+    },
+    {
+      "slug": "bagnerwtf",
+      "name": "BagnerWTF",
+      "externalUrl": "http://www.bagner.wtf",
+      "twitterUsername": "Bagnersnft"
+    },
+    {
+      "slug": "yoloholiday",
+      "name": "YOLO HOLIDAY",
+      "externalUrl": "https://yolo.holiday/",
+      "twitterUsername": "yoloholidaynft"
+    },
+    {
+      "slug": "edo2022",
+      "name": "edo2022",
+      "externalUrl": "https://tokyonftlab.com/",
+      "twitterUsername": "edo2022_nft"
+    },
+    {
       "slug": "binance.us",
       "name": "Binance.US",
       "externalUrl": "https://binance.us/",
@@ -35295,5 +35319,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657319379081
+  "genTime": 1657424536897
 }
