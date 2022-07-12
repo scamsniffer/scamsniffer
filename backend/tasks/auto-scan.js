@@ -5,12 +5,14 @@ require("dotenv").config();
 const API =  process.env.DETECTOR_API;
 const api_key = process.env.DETECTOR_API_KEY;
 
-async function detectDomain(link, host) {
+async function detectDomain(link, scam = null) {
   const { data } = await axios.get(API, {
     params: {
       api_key,
       link,
-      via: 'auto scan'
+      desc: scam
+        ? `${scam.project}\nOfficial site:${scam.projectUrl}\nTwitter:${scam.projectTwitter}`
+        : `auto scan`,
     },
   });
   console.log("detectDomain", data, link);
@@ -36,9 +38,9 @@ async function detectRecentDomain() {
       });
       if (recentScams.length) {
         console.log("detect", recentDomain.host);
-        await detectDomain(recentScams[0].link, recentDomain.host);
+        await detectDomain(recentScams[0].link, recentScams[0]);
       } else {
-        await detectDomain(`https://${recentDomain.host}`, recentDomain.host);
+        await detectDomain(`https://${recentDomain.host}`, null);
       }
     } catch (e) {
       console.log("error", e);
