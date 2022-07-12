@@ -96,6 +96,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "project-0xd38",
+      "name": "Project 0xD38",
+      "externalUrl": "https://0xd38.xyz/",
+      "twitterUsername": "0xD38"
+    },
+    {
+      "slug": "monstercavewtf",
+      "name": "Monster Cave - Elder Torch",
+      "externalUrl": "https://www.monstercave.wtf/",
+      "twitterUsername": "monstercave_wtf"
+    },
+    {
       "slug": "thesaudis",
       "name": "The Saudis",
       "externalUrl": "https://www.thesaudisnft.com",
@@ -35319,5 +35331,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657424536897
+  "genTime": 1657475332550
 }
