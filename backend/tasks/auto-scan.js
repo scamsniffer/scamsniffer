@@ -1,11 +1,16 @@
 const axios = require("axios");
 const { DomainSummary, ScamList } = require("../schema");
-const API = `https://api.scamsniffer.io/detect`;
+require("dotenv").config();
 
-async function detectDomain(link) {
+const API =  process.env.DETECTOR_API;
+const api_key = process.env.DETECTOR_API_KEY;
+
+async function detectDomain(link, host) {
   const { data } = await axios.get(API, {
     params: {
+      api_key,
       link,
+      via: 'auto scan'
     },
   });
   console.log("detectDomain", data, link);
@@ -31,16 +36,16 @@ async function detectRecentDomain() {
       });
       if (recentScams.length) {
         console.log("detect", recentDomain.host);
-        await detectDomain(recentScams[0].link);
+        await detectDomain(recentScams[0].link, recentDomain.host);
       } else {
-        await detectDomain(`https://${recentDomain.host}`);
+        await detectDomain(`https://${recentDomain.host}`, recentDomain.host);
       }
     } catch (e) {
       console.log("error", e);
     }
   }
 
-  setTimeout(detectRecentDomain, 1000 * 60 * 30);
+  setTimeout(detectRecentDomain, 1000 * 60 * 10);
 }
 
 detectRecentDomain();
