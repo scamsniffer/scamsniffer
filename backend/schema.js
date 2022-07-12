@@ -246,16 +246,15 @@ const Cache = sequelize.define(
 );
 
 async function init() {
-  // await ScamList.sync({ alter: true });
-  // await Cache.sync({ alter: true });
-  // await DomainSummary.sync({ alter: true });
-  // await Summary.sync({ alter: true });
-  // await TwitterSummary.sync({ alter: true });
-  // await Project.sync({ alter: true });
-  // await DetectHistory.sync({ alter: true });
-
-  const res = await sequelize.query("DROP TABLE detect_histories_backup");
-  console.log(res);
+  await ScamList.sync({ alter: true });
+  await Cache.sync({ alter: true });
+  await DomainSummary.sync({ alter: true });
+  await Summary.sync({ alter: true });
+  await TwitterSummary.sync({ alter: true });
+  await Project.sync({ alter: true });
+  await DetectHistory.sync({ alter: true });
+  // const res = await sequelize.query("DROP TABLE detect_histories_backup");
+  // console.log(res);
   await ScamActivity.sync({ alter: true });
 }
 
