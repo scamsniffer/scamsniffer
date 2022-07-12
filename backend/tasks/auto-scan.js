@@ -10,8 +10,9 @@ async function detectDomain(link, scam = null) {
     params: {
       api_key,
       link,
+      // desc: `${project.name}\nOfficial site:${project.externalUrl}\nTwitter:${project.twitterUsername}\nvia: Newly Registered Domains Scanner`,
       desc: scam
-        ? `${scam.project}\nOfficial site:${scam.projectUrl}\nTwitter:${scam.projectTwitter}`
+        ? `${scam.project}\nOfficial site:${scam.projectUrl}\nTwitter:${scam.projectTwitter}\nvia:Plugin Similar Scanner`
         : `auto scan`,
     },
   });
