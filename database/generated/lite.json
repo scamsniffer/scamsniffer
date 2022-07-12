@@ -96,6 +96,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "theirsverse-official",
+      "name": "Theirsverse Official",
+      "externalUrl": "https://theirsverse.com",
+      "twitterUsername": "Theirsverse"
+    },
+    {
+      "slug": "nice-official",
+      "name": "NICE OFFICIAL",
+      "externalUrl": "https://www.nice.club/",
+      "twitterUsername": "NICEClubNFT"
+    },
+    {
+      "slug": "wiiides",
+      "name": "Wiiides",
+      "externalUrl": "http://www.wiiides.com/",
+      "twitterUsername": "wiiides"
+    },
+    {
       "slug": "project-0xd38",
       "name": "Project 0xD38",
       "externalUrl": "https://0xd38.xyz/",
@@ -35331,5 +35349,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657475332550
+  "genTime": 1657631102888
 }
