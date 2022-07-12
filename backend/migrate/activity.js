@@ -1,8 +1,15 @@
 const { ScamActivity, DetectHistory } = require("../schema");
 
 (async () => {
+
+    await ScamActivity.destroy({
+        where: {
+
+        }
+    })
+    
   const histories = await DetectHistory.findAll({
-    attributes: ["id", "linkAddress", "host", "actions"],
+    attributes: ["id", "createdAt", "link", "linkAddress", "host", "actions"],
   });
 
   for (let index = 0; index < histories.length; index++) {
