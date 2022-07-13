@@ -96,6 +96,36 @@
   ],
   "ProjectList": [
     {
+      "slug": "kumabossnft",
+      "name": "KumaBossNFT",
+      "externalUrl": "http://kumaboss.com",
+      "twitterUsername": "KumaBossNFT"
+    },
+    {
+      "slug": "super-cool-world",
+      "name": "Nina's Super Cool World",
+      "externalUrl": "http://thegoda.io",
+      "twitterUsername": "TheGoda_io"
+    },
+    {
+      "slug": "soulda16club",
+      "name": "Soulda16Club",
+      "externalUrl": "https://soulda16.club/",
+      "twitterUsername": "Soulda16Club"
+    },
+    {
+      "slug": "thesaudiokaybears",
+      "name": "The Saudi Okay Bears",
+      "externalUrl": "http://thesaudiokaybears.xyz",
+      "twitterUsername": "SaudiOkayBears"
+    },
+    {
+      "slug": "the-asylum-halls-genesis",
+      "name": "The Asylum Halls Genesis",
+      "externalUrl": null,
+      "twitterUsername": "asylumhalls"
+    },
+    {
       "slug": "theirsverse-official",
       "name": "Theirsverse Official",
       "externalUrl": "https://theirsverse.com",
@@ -35349,5 +35379,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657631102888
+  "genTime": 1657734984580
 }
