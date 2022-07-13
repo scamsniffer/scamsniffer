@@ -1,11 +1,11 @@
-const { DomainSummary } = require("./schema");
+const { ScamActivity } = require("./schema");
 const { Op } = require('sequelize')
 // init();
 
-DomainSummary.destroy({
+ScamActivity.destroy({
   where: {
-    topDomain: {
-      [Op.in]: ["premint.xyz", 'synthetix.io', "fractal.is", "nexustracker.io", 'nftgo.io', 'twitter.com', 't.co', "youtube.com", "etherscan.io"],
+    id: {
+      [Op.in]: [743],
     },
   },
 });
