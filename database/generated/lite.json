@@ -12,6 +12,8 @@
     "Supply",
     "GIVEAWAY",
     "claim",
+    "whitelist",
+    "raffle",
     "eligible"
   ],
   "commonWords": [
