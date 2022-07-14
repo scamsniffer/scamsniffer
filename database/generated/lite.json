@@ -240,12 +240,6 @@
       "twitterUsername": "HuobiGlobal"
     },
     {
-      "slug": "solana.fm",
-      "name": "SolanaFM",
-      "externalUrl": "https://solana.fm/",
-      "twitterUsername": "solanafm"
-    },
-    {
       "slug": "solana.org",
       "name": "Solana Foundation",
       "externalUrl": "https://solana.org/",
@@ -27307,12 +27301,6 @@
       "name": "GoldBlocks",
       "externalUrl": "http://goldblocks.eu/",
       "twitterUsername": "goldblockscoin"
-    },
-    {
-      "slug": "visio",
-      "name": "Visio",
-      "externalUrl": "https://www.visio.wtf/",
-      "twitterUsername": "TheVisioProject"
     },
     {
       "slug": "marscoin",
