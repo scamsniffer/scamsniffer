@@ -240,12 +240,6 @@
       "twitterUsername": "HuobiGlobal"
     },
     {
-      "slug": "coinbase.com",
-      "name": "Coinbase",
-      "externalUrl": "https://coinbase.com/",
-      "twitterUsername": "coinbase"
-    },
-    {
       "slug": "solana.fm",
       "name": "SolanaFM",
       "externalUrl": "https://solana.fm/",
@@ -400,12 +394,6 @@
       "name": "Zapper",
       "externalUrl": "https://zapper.fi/",
       "twitterUsername": "zapper_fi"
-    },
-    {
-      "slug": "blockchain.com",
-      "name": "Blockchain.com",
-      "externalUrl": "https://blockchain.com/",
-      "twitterUsername": "blockchain"
     },
     {
       "slug": "myetherwallet.com",
@@ -4671,12 +4659,6 @@
       "twitterUsername": "lidofinance"
     },
     {
-      "slug": "avalanche-2",
-      "name": "Avalanche",
-      "externalUrl": "https://avax.network/",
-      "twitterUsername": "avalancheavax"
-    },
-    {
       "slug": "tron",
       "name": "TRON",
       "externalUrl": "https://tron.network/index?lng=en",
@@ -4687,12 +4669,6 @@
       "name": "Shiba Inu",
       "externalUrl": "https://shibatoken.com/",
       "twitterUsername": "Shibtoken"
-    },
-    {
-      "slug": "dai",
-      "name": "Dai",
-      "externalUrl": "http://www.makerdao.com/",
-      "twitterUsername": "makerDAO"
     },
     {
       "slug": "litecoin",
@@ -4755,12 +4731,6 @@
       "twitterUsername": null
     },
     {
-      "slug": "cosmos",
-      "name": "Cosmos",
-      "externalUrl": "https://cosmos.network/",
-      "twitterUsername": "cosmos"
-    },
-    {
       "slug": "algorand",
       "name": "Algorand",
       "externalUrl": "https://algorand.foundation/",
@@ -4807,12 +4777,6 @@
       "name": "VeChain",
       "externalUrl": "https://www.vechain.com",
       "twitterUsername": "vechainofficial"
-    },
-    {
-      "slug": "elrond-erd-2",
-      "name": "Elrond",
-      "externalUrl": "https://elrond.com",
-      "twitterUsername": "elrondnetwork"
     },
     {
       "slug": "internet-computer",
@@ -4897,12 +4861,6 @@
       "name": "Zcash",
       "externalUrl": "https://z.cash/",
       "twitterUsername": "electriccoinco"
-    },
-    {
-      "slug": "maker",
-      "name": "Maker",
-      "externalUrl": "https://makerdao.com/",
-      "twitterUsername": "MakerDAO"
     },
     {
       "slug": "theta-token",
@@ -5007,12 +4965,6 @@
       "twitterUsername": "ecashofficial"
     },
     {
-      "slug": "fantom",
-      "name": "Fantom",
-      "externalUrl": "http://fantom.foundation/",
-      "twitterUsername": "FantomFDN"
-    },
-    {
       "slug": "gatechain-token",
       "name": "GateToken",
       "externalUrl": "https://gatechain.io/",
@@ -5089,12 +5041,6 @@
       "name": "Kusama",
       "externalUrl": "https://kusama.network",
       "twitterUsername": "kusamanetwork"
-    },
-    {
-      "slug": "blockstack",
-      "name": "Stacks",
-      "externalUrl": "https://www.stacks.co/",
-      "twitterUsername": "stacks"
     },
     {
       "slug": "amp-token",
@@ -5191,12 +5137,6 @@
       "name": "Fei USD",
       "externalUrl": "https://fei.money/",
       "twitterUsername": "feiprotocol"
-    },
-    {
-      "slug": "chain-2",
-      "name": "Chain",
-      "externalUrl": "https://chain.com/",
-      "twitterUsername": "chain"
     },
     {
       "slug": "compound-usd-coin",
@@ -6279,12 +6219,6 @@
       "twitterUsername": "klever_io"
     },
     {
-      "slug": "power-ledger",
-      "name": "Power Ledger",
-      "externalUrl": "https://powerledger.io",
-      "twitterUsername": "PowerLedger_io"
-    },
-    {
       "slug": "divi",
       "name": "Divi",
       "externalUrl": "https://diviproject.org",
@@ -6319,12 +6253,6 @@
       "name": "AscendEx Token",
       "externalUrl": "https://ascendex.com/en/global-digital-asset-platform",
       "twitterUsername": "AscendEX_Global"
-    },
-    {
-      "slug": "ultra",
-      "name": "Ultra",
-      "externalUrl": "https://ultra.io",
-      "twitterUsername": "ultra_io"
     },
     {
       "slug": "api3",
@@ -6703,12 +6631,6 @@
       "name": "MaidSafeCoin",
       "externalUrl": "https://safenetwork.tech/",
       "twitterUsername": "maidsafe"
-    },
-    {
-      "slug": "tierion",
-      "name": "Tierion",
-      "externalUrl": "https://tierion.com",
-      "twitterUsername": "Tierion"
     },
     {
       "slug": "kommunitas",
@@ -7387,12 +7309,6 @@
       "name": "Aave [OLD]",
       "externalUrl": "https://aave.com/",
       "twitterUsername": "aaveaave"
-    },
-    {
-      "slug": "dvision-network",
-      "name": "Dvision Network",
-      "externalUrl": "https://dvision.network/",
-      "twitterUsername": "Dvision_network"
     },
     {
       "slug": "wanchain",
@@ -9063,12 +8979,6 @@
       "twitterUsername": "moviebloc"
     },
     {
-      "slug": "ooki",
-      "name": "Ooki",
-      "externalUrl": "https://hello.ooki.com/",
-      "twitterUsername": "ookitrade"
-    },
-    {
       "slug": "paraswap",
       "name": "ParaSwap",
       "externalUrl": "https://paraswap.io/",
@@ -9253,12 +9163,6 @@
       "name": "The Midas Touch Gold",
       "externalUrl": "https://dgex.io/",
       "twitterUsername": "tmtgdge"
-    },
-    {
-      "slug": "gamefi",
-      "name": "GameFi",
-      "externalUrl": "https://gamefi.org/",
-      "twitterUsername": "GameFi_Official"
     },
     {
       "slug": "treeb",
@@ -12069,12 +11973,6 @@
       "twitterUsername": "socios"
     },
     {
-      "slug": "shirtum",
-      "name": "Shirtum",
-      "externalUrl": "https://shirtum.com/",
-      "twitterUsername": "shirtumapp"
-    },
-    {
       "slug": "dogami",
       "name": "Dogami",
       "externalUrl": "https://dogami.com/",
@@ -13417,12 +13315,6 @@
       "name": "UFC Fan Token",
       "externalUrl": "https://www.socios.com/",
       "twitterUsername": "ufc"
-    },
-    {
-      "slug": "sai",
-      "name": "Sai",
-      "externalUrl": "https://makerdao.com/",
-      "twitterUsername": "MakerDAO"
     },
     {
       "slug": "siren",
@@ -15675,12 +15567,6 @@
       "twitterUsername": "Wanaka_Farm"
     },
     {
-      "slug": "public-mint",
-      "name": "Public Mint",
-      "externalUrl": "https://publicmint.com",
-      "twitterUsername": "PublicMint"
-    },
-    {
       "slug": "agave-token",
       "name": "Agave Token",
       "externalUrl": "https://agave.finance/",
@@ -16135,12 +16021,6 @@
       "name": "Refinable",
       "externalUrl": "https://refinable.com/",
       "twitterUsername": "refinableapp"
-    },
-    {
-      "slug": "pillar",
-      "name": "Pillar",
-      "externalUrl": "https://pillarproject.io/",
-      "twitterUsername": "PillarWallet"
     },
     {
       "slug": "reward-hunters-token",
@@ -19983,12 +19863,6 @@
       "twitterUsername": "SpecProtocol"
     },
     {
-      "slug": "golff",
-      "name": "Golff",
-      "externalUrl": "https://www.golff.finance/",
-      "twitterUsername": "GolffProtocol"
-    },
-    {
       "slug": "2crazynft",
       "name": "2crazyNFT",
       "externalUrl": "https://www.2crazynft.com/",
@@ -20287,12 +20161,6 @@
       "name": "DAOstack",
       "externalUrl": "https://daostack.io/en/home",
       "twitterUsername": "daostack"
-    },
-    {
-      "slug": "matrix-2",
-      "name": "Matrix",
-      "externalUrl": "https://matrixtoken.co/en/",
-      "twitterUsername": "matrixtoken1"
     },
     {
       "slug": "pontoon",
@@ -20983,12 +20851,6 @@
       "name": "Golden Ball",
       "externalUrl": "https://goldenball.finance/",
       "twitterUsername": "GoldenBallToken"
-    },
-    {
-      "slug": "vault",
-      "name": "VAULT",
-      "externalUrl": "https://www.vault.investments/",
-      "twitterUsername": "VaultInvest"
     },
     {
       "slug": "sureremit",
@@ -22197,12 +22059,6 @@
       "twitterUsername": "UNetworkHQ"
     },
     {
-      "slug": "royale",
-      "name": "Royale",
-      "externalUrl": "https://royale.finance/",
-      "twitterUsername": "Royale_Finance"
-    },
-    {
       "slug": "oh-finance",
       "name": "Oh! Finance",
       "externalUrl": "https://oh.finance/",
@@ -22233,12 +22089,6 @@
       "twitterUsername": "shartoken"
     },
     {
-      "slug": "milky-token",
-      "name": "Milky Token",
-      "externalUrl": "https://kawaii.global/",
-      "twitterUsername": "kawaii_islands"
-    },
-    {
       "slug": "avaxtars",
       "name": "Avaxtars",
       "externalUrl": "https://avaxtars.com/",
@@ -22255,12 +22105,6 @@
       "name": "SugarBounce",
       "externalUrl": "https://sugarbounce.com/",
       "twitterUsername": "SugarBounceNSFW"
-    },
-    {
-      "slug": "kawaii-islands",
-      "name": "Kawaii Islands",
-      "externalUrl": "https://kawaii.global/",
-      "twitterUsername": "kawaii_islands"
     },
     {
       "slug": "world-token",
@@ -25237,12 +25081,6 @@
       "name": "Olive Cash",
       "externalUrl": "https://olive.cash/",
       "twitterUsername": "OliveCashBsc"
-    },
-    {
-      "slug": "corestarter",
-      "name": "CoreStarter",
-      "externalUrl": "https://corestarter.com/",
-      "twitterUsername": "CoreStarter"
     },
     {
       "slug": "world-of-defish",
