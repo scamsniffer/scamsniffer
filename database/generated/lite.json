@@ -4941,12 +4941,6 @@
       "twitterUsername": "thorchain"
     },
     {
-      "slug": "quant-network",
-      "name": "Quant",
-      "externalUrl": "https://www.quant.network/",
-      "twitterUsername": "quant_network"
-    },
-    {
       "slug": "terra-luna",
       "name": "Terra",
       "externalUrl": "https://terra.money",
@@ -10993,12 +10987,6 @@
       "name": "Thought",
       "externalUrl": "https://thought.live/",
       "twitterUsername": "thought_THT"
-    },
-    {
-      "slug": "hot-cross",
-      "name": "Hot Cross",
-      "externalUrl": "https://hotcross.com/",
-      "twitterUsername": "hotcrosscom"
     },
     {
       "slug": "hshare",
@@ -29791,12 +29779,6 @@
       "name": "UraniumX",
       "externalUrl": "https://urx.zone",
       "twitterUsername": null
-    },
-    {
-      "slug": "gimmer",
-      "name": "Gimmer",
-      "externalUrl": "https://gimmer.net",
-      "twitterUsername": "gimmerbot"
     },
     {
       "slug": "spice",
