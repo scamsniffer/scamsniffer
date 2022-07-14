@@ -96,6 +96,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "moonbatswtf",
+      "name": "moonbats.wtf",
+      "externalUrl": "https://moonbats.wtf",
+      "twitterUsername": "Moon_Bats"
+    },
+    {
       "slug": "kumabossnft",
       "name": "KumaBossNFT",
       "externalUrl": "http://kumaboss.com",
@@ -35379,5 +35385,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657734984580
+  "genTime": 1657768915284
 }
