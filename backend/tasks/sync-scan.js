@@ -54,6 +54,7 @@ async function syncData() {
   console.log("lastId", lastId);
 
   const newRows = await DomainSummary.findAll({
+    limit: 50,
     where: {
       id: {
         [Op.gt]: lastId,
