@@ -16,7 +16,7 @@ async function detectDomain(link, scam = null) {
         : `auto scan`,
     },
   });
-  console.log("detectDomain", data, link);
+//   console.log("detectDomain", data, link);
 }
 
 async function doSync(recentDomain) {
@@ -28,8 +28,8 @@ async function doSync(recentDomain) {
       },
     });
 
+    console.log("detect", recentDomain.host);
     if (recentScams.length) {
-      console.log("detect", recentDomain.host);
       await detectDomain(recentScams[0].link, recentScams[0]);
     } else {
       await detectDomain(`https://${recentDomain.host}`, null);
