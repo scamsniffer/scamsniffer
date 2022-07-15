@@ -34,7 +34,6 @@ async function doSync(recentDomain) {
     } else {
       await detectDomain(`https://${recentDomain.host}`, null);
     }
-    console.log("data", data);
   } catch (e) {
     console.log("error", e);
   }
