@@ -66,6 +66,9 @@ async function syncData() {
   for (let index = 0; index < newRows.length; index++) {
     const newRow = newRows[index];
     await doSync(newRow);
+    await new Promise((resolve) => {
+        setTimeout(resolve, 500);
+    });
     lastId = newRow.id;
   }
 
