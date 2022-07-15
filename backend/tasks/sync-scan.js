@@ -92,7 +92,7 @@ async function syncTask() {
       await syncData();
     } catch (e) {}
     await new Promise((resolve) => {
-      setTimeout(resolve, 660 * 1000);
+      setTimeout(resolve, 60 * 1000);
     });
   }
 }
