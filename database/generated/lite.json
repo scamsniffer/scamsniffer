@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "factura-by-mathias-isaksen",
+      "name": "Factura by Mathias Isaksen",
+      "externalUrl": "https://www.gmstudio.art/collections/factura",
+      "twitterUsername": "gmdaostudio"
+    },
+    {
       "slug": "megaminft",
       "name": "MEGAMI_NFT",
       "externalUrl": "https://megami.io/",
@@ -35195,5 +35201,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657973505441
+  "genTime": 1657990505960
 }
