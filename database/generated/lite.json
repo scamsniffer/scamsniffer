@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "megaminft",
+      "name": "MEGAMI_NFT",
+      "externalUrl": "https://megami.io/",
+      "twitterUsername": "MEGAMINFT"
+    },
+    {
       "slug": "mirakai-scrolls",
       "name": "Mirakai Scrolls",
       "externalUrl": "https://officialmirakai.com/",
@@ -35189,5 +35195,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657937567227
+  "genTime": 1657973505441
 }
