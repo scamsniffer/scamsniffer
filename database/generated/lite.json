@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "the-americans-nft",
+      "name": "The Americans NFT",
+      "externalUrl": null,
+      "twitterUsername": "TheAmericans_US"
+    },
+    {
       "slug": "factura-by-mathias-isaksen",
       "name": "Factura by Mathias Isaksen",
       "externalUrl": "https://www.gmstudio.art/collections/factura",
@@ -35201,5 +35207,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657990505960
+  "genTime": 1658001424090
 }
