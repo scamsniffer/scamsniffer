@@ -98,6 +98,36 @@
   ],
   "ProjectList": [
     {
+      "slug": "mirakai-scrolls",
+      "name": "Mirakai Scrolls",
+      "externalUrl": "https://officialmirakai.com/",
+      "twitterUsername": "OfficialMirakai"
+    },
+    {
+      "slug": "tableland-rigs",
+      "name": "Tableland Rigs",
+      "externalUrl": "https://tableland.xyz/rigs",
+      "twitterUsername": "tableland__"
+    },
+    {
+      "slug": "beingsnft",
+      "name": "Beings Official",
+      "externalUrl": "https://beingsnft.art/",
+      "twitterUsername": "Beings_Official"
+    },
+    {
+      "slug": "memoriesofamasterpiece",
+      "name": "Memories Of A Masterpiece",
+      "externalUrl": "http://ambervittoria.com",
+      "twitterUsername": "amber_vittoria"
+    },
+    {
+      "slug": "therealkingship",
+      "name": "KINGSHIP",
+      "externalUrl": "http://kingship.io",
+      "twitterUsername": "therealkingship"
+    },
+    {
       "slug": "moonbatswtf",
       "name": "moonbats.wtf",
       "externalUrl": "https://moonbats.wtf",
@@ -35189,5 +35219,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1657768915284
+  "genTime": 1657937567227
 }
