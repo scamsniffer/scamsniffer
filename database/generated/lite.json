@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "loremnft",
+      "name": "LOREMNFT",
+      "externalUrl": "https://loremnft.com",
+      "twitterUsername": "LOREMNFT"
+    },
+    {
       "slug": "the-americans-nft",
       "name": "The Americans NFT",
       "externalUrl": null,
@@ -35207,5 +35213,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658001424090
+  "genTime": 1658005082103
 }
