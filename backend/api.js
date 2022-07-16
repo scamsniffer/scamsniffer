@@ -20,6 +20,16 @@ const { adScamActivity } = require("./handlers/activity");
 const { detectUrl } = require("./handlers/page");
 const { lookupDomain } = require("./handlers/domain");
 const { detectByUrl } = require("./handlers/detector");
+const morgan = require("morgan");
+const fs = require("fs");
+const path = require("path");
+
+const accessLogStream = fs.createWriteStream(
+  path.join(__dirname, "access.log"),
+  {
+    flags: "a",
+  }
+);
 
 app.use(cors());
 app.use(compression());
@@ -28,6 +38,7 @@ app.use(
     limit: "10mb",
   })
 );
+app.use(morgan("combined", { stream: accessLogStream }));
 
 const Handlers = {
   ScamList: new ModelHandler(ScamList),
