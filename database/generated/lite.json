@@ -4571,12 +4571,6 @@
       "twitterUsername": null
     },
     {
-      "slug": "pxquest",
-      "name": "PX Quest",
-      "externalUrl": "https://pxquest.com",
-      "twitterUsername": "pxquest"
-    },
-    {
       "slug": "rug-radio-membership-pass",
       "name": "Rug Radio Membership Pass",
       "externalUrl": "https://www.rug.fm/",
@@ -4613,22 +4607,10 @@
       "twitterUsername": "Ripple"
     },
     {
-      "slug": "binance-usd",
-      "name": "Binance USD",
-      "externalUrl": "https://www.binance.com/en/busd",
-      "twitterUsername": "PaxosGlobal"
-    },
-    {
       "slug": "cardano",
       "name": "Cardano",
       "externalUrl": "https://www.cardano.org/en/home/",
       "twitterUsername": "cardano"
-    },
-    {
-      "slug": "solana",
-      "name": "Solana",
-      "externalUrl": "https://solana.com",
-      "twitterUsername": "solana"
     },
     {
       "slug": "dogecoin",
@@ -18863,12 +18845,6 @@
       "twitterUsername": "Algoblockstrade"
     },
     {
-      "slug": "pulsepad",
-      "name": "PulsePad",
-      "externalUrl": "https://pulsepad.io/",
-      "twitterUsername": "PulsePad_App"
-    },
-    {
       "slug": "seen",
       "name": "SEEN",
       "externalUrl": "https://seen.haus",
@@ -29451,12 +29427,6 @@
       "name": "ZUM TOKEN",
       "externalUrl": "https://zum-token.com/",
       "twitterUsername": "Zum_Token"
-    },
-    {
-      "slug": "inlock-token",
-      "name": "INLOCK",
-      "externalUrl": "https://inlock.io/",
-      "twitterUsername": "inlock_token"
     },
     {
       "slug": "cryptobosscoin",
