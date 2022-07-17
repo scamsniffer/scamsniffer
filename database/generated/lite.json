@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "cnp-jobs",
+      "name": "CNP Jobs",
+      "externalUrl": null,
+      "twitterUsername": "ujuuna999"
+    },
+    {
       "slug": "loremnft",
       "name": "LOREMNFT",
       "externalUrl": "https://loremnft.com",
@@ -35213,5 +35219,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658005082103
+  "genTime": 1658062031804
 }
