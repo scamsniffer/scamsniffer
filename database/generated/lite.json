@@ -98,6 +98,42 @@
   ],
   "ProjectList": [
     {
+      "slug": "gm-token",
+      "name": "gmDAO token",
+      "externalUrl": "http://gmdao.ai",
+      "twitterUsername": "gmDAOeth"
+    },
+    {
+      "slug": "cube-x-official",
+      "name": "CubeX Official NFTs",
+      "externalUrl": "https://www.cubex.gg/",
+      "twitterUsername": "cubexnft"
+    },
+    {
+      "slug": "goblinland-wtf",
+      "name": "Goblinland_wtf",
+      "externalUrl": "https://www.goblin-land.wtf/",
+      "twitterUsername": "Goblinland_wtf"
+    },
+    {
+      "slug": "plasticity-by-p4stoboy",
+      "name": "Plasticity by p4stoboy",
+      "externalUrl": "https://www.gmstudio.art/collections/plasticity",
+      "twitterUsername": "gmdaostudio"
+    },
+    {
+      "slug": "mind-the-gap-by-mountvitruvius",
+      "name": "Mind the Gap by MountVitruvius",
+      "externalUrl": "https://www.gmstudio.art/collections/mind-the-gap",
+      "twitterUsername": "gmdaostudio"
+    },
+    {
+      "slug": "koripo-by-rich-poole",
+      "name": "Koripo by Rich Poole",
+      "externalUrl": "https://www.gmstudio.art/collections/koripo",
+      "twitterUsername": "gmdaostudio"
+    },
+    {
       "slug": "cnp-jobs",
       "name": "CNP Jobs",
       "externalUrl": null,
@@ -35219,5 +35255,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658062031804
+  "genTime": 1658149514814
 }
