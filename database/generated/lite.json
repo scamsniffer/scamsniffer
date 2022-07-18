@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "super-fried-chicken",
+      "name": "Super Fried Chicken",
+      "externalUrl": "https://superfriedchicken.xyz/",
+      "twitterUsername": "CluckCluckNFT"
+    },
+    {
       "slug": "gm-token",
       "name": "gmDAO token",
       "externalUrl": "http://gmdao.ai",
@@ -35255,5 +35261,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658149514814
+  "genTime": 1658159597240
 }
