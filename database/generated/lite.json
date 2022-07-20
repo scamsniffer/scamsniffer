@@ -98,6 +98,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "nickelodeon-rugrats-heyarnold-eth",
+      "name": "Nickelodeon: Rugrats & Hey Arnold! (ETH)",
+      "externalUrl": "https://nickelodeon.xyz/marketplace",
+      "twitterUsername": "nickelodeon_nft"
+    },
+    {
+      "slug": "ventana-by-oscar-marquina",
+      "name": "Ventana by Oscar Marquina",
+      "externalUrl": "https://ventanaoreo.xyz/",
+      "twitterUsername": "oreoDAOstudio"
+    },
+    {
+      "slug": "dwarvestown-xyz",
+      "name": "DwarvesTown_xyz",
+      "externalUrl": "http://dwarvestown.xyz",
+      "twitterUsername": "dwarvestown"
+    },
+    {
       "slug": "9999-luftballons",
       "name": "9999 Luftballons",
       "externalUrl": "https://twitter.com/9999Luftballons",
@@ -35267,5 +35285,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658198125637
+  "genTime": 1658304790467
 }
