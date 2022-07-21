@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "etherjump-plots",
+      "name": "Etherjump Plots",
+      "externalUrl": "http://mint.etherjump.game",
+      "twitterUsername": "etherjump"
+    },
+    {
       "slug": "nickelodeon-rugrats-heyarnold-eth",
       "name": "Nickelodeon: Rugrats & Hey Arnold! (ETH)",
       "externalUrl": "https://nickelodeon.xyz/marketplace",
@@ -35285,5 +35291,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658304790467
+  "genTime": 1658387855794
 }
