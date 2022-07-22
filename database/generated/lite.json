@@ -98,6 +98,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "thepotatoz",
+      "name": "The Potatoz",
+      "externalUrl": "https://www.memeland.com/potatoz",
+      "twitterUsername": "memeland"
+    },
+    {
+      "slug": "projectisekaimeta",
+      "name": "Isekai Meta",
+      "externalUrl": "http://isekaimeta.com",
+      "twitterUsername": "IsekaiMeta"
+    },
+    {
+      "slug": "miningversenftofficial",
+      "name": "MiningverseNFT Official",
+      "externalUrl": "https://miningversenft.com/",
+      "twitterUsername": "MiningverseNFT"
+    },
+    {
       "slug": "etherjump-plots",
       "name": "Etherjump Plots",
       "externalUrl": "http://mint.etherjump.game",
@@ -35291,5 +35309,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658387855794
+  "genTime": 1658456304884
 }
