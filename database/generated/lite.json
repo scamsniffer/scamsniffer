@@ -98,6 +98,36 @@
   ],
   "ProjectList": [
     {
+      "slug": "nft-worlds",
+      "name": "NFT Worlds",
+      "externalUrl": "https://docs.nftworlds.com/",
+      "twitterUsername": "nftworldsNFT"
+    },
+    {
+      "slug": "frootsnft",
+      "name": "FrootsNFT",
+      "externalUrl": null,
+      "twitterUsername": "frootsnft"
+    },
+    {
+      "slug": "pensiero-by-rosalia-linari",
+      "name": "il Pensiero by Rosalia Linari",
+      "externalUrl": "https://ilpensiero.xyz/",
+      "twitterUsername": "ilpensiero_art"
+    },
+    {
+      "slug": "ladyapeclub5668",
+      "name": "Lady Ape Club",
+      "externalUrl": "http://www.ladyapeclub.com",
+      "twitterUsername": "ladyapeclub"
+    },
+    {
+      "slug": "pixpandanft",
+      "name": "Panda of kungfu pix NFT",
+      "externalUrl": "http://pandakungfu.xyz",
+      "twitterUsername": "pixpandanft"
+    },
+    {
       "slug": "thepotatoz",
       "name": "The Potatoz",
       "externalUrl": "https://www.memeland.com/potatoz",
@@ -9023,5 +9053,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658456304884
+  "genTime": 1658564866584
 }
