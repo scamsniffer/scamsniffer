@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "ultiverse-electric-sheep",
+      "name": "Ultiverse - Electric Sheep",
+      "externalUrl": "https://es.ultiverse.io/",
+      "twitterUsername": "0xElectricsheep"
+    },
+    {
+      "slug": "hertzcity",
+      "name": "HertzCity Official",
+      "externalUrl": "http://hertzcity.io/",
+      "twitterUsername": "Hertz_city"
+    },
+    {
       "slug": "angryofwitch",
       "name": "AngryOfWitch",
       "externalUrl": "http://angrytown.wtf",
@@ -9083,5 +9095,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658741630940
+  "genTime": 1658762684423
 }
