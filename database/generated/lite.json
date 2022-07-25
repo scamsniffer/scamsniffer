@@ -98,6 +98,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "casual-sloths-official",
+      "name": "Casual Sloths Official",
+      "externalUrl": "http://casualsloths.xyz",
+      "twitterUsername": "CasualSloths"
+    },
+    {
+      "slug": "mysticsuniverse",
+      "name": "MysticsUniverse",
+      "externalUrl": "https://mysticsuniverse.io/",
+      "twitterUsername": "MysticsNFT"
+    },
+    {
+      "slug": "azuki",
+      "name": "Azuki",
+      "externalUrl": "http://www.azuki.com",
+      "twitterUsername": "azukiofficial"
+    },
+    {
       "slug": "nft-worlds",
       "name": "NFT Worlds",
       "externalUrl": "https://docs.nftworlds.com/",
@@ -9053,5 +9071,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658564866584
+  "genTime": 1658721076998
 }
