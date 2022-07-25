@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "office-hours-official",
+      "name": "Office Hours Official",
+      "externalUrl": null,
+      "twitterUsername": "0xBasset"
+    },
+    {
+      "slug": "rags-to-richie-by-alec-monopoly",
+      "name": "Rags to  Richie by Alec Monopoly",
+      "externalUrl": "https://ragstorichie.io/",
+      "twitterUsername": "ragstorichienft"
+    },
+    {
       "slug": "geologico",
       "name": "Geologico by GEO Gallery",
       "externalUrl": "https://geogallery.xyz/",
@@ -9113,5 +9125,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658767899396
+  "genTime": 1658771540901
 }
