@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "angryofwitch",
+      "name": "AngryOfWitch",
+      "externalUrl": "http://angrytown.wtf",
+      "twitterUsername": "Angryofwitch"
+    },
+    {
+      "slug": "youtherealmvp",
+      "name": "YOU THE REAL MVP",
+      "externalUrl": "http://memeland.com",
+      "twitterUsername": "memeland"
+    },
+    {
       "slug": "casual-sloths-official",
       "name": "Casual Sloths Official",
       "externalUrl": "http://casualsloths.xyz",
@@ -9071,5 +9083,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658721076998
+  "genTime": 1658741630940
 }
