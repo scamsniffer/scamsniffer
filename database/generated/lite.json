@@ -98,6 +98,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "geologico",
+      "name": "Geologico by GEO Gallery",
+      "externalUrl": "https://geogallery.xyz/",
+      "twitterUsername": "thegeogallery"
+    },
+    {
+      "slug": "ledger-market-pass-genesis-edition",
+      "name": "[ Ledger ] Market Pass - Genesis Edition",
+      "externalUrl": "https://market.ledger.com/",
+      "twitterUsername": "Ledger"
+    },
+    {
+      "slug": "mooncatz",
+      "name": "Mooncatz",
+      "externalUrl": "http://mooncatz.io",
+      "twitterUsername": "MooncatzNFT"
+    },
+    {
       "slug": "ultiverse-electric-sheep",
       "name": "Ultiverse - Electric Sheep",
       "externalUrl": "https://es.ultiverse.io/",
@@ -9095,5 +9113,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658762684423
+  "genTime": 1658767899396
 }
