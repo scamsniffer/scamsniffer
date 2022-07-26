@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "monkai",
+      "name": "Monkai",
+      "externalUrl": "http://MonkaiNFT.com",
+      "twitterUsername": "MonkaiNFT"
+    },
+    {
       "slug": "citiesto",
       "name": "Citiesto by Hevey",
       "externalUrl": "https://citiesto.xyz/",
@@ -9131,5 +9137,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658852494240
+  "genTime": 1658866369728
 }
