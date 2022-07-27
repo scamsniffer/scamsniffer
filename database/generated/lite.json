@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "golden-token-mexico-city",
+      "name": "Golden Token Mexico City",
+      "externalUrl": "https://www.brightmoments.io/",
+      "twitterUsername": "brtmoments"
+    },
+    {
       "slug": "gargameltown",
       "name": "GargamelTown",
       "externalUrl": "http://gargameltown.wtf/",
@@ -9143,5 +9149,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658914648848
+  "genTime": 1658926149331
 }
