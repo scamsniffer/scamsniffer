@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "stickmentoys",
+      "name": "Stickmen Toys",
+      "externalUrl": "https://stickmentoys.com/",
+      "twitterUsername": "StickmenToys"
+    },
+    {
       "slug": "golden-token-mexico-city",
       "name": "Golden Token Mexico City",
       "externalUrl": "https://www.brightmoments.io/",
@@ -9149,5 +9155,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658926149331
+  "genTime": 1658952437007
 }
