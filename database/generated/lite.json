@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "destroyand",
+      "name": "Destroy and... Official",
+      "externalUrl": "https://destroyand.com/",
+      "twitterUsername": "destroyand_"
+    },
+    {
       "slug": "stickmentoys",
       "name": "Stickmen Toys",
       "externalUrl": "https://stickmentoys.com/",
@@ -9155,5 +9161,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658952437007
+  "genTime": 1658959720081
 }
