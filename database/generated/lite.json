@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "gargameltown",
+      "name": "GargamelTown",
+      "externalUrl": "http://gargameltown.wtf/",
+      "twitterUsername": "Gargamelnft"
+    },
+    {
       "slug": "monkai",
       "name": "Monkai",
       "externalUrl": "http://MonkaiNFT.com",
@@ -9137,5 +9143,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658866369728
+  "genTime": 1658914648848
 }
