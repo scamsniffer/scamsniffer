@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "bad-influence-0x",
+      "name": "Bad Influence 0x",
+      "externalUrl": "https://www.badinfluence.com/",
+      "twitterUsername": "BadInfluence0x"
+    },
+    {
       "slug": "music-apes-club",
       "name": "Music Ape Club",
       "externalUrl": "https://musicape.xyz/",
@@ -9173,5 +9179,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659021878328
+  "genTime": 1659042644430
 }
