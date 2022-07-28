@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "music-apes-club",
+      "name": "Music Ape Club",
+      "externalUrl": "https://musicape.xyz/",
+      "twitterUsername": "musicape_xyz"
+    },
+    {
+      "slug": "pg-jiraverse",
+      "name": "PG: JIRAVERSE",
+      "externalUrl": "https://linktr.ee/projectgodjira",
+      "twitterUsername": "PGodjira"
+    },
+    {
       "slug": "destroyand",
       "name": "Destroy and... Official",
       "externalUrl": "https://destroyand.com/",
@@ -9161,5 +9173,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1658959720081
+  "genTime": 1659021878328
 }
