@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "superrare",
+      "name": "SuperRare",
+      "externalUrl": "https://superrare.co",
+      "twitterUsername": "superrare"
+    },
+    {
       "slug": "bad-influence-0x",
       "name": "Bad Influence 0x",
       "externalUrl": "https://www.badinfluence.com/",
@@ -9179,5 +9185,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659042644430
+  "genTime": 1659053567525
 }
