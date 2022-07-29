@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "elvestown",
+      "name": "Elves Town",
+      "externalUrl": "http://elfnft.wtf",
+      "twitterUsername": "elf_elfnft"
+    },
+    {
       "slug": "superrare",
       "name": "SuperRare",
       "externalUrl": "https://superrare.co",
@@ -9185,5 +9191,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659053567525
+  "genTime": 1659090896665
 }
