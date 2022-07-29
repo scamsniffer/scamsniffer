@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "yagiverse-genesis",
+      "name": "Yagiverse Genesis",
+      "externalUrl": "https://yagiverse.io",
+      "twitterUsername": "Yagiverse"
+    },
+    {
       "slug": "elvestown",
       "name": "Elves Town",
       "externalUrl": "http://elfnft.wtf",
@@ -9191,5 +9197,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659090896665
+  "genTime": 1659123556452
 }
