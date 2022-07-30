@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "jackson-zttu0dbgic",
+      "name": "Jackson On Chain NFT",
+      "externalUrl": "http://www.jacksonnft.xyz",
+      "twitterUsername": "LXRogers"
+    },
+    {
       "slug": "yagiverse-genesis",
       "name": "Yagiverse Genesis",
       "externalUrl": "https://yagiverse.io",
@@ -9197,5 +9203,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659123556452
+  "genTime": 1659184054147
 }
