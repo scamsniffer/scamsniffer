@@ -98,6 +98,42 @@
   ],
   "ProjectList": [
     {
+      "slug": "rarible",
+      "name": "Rarible",
+      "externalUrl": "https://rarible.com/",
+      "twitterUsername": "rariblecom"
+    },
+    {
+      "slug": "beanzofficial",
+      "name": "BEANZ Official",
+      "externalUrl": null,
+      "twitterUsername": "AzukiOfficial"
+    },
+    {
+      "slug": "collectvoxtownstar",
+      "name": "VOX Collectibles",
+      "externalUrl": "http://collectvox.com",
+      "twitterUsername": "gogalagames"
+    },
+    {
+      "slug": "town-star",
+      "name": "Town Star",
+      "externalUrl": "https://www.gala.games/",
+      "twitterUsername": "GoGalaGames"
+    },
+    {
+      "slug": "888innercircle",
+      "name": "888 inner circle",
+      "externalUrl": null,
+      "twitterUsername": "crypto888crypto"
+    },
+    {
+      "slug": "neotokyo-outer-identities",
+      "name": "NeoTokyo Outer Identities",
+      "externalUrl": "https://neotokyo.codes/",
+      "twitterUsername": "NeoTokyoCode"
+    },
+    {
       "slug": "jackson-zttu0dbgic",
       "name": "Jackson On Chain NFT",
       "externalUrl": "http://www.jacksonnft.xyz",
@@ -9203,5 +9239,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659184054147
+  "genTime": 1659186275175
 }
