@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "rareapepeyachtclub",
+      "name": "Rare Apepes",
+      "externalUrl": "https://www.rareapepeyachtclub.com/",
+      "twitterUsername": "RareApepeYC"
+    },
+    {
       "slug": "ninjafaith",
       "name": "NinjaFaith",
       "externalUrl": "http://ninjafaith.xyz/",
@@ -11303,5 +11309,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659251312482
+  "genTime": 1659289743388
 }
