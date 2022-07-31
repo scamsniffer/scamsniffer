@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "the-esion-club",
+      "name": "ESION CLUB",
+      "externalUrl": "https://esionnft.com/",
+      "twitterUsername": "ESION_Club"
+    },
+    {
       "slug": "oncyber-labs",
       "name": "oncyber labs",
       "externalUrl": "http://oncyber.io",
@@ -11291,5 +11297,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659192015521
+  "genTime": 1659239277038
 }
