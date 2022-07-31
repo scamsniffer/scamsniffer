@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "ninjafaith",
+      "name": "NinjaFaith",
+      "externalUrl": "http://ninjafaith.xyz/",
+      "twitterUsername": "shinobiweb3"
+    },
+    {
       "slug": "the-esion-club",
       "name": "ESION CLUB",
       "externalUrl": "https://esionnft.com/",
@@ -11297,5 +11303,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659239277038
+  "genTime": 1659251312482
 }
