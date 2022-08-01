@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "subwayrats",
+      "name": "SubwayRats",
+      "externalUrl": "http://SubwayRats.io",
+      "twitterUsername": "SubwayRatsNft"
+    },
+    {
       "slug": "geometricbirds",
       "name": "Geometric  birds",
       "externalUrl": "http://geometric.work",
@@ -11327,5 +11333,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659344984547
+  "genTime": 1659348609572
 }
