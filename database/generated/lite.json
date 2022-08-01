@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "whoisenzo1",
+      "name": "Who is Enzo ? (1/10)",
+      "externalUrl": null,
+      "twitterUsername": "EnzoNFT_"
+    },
+    {
+      "slug": "big-eye-rebellion",
+      "name": "Big Eye Rebellion",
+      "externalUrl": "https://bigeyerebellion.world/",
+      "twitterUsername": "BigEyeRebellion"
+    },
+    {
       "slug": "rareapepeyachtclub",
       "name": "Rare Apepes",
       "externalUrl": "https://www.rareapepeyachtclub.com/",
@@ -11309,5 +11321,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659289743388
+  "genTime": 1659319382280
 }
