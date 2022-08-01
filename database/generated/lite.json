@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "acordaesconegut",
+      "name": "Acord Aesconegut - Art & Souls Studios",
+      "externalUrl": "https://acordaesconegut.xyz/",
+      "twitterUsername": "artnsouls_"
+    },
+    {
       "slug": "subwayrats",
       "name": "SubwayRats",
       "externalUrl": "http://SubwayRats.io",
@@ -11333,5 +11339,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659348609572
+  "genTime": 1659362616639
 }
