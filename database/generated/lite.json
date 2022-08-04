@@ -98,6 +98,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "mirage-gallery-curated",
+      "name": "Mirage Gallery Curated",
+      "externalUrl": "https://miragegallery.ai",
+      "twitterUsername": "miragegalleryai"
+    },
+    {
+      "slug": "vampirecastle",
+      "name": "VampireCastle",
+      "externalUrl": "http://Vampirecastle.xyz",
+      "twitterUsername": "vampire__nft"
+    },
+    {
       "slug": "monsterhome",
       "name": "MonsterHome",
       "externalUrl": "http://Monsterhome.xyz",
@@ -11345,5 +11357,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659444600069
+  "genTime": 1659585623783
 }
