@@ -98,6 +98,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "kido-nft",
+      "name": "KIDO: Memories of Childhood",
+      "externalUrl": "http://kidonft.xyz",
+      "twitterUsername": "kidonft_xyz"
+    },
+    {
       "slug": "mirage-gallery-curated",
       "name": "Mirage Gallery Curated",
       "externalUrl": "https://miragegallery.ai",
@@ -11357,5 +11363,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659585623783
+  "genTime": 1659626885414
 }
