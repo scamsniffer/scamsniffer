@@ -9,5 +9,6 @@
     "scam_act": "Scam activity",
     "setting": "Settings",
     "risk_assets": "Risk assets warning on Opensea",
-    "scam_detection": "ScamSniffer webpage detection"
+    "scam_detection": "ScamSniffer webpage detection",
+    "firewall_check": "Security Check"
 }

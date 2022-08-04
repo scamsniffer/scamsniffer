@@ -18,15 +18,16 @@ const nodeEnv = process.env.NODE_ENV || 'development';
 const targetBrowser = process.env.TARGET_BROWSER;
 
 const extensionReloaderPlugin =
-  nodeEnv === 'development'
+  nodeEnv === "development"
     ? new ExtensionReloader({
         port: 9090,
         reloadPage: true,
         entries: {
           // TODO: reload manifest on update
-          contentScript: 'contentScript',
-          background: 'background',
-          extensionPage: ['popup', 'options'],
+          contentScript: "contentScript",
+          firewall: "firewall",
+          background: "background",
+          extensionPage: ["popup", "options"],
         },
       })
     : () => {
@@ -59,8 +60,9 @@ module.exports = {
   entry: {
     manifest: path.join(sourcePath, "manifest.json"),
     background: path.join(sourcePath, "Background", "index.ts"),
+    firewall: path.join(sourcePath, "Firewall", "index.ts"),
     contentScript: path.join(sourcePath, "ContentScript", "index.ts"),
-    popup: path.join(sourcePath, "Popup", "index.tsx")
+    popup: path.join(sourcePath, "Popup", "index.tsx"),
   },
 
   output: {
@@ -92,7 +94,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['url-loader'],
+        use: ["url-loader"],
       },
       {
         test: /\.(js|ts)x?$/,
@@ -101,7 +103,7 @@ module.exports = {
         options: {
           presets: [
             "@babel/env",
-           ["@babel/preset-react", {"runtime": "automatic"}],
+            ["@babel/preset-react", { runtime: "automatic" }],
             "@babel/preset-typescript",
           ],
           plugins: ["@babel/plugin-transform-runtime"],

@@ -9,5 +9,6 @@
     "setting": "设置",
     "scam_act": "被盗资产",
     "risk_assets": "在Opensea显示被盗风险资产提醒",
-    "scam_detection": "ScamSniffer风险检测"
+    "scam_detection": "ScamSniffer风险检测",
+    "firewall_check": "安全检查"
 }

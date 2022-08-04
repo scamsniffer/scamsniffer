@@ -41,7 +41,27 @@
     "service_worker": "js/background.bundle.js"
   },
 
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "assets/js/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
   "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "js/firewall.bundle.js"
+      ]
+    },
     {
       "matches": [
         "<all_urls>"

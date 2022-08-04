@@ -8,10 +8,10 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next) // bind react-i18next to the instance
   .init({
-    fallbackLng: "en-US",
+    fallbackLng: "en",
   });
 
-i18n.addResourceBundle("en-US", "translation", enUS);
+i18n.addResourceBundle("en", "translation", enUS);
 i18n.addResourceBundle("zh-CN", "translation", zhCN);
 
 export default i18n;
