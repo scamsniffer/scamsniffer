@@ -5,7 +5,7 @@ const { Op } = require('sequelize')
 ScamActivity.destroy({
   where: {
     id: {
-      [Op.in]: [743],
+      [Op.in]: [1044],
     },
   },
 });
