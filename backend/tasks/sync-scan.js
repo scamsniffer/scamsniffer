@@ -32,7 +32,7 @@ async function doSync(recentDomain) {
     if (recentScams.length) {
       await detectDomain(recentScams[0].link, recentScams[0]);
     } else {
-      await detectDomain(`https://${recentDomain.host}`, null);
+      await detectDomain(`https://${recentDomain.host}/`, null);
     }
   } catch (e) {
     console.log("error", e);
