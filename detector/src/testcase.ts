@@ -2,6 +2,7 @@ import builtInDatabase from "./database/lite.json";
 import { getTopDomainFromUrl, Detector } from "./detector";
 import { TEST_TWEETS, TEST_TWEETS_ALL } from "./__fixtures__/testTweets";
 import { BLACK_LIST } from "./__fixtures__/blackList";
+import fs from 'fs';
 
 async function testWhite() {
   const detector = new Detector({});
@@ -29,12 +30,15 @@ async function testAll() {
     const spend = Date.now() - startTime;
     if (result) {
       listScam.push(result);
-    } else {
-    }
+    } else {}
     console.log("spend", spend, index, "isWhite", result === null);
   }
 
-  console.log(TEST_TWEETS_ALL.length, listScam.length, listScam);
+  console.log(TEST_TWEETS_ALL.length, listScam.length);
+  fs.writeFileSync(
+    __dirname + "/../test-results/results.json",
+    JSON.stringify(listScam)
+  );
 }
 
 async function testBlack() {
