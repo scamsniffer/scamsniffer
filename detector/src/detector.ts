@@ -643,8 +643,9 @@ async function _detectScam(
       for (let index = 0; index < domainResult.length; index++) {
         const domainSim = domainResult[index];
         if (!domainSim) continue;
-        // full match xxx.com xxx.io
-        const isFullyMatch = domainSim.sim === 1;
+        if (!domainSim.linkDomain) continue;
+          // full match xxx.com xxx.io
+          const isFullyMatch = domainSim.sim === 1;
         // contain match cc-xxx.com xxx.io
         const simAndMatch = domainSim.contain && domainSim.sim > 0.7;
         // const hasContainAndSim = ;
