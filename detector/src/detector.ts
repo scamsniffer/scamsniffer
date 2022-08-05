@@ -88,10 +88,14 @@ function includeNameCheck(findName: string, name: string) {
 function compareName(name: string, name2: string) {
   name = name.toLowerCase();
   name2 = name2.toLowerCase();
+  // LossLess Labs (Shujin) match Lossless
+  const diffLimit = 4;
+  const diff = Math.abs(name2.length - name.length);
   return (
     name.length > miniumWordsLength &&
     name2.length > miniumWordsLength &&
-    name.includes(name2)
+    name.includes(name2) &&
+    diff < diffLimit
   );
 }
 
@@ -618,7 +622,12 @@ async function _detectScam(
                   //   console.log("compare subdomain", sim, simThreshold);
                   // }
                   let aString = subDomains[0];
-                  if (aString != "www") {
+                  let projectName = projectWithDomain.project.name.replace(new RegExp('.', ''), '');
+                  let subdomainInName = projectName
+                    .toLowerCase()
+                    .includes(aString);
+
+                  if (aString != "www" && subdomainInName) {
                     checkMatchItems(aString, bString);
                   }
                 }
@@ -662,6 +671,9 @@ async function _detectScam(
         // contain match cc-xxx.com xxx.io
         const simAndMatch = domainSim.contain && domainSim.sim > 0.7;
         // const hasContainAndSim = ;
+        const isCommonWords = commonWords.includes(
+          domainSim.linkDomain.domainName
+        );
         if (isFullyMatch || simAndMatch) {
           if (hasContext) {
             // in twitter context
@@ -669,7 +681,9 @@ async function _detectScam(
           } else {
             similarProject = domainSim;
           }
-          continue;
+          if (!isCommonWords) { 
+            continue;
+          }
         }
         try {
           domainMeta = options.skipDomainMeta

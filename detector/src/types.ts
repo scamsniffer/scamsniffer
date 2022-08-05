@@ -36,6 +36,7 @@ export type Project = {
   externalUrl: string | null;
   twitterUsername: string | null;
   domainDetail?: DomainDetail;
+  category?: string;
 };
 
 export type BlackList = {
