@@ -43,19 +43,21 @@ async function reportScam(req, res) {
     });
   }
 
-  const twitterStat = await TwitterSummary.findOne({
-    where: {
-      twitter: row.twitter,
-    },
-  });
-  if (twitterStat) {
-    twitterStat.count = domainStat.count + 1;
-    await twitterStat.save();
-  } else {
-    await TwitterSummary.create({
-      twitter: row.twitter,
-      count: 1,
+  if (row.twitter) {
+    const twitterStat = await TwitterSummary.findOne({
+      where: {
+        twitter: row.twitter,
+      },
     });
+    if (twitterStat) {
+      twitterStat.count = domainStat.count + 1;
+      await twitterStat.save();
+    } else {
+      await TwitterSummary.create({
+        twitter: row.twitter,
+        count: 1,
+      });
+    }
   }
 
   await increaseCount("total");
