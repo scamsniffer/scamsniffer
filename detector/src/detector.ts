@@ -23,7 +23,7 @@ const REPORT_ENDPOINT = "https://api.scamsniffer.io/report";
 const REPORT_ENDPOINT_DEV = "http://localhost/report";
 const remoteDatabase =
   "https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json";
-const miniumWordsLength = 4;
+const miniumWordsLength = 5;
 
 export function getTopDomainFromUrl(url: string): DomainDetail | null {
   let topDomain = null;
