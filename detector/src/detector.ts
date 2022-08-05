@@ -669,8 +669,12 @@ async function _detectScam(
             : await getDomainMeta([domainSim.linkDomain.topDomain]);
           if (!domainMeta) continue;
           const domainDetail = domainMeta.data;
-          const createDate =
-            domainDetail.creationDate || domainDetail.updatedDate;
+          if (!domainDetail) {
+            console.log("domainMeta", domainMeta);
+            continue;
+          }
+            const createDate =
+              domainDetail.creationDate || domainDetail.updatedDate;
           creationDaysOfDomain = createDate
             ? Math.floor(
                 (Date.now() - new Date(createDate).getTime()) / 1000 / 86400
