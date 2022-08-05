@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "nftiff",
+      "name": "NFTiff",
+      "externalUrl": "http://nft.Tiffany.com",
+      "twitterUsername": "TiffanyAndCo"
+    },
+    {
       "slug": "tiffany",
       "name": "Tiffany & Co.",
       "externalUrl": "https://nft.tiffany.com/",
@@ -9598,5 +9604,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659694845445
+  "genTime": 1659714095530
 }
