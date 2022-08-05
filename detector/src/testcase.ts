@@ -37,7 +37,7 @@ async function testAll() {
   console.log(TEST_TWEETS_ALL.length, listScam.length);
   fs.writeFileSync(
     __dirname + "/../test-results/results.json",
-    JSON.stringify(listScam)
+    JSON.stringify(listScam, null, 2)
   );
 }
 
