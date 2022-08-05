@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "babybearwtf",
+      "name": "Baby Bear purks",
+      "externalUrl": "http://babybear.wtf",
+      "twitterUsername": "BABYBEARNFT__"
+    },
+    {
       "slug": "the-dumbkeys",
       "name": "The Dumbkeys",
       "externalUrl": "http://www.dumbkeys.io",
@@ -11356,5 +11362,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659687570406
+  "genTime": 1659694845445
 }
