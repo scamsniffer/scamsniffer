@@ -43,7 +43,7 @@ async function syncData() {
   let lastId = 0;
   const cache = await Cache.findOne({
     where: {
-      key: "sync_id",
+      key: "sync_detect_id",
     },
   });
 
