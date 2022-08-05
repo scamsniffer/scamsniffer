@@ -9148,36 +9148,6 @@
       "twitterUsername": "REBELSinDSGS"
     },
     {
-      "slug": "bitcoin",
-      "name": "Bitcoin",
-      "externalUrl": "https://bitcoin.org/",
-      "twitterUsername": "Bitcoin"
-    },
-    {
-      "slug": "ethereum",
-      "name": "Ethereum",
-      "externalUrl": "https://www.ethereum.org",
-      "twitterUsername": "ethereum"
-    },
-    {
-      "slug": "binancecoin",
-      "name": "BNB",
-      "externalUrl": "https://www.bnbchain.world/en",
-      "twitterUsername": "binance"
-    },
-    {
-      "slug": "terra2",
-      "name": "Terra",
-      "externalUrl": "https://www.terra.money/",
-      "twitterUsername": "terra_money"
-    },
-    {
-      "slug": "wbnb",
-      "name": "Wrapped BNB",
-      "externalUrl": "https://www.binance.org/",
-      "twitterUsername": null
-    },
-    {
       "slug": "privateum",
       "name": "Privateum",
       "externalUrl": "https://www.privateum.org/",
