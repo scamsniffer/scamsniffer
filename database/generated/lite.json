@@ -2695,12 +2695,6 @@
       "twitterUsername": "edo2022_nft"
     },
     {
-      "slug": "binance.us",
-      "name": "Binance.US",
-      "externalUrl": "https://binance.us/",
-      "twitterUsername": "binanceus"
-    },
-    {
       "slug": "ftx.us",
       "name": "FTX",
       "externalUrl": "https://ftx.us/",
@@ -2855,12 +2849,6 @@
       "name": "Polygon DAO",
       "externalUrl": "https://polygon.community/",
       "twitterUsername": null
-    },
-    {
-      "slug": "chain.link",
-      "name": "Chainlink",
-      "externalUrl": "https://chain.link/",
-      "twitterUsername": "chainlink"
     },
     {
       "slug": "algorand.com",
