@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "tiffany",
+      "name": "Tiffany & Co.",
+      "externalUrl": "https://nft.tiffany.com/",
+      "twitterUsername": "TiffanyAndCo"
+    },
+    {
       "slug": "babybearwtf",
       "name": "Baby Bear purks",
       "externalUrl": "http://babybear.wtf",
