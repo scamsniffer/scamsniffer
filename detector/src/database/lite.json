@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "babybearwtf",
+      "name": "Baby Bear purks",
+      "externalUrl": "http://babybear.wtf",
+      "twitterUsername": "BABYBEARNFT__"
+    },
+    {
       "slug": "the-dumbkeys",
       "name": "The Dumbkeys",
       "externalUrl": "http://www.dumbkeys.io",
@@ -2689,12 +2695,6 @@
       "twitterUsername": "edo2022_nft"
     },
     {
-      "slug": "binance.us",
-      "name": "Binance.US",
-      "externalUrl": "https://binance.us/",
-      "twitterUsername": "binanceus"
-    },
-    {
       "slug": "ftx.us",
       "name": "FTX",
       "externalUrl": "https://ftx.us/",
@@ -2849,12 +2849,6 @@
       "name": "Polygon DAO",
       "externalUrl": "https://polygon.community/",
       "twitterUsername": null
-    },
-    {
-      "slug": "chain.link",
-      "name": "Chainlink",
-      "externalUrl": "https://chain.link/",
-      "twitterUsername": "chainlink"
     },
     {
       "slug": "algorand.com",
@@ -11356,5 +11350,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659687570406
+  "genTime": 1659694845445
 }
