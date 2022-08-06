@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "bored-and-dangerous",
+      "name": "Bored & Dangerous",
+      "externalUrl": "http://azurbala.com",
+      "twitterUsername": "bddeployer"
+    },
+    {
       "slug": "beyond-earth-land",
       "name": "Beyond Earth Land",
       "externalUrl": "https://beyondearthonline.io/",
@@ -9628,5 +9634,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659778926752
+  "genTime": 1659793843804
 }
