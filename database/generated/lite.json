@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "sudoswap",
+      "name": "sudoswap",
+      "externalUrl": "https://sudoswap.xyz/",
+      "twitterUsername": "sudoswap"
+    },
+    {
       "slug": "nftiff",
       "name": "NFTiff",
       "externalUrl": "http://nft.Tiffany.com",
