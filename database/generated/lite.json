@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "beyond-earth-land",
+      "name": "Beyond Earth Land",
+      "externalUrl": "https://beyondearthonline.io/",
+      "twitterUsername": "BeyondEarth_NFT"
+    },
+    {
       "slug": "women-ape-yacht-club",
       "name": "Women Ape Yacht Club",
       "externalUrl": "http://mint.womenapeyachtclub.com/",
@@ -9622,5 +9628,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659775278134
+  "genTime": 1659778926752
 }
