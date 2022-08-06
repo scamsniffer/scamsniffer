@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "women-ape-yacht-club",
+      "name": "Women Ape Yacht Club",
+      "externalUrl": "http://mint.womenapeyachtclub.com/",
+      "twitterUsername": "womenapeyc"
+    },
+    {
       "slug": "boonmirds",
       "name": "Boonmirds",
       "externalUrl": "http://boonmirds.xyz",
@@ -9616,5 +9622,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659768012702
+  "genTime": 1659775278134
 }
