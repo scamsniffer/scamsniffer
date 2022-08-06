@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "boonmirds",
+      "name": "Boonmirds",
+      "externalUrl": "http://boonmirds.xyz",
+      "twitterUsername": "boonmirds"
+    },
+    {
       "slug": "sudoswap",
       "name": "sudoswap",
       "externalUrl": "https://sudoswap.xyz/",
@@ -9610,5 +9616,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659714095530
+  "genTime": 1659768012702
 }
