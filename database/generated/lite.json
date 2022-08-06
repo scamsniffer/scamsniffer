@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "otokonft",
+      "name": "OTOKO NFT",
+      "externalUrl": "https://otoko.io/",
+      "twitterUsername": "otokonft"
+    },
+    {
       "slug": "bored-and-dangerous",
       "name": "Bored & Dangerous",
       "externalUrl": "http://azurbala.com",
@@ -9634,5 +9640,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659793843804
+  "genTime": 1659801135837
 }
