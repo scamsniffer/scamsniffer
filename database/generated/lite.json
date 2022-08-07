@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "hero-ape-milo",
+      "name": "Hero APE Milo",
+      "externalUrl": "https://heroape.io",
+      "twitterUsername": "heroapeofficial"
+    },
+    {
       "slug": "otokonft",
       "name": "OTOKO NFT",
       "externalUrl": "https://otoko.io/",
@@ -9634,5 +9640,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659801135837
+  "genTime": 1659843819559
 }
