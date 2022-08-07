@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "mm3nft",
+      "name": "MM3NFT",
+      "externalUrl": "https://mm3nft.com/",
+      "twitterUsername": "mm3nft"
+    },
+    {
       "slug": "hero-ape-milo",
       "name": "Hero APE Milo",
       "externalUrl": "https://heroape.io",
@@ -9640,5 +9646,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659843819559
+  "genTime": 1659851114497
 }
