@@ -121,6 +121,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "my-beautiful-dark-twisted-fantasy-by-beeble",
+      "name": "MY BEAUTIFUL DARK TWISTED FANTASY BY BEEBLE",
+      "externalUrl": "http://beeble.xyz",
+      "twitterUsername": "Beeble_XYZ"
+    },
+    {
+      "slug": "crudeborne-eggs",
+      "name": "CrudeBorne Eggs",
+      "externalUrl": "https://crudeborne.wtf",
+      "twitterUsername": "crudeborne"
+    },
+    {
+      "slug": "babbys",
+      "name": "Babbys",
+      "externalUrl": "https://babby.xyz",
+      "twitterUsername": "dancebabbydance"
+    },
+    {
+      "slug": "e4c",
+      "name": "E4C Rangers",
+      "externalUrl": "http://www.ambrus.studio",
+      "twitterUsername": "AmbrusStudio"
+    },
+    {
       "slug": "mm3nft",
       "name": "MM3NFT",
       "externalUrl": "https://mm3nft.com/",
@@ -9646,5 +9670,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659851114497
+  "genTime": 1659936566591
 }
