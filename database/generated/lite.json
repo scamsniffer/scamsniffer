@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "moodiesbyhanuka",
+      "name": "Moodies by Hanuka",
+      "externalUrl": "https://www.moodiesbyhanuka.com",
+      "twitterUsername": "moodiesbyhanuka"
+    },
+    {
       "slug": "uglyduckwtf",
       "name": "uglyduck.wtf",
       "externalUrl": "https://uglyduck.wtf/",
@@ -9700,5 +9706,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660058090333
+  "genTime": 1660072979643
 }
