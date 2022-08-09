@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "proof-of-narnian-nft-og",
+      "name": "Proof of Narnian NFT",
+      "externalUrl": "https://narnia.capital/",
+      "twitterUsername": "ICODrops"
+    },
+    {
+      "slug": "digidaigaku",
+      "name": "DigiDaigaku",
+      "externalUrl": "https://digidaigaku.com/",
+      "twitterUsername": "Digidaigaku"
+    },
+    {
       "slug": "moodiesbyhanuka",
       "name": "Moodies by Hanuka",
       "externalUrl": "https://www.moodiesbyhanuka.com",
@@ -9706,5 +9718,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660072979643
+  "genTime": 1660076639735
 }
