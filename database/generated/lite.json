@@ -121,6 +121,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "8liens",
+      "name": "8liens NFT",
+      "externalUrl": "http://8liens.xyz",
+      "twitterUsername": "8liensNFT"
+    },
+    {
+      "slug": "MV3",
+      "name": "The MV3 Universe",
+      "externalUrl": "https://www.mv3hq.com",
+      "twitterUsername": "mv3nft"
+    },
+    {
+      "slug": "decentraland",
+      "name": "Decentraland",
+      "externalUrl": "https://decentraland.org/",
+      "twitterUsername": "decentraland"
+    },
+    {
+      "slug": "cryptotitvags",
+      "name": "CryptoTitVags",
+      "externalUrl": "http://cryptotitvags.wtf",
+      "twitterUsername": "CryptoTitVags"
+    },
+    {
       "slug": "my-beautiful-dark-twisted-fantasy-by-beeble",
       "name": "MY BEAUTIFUL DARK TWISTED FANTASY BY BEEBLE",
       "externalUrl": "http://beeble.xyz",
@@ -9670,5 +9694,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659936566591
+  "genTime": 1660019506674
 }
