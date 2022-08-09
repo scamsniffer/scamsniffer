@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "uglyduckwtf",
+      "name": "uglyduck.wtf",
+      "externalUrl": "https://uglyduck.wtf/",
+      "twitterUsername": "Uglyduckwtf"
+    },
+    {
       "slug": "8liens",
       "name": "8liens NFT",
       "externalUrl": "http://8liens.xyz",
@@ -9694,5 +9700,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660019506674
+  "genTime": 1660058090333
 }
