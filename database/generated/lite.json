@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "onigiri-pepes",
+      "name": "Onigiri Pepes",
+      "externalUrl": "http://onigiri-pepes.com",
+      "twitterUsername": "OnigiriPepes"
+    },
+    {
+      "slug": "shellzorb",
+      "name": "Shellz Orb",
+      "externalUrl": "https://shellzorb.io",
+      "twitterUsername": "ShellzOrb"
+    },
+    {
       "slug": "proof-of-narnian-nft-og",
       "name": "Proof of Narnian NFT",
       "externalUrl": "https://narnia.capital/",
@@ -9718,5 +9730,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660076639735
+  "genTime": 1660179302110
 }
