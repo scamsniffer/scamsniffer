@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "webaverse-genesis-pass",
+      "name": "Webaverse Genesis Pass",
+      "externalUrl": "https://webaverse.com/",
+      "twitterUsername": "webaverse"
+    },
+    {
       "slug": "onigiri-pepes",
       "name": "Onigiri Pepes",
       "externalUrl": "http://onigiri-pepes.com",
@@ -9724,5 +9730,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660179302110
+  "genTime": 1660198241253
 }
