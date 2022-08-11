@@ -121,6 +121,90 @@
   ],
   "ProjectList": [
     {
+      "slug": "proof-of-narnian-nft-og",
+      "name": "Proof of Narnian NFT",
+      "externalUrl": "https://narnia.capital/",
+      "twitterUsername": "ICODrops"
+    },
+    {
+      "slug": "digidaigaku",
+      "name": "DigiDaigaku",
+      "externalUrl": "https://digidaigaku.com/",
+      "twitterUsername": "Digidaigaku"
+    },
+    {
+      "slug": "moodiesbyhanuka",
+      "name": "Moodies by Hanuka",
+      "externalUrl": "https://www.moodiesbyhanuka.com",
+      "twitterUsername": "moodiesbyhanuka"
+    },
+    {
+      "slug": "uglyduckwtf",
+      "name": "uglyduck.wtf",
+      "externalUrl": "https://uglyduck.wtf/",
+      "twitterUsername": "Uglyduckwtf"
+    },
+    {
+      "slug": "8liens",
+      "name": "8liens NFT",
+      "externalUrl": "http://8liens.xyz",
+      "twitterUsername": "8liensNFT"
+    },
+    {
+      "slug": "MV3",
+      "name": "The MV3 Universe",
+      "externalUrl": "https://www.mv3hq.com",
+      "twitterUsername": "mv3nft"
+    },
+    {
+      "slug": "decentraland",
+      "name": "Decentraland",
+      "externalUrl": "https://decentraland.org/",
+      "twitterUsername": "decentraland"
+    },
+    {
+      "slug": "cryptotitvags",
+      "name": "CryptoTitVags",
+      "externalUrl": "http://cryptotitvags.wtf",
+      "twitterUsername": "CryptoTitVags"
+    },
+    {
+      "slug": "my-beautiful-dark-twisted-fantasy-by-beeble",
+      "name": "MY BEAUTIFUL DARK TWISTED FANTASY BY BEEBLE",
+      "externalUrl": "http://beeble.xyz",
+      "twitterUsername": "Beeble_XYZ"
+    },
+    {
+      "slug": "crudeborne-eggs",
+      "name": "CrudeBorne Eggs",
+      "externalUrl": "https://crudeborne.wtf",
+      "twitterUsername": "crudeborne"
+    },
+    {
+      "slug": "babbys",
+      "name": "Babbys",
+      "externalUrl": "https://babby.xyz",
+      "twitterUsername": "dancebabbydance"
+    },
+    {
+      "slug": "e4c",
+      "name": "E4C Rangers",
+      "externalUrl": "http://www.ambrus.studio",
+      "twitterUsername": "AmbrusStudio"
+    },
+    {
+      "slug": "mm3nft",
+      "name": "MM3NFT",
+      "externalUrl": "https://mm3nft.com/",
+      "twitterUsername": "mm3nft"
+    },
+    {
+      "slug": "hero-ape-milo",
+      "name": "Hero APE Milo",
+      "externalUrl": "https://heroape.io",
+      "twitterUsername": "heroapeofficial"
+    },
+    {
       "slug": "otokonft",
       "name": "OTOKO NFT",
       "externalUrl": "https://otoko.io/",
@@ -9634,5 +9718,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1659801135837
+  "genTime": 1660076639735
 }
