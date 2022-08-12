@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "babyrareapepeyachtclub",
+      "name": "Baby Rare Apepe YC",
+      "externalUrl": "https://babyrareapepeyc.xyz/",
+      "twitterUsername": "BabyRareApepeYC"
+    },
+    {
+      "slug": "beartings",
+      "name": "BearTings NFT",
+      "externalUrl": "https://beartings.io/",
+      "twitterUsername": "BearTings_NFT"
+    },
+    {
       "slug": "webaverse-genesis-pass",
       "name": "Webaverse Genesis Pass",
       "externalUrl": "https://webaverse.com/",
@@ -9730,5 +9742,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660198241253
+  "genTime": 1660297427153
 }
