@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "superrare",
+      "name": "SuperRare",
+      "externalUrl": "https://superrare.co",
+      "twitterUsername": "superrare"
+    },
+    {
       "slug": "babyrareapepeyachtclub",
       "name": "Baby Rare Apepe YC",
       "externalUrl": "https://babyrareapepeyc.xyz/",
@@ -9742,5 +9748,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660297427153
+  "genTime": 1660301134171
 }
