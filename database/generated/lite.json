@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "justin-aversano-cognition",
+      "name": "Justin Aversano - Cognition - Collection of 364 Paintings",
+      "externalUrl": "https://mint.justinaversano.com/",
+      "twitterUsername": "justinaversano"
+    },
+    {
       "slug": "superrare",
       "name": "SuperRare",
       "externalUrl": "https://superrare.co",
@@ -9748,5 +9754,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660301134171
+  "genTime": 1660354075538
 }
