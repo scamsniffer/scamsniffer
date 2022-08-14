@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "genuine-undead",
+      "name": "Genuine Undead",
+      "externalUrl": "https://www.genuineundead.com/",
+      "twitterUsername": "GenuineUndead"
+    },
+    {
+      "slug": "real-goblins",
+      "name": "Real Goblins",
+      "externalUrl": "https://www.realgoblins.wtf/",
+      "twitterUsername": "realgoblinsnft"
+    },
+    {
       "slug": "justin-aversano-cognition",
       "name": "Justin Aversano - Cognition - Collection of 364 Paintings",
       "externalUrl": "https://mint.justinaversano.com/",
@@ -9754,5 +9766,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660354075538
+  "genTime": 1660453494696
 }
