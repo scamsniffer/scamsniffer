@@ -246,7 +246,7 @@ async function testLink() {
 async function test() {
   await testAll();
   // await testWhite();
-  // await testBlack();
+  await testBlack();
 }
 
 test();
