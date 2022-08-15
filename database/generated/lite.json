@@ -121,6 +121,48 @@
   ],
   "ProjectList": [
     {
+      "slug": "genuine-undead",
+      "name": "Genuine Undead",
+      "externalUrl": "https://www.genuineundead.com/",
+      "twitterUsername": "GenuineUndead"
+    },
+    {
+      "slug": "real-goblins",
+      "name": "Real Goblins",
+      "externalUrl": "https://www.realgoblins.wtf/",
+      "twitterUsername": "realgoblinsnft"
+    },
+    {
+      "slug": "justin-aversano-cognition",
+      "name": "Justin Aversano - Cognition - Collection of 364 Paintings",
+      "externalUrl": "https://mint.justinaversano.com/",
+      "twitterUsername": "justinaversano"
+    },
+    {
+      "slug": "superrare",
+      "name": "SuperRare",
+      "externalUrl": "https://superrare.co",
+      "twitterUsername": "superrare"
+    },
+    {
+      "slug": "babyrareapepeyachtclub",
+      "name": "Baby Rare Apepe YC",
+      "externalUrl": "https://babyrareapepeyc.xyz/",
+      "twitterUsername": "BabyRareApepeYC"
+    },
+    {
+      "slug": "beartings",
+      "name": "BearTings NFT",
+      "externalUrl": "https://beartings.io/",
+      "twitterUsername": "BearTings_NFT"
+    },
+    {
+      "slug": "webaverse-genesis-pass",
+      "name": "Webaverse Genesis Pass",
+      "externalUrl": "https://webaverse.com/",
+      "twitterUsername": "webaverse"
+    },
+    {
       "slug": "onigiri-pepes",
       "name": "Onigiri Pepes",
       "externalUrl": "http://onigiri-pepes.com",
@@ -9724,5 +9766,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660179302110
+  "genTime": 1660453494696
 }
