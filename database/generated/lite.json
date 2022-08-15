@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "rotten-anti-social-club",
+      "name": "Rotten Anti Social Club",
+      "externalUrl": "https://rasc.wtf/",
+      "twitterUsername": "RASC_WTF"
+    },
+    {
       "slug": "ensmaxis",
       "name": "ENS Maxis",
       "externalUrl": "https://ensmaxis.com",
@@ -9778,5 +9784,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660581530153
+  "genTime": 1660592411808
 }
