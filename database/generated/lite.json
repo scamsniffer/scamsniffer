@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "dininho-adventures",
+      "name": "Dininho Adventures",
+      "externalUrl": "https://dininhoadventures.com/",
+      "twitterUsername": "dinobonoide"
+    },
+    {
       "slug": "genuine-undead",
       "name": "Genuine Undead",
       "externalUrl": "https://www.genuineundead.com/",
@@ -9766,5 +9772,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660453494696
+  "genTime": 1660542853084
 }
