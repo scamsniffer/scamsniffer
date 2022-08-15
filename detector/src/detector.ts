@@ -843,7 +843,8 @@ export class Detector {
     const domain = getTopDomainFromUrl(url);
     if (!domain || domain === null) return false;
     if (domain.host === null) return false;
-    return await checkIsInBlacklist("domain", domain.host);
+    console.log("checkIsInBlacklist", domain.host);
+    return await checkIsInBlacklist("domains", domain.host);
   }
 
   async checkNFTToken(
