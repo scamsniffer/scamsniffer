@@ -249,5 +249,5 @@ async function test() {
   // await testBlack();
 }
 
-// test();
-testLink();
+test();
+// testLink();

@@ -843,7 +843,6 @@ export class Detector {
     const domain = getTopDomainFromUrl(url);
     if (!domain || domain === null) return false;
     if (domain.host === null) return false;
-    console.log("checkIsInBlacklist", domain.host);
     return await checkIsInBlacklist("domains", domain.host);
   }
 
