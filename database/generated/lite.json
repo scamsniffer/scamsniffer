@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "ensmaxis",
+      "name": "ENS Maxis",
+      "externalUrl": "https://ensmaxis.com",
+      "twitterUsername": "ENSMaxisNFT"
+    },
+    {
       "slug": "dininho-adventures",
       "name": "Dininho Adventures",
       "externalUrl": "https://dininhoadventures.com/",
@@ -9772,5 +9778,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660542853084
+  "genTime": 1660581530153
 }
