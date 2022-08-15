@@ -238,7 +238,10 @@ async function testLink() {
         "So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀 So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀",
     })
   );
+
+  console.log(await detector.checkUrlInBlacklist("https://doodles-nft.xyz"));
 }
+
 
 async function test() {
   await testAll();
@@ -246,5 +249,5 @@ async function test() {
   // await testBlack();
 }
 
-test();
-// testLink();
+// test();
+testLink();
