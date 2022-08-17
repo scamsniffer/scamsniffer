@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "notditto",
+      "name": "NOT DITTO",
+      "externalUrl": "http://notditto.xyz",
+      "twitterUsername": "notdittonft"
+    },
+    {
       "slug": "rotten-anti-social-club",
       "name": "Rotten Anti Social Club",
       "externalUrl": "https://rasc.wtf/",
@@ -9784,5 +9790,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660592411808
+  "genTime": 1660703937528
 }
