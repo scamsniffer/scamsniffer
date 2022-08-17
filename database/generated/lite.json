@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "cosmic-clones",
+      "name": "Cosmic Clones",
+      "externalUrl": "https://cosmiccollective.xyz/cosmic-clones",
+      "twitterUsername": "Cosmic_Clones"
+    },
+    {
       "slug": "notditto",
       "name": "NOT DITTO",
       "externalUrl": "http://notditto.xyz",
@@ -9790,5 +9796,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660703937528
+  "genTime": 1660737506293
 }
