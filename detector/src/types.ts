@@ -58,6 +58,7 @@ export type DomainDetail = {
   topLevelDomainsName: string[] | null;
   subDomainsName: string[] | null;
   host: string | null;
+  isPunyCode: boolean
 };
 
 export type NFTCheckResult = {

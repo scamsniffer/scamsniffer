@@ -63,7 +63,7 @@
 //   console.log(
 //     await detector.detectScam(
 //       {
-//         links: ["https://genesislearn.site"],
+//         links: ["https://xn--moonbrds-g2a.xyz/"],
 //       },
 //       {
 //         // onlyLink: true
@@ -71,16 +71,29 @@
 //     )
 //   );
 
-//     console.log(
-//       await detector.detectScam(
-//         {
-//           links: ["https://ftx.cool/eu/wallet"],
-//         },
-//         {
-//           // onlyLink: true
-//         }
-//       )
-//     );
+//   console.log(
+//     await detector.detectScam(
+//       {
+//         links: ["https://xn--premnt-e9a.xyz/"],
+//       },
+//       {
+//         // onlyLink: true
+//       }
+//     )
+//   );
+
+  
+
+//     // console.log(
+//     //   await detector.detectScam(
+//     //     {
+//     //       links: ["https://ftx.cool/eu/wallet"],
+//     //     },
+//     //     {
+//     //       // onlyLink: true
+//     //     }
+//     //   )
+//     // );
 
 //   //   console.log(
 //   //     await detector.detectScam(
@@ -228,18 +241,18 @@
 //   //      })
 //   //    );
 
-//   console.log(
-//     await detector.detectScam({
-//       id: "1545388228663865344",
-//       nickname: "CIA Officer",
-//       userId: "officer_cia",
-//       links: ["http://tranqui.xyz/posts/100-days-of-code"],
-//       content:
-//         "So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀 So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀",
-//     })
-//   );
+// //   console.log(
+// //     await detector.detectScam({
+// //       id: "1545388228663865344",
+// //       nickname: "CIA Officer",
+// //       userId: "officer_cia",
+// //       links: ["http://tranqui.xyz/posts/100-days-of-code"],
+// //       content:
+// //         "So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀 So you want to become a smart contract developer? Here is a condensed guide for learning Web3 development in 100 Days  👀",
+// //     })
+// //   );
 
-//   console.log(await detector.checkUrlInBlacklist("https://doodles-nft.xyz"));
+// //   console.log(await detector.checkUrlInBlacklist("https://doodles-nft.xyz"));
 // }
 
 
@@ -249,5 +262,5 @@
 //   await testBlack();
 // }
 
-// test();
-// // testLink();
+// // test();
+// testLink();

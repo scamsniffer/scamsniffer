@@ -12,6 +12,7 @@ import fetch from "isomorphic-fetch";
 import { parseDomain, ParseResultType } from "parse-domain";
 import urlParser from "url";
 import { fixWordsIfHasUnicode, compareTwoStrings } from "./confusables";
+import punycode from "punycode";
 
 const TOKEN_ENDPOINT =
   "https://cdn.jsdelivr.net/gh/scamsniffer/explorer-database@main/data/v1";
@@ -67,6 +68,7 @@ export function getTopDomainFromUrl(url: string): DomainDetail | null {
   let domainName = null;
   let topLevelDomainsName: string[] = [];
   let subDomainsName: string[] = [];
+  let isPunyCode = false;
   const host = urlParser.parse(url).host;
   if (host === null) return null;
   const parseResult = parseDomain(host);
@@ -89,7 +91,24 @@ export function getTopDomainFromUrl(url: string): DomainDetail | null {
     // default:
     //   throw new Error(`${host} is an ip address or invalid domain`);
   }
+
+  
+
+  if (domainName) {
+    const unicodeName = punycode.toUnicode(domainName);
+    isPunyCode = unicodeName != domainName;
+    if (isPunyCode) {
+      domainName = unicodeName
+    }
+    // if (isPunyCode) {
+    //   console.log({
+    //     isPunyCode,
+    //     unicodeName,
+    //   })
+    // }
+  }
   return {
+    isPunyCode,
     topDomain,
     domainName,
     subDomainsName,
