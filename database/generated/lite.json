@@ -121,6 +121,30 @@
   ],
   "ProjectList": [
     {
+      "slug": "osrs-punks",
+      "name": "OSRS Punks",
+      "externalUrl": null,
+      "twitterUsername": "OSRSPunks"
+    },
+    {
+      "slug": "finiliar",
+      "name": "Finiliar",
+      "externalUrl": "https://finiliar.com",
+      "twitterUsername": "finiliar"
+    },
+    {
+      "slug": "strxngers",
+      "name": "Strxngers",
+      "externalUrl": "https://strxngers.me",
+      "twitterUsername": "StrxngersNFT"
+    },
+    {
+      "slug": "kryptoria-alphacitizens",
+      "name": "Kryptoria - Alpha Citizens",
+      "externalUrl": "https://kryptoria.io",
+      "twitterUsername": "Kryptoria"
+    },
+    {
       "slug": "og-portal-nft",
       "name": "OG Portal NFT",
       "externalUrl": "https://ekta.io",
@@ -9790,5 +9814,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1660791576524
+  "genTime": 1661003858217
 }
