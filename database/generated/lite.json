@@ -121,6 +121,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "outsadofficial",
+      "name": "OutSad Official",
+      "externalUrl": "https://outsad.io/#/",
+      "twitterUsername": "OutsadNFT"
+    },
+    {
       "slug": "osrs-punks",
       "name": "OSRS Punks",
       "externalUrl": null,
@@ -9814,5 +9820,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1661003858217
+  "genTime": 1661013700747
 }
