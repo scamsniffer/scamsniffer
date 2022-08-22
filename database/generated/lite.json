@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "weallsurviveddeath",
+      "name": "We All Survived Death",
+      "externalUrl": "http://www.wasdnft.com",
+      "twitterUsername": "WeAllSurvived"
+    },
+    {
+      "slug": "beeble-genesis",
+      "name": "BEEBLE GENESIS",
+      "externalUrl": "http://beeble.xyz",
+      "twitterUsername": "Beeble_XYZ"
+    },
+    {
       "slug": "outsadofficial",
       "name": "OutSad Official",
       "externalUrl": "https://outsad.io/#/",
@@ -9814,5 +9826,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1661013700747
+  "genTime": 1661178269434
 }
