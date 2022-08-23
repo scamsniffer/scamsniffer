@@ -16,7 +16,7 @@ async function detectDomain(link, scam = null) {
         : `auto scan`,
     },
   });
-//   console.log("detectDomain", data, link);
+  console.log("detectDomain", data, link);
 }
 
 async function doSync(recentDomain) {
@@ -49,7 +49,9 @@ async function syncData() {
 
   if (cache) {
     lastId = parseInt(cache.value);
+    lastId = 2059;
   }
+  
 
   console.log("lastId", lastId);
 
