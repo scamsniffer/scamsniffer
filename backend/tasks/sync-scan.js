@@ -127,7 +127,9 @@ async function syncTask() {
   for (let index = 0; index < Infinity; index++) {
     try {
       await syncData();
-    } catch (e) {}
+    } catch (e) {
+      console.log('error', e)
+    }
     await new Promise((resolve) => {
       setTimeout(resolve, 60 * 1000);
     });
