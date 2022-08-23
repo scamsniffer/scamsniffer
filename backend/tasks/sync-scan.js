@@ -1,6 +1,8 @@
 const { ScamList, Cache, DomainSummary } = require("../schema");
 const { Op } = require("sequelize");
 const axios = require("axios");
+const fs = require('fs');
+
 require("dotenv").config();
 
 const API = process.env.DETECTOR_API;
@@ -18,6 +20,8 @@ async function detectDomain(link, scam = null) {
   });
   console.log("detectDomain", data, link);
 }
+
+
 
 async function doSync(recentDomain) {
   try {
@@ -39,7 +43,38 @@ async function doSync(recentDomain) {
   }
 }
 
+
+const scanFile = __dirname + './synced.json';
+const scanned = fs.existsSync(scanFile) ? require(scanFile) : [];
+
 async function syncData() {
+
+  const newRows = await DomainSummary.findAll({
+    limit: 100,
+    where: {
+      id: {
+        [Op.gt]: lastId,
+      },
+      needReport: 1,
+    },
+  });
+
+  // console.log("found", newRows.length);
+  for (let index = 0; index < newRows.length; index++) {
+    const newRow = newRows[index];
+    if (scanned.includes(newRow.host)) {
+      continue;
+    }
+    await doSync(newRow);
+    scanned.push(newRow.host)
+    await new Promise((resolve) => {
+        setTimeout(resolve, 500);
+    });
+  }
+  fs.writeFileSync(scanFile, JSON.stringify(scanned, null, 2))
+}
+
+async function syncDataById() {
   let lastId = 0;
   const cache = await Cache.findOne({
     where: {
@@ -56,7 +91,7 @@ async function syncData() {
   console.log("lastId", lastId);
 
   const newRows = await DomainSummary.findAll({
-    limit: 50,
+    limit: 100,
     where: {
       id: {
         [Op.gt]: lastId,
