@@ -44,7 +44,7 @@ async function doSync(recentDomain) {
 }
 
 
-const scanFile = __dirname + './synced.json';
+const scanFile = __dirname + '/synced.json';
 const scanned = fs.existsSync(scanFile) ? require(scanFile) : [];
 
 async function syncData() {
