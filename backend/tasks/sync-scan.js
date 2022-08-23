@@ -50,10 +50,11 @@ const scanned = fs.existsSync(scanFile) ? require(scanFile) : [];
 async function syncData() {
 
   const newRows = await DomainSummary.findAll({
-    limit: 100,
+    limit: 50,
     where: {
       needReport: 1,
     },
+    order: [["id", "desc"]],
   });
 
   // console.log("found", newRows.length);
