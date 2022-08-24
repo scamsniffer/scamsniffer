@@ -121,6 +121,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "abcabracadabra",
+      "name": "ABC(abracadabra)",
+      "externalUrl": null,
+      "twitterUsername": "HGESOL"
+    },
+    {
+      "slug": "moonpudgy",
+      "name": "MoonPudgy",
+      "externalUrl": "https://moonpudgy.xyz/",
+      "twitterUsername": "Moon_Pudgy"
+    },
+    {
       "slug": "weallsurviveddeath",
       "name": "We All Survived Death",
       "externalUrl": "http://www.wasdnft.com",
@@ -9820,5 +9832,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1661178269434
+  "genTime": 1661349379961
 }
