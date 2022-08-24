@@ -3,7 +3,7 @@ const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require('../utils/summary')
 
 async function reportScam(req, res) {
-  console.log('reportScam');
+  console.log('reportScam', req);
   // await ScamList.sync({ alter: true });
   const item = req.body;
   const { post } = item;
