@@ -121,6 +121,24 @@
   ],
   "ProjectList": [
     {
+      "slug": "ezu",
+      "name": "EZU",
+      "externalUrl": "https://ezu.xyz/",
+      "twitterUsername": "ezu_xyz"
+    },
+    {
+      "slug": "randompandaclub",
+      "name": "RandomPandaClub",
+      "externalUrl": "https://rpc.club",
+      "twitterUsername": "RandomPandaClub"
+    },
+    {
+      "slug": "my-final-form",
+      "name": "My Final Form",
+      "externalUrl": "http://myfinalform.io/",
+      "twitterUsername": "MFF_ETH"
+    },
+    {
       "slug": "abcabracadabra",
       "name": "ABC(abracadabra)",
       "externalUrl": null,
@@ -9832,5 +9850,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1661349379961
+  "genTime": 1661400335570
 }
