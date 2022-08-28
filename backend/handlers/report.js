@@ -1,4 +1,4 @@
-const { ScamList, DomainSummary, TwitterSummary, Summary } = require("../schema");
+const { ScamList, DomainSummary, ScamActivity, TwitterSummary, Summary } = require("../schema");
 const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require('../utils/summary')
 
