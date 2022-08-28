@@ -69,7 +69,7 @@ async function reportScam(req, res) {
 
 
 async function getStatus(req, res) {
-  const [allSummary, recentDetected, recentReported, recentScams] =
+  const [allSummary, recentDetected, recentReported, recentScams, recentScamActivity] =
     await Promise.all([
       Summary.findAll({
         raw: true,
@@ -101,6 +101,17 @@ async function getStatus(req, res) {
         where: {},
         order: [["id", "desc"]],
       }),
+      ScamActivity.findAll({
+        limit: 10,
+        attributes: [
+          "id",
+          "link",
+          "host",
+          "action",
+          "time"
+        ],
+        order: [["id", "desc"]],
+      }),
     ]);
 
   res.json({
@@ -111,6 +122,7 @@ async function getStatus(req, res) {
     recentDetected,
     recentReported,
     recentScams,
+    recentScamActivity
   });
 }
 
