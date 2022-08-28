@@ -10,5 +10,6 @@
     "setting": "Settings",
     "risk_assets": "Risk assets warning on Opensea",
     "scam_detection": "ScamSniffer webpage detection",
-    "firewall_check": "Security Check"
+    "firewall_check": "Security Check",
+    "siteBlocked": "Site Blocked"
 }

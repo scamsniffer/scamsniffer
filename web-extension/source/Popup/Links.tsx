@@ -13,7 +13,7 @@ export default function IconButtons() {
     <Stack direction="row" justifyContent="flex-end" spacing={1}>
       <IconButton
         aria-label="twitter"
-        onClick={() => openPage("https://discord.com/invite/q6pJMAbeH7")}
+        onClick={() => openPage("https://discord.com/invite/UfrduBeefK")}
       >
         <svg
           width="100%"

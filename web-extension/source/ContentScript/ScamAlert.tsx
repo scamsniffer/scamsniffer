@@ -102,16 +102,23 @@ const ScamAlert = ({result}: {result: ScamResult}) => {
   return (
     <div className={classes.root}>
       <div className={classes.scam}>
-        <Typography variant="body2" className={classes.title}>
-          {t("simProject")}
-        </Typography>
+       {
+        result.matchType === 'domain-blocked' ?  <Typography variant="body2" className={classes.title}>
+        {t("siteBlocked")}
+      </Typography> : (
+          <Typography variant="body2" className={classes.title}>
+        {t("simProject")}
+      </Typography>
+        )
+       } 
         <List className={classes.list}>
-          <ListItemButton>
+          { result.matchType === 'domain-blocked' ? null : <ListItemButton>
             <ListItemIcon>
               <DescriptionIcon className={classes.highlight} />
             </ListItemIcon>
             <ListItemText className={classes.highlight} primary={result.name} />
           </ListItemButton>
+}
           {result.twitterUsername ? (
             <ListItemButton onClick={() => openTwitter()}>
               <ListItemIcon>

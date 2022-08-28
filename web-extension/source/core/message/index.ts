@@ -15,9 +15,12 @@ const message = new WebExtensionMessage();
 const channel = (message.events as any).rpc;
 
 const isBackground = isEnvironment(Environment.ManifestBackground);
-const options =  {
+const options = {
   channel: channel.bind(MessageTarget.Broadcast),
   preferLocalImplementation: isBackground,
 };
 
-export const RPC = AsyncCall<typeof server>(server, options);
+export const RPC = AsyncCall<typeof server>(
+  !isBackground ? {} : server,
+  options
+);

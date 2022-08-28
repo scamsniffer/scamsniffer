@@ -83,9 +83,26 @@ const ScamDialog = () => {
       links: [window.location.href],
       pageDetails,
     };
-    const result = await RPC.detectScam(postDetail);
+
+    const [
+      result,
+      isBlocked
+    ] = await Promise.all([
+      RPC.detectScam(postDetail),
+      RPC.checkUrlInBlacklist(postDetail.links[0]),
+    ]);
     if (result) {
       setScamProject(result);
+      setOpen(true);
+    } else if (isBlocked) {
+      setScamProject({
+        slug: 'blocked',
+        name: 'blocked',
+        matchType: 'domain-blocked',
+        externalUrl:  null,
+        twitterUsername:  null,
+        post: postDetail
+      });
       setOpen(true);
     }
   }, []);

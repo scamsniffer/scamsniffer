@@ -38,6 +38,20 @@ export async function setDisableFeature(features: string[]): Promise<void> {
   await setValue("disable_feature", features.join(","));
 }
 
+export async function setConfig(config: any): Promise<void> {
+  await setValue("config", JSON.stringify(config));
+}
+
+export async function getConfig(): Promise<any> {
+  const configStr = await getValue("config");
+  if (configStr) {
+    try {
+      return JSON.parse(configStr)
+    } catch (e) {}
+  }
+  return {};
+}
+
 export async function getDisabledFeatures(): Promise<string[]> {
   const disable_feature = await getValue("disable_feature");
   if (disable_feature) {
@@ -59,6 +73,12 @@ export async function sendReportScam(result: ScamResult) {
 export async function detectScam(post: PostDetail) {
   initDetector();
   const result = await detector?.detectScam(post);
+  return result;
+}
+
+export async function checkUrlInBlacklist(link: string) {
+  initDetector();
+  const result = await detector?.checkUrlInBlacklist(link);
   return result;
 }
 

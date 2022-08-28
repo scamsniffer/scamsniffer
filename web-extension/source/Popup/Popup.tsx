@@ -1,6 +1,9 @@
 import { browser } from "webextension-polyfill-ts";
 import { Box } from "@mui/material";
 import Setting from "./Setting";
+import Config from "./Config";
+import Divider from '@mui/material/Divider';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Links from "./Links";
 import ButtonBase from "@mui/material/ButtonBase";
 import { createMakeStyles } from "tss-react";
@@ -8,12 +11,21 @@ import { useTheme } from "@mui/material";
 export const { makeStyles } = createMakeStyles({ useTheme });
 import { useTranslation } from "react-i18next";
 
+const lightTheme = createTheme({
+  palette: {
+    mode: "light",
+  }
+});
+
 const useStyles = makeStyles()((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     overflow: "hidden",
+    ' .MuiDivider-root': {
+      borderColor: '#e9e9e9'
+    }
   },
   beta: {
     color: "white",
@@ -45,31 +57,35 @@ const Popup: React.FC = () => {
   const { classes } = useStyles();
   const { t } = useTranslation();
   return (
-    <div className={classes.root}>
-      <div className={classes.scam}>
-        <Box className={classes.logo}>
-          <Box>
-            <ButtonBase
-              aria-label="twitter"
-              onClick={() =>
-                window.open("https://scamsniffer.io/?utm_source=plugin-popup")
-              }
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/scamsniffer/landingpage@main/assets/logo-light.svg"
-                height={36}
-              />
-              <span className={classes.beta}>Beta</span>
-            </ButtonBase>
+    <ThemeProvider theme={lightTheme}>
+      <div className={classes.root}>
+        <div className={classes.scam}>
+          <Box className={classes.logo}>
+            <Box>
+              <ButtonBase
+                aria-label="twitter"
+                onClick={() =>
+                  window.open("https://scamsniffer.io/?utm_source=plugin-popup")
+                }
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/scamsniffer/landingpage@main/assets/logo-light.svg"
+                  height={36}
+                />
+                <span className={classes.beta}>Beta</span>
+              </ButtonBase>
+            </Box>
+            {/* <p className={classes.slogan}>{t("slogan")}</p> */}
           </Box>
-          <p className={classes.slogan}>{t("slogan")}</p>
-        </Box>
-        <Setting />
-        <div className={classes.links}>
-          <Links />
+          <Setting />
+          <Divider />
+          <Config />
+          <div className={classes.links}>
+            <Links />
+          </div>
         </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
