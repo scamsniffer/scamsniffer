@@ -13,6 +13,7 @@ import { parseDomain, ParseResultType } from "parse-domain";
 import urlParser from "url";
 import { fixWordsIfHasUnicode, compareTwoStrings } from "./confusables";
 import punycode from "punycode";
+import { checkDNSProvider } from './site-status/check';
 
 const TOKEN_ENDPOINT =
   "https://cdn.jsdelivr.net/gh/scamsniffer/explorer-database@main/data/v1";
@@ -24,6 +25,7 @@ const REPORT_ENDPOINT = "https://api.scamsniffer.io/report";
 const REPORT_ENDPOINT_DEV = "http://localhost/report";
 const remoteDatabase = "https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json";
 const blackListDatabase = "https://raw.githubusercontent.com/scamsniffer/scam-database/main/blacklist/all.json";
+const siteStatusDatabase = "https://raw.githubusercontent.com/scamsniffer/SiteWatcher/main/database/status.json";
 const miniumWordsLength = 5;
 
 export class DataCache {
@@ -780,7 +782,7 @@ async function fetchScamDatabase() {
 }
 
 // 5 minutes ttl
-const fetchScamDatabaseWithCache = new DataCache(fetchScamDatabase, 5);
+const fetchScamDatabaseWithCache = new DataCache(fetchScamDatabase, 3);
 
 async function checkIsInBlacklist(type: string, value: string) {
   let isHit = false;
@@ -790,6 +792,27 @@ async function checkIsInBlacklist(type: string, value: string) {
   }catch(e ){}
   return isHit;
 }
+
+
+async function fetchSiteStatusDatabase() {
+  const req = await fetch(siteStatusDatabase);
+  return await req.json();
+}
+
+// 5 minutes ttl
+const fetchSiteStatusDatabaseWithCache = new DataCache(fetchSiteStatusDatabase, 3);
+
+async function checkSiteStatus(host: string) {
+  try {
+    const database = await fetchSiteStatusDatabaseWithCache.getData();
+    const dnsResult = await checkDNSProvider(host, database)
+    return {
+      dns: dnsResult
+    };
+  }catch(e ){}
+  return null;
+}
+
 
 export class Detector {
   onlyBuiltIn: boolean;
@@ -863,6 +886,13 @@ export class Detector {
     if (!domain || domain === null) return false;
     if (domain.host === null) return false;
     return await checkIsInBlacklist("domains", domain.host);
+  }
+
+  async checkSiteStatus(url: string): Promise<any> {
+    const domain = getTopDomainFromUrl(url);
+    if (!domain || domain === null) return null;
+    if (domain.host === null) return null;
+    return await checkSiteStatus(domain.host);
   }
 
   async checkNFTToken(
