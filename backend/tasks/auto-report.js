@@ -28,13 +28,18 @@ async function getAndReport() {
         needReportDomain.reported = 1
         await needReportDomain.save()
         reported++
+      } else {
+        await reportScam(`https://${needReportDomain.host}`);
+        needReportDomain.reported = 1
+        await needReportDomain.save()
+        reported++
       }
     }
   
     if (reported) await increaseCount("reported", reported);
     console.log("found", needReportDomains.length);
   } catch(e) {
-    
+
   }
   setTimeout(getAndReport, 10 * 1000);
 }
