@@ -4000,6 +4000,12 @@
       "twitterUsername": "premint_nft"
     },
     {
+      "slug": "looksrare",
+      "name": "LooksRare",
+      "externalUrl": "https://looksrare.org/",
+      "twitterUsername": "looksrare"
+    },
+    {
       "slug": "cryptopunks",
       "name": "CryptoPunks",
       "externalUrl": "https://www.larvalabs.com/cryptopunks",
