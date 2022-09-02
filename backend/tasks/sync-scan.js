@@ -52,7 +52,6 @@ async function syncData() {
   const newRows = await DomainSummary.findAll({
     limit: 50,
     where: {
-      needReport: 1,
     },
     order: [["id", "desc"]],
   });
