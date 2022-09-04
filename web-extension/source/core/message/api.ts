@@ -24,10 +24,8 @@ export async function checkTabIsMismatch(tabId: number, url: string) {
     if (!cardInfo) return null;
     cacheCards.delete(tabData.url)
     const currentHost = urlParser.parse(url);
-    console.log('cardInfo', cacheCards, cardInfo, tabData, url, currentHost.host)
     // check host
     if (currentHost.host != cardInfo.domain) {
-      console.log('mismatch')
       return {
         ...cardInfo
       }

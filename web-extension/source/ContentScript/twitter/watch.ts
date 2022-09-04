@@ -52,12 +52,11 @@ export function startWatch() {
             if (isInCardEl) {
                 const info = extractMeta(isInCardEl)
                 if (info) {
-                    console.log('clicked', info)
                     RPC.setTwitterCardAction(info)
                 }
             }
         }
-        
+
         document.addEventListener("contextmenu", handleAction);
         document.addEventListener('click', handleAction)
     }

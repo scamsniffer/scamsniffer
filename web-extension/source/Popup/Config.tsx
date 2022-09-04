@@ -17,22 +17,15 @@ export default function SwitchListSecondary() {
 
    useAsync(async () => {
      const config = await RPC.getConfig();
-     console.log('init config', config)
      setConfig(config);
    }, []);
 
     useEffect(() => {
-      console.log('update conifg', config)
       RPC.setConfig(config);
     }, [config]);
 
   const handleChange = (field: string) => (args: any) => {
     const value = args.target.value;
-    console.log({
-      ...config,
-      [field]: value
-    })
-
     setConfig({
       ...config,
       [field]: value

@@ -11,7 +11,6 @@ export const updateFirewallConfig = (config: any) => {
 };
 
 async function sendConfig() {
-  console.log('sendConfig')
   const [
     config,
     isDisabled
