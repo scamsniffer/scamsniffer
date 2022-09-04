@@ -11,5 +11,6 @@
     "risk_assets": "Risk assets warning on Opensea",
     "scam_detection": "ScamSniffer webpage detection",
     "firewall_check": "Security Check",
-    "siteBlocked": "Site Blocked"
+    "siteBlocked": "Site Blocked",
+    "misMatch": "Twitter Spoofing Detected"
 }

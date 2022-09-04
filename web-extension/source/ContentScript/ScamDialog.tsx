@@ -8,6 +8,7 @@ import ButtonBase from "@mui/material/ButtonBase";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createShadowRootForwardedComponent } from "../core/ShadowRoot/Portal";
 import { useState, useCallback, useRef, useEffect } from "react";
+import { getMyTabId } from "../core/tab";
 
 export const ShadowRootDialog: typeof Dialog =
   createShadowRootForwardedComponent(Dialog) as any;
@@ -84,12 +85,16 @@ const ScamDialog = () => {
       pageDetails,
     };
 
+    const tabId = await getMyTabId();
+
     const [
       result,
-      isBlocked
+      isBlocked,
+      mismatchCardInfo
     ] = await Promise.all([
       RPC.detectScam(postDetail),
       RPC.checkUrlInBlacklist(postDetail.links[0]),
+      RPC.checkTabIsMismatch(tabId, window.location.href)
     ]);
     if (result) {
       setScamProject(result);
@@ -101,6 +106,17 @@ const ScamDialog = () => {
         matchType: 'domain-blocked',
         externalUrl:  null,
         twitterUsername:  null,
+        post: postDetail
+      });
+      setOpen(true);
+    } else if (mismatchCardInfo) {
+      setScamProject({
+        slug: 'mismatch',
+        name: 'mismatch',
+        matchType: 'mismatch-card',
+        externalUrl:  null,
+        twitterUsername:  null,
+        ...mismatchCardInfo,
         post: postDetail
       });
       setOpen(true);

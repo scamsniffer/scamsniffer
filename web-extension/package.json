@@ -1,6 +1,6 @@
 {
   "name": "ScamSniffer",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Help people against with the crypto scammers",
   "private": true,
   "license": "MIT",
@@ -37,6 +37,7 @@
     "i18next": "^21.8.10",
     "i18next-browser-languagedetector": "^6.1.4",
     "lodash-unified": "1.0.2",
+    "parse-domain": "^7.0.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-i18next": "^11.17.2",

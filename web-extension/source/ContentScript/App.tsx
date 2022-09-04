@@ -1,5 +1,7 @@
 import ScamDialog from "./ScamDialog";
 import { RPC } from "../core/message/index";
+import { getMyTabId } from "../core/tab";
+
 import {
   setupPortalShadowRoot,
   createReactRootShadowedPartial,
@@ -18,6 +20,8 @@ export async function renderScamDialog() {
 
 (async () => {
   const isDisabled = await RPC.isFeatureDisabled("webpage");
+  const tabId = await getMyTabId();
+  console.log('tabId', tabId)
   if (!isDisabled) {
     renderScamDialog();
   }

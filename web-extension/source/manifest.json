@@ -14,7 +14,8 @@
   "short_name": "Scam Sniffer",
 
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
 
   "__chrome|firefox__author": "fun",

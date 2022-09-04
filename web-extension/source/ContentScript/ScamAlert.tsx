@@ -5,15 +5,15 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-} from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkIcon from '@mui/icons-material/Link';
-import DescriptionIcon from '@mui/icons-material/Description';
-import type {ScamResult} from '@scamsniffer/detector';
-import {useAsync} from 'react-use';
-import {useState, useEffect} from 'react';
-import urlcat from 'urlcat';
-import {RPC} from '../core/message/index';
+} from "@mui/material";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkIcon from "@mui/icons-material/Link";
+import DescriptionIcon from "@mui/icons-material/Description";
+import type { ScamResult } from "@scamsniffer/detector";
+import { useAsync } from "react-use";
+import { useState, useEffect } from "react";
+import urlcat from "urlcat";
+import { RPC } from "../core/message/index";
 
 import { createMakeStyles } from "tss-react";
 import { useTheme } from "@mui/material";
@@ -55,6 +55,10 @@ const useStyles = makeStyles()((theme) => ({
   highlight: {
     color: "#f4f4f4",
   },
+  link: {
+    color: '#eee',
+    'marginLeft': '3px',
+  },
   title: {
     fontFamily: "Poppins",
     fontWeight: 800,
@@ -68,10 +72,10 @@ const useStyles = makeStyles()((theme) => ({
 }));
 
 function openWebPage(url: string) {
-  window.open(url)
+  window.open(url);
 }
 
-const ScamAlert = ({result}: {result: ScamResult}) => {
+const ScamAlert = ({ result }: { result: ScamResult }) => {
   const { classes } = useStyles();
   const [autoReport, setAutoReport] = useState(false);
   const { t, i18n } = useTranslation();
@@ -82,9 +86,8 @@ const ScamAlert = ({result}: {result: ScamResult}) => {
     }
   }, [autoReport, result]);
 
-
   const openTwitter = () => {
-    const link = urlcat('https://twitter.com', '/:username', {
+    const link = urlcat("https://twitter.com", "/:username", {
       username: result.twitterUsername,
     });
     openWebPage(link);
@@ -98,53 +101,92 @@ const ScamAlert = ({result}: {result: ScamResult}) => {
     const enabled = await RPC.isAutoReportEnabled();
     setAutoReport(enabled);
   }, []);
-  
+
+  const isMismatch = result.matchType === "mismatch-card";
+
   return (
     <div className={classes.root}>
-      <div className={classes.scam}>
-       {
-        result.matchType === 'domain-blocked' ?  <Typography variant="body2" className={classes.title}>
-        {t("siteBlocked")}
-      </Typography> : (
+      {isMismatch ? (
+        <div className={classes.scam}>
           <Typography variant="body2" className={classes.title}>
-        {t("simProject")}
-      </Typography>
-        )
-       } 
-        <List className={classes.list}>
-          { result.matchType === 'domain-blocked' ? null : <ListItemButton>
-            <ListItemIcon>
-              <DescriptionIcon className={classes.highlight} />
-            </ListItemIcon>
-            <ListItemText className={classes.highlight} primary={result.name} />
-          </ListItemButton>
-}
-          {result.twitterUsername ? (
-            <ListItemButton onClick={() => openTwitter()}>
-              <ListItemIcon>
-                <TwitterIcon className={classes.highlight} />
-              </ListItemIcon>
-              <ListItemText
-                className={classes.highlight}
-                primary={result.twitterUsername}
-              />
-            </ListItemButton>
-          ) : null}
-          {result.externalUrl ? (
-            <ListItemButton onClick={() => openSite()}>
-              <ListItemIcon>
-                <LinkIcon className={classes.highlight} />
-              </ListItemIcon>
-              <ListItemText
-                className={classes.highlight}
-                primary={result.externalUrl}
-              />
-            </ListItemButton>
-          ) : null}
-        </List>
-        <Typography className={classes.desc}>{t("tipOne")}</Typography>
-        <Typography className={classes.desc}>{t("topTwo")}</Typography>
-      </div>
+            {t("misMatch")}
+          </Typography>
+          <List className={classes.list}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <DescriptionIcon className={classes.highlight} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.highlight}
+                  primary={(result as any).domain}
+                />
+              </ListItemButton>
+              <ListItemButton>
+                <ListItemIcon>
+                  <DescriptionIcon className={classes.highlight} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.highlight}
+                  primary={(result as any).title}
+                />
+              </ListItemButton>
+          </List>
+          <Typography className={classes.desc}>{t("tipOne")}</Typography>
+          <Typography className={classes.desc}>{t("topTwo")}</Typography>
+          <Typography className={classes.desc}>
+            More: <a href="https://harrydenley.com/faking-twitter-unfurling-part-2/" target="_blank" className={classes.link}>Spoofing Twitter unfurling to phish you</a>
+          </Typography>
+        </div>
+      ) : (
+        <div className={classes.scam}>
+          {result.matchType === "domain-blocked" ? (
+            <Typography variant="body2" className={classes.title}>
+              {t("siteBlocked")}
+            </Typography>
+          ) : (
+            <Typography variant="body2" className={classes.title}>
+              {t("simProject")}
+            </Typography>
+          )}
+          <List className={classes.list}>
+            {result.matchType === "domain-blocked" ? null : (
+              <ListItemButton>
+                <ListItemIcon>
+                  <DescriptionIcon className={classes.highlight} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.highlight}
+                  primary={result.name}
+                />
+              </ListItemButton>
+            )}
+            {result.twitterUsername ? (
+              <ListItemButton onClick={() => openTwitter()}>
+                <ListItemIcon>
+                  <TwitterIcon className={classes.highlight} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.highlight}
+                  primary={result.twitterUsername}
+                />
+              </ListItemButton>
+            ) : null}
+            {result.externalUrl ? (
+              <ListItemButton onClick={() => openSite()}>
+                <ListItemIcon>
+                  <LinkIcon className={classes.highlight} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.highlight}
+                  primary={result.externalUrl}
+                />
+              </ListItemButton>
+            ) : null}
+          </List>
+          <Typography className={classes.desc}>{t("tipOne")}</Typography>
+          <Typography className={classes.desc}>{t("topTwo")}</Typography>
+        </div>
+      )}
     </div>
   );
 };

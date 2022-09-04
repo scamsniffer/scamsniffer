@@ -1,9 +1,42 @@
 import type {ScamResult, PostDetail} from '@scamsniffer/detector';
 import {reportScam, Detector} from '@scamsniffer/detector';
 import { browser } from "webextension-polyfill-ts";
+import { tabInfo } from "../tab";
+import urlParser from "url";
 
 const storage = new Map();
 const reportKey = 'auto_report';
+
+const cacheCards = new Map();
+
+export async function setTwitterCardAction(info: any) {
+  cacheCards.set(info.link, info);
+  setTimeout(() => {
+    cacheCards.delete(info.link)
+  }, 20 * 1000);
+}
+
+export async function checkTabIsMismatch(tabId: number, url: string) {
+  try {
+    const tabData = tabInfo.get(tabId);
+    if (!tabData) return null;
+    const cardInfo = cacheCards.get(tabData.url);
+    if (!cardInfo) return null;
+    cacheCards.delete(tabData.url)
+    const currentHost = urlParser.parse(url);
+    console.log('cardInfo', cacheCards, cardInfo, tabData, url, currentHost.host)
+    // check host
+    if (currentHost.host != cardInfo.domain) {
+      console.log('mismatch')
+      return {
+        ...cardInfo
+      }
+    }
+  } catch (e) {
+    console.log('checkTabIsMismatch', e)
+  }
+  return null;
+} 
 
 async function getValue(key: string) {
   const values = await browser.storage.local.get(key);
