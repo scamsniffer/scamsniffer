@@ -13,7 +13,7 @@ import { parseDomain, ParseResultType } from "parse-domain";
 import urlParser from "url";
 import { fixWordsIfHasUnicode, compareTwoStrings } from "./confusables";
 import punycode from "punycode";
-import { checkDNSProvider } from './site-status/check';
+import { checkDNSProvider } from "./site-status/check";
 
 const TOKEN_ENDPOINT =
   "https://cdn.jsdelivr.net/gh/scamsniffer/explorer-database@main/data/v1";
@@ -23,9 +23,12 @@ const TOKEN_ENDPOINT =
 
 const REPORT_ENDPOINT = "https://api.scamsniffer.io/report";
 const REPORT_ENDPOINT_DEV = "http://localhost/report";
-const remoteDatabase = "https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json";
-const blackListDatabase = "https://raw.githubusercontent.com/scamsniffer/scam-database/main/blacklist/all.json";
-const siteStatusDatabase = "https://raw.githubusercontent.com/scamsniffer/SiteWatcher/main/database/status.json";
+const remoteDatabase =
+  "https://raw.githubusercontent.com/scamsniffer/scamsniffer/main/database/generated/lite.json";
+const blackListDatabase =
+  "https://raw.githubusercontent.com/scamsniffer/scam-database/main/blacklist/all.json";
+const siteStatusDatabase =
+  "https://raw.githubusercontent.com/scamsniffer/SiteWatcher/main/database/status.json";
 const miniumWordsLength = 5;
 
 export class DataCache {
@@ -64,7 +67,6 @@ export class DataCache {
   }
 }
 
-
 export function getTopDomainFromUrl(url: string): DomainDetail | null {
   let topDomain = null;
   let domainName = null;
@@ -94,13 +96,11 @@ export function getTopDomainFromUrl(url: string): DomainDetail | null {
     //   throw new Error(`${host} is an ip address or invalid domain`);
   }
 
-  
-
   if (domainName) {
     const unicodeName = punycode.toUnicode(domainName);
     isPunyCode = unicodeName != domainName;
     if (isPunyCode) {
-      domainName = unicodeName
+      domainName = unicodeName;
     }
     // if (isPunyCode) {
     //   console.log({
@@ -275,7 +275,7 @@ async function _detectScam(
 
   // links
   if (outLinks.length === 0) {
-    console.error('no links')
+    console.error("no links");
     return null;
   }
 
@@ -391,7 +391,6 @@ async function _detectScam(
         }
       }
     }
-
   }
 
   if (flags.checkPage && pageDetails) {
@@ -472,11 +471,11 @@ async function _detectScam(
         if (_.domainDetail) {
           // console.log('has index')
         }
-        
+
         const projectDomainDetail = _.domainDetail
-            ? _.domainDetail
-            : _.externalUrl && getTopDomainFromUrl(_.externalUrl);
-        
+          ? _.domainDetail
+          : _.externalUrl && getTopDomainFromUrl(_.externalUrl);
+
         const compareItems: [string, string, number][] = [];
 
         if (projectDomainDetail)
@@ -590,6 +589,7 @@ async function _detectScam(
     }
 
     const checkDomain = projectsWithDomain.length;
+
     if (checkDomain) {
       const simThreshold = 0.65;
       const domainRegLimit = options.registerDays || 10;
@@ -694,7 +694,7 @@ async function _detectScam(
                 }
               : null;
           });
-      
+
       let similarProject = null;
       let creationDaysOfDomain = -1;
       let domainMeta = null;
@@ -702,11 +702,10 @@ async function _detectScam(
         const domainSim = domainResult[index];
         if (!domainSim) continue;
         if (!domainSim.linkDomain) continue;
-          // full match xxx.com xxx.io
-          const isFullyMatch = domainSim.sim === 1;
+        // full match xxx.com xxx.io
+        const isFullyMatch = domainSim.sim === 1;
         // contain match cc-xxx.com xxx.io
         const simAndMatch = domainSim.contain && domainSim.sim > 0.7;
-        // const hasContainAndSim = ;
         const isCommonWords = commonWords.includes(
           domainSim.linkDomain.domainName
         );
@@ -717,7 +716,7 @@ async function _detectScam(
           } else {
             similarProject = domainSim;
           }
-          if (!isCommonWords) { 
+          if (!isCommonWords) {
             continue;
           }
         }
@@ -728,11 +727,11 @@ async function _detectScam(
           if (!domainMeta) continue;
           const domainDetail = domainMeta.data;
           if (!domainDetail) {
-            console.log("domainMeta", domainMeta);
             continue;
           }
-            const createDate =
-              domainDetail.creationDate || domainDetail.updatedDate;
+
+          const createDate =
+            domainDetail.creationDate || domainDetail.updatedDate;
           creationDaysOfDomain = createDate
             ? Math.floor(
                 (Date.now() - new Date(createDate).getTime()) / 1000 / 86400
@@ -744,7 +743,7 @@ async function _detectScam(
               (domainSim.sim > simDayLimit ? simRegLimit : domainRegLimit);
           if (isRecentRegister) {
             similarProject = domainSim;
-            if (hasContext && !fuzzyTwitterCheck) similarProject = null;
+            // if (hasContext && !fuzzyTwitterCheck) similarProject = null;
             break;
           } else {
             // console.log("not recent", domainMeta);
@@ -775,7 +774,6 @@ async function _detectScam(
   return null;
 }
 
-
 async function fetchScamDatabase() {
   const req = await fetch(blackListDatabase);
   return await req.json();
@@ -789,10 +787,9 @@ async function checkIsInBlacklist(type: string, value: string) {
   try {
     const database = await fetchScamDatabaseWithCache.getData();
     isHit = database[type].includes(value);
-  }catch(e ){}
+  } catch (e) {}
   return isHit;
 }
-
 
 async function fetchSiteStatusDatabase() {
   const req = await fetch(siteStatusDatabase);
@@ -800,19 +797,21 @@ async function fetchSiteStatusDatabase() {
 }
 
 // 5 minutes ttl
-const fetchSiteStatusDatabaseWithCache = new DataCache(fetchSiteStatusDatabase, 3);
+const fetchSiteStatusDatabaseWithCache = new DataCache(
+  fetchSiteStatusDatabase,
+  3
+);
 
 async function checkSiteStatus(host: string) {
   try {
     const database = await fetchSiteStatusDatabaseWithCache.getData();
-    const dnsResult = await checkDNSProvider(host, database)
+    const dnsResult = await checkDNSProvider(host, database);
     return {
-      dns: dnsResult
+      dns: dnsResult,
     };
-  }catch(e ){}
+  } catch (e) {}
   return null;
 }
-
 
 export class Detector {
   onlyBuiltIn: boolean;

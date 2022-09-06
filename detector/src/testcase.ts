@@ -60,28 +60,55 @@
 
 // async function testLink() {
 //   const detector = new Detector({});
-//   console.log(
-//     await detector.detectScam(
-//       {
-//         links: ["https://xn--moonbrds-g2a.xyz/"],
-//       },
-//       {
-//         // onlyLink: true
-//       }
-//     )
-//   );
+// //   console.log(
+// //     await detector.detectScam(
+// //       {
+// //         links: ["https://xn--moonbrds-g2a.xyz/"],
+// //       },
+// //       {
+// //         // onlyLink: true
+// //       }
+// //     )
+// //   );
 
-//   console.log(
-//     await detector.detectScam(
-//       {
-//         links: ["https://xn--premnt-e9a.xyz/"],
-//       },
-//       {
-//         // onlyLink: true
-//       }
-//     )
-//   );
+// //   console.log(
+// //     await detector.detectScam(
+// //       {
+// //         links: ["https://xn--premnt-e9a.xyz/"],
+// //       },
+// //       {
+// //         // onlyLink: true
+// //       }
+// //     )
+// //   );
 
+//   // console.log(
+//   //   await detector.detectScam({
+//   //       "id": "1566532508979798021",
+//   //       "nickname": "DigiDaigaku",
+//   //       "userId": "DigiDagaku",
+//   //       "links": [
+//   //           "https://digidiagaku.com",
+//   //           "https://digidiagaku.com",
+//   //           "https://digidiagaku.com/"
+//   //       ],
+//   //       "content": "👀 Have you seen our new dashboard at  https://digidiagaku.com  Your Digi is ready for both stacking and quest adventures! \n\nQuests will be added gradually to My wallet - action and you will be able to choose between \"soft\" stacking and \"adventure\".\n\nEndless rewards, rewards... 👀 Have you seen our new dashboard at  https://digidiagaku.com  Your Digi is ready for both stacking and quest adventures! \n\nQuests will be added gradually to My wallet - action and you will be able to choose between \"soft\" stacking and \"adventure\".\n\nEndless rewards, rewards..."
+//   //   })
+//   // )
+
+//   // console.log(
+//   //   await detector.detectScam({
+//   //     "id": "1563962967036764160",
+//   //     "nickname": "Potatoz By Memeland",
+//   //     "userId": "nftmemeIand",
+//   //     "links": [
+//   //         "https://potatoznft.org",
+//   //         "https://potatoznft.org",
+//   //         "https://t.co/k5sMNTZY4K"
+//   //     ],
+//   //     "content": "🥔 GROWING SZN is here! 🥔 \n\nWe are giving away POTATOZ to 50 lucky winners!\n\nCheck your prize here:\n https://potatoznft.org \n\nNote for holders:\nDon't forget to refresh your POTATOZ Metadata after claiming! 🥔 GROWING SZN is here! 🥔 \n\nWe are giving away POTATOZ to 50 lucky winners!\n\nCheck your prize here:\n https://potatoznft.org \n\nNote for holders:\nDon't forget to refresh your POTATOZ Metadata after claiming!"
+//   // })
+//   // )
   
 
 //     // console.log(
