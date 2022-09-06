@@ -1,5 +1,6 @@
 const { lookup } = require("./whois");
 const parseRawData = require("./whois/parsed");
+const fs = require('fs');
 
 async function lookupDomain(req, res) {
     let data = null
@@ -14,6 +15,9 @@ async function lookupDomain(req, res) {
       });
     });
     const parsed = parseRawData(data, domain);
+    if (parsed.error) {
+      fs.appendFileSync('./whois.log', domain+"\n");
+    }
     res.json({
       data: parsed,
     });

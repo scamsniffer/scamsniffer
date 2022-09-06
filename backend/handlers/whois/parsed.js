@@ -442,15 +442,15 @@ var parseRawData = function (rawData, domain) {
   if (unknownTLD) {
     // console.log('rawData: "' + rawData + '"');
     // console.log('result ' + JSON.stringify(result));
-
     // Check to make sure certain fields are set for unknown TLDs to ensure the default pattern matching worked
     // If not then throw TLD not supported error.
     if (!result.isAvailable) {
       if (
-        !result.hasOwnProperty("creationDate") ||
-        !result.hasOwnProperty("expirationDate") ||
-        !result.hasOwnProperty("updatedDate") ||
-        !result.hasOwnProperty("registrar")
+        !result.hasOwnProperty("creationDate") 
+        // ||
+        // !result.hasOwnProperty("expirationDate") ||
+        // !result.hasOwnProperty("updatedDate") ||
+        // !result.hasOwnProperty("registrar")
       ) {
         throw new Error("TLD not supported");
       }
