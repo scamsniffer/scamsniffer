@@ -7,7 +7,7 @@
 
 *****
 
-Scam Sniffer is a plugin build upon Mask Network which can help us against with the scammers
+Enhance anti-scam capability of individual users to accelerate the mass adoption of web3.
 
 
 
