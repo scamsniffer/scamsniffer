@@ -14,7 +14,8 @@
     "claim",
     "whitelist",
     "raffle",
-    "eligible"
+    "eligible",
+    "rewards"
   ],
   "commonWords": [
     "bitcoin",
@@ -3052,18 +3053,6 @@
       "slug": "xrpl.org",
       "name": "XRPL.org",
       "externalUrl": "https://xrpl.org/",
-      "twitterUsername": null
-    },
-    {
-      "slug": "polygon.technology",
-      "name": "Polygon",
-      "externalUrl": "https://polygon.technology/",
-      "twitterUsername": "0xPolygon"
-    },
-    {
-      "slug": "polygon.community",
-      "name": "Polygon DAO",
-      "externalUrl": "https://polygon.community/",
       "twitterUsername": null
     },
     {
