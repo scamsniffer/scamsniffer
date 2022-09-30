@@ -141,7 +141,7 @@ async function recallActivity(req, res) {
   await ScamActivity.destroy({
     where: {
       host: {
-        [Op.in]: [item.host],
+        [Op.in]: item.host.split(','),
       },
     },
   });
