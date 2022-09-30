@@ -128,6 +128,30 @@ async function adScamActivity(req, res) {
 //   }
 }
 
+
+async function recallActivity(req, res) {
+  const item = req.body;
+  if (item) {
+    if (item.token != process.env.AUTH_TOKEN) {
+      return res.json({
+        error: "auth failed",
+      });
+    }
+  }
+  await ScamActivity.destroy({
+    where: {
+      host: {
+        [Op.in]: item.host,
+      },
+    },
+  });
+
+  res.json({
+    done: true
+  })
+}
+
 module.exports = {
   adScamActivity,
+  recallActivity,
 };

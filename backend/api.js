@@ -63,6 +63,8 @@ app.post("/report", reportScam);
 app.get("/detector/detectByUrl", detectByUrl);
 
 app.all("/scam/activity", adScamActivity);
+app.all("/scam/activity/recall", recallActivity);
+
 
 app.get("*", async (req, res) => {
   res.send("Hello");
