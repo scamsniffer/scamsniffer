@@ -16,7 +16,7 @@ const {
   ScamActivity
 } = require("./schema");
 const { reportScam, getStatus } = require("./handlers/report");
-const { adScamActivity } = require("./handlers/activity");
+const { adScamActivity, recallActivity } = require("./handlers/activity");
 const { detectUrl } = require("./handlers/page");
 const { lookupDomain } = require("./handlers/domain");
 const { detectByUrl } = require("./handlers/detector");
