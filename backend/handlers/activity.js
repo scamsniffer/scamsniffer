@@ -2,7 +2,7 @@ const { DomainSummary, DetectHistory, ScamActivity } = require("../schema");
 const { getTopDomain } = require("../utils/domain");
 const { increaseCount } = require("../utils/summary");
 const axios = require("axios");
-
+const { Op } = require('sequelize')
 // const detectTimeout = 60 * 1000 * 60 * 6;
 // const DetectorVersion = "0.0.3";
 
