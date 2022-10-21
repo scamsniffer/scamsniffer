@@ -9041,12 +9041,6 @@
       "twitterUsername": "gunbot_official"
     },
     {
-      "slug": "bitsten-token",
-      "name": "Bitsten Token",
-      "externalUrl": "https://token.bitsten.com",
-      "twitterUsername": "BitstenToken"
-    },
-    {
       "slug": "tenxcoin",
       "name": "TenXCoin",
       "externalUrl": "https://tenxcoin.eu/",
