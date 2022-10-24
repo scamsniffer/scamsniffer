@@ -122,6 +122,54 @@
   ],
   "ProjectList": [
     {
+      "slug": "nyolings",
+      "name": "Nyolings",
+      "externalUrl": "http://nyolings.io",
+      "twitterUsername": "Nyolings"
+    },
+    {
+      "slug": "streetmachine",
+      "name": "STM LOCKED",
+      "externalUrl": "https://streetmachine.club/",
+      "twitterUsername": "STMachineNFT"
+    },
+    {
+      "slug": "degenheim-nft",
+      "name": "Degenheim",
+      "externalUrl": "https://degenheim.com/",
+      "twitterUsername": "degenheim"
+    },
+    {
+      "slug": "castaways-the-islands",
+      "name": "Castaways - The Islands",
+      "externalUrl": "https://castaways.com",
+      "twitterUsername": "castaways_gg"
+    },
+    {
+      "slug": "mothz-io",
+      "name": "Mothz (WenLamp)",
+      "externalUrl": "http://mothz.io",
+      "twitterUsername": "wenlamp"
+    },
+    {
+      "slug": "renga",
+      "name": "RENGA",
+      "externalUrl": "https://renga.app/",
+      "twitterUsername": "RENGA_inc"
+    },
+    {
+      "slug": "infamous-official",
+      "name": "Infamous - Official",
+      "externalUrl": "https://www.infamousltd.io/",
+      "twitterUsername": "Infamous_ltd"
+    },
+    {
+      "slug": "yugiyn-official",
+      "name": "YuGiYn",
+      "externalUrl": "https://yu-gi-yn.com/",
+      "twitterUsername": "Yu_Gi_Yn"
+    },
+    {
       "slug": "ezu",
       "name": "EZU",
       "externalUrl": "https://ezu.xyz/",
@@ -9797,5 +9845,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1661400335570
+  "genTime": 1666623714081
 }
