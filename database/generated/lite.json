@@ -122,6 +122,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "gangster-all-star-evolution",
+      "name": "Gangster All Star Evolution",
+      "externalUrl": "https://gangsterallstar.com",
+      "twitterUsername": "gangsterallstar"
+    },
+    {
       "slug": "nyolings",
       "name": "Nyolings",
       "externalUrl": "http://nyolings.io",
@@ -9845,5 +9851,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1666623714081
+  "genTime": 1666699363225
 }
