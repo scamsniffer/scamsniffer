@@ -122,6 +122,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "rtfkt-x-rimowa",
+      "name": "RTFKT x RIMOWA Meta-Artisan Collection í ¼í¼Œ",
+      "externalUrl": "https://www.rtfkt.com/",
+      "twitterUsername": "RTFKT"
+    },
+    {
       "slug": "infamous-clearance-passes",
       "name": "Infamous - Clearance Passes",
       "externalUrl": "https://linktr.ee/infamousltd",
@@ -9863,5 +9869,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1666877190359
+  "genTime": 1666891632006
 }
