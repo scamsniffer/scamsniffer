@@ -122,6 +122,18 @@
   ],
   "ProjectList": [
     {
+      "slug": "infamous-clearance-passes",
+      "name": "Infamous - Clearance Passes",
+      "externalUrl": "https://linktr.ee/infamousltd",
+      "twitterUsername": "Infamous_ltd"
+    },
+    {
+      "slug": "rplanet-genesis",
+      "name": "R Planet - Genesis Collection",
+      "externalUrl": "http://www.rplanetnft.xyz",
+      "twitterUsername": "RPlanetNFT"
+    },
+    {
       "slug": "gangster-all-star-evolution",
       "name": "Gangster All Star Evolution",
       "externalUrl": "https://gangsterallstar.com",
@@ -9851,5 +9863,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1666699363225
+  "genTime": 1666877190359
 }
