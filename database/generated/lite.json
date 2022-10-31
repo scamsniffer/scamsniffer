@@ -122,8 +122,14 @@
   ],
   "ProjectList": [
     {
+      "slug": "everybodys",
+      "name": "EVERYBODYS",
+      "externalUrl": "https://www.everybodys.io/",
+      "twitterUsername": "EverybodysFun"
+    },
+    {
       "slug": "rtfkt-x-rimowa",
-      "name": "RTFKT x RIMOWA Meta-Artisan Collection í ¼í¼Œ",
+      "name": "RTFKT x RIMOWA Meta-Artisan Collection ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
       "externalUrl": "https://www.rtfkt.com/",
       "twitterUsername": "RTFKT"
     },
@@ -9869,5 +9875,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1666891632006
+  "genTime": 1667197091702
 }
