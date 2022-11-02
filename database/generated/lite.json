@@ -122,6 +122,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "kprverse",
+      "name": "KPR",
+      "externalUrl": "http://kprverse.com",
+      "twitterUsername": "KPRVERSE"
+    },
+    {
       "slug": "everybodys",
       "name": "EVERYBODYS",
       "externalUrl": "https://www.everybodys.io/",
@@ -4225,8 +4231,8 @@
     {
       "slug": "fidenza-by-tyler-hobbs",
       "name": "Fidenza by Tyler Hobbs",
-      "externalUrl": "https://www.artblocks.io/project/78",
-      "twitterUsername": null
+      "externalUrl": "https://artblocks.io",
+      "twitterUsername": "tylerxhobbs"
     },
     {
       "slug": "adidasoriginals",
@@ -9875,5 +9881,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1667197091702
+  "genTime": 1667431279725
 }
