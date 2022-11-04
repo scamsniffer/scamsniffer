@@ -8,7 +8,8 @@ import {
 } from "../core/ShadowRoot";
 
 import "./i18n";
-import "./Asset";
+// Hide Opensea Warning
+// import "./Asset";
 
 export async function renderScamDialog() {
   const createReactRootShadowed = createReactRootShadowedPartial({

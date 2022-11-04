@@ -40,7 +40,8 @@ export default function SwitchListSecondary() {
       sx={{ width: "100%", bgcolor: "background.paper" }}
       subheader={<ListSubheader>{t("setting")}</ListSubheader>}
     >
-      <ListItem>
+      {/* Hide Opensea Warning */}
+      {/* <ListItem>
         <ListItemText id="switch-list-label-wifi" primary={t("risk_assets")} />
         <Switch
           edge="end"
@@ -49,7 +50,7 @@ export default function SwitchListSecondary() {
           inputProps={{
           }}
         />
-      </ListItem>
+      </ListItem> */}
       <ListItem>
         <ListItemText
           id="switch-list-label-bluetooth"
