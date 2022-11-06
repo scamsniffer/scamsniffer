@@ -97,8 +97,8 @@ const ScamDialog = () => {
       RPC.checkTabIsMismatch(tabId, window.location.href)
     ]);
     if (result) {
-      setScamProject(result);
-      setOpen(true);
+      // setScamProject(result);
+      // setOpen(true);
     } else if (isBlocked) {
       setScamProject({
         slug: 'blocked',

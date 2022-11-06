@@ -51,7 +51,7 @@ export default function SwitchListSecondary() {
           }}
         />
       </ListItem> */}
-      <ListItem>
+      {/* <ListItem>
         <ListItemText
           id="switch-list-label-bluetooth"
           primary={t("scam_detection")}
@@ -63,7 +63,7 @@ export default function SwitchListSecondary() {
           inputProps={{
           }}
         />
-      </ListItem>
+      </ListItem> */}
       <ListItem>
         <ListItemText
           id="switch-list-label-bluetooth"
