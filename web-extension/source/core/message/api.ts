@@ -110,6 +110,7 @@ export async function detectScam(post: PostDetail) {
 export async function checkUrlInBlacklist(link: string) {
   initDetector();
   const result = await detector?.checkUrlInBlacklist(link);
+  console.log('checkUrlInBlacklist', result)
   return result;
 }
 

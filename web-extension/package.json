@@ -1,9 +1,9 @@
 {
   "name": "ScamSniffer",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Help people against with the crypto scammers",
   "private": true,
-  "license": "MIT",
+  "license": "AGPL",
   "engines": {
     "node": ">=10.0.0",
     "yarn": ">= 1.0.0"

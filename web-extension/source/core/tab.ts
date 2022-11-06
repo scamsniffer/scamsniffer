@@ -1,6 +1,7 @@
 import { browser } from "webextension-polyfill-ts";
 
 export const tabInfo = new Map();
+const TYPE_ID = 'GET_TAB_ID';
 
 export function handleTabInfo() {
     browser.tabs.onUpdated.addListener(function (tabID, changeInfo, tab) {
@@ -18,9 +19,9 @@ export function handleTabInfo() {
     })
 
     browser.runtime.onMessage.addListener((payload: any, sender) => {
-        if (payload.method === 'GET_TAB_ID' && sender.tab?.id) {
+        if (payload.type === TYPE_ID && sender.tab?.id) {
             browser.tabs.sendMessage(sender.tab.id, {
-                method: 'GET_TAB_ID',
+                type: TYPE_ID,
                 tabId: sender.tab.id
             })
         }
@@ -35,9 +36,9 @@ export async function getMyTabId() : Promise<number> {
         return Promise.resolve(cachedTabId);
     }
     return new Promise((resolve) => {
-        browser.runtime.sendMessage({ method: 'GET_TAB_ID' });
+        browser.runtime.sendMessage({ type: TYPE_ID });
         const watcher = (payload: any) => {
-            if (payload.method === 'GET_TAB_ID') {
+            if (payload.type === TYPE_ID) {
                 browser.runtime.onMessage.removeListener(watcher);
                 cachedTabId = payload.tabId;
                 resolve(cachedTabId as number)
