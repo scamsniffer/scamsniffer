@@ -122,6 +122,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "aopanda-party",
+      "name": "Aopanda Party",
+      "externalUrl": "https://nft.aopanda.ainy-llc.com/site/",
+      "twitterUsername": "APP_PANDAO_NFT"
+    },
+    {
       "slug": "kprverse",
       "name": "KPR",
       "externalUrl": "http://kprverse.com",
@@ -9863,5 +9869,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1667431279725
+  "genTime": 1667913763905
 }
