@@ -18,16 +18,16 @@ const nodeEnv = process.env.NODE_ENV || 'development';
 const targetBrowser = process.env.TARGET_BROWSER;
 
 const extensionReloaderPlugin =
-  nodeEnv === "development"
+  nodeEnv === 'development'
     ? new ExtensionReloader({
         port: 9090,
         reloadPage: true,
         entries: {
           // TODO: reload manifest on update
-          contentScript: "contentScript",
-          firewall: "firewall",
-          background: "background",
-          extensionPage: ["popup", "options"],
+          contentScript: 'contentScript',
+          firewall: 'firewall',
+          background: 'background',
+          extensionPage: ['popup', 'options'],
         },
       })
     : () => {
@@ -58,23 +58,23 @@ module.exports = {
   mode: nodeEnv,
 
   entry: {
-    manifest: path.join(sourcePath, "manifest.json"),
-    background: path.join(sourcePath, "Background", "index.ts"),
-    firewall: path.join(sourcePath, "Firewall", "index.ts"),
-    contentScript: path.join(sourcePath, "ContentScript", "index.ts"),
-    popup: path.join(sourcePath, "Popup", "index.tsx"),
+    manifest: path.join(sourcePath, 'manifest.json'),
+    background: path.join(sourcePath, 'Background', 'index.ts'),
+    firewall: path.join(sourcePath, 'Firewall', 'index.ts'),
+    contentScript: path.join(sourcePath, 'ContentScript', 'index.ts'),
+    popup: path.join(sourcePath, 'Popup', 'index.tsx'),
   },
 
   output: {
     path: path.join(destPath, targetBrowser),
-    filename: "js/[name].bundle.js",
+    filename: 'js/[name].bundle.js',
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      "webextension-polyfill-ts": path.resolve(
-        path.join(__dirname, "node_modules", "webextension-polyfill-ts")
+      'webextension-polyfill-ts': path.resolve(
+        path.join(__dirname, 'node_modules', 'webextension-polyfill-ts')
       ),
     },
   },
@@ -82,10 +82,10 @@ module.exports = {
   module: {
     rules: [
       {
-        type: "javascript/auto", // prevent webpack handling json with its own loaders,
+        type: 'javascript/auto', // prevent webpack handling json with its own loaders,
         test: /manifest\.json$/,
         use: {
-          loader: "wext-manifest-loader",
+          loader: 'wext-manifest-loader',
           options: {
             usePackageJSONVersion: true, // set to false to not use package.json version for manifest
           },
@@ -94,19 +94,19 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ["url-loader"],
+        use: ['url-loader'],
       },
       {
         test: /\.(js|ts)x?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
           presets: [
-            "@babel/env",
-            ["@babel/preset-react", { runtime: "automatic" }],
-            "@babel/preset-typescript",
+            '@babel/env',
+            ['@babel/preset-react', {runtime: 'automatic'}],
+            '@babel/preset-typescript',
           ],
-          plugins: ["@babel/plugin-transform-runtime"],
+          plugins: ['@babel/plugin-transform-runtime'],
         },
       },
       {
@@ -116,18 +116,18 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader, // It creates a CSS file per JS file which contains CSS
           },
           {
-            loader: "css-loader", // Takes the CSS files and returns the CSS with imports and url(...) for Webpack
+            loader: 'css-loader', // Takes the CSS files and returns the CSS with imports and url(...) for Webpack
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    "autoprefixer",
+                    'autoprefixer',
                     {
                       // Options
                     },
@@ -136,7 +136,7 @@ module.exports = {
               },
             },
           },
-          "resolve-url-loader", // Rewrites relative paths in url() statements
+          'resolve-url-loader', // Rewrites relative paths in url() statements
         ],
       },
     ],
@@ -146,10 +146,10 @@ module.exports = {
     // Plugin to not generate js bundle for manifest entry
     new WextManifestWebpackPlugin(),
     // Generate sourcemaps
-    new webpack.SourceMapDevToolPlugin({ filename: false }),
+    new webpack.SourceMapDevToolPlugin({filename: false}),
     new ForkTsCheckerWebpackPlugin(),
     // environmental variables
-    new webpack.EnvironmentPlugin(["NODE_ENV", "TARGET_BROWSER"]),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'TARGET_BROWSER']),
     // delete previous build files
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
@@ -163,24 +163,24 @@ module.exports = {
       verbose: true,
     }),
     new HtmlWebpackPlugin({
-      template: path.join(viewsPath, "popup.html"),
-      inject: "body",
-      chunks: ["popup"],
+      template: path.join(viewsPath, 'popup.html'),
+      inject: 'body',
+      chunks: ['popup'],
       hash: true,
-      filename: "popup.html",
+      filename: 'popup.html',
     }),
     new HtmlWebpackPlugin({
-      template: path.join(viewsPath, "options.html"),
-      inject: "body",
-      chunks: ["options"],
+      template: path.join(viewsPath, 'options.html'),
+      inject: 'body',
+      chunks: ['options'],
       hash: true,
-      filename: "options.html",
+      filename: 'options.html',
     }),
     // write css file(s) to build folder
-    new MiniCssExtractPlugin({ filename: "css/[name].css" }),
+    new MiniCssExtractPlugin({filename: 'css/[name].css'}),
     // copy static assets
     new CopyWebpackPlugin({
-      patterns: [{ from: "source/assets", to: "assets" }],
+      patterns: [{from: 'source/assets', to: 'assets'}],
     }),
     // plugin to enable browser reloading in development mode
     // extensionReloaderPlugin,
@@ -200,7 +200,7 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({
         cssProcessorPluginOptions: {
-          preset: ["default", { discardComments: { removeAll: true } }],
+          preset: ['default', {discardComments: {removeAll: true}}],
         },
       }),
       new FilemanagerPlugin({
@@ -208,13 +208,13 @@ module.exports = {
           onEnd: {
             archive: [
               {
-                format: "zip",
+                format: 'zip',
                 source: path.join(destPath, targetBrowser),
                 destination: `${path.join(
                   destPath,
                   targetBrowser
                 )}.${getExtensionFileType(targetBrowser)}`,
-                options: { zlib: { level: 6 } },
+                options: {zlib: {level: 6}},
               },
             ],
           },

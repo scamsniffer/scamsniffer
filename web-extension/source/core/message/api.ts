@@ -1,51 +1,70 @@
 import type {ScamResult, PostDetail} from '@scamsniffer/detector';
 import {reportScam, Detector} from '@scamsniffer/detector';
-import { browser } from "webextension-polyfill-ts";
-import { tabInfo } from "../tab";
-import urlParser from "url";
+import byPassedOriginManager from '../features/phasing-warning/byPassedOriginManager';
+import {
+  enableAutoReport,
+  getConfig,
+  getDisabledFeatures,
+  setConfig,
+  setDisableFeature,
+} from '../storage';
+import tabInfoManager from '../tab/infoManager';
 
-const storage = new Map();
-const reportKey = 'auto_report';
+// twitter card
 
 const cacheCards = new Map();
 
 export async function setTwitterCardAction(info: any) {
   cacheCards.set(info.link, info);
   setTimeout(() => {
-    cacheCards.delete(info.link)
+    cacheCards.delete(info.link);
   }, 20 * 1000);
 }
 
 export async function checkTabIsMismatch(tabId: number, url: string) {
   try {
-    const tabData = tabInfo.get(tabId);
+    const tabData = tabInfoManager.query(tabId);
     if (!tabData) return null;
     const cardInfo = cacheCards.get(tabData.url);
     if (!cardInfo) return null;
-    cacheCards.delete(tabData.url)
-    const currentHost = urlParser.parse(url);
+    cacheCards.delete(tabData.url);
+    const currentHost = new URL(url);
     // check host
-    if (currentHost.host != cardInfo.domain) {
+    if (currentHost.host !== cardInfo.domain) {
       return {
-        ...cardInfo
-      }
+        ...cardInfo,
+      };
     }
   } catch (e) {
-    console.log('checkTabIsMismatch', e)
+    console.log('checkTabIsMismatch', e);
   }
   return null;
-} 
-
-async function getValue(key: string) {
-  const values = await browser.storage.local.get(key);
-  return values[key];
 }
 
-async function setValue(key: string, value: string) {
-  return await browser.storage.local.set({
-    [key]: value
-  });
+// Settings
+
+export async function isFeatureDisabled(feature: string): Promise<boolean> {
+  const disableFeature = await getDisabledFeatures();
+  return disableFeature.includes(feature);
 }
+
+export async function isAutoReportEnabled() {
+  return true;
+}
+
+export {
+  getDisabledFeatures,
+  setDisableFeature,
+  setConfig,
+  getConfig,
+  enableAutoReport,
+};
+
+export function byPassOrigin(origin: string) {
+  byPassedOriginManager.add(origin);
+}
+
+// detector
 
 let detector: Detector | null = null;
 
@@ -55,46 +74,6 @@ function initDetector() {
       onlyBuiltIn: false,
     });
   }
-}
-
-export async function enableAutoReport(enabled: boolean) {
-  await storage.set(reportKey, enabled ? 1 : 0);
-}
-
-export async function isAutoReportEnabled(): Promise<boolean> {
-  return true;
-}
-
-export async function setDisableFeature(features: string[]): Promise<void> {
-  await setValue("disable_feature", features.join(","));
-}
-
-export async function setConfig(config: any): Promise<void> {
-  await setValue("config", JSON.stringify(config));
-}
-
-export async function getConfig(): Promise<any> {
-  const configStr = await getValue("config");
-  if (configStr) {
-    try {
-      return JSON.parse(configStr)
-    } catch (e) {}
-  }
-  return {};
-}
-
-export async function getDisabledFeatures(): Promise<string[]> {
-  const disable_feature = await getValue("disable_feature");
-  if (disable_feature) {
-    const features = disable_feature.split(",");
-    return features
-  }
-  return [];
-}
-
-export async function isFeatureDisabled(feature: string): Promise<boolean> {
-  const disable_features = await getDisabledFeatures();
-  return disable_features.includes(feature);
 }
 
 export async function sendReportScam(result: ScamResult) {

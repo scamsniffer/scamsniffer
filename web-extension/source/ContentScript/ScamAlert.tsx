@@ -5,69 +5,70 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-} from "@mui/material";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkIcon from "@mui/icons-material/Link";
-import DescriptionIcon from "@mui/icons-material/Description";
-import type { ScamResult } from "@scamsniffer/detector";
-import { useAsync } from "react-use";
-import { useState, useEffect } from "react";
-import urlcat from "urlcat";
-import { RPC } from "../core/message/index";
+  useTheme,
+} from '@mui/material';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkIcon from '@mui/icons-material/Link';
+import DescriptionIcon from '@mui/icons-material/Description';
+import type {ScamResult} from '@scamsniffer/detector';
+import {useAsync} from 'react-use';
+import {useState, useEffect} from 'react';
+import urlcat from 'urlcat';
 
-import { createMakeStyles } from "tss-react";
-import { useTheme } from "@mui/material";
-export const { makeStyles } = createMakeStyles({ useTheme });
-import { useTranslation } from "react-i18next";
-import { browser, Tabs } from "webextension-polyfill-ts";
+import {createMakeStyles} from 'tss-react';
+
+import {useTranslation} from 'react-i18next';
+import {RPC} from '../core/message/client';
+
+export const {makeStyles} = createMakeStyles({useTheme});
 
 const useStyles = makeStyles()((theme) => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    overflow: "hidden",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    overflow: 'hidden',
     padding: theme.spacing(2),
   },
   icon: {
-    verticalAlign: "-6px",
-    marginRight: "12px",
+    verticalAlign: '-6px',
+    marginRight: '12px',
   },
   list: {
     padding: 0,
-    borderTop: "1px solid rgba(255, 255, 255, 0.08)",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
   },
   scam: {
     padding: theme.spacing(2),
-    background: "#d75a63",
-    borderRadius: "10px",
+    background: '#d75a63',
+    borderRadius: '10px',
   },
   reportWrapper: {
-    marginTop: "5px",
+    marginTop: '5px',
   },
   desc: {
-    margin: "15px 10px 7px",
-    color: "#ddd",
-    fontSize: "14px",
-    textAlign: "center",
+    margin: '15px 10px 7px',
+    color: '#ddd',
+    fontSize: '14px',
+    textAlign: 'center',
   },
   highlight: {
-    color: "#f4f4f4",
+    color: '#f4f4f4',
   },
   link: {
     color: '#eee',
-    'marginLeft': '3px',
+    marginLeft: '3px',
   },
   title: {
-    fontFamily: "Poppins",
+    fontFamily: 'Poppins',
     fontWeight: 800,
-    margin: "10px 0 18px 0",
-    fontSize: "17px",
-    lineHeight: "17px",
-    width: "350px",
-    textAlign: "center",
-    wordBreak: "break-word",
+    margin: '10px 0 18px 0',
+    fontSize: '17px',
+    lineHeight: '17px',
+    width: '350px',
+    textAlign: 'center',
+    wordBreak: 'break-word',
   },
 }));
 
@@ -75,10 +76,10 @@ function openWebPage(url: string) {
   window.open(url);
 }
 
-const ScamAlert = ({ result }: { result: ScamResult }) => {
-  const { classes } = useStyles();
+const ScamAlert = ({result}: {result: ScamResult}) => {
+  const {classes} = useStyles();
   const [autoReport, setAutoReport] = useState(false);
-  const { t, i18n } = useTranslation();
+  const {t, i18n} = useTranslation();
 
   useEffect(() => {
     if (autoReport) {
@@ -87,7 +88,7 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
   }, [autoReport, result]);
 
   const openTwitter = () => {
-    const link = urlcat("https://twitter.com", "/:username", {
+    const link = urlcat('https://twitter.com', '/:username', {
       username: result.twitterUsername,
     });
     openWebPage(link);
@@ -102,54 +103,62 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
     setAutoReport(enabled);
   }, []);
 
-  const isMismatch = result.matchType === "mismatch-card";
+  const isMismatch = result.matchType === 'mismatch-card';
 
   return (
     <div className={classes.root}>
       {isMismatch ? (
         <div className={classes.scam}>
           <Typography variant="body2" className={classes.title}>
-            {t("misMatch")}
+            {t('misMatch')}
           </Typography>
           <List className={classes.list}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <DescriptionIcon className={classes.highlight} />
-                </ListItemIcon>
-                <ListItemText
-                  className={classes.highlight}
-                  primary={(result as any).domain}
-                />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemIcon>
-                  <DescriptionIcon className={classes.highlight} />
-                </ListItemIcon>
-                <ListItemText
-                  className={classes.highlight}
-                  primary={(result as any).title}
-                />
-              </ListItemButton>
+            <ListItemButton>
+              <ListItemIcon>
+                <DescriptionIcon className={classes.highlight} />
+              </ListItemIcon>
+              <ListItemText
+                className={classes.highlight}
+                primary={(result as any).domain}
+              />
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemIcon>
+                <DescriptionIcon className={classes.highlight} />
+              </ListItemIcon>
+              <ListItemText
+                className={classes.highlight}
+                primary={(result as any).title}
+              />
+            </ListItemButton>
           </List>
-          <Typography className={classes.desc}>{t("tipOne")}</Typography>
-          <Typography className={classes.desc}>{t("topTwo")}</Typography>
+          <Typography className={classes.desc}>{t('tipOne')}</Typography>
+          <Typography className={classes.desc}>{t('topTwo')}</Typography>
           <Typography className={classes.desc}>
-            More: <a href="https://harrydenley.com/faking-twitter-unfurling-part-2/" target="_blank" className={classes.link}>Spoofing Twitter unfurling to phish you</a>
+            More:{' '}
+            <a
+              href="https://harrydenley.com/faking-twitter-unfurling-part-2/"
+              target="_blank"
+              className={classes.link}
+              rel="noreferrer"
+            >
+              Spoofing Twitter unfurling to phish you
+            </a>
           </Typography>
         </div>
       ) : (
         <div className={classes.scam}>
-          {result.matchType === "domain-blocked" ? (
+          {result.matchType === 'domain-blocked' ? (
             <Typography variant="body2" className={classes.title}>
-              {t("siteBlocked")}
+              {t('siteBlocked')}
             </Typography>
           ) : (
             <Typography variant="body2" className={classes.title}>
-              {t("simProject")}
+              {t('simProject')}
             </Typography>
           )}
           <List className={classes.list}>
-            {result.matchType === "domain-blocked" ? null : (
+            {result.matchType === 'domain-blocked' ? null : (
               <ListItemButton>
                 <ListItemIcon>
                   <DescriptionIcon className={classes.highlight} />
@@ -183,8 +192,8 @@ const ScamAlert = ({ result }: { result: ScamResult }) => {
               </ListItemButton>
             ) : null}
           </List>
-          <Typography className={classes.desc}>{t("tipOne")}</Typography>
-          <Typography className={classes.desc}>{t("topTwo")}</Typography>
+          <Typography className={classes.desc}>{t('tipOne')}</Typography>
+          <Typography className={classes.desc}>{t('topTwo')}</Typography>
         </div>
       )}
     </div>

@@ -1,26 +1,25 @@
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListSubheader from "@mui/material/ListSubheader";
-import Switch from "@mui/material/Switch";
-import { useState, useEffect } from "react";
-import { RPC } from "../core/message/index";
-import { useAsync } from "react-use";
-import { useTranslation } from "react-i18next";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListSubheader from '@mui/material/ListSubheader';
+import Switch from '@mui/material/Switch';
+import {useState, useEffect} from 'react';
+import {useAsync} from 'react-use';
+import {useTranslation} from 'react-i18next';
+import {RPC} from '../core/message/client';
 
 export default function SwitchListSecondary() {
-
   const [checked, setChecked] = useState<string[]>([]);
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
-   useAsync(async () => {
-     const disabled = await RPC.getDisabledFeatures();
-     setChecked(disabled);
-   }, []);
+  useAsync(async () => {
+    const disabled = await RPC.getDisabledFeatures();
+    setChecked(disabled);
+  }, []);
 
-    useEffect(() => {
-        RPC.setDisableFeature(checked);
-    }, [checked]);
+  useEffect(() => {
+    RPC.setDisableFeature(checked);
+  }, [checked]);
 
   const handleToggle = (value: string) => () => {
     const currentIndex = checked.indexOf(value);
@@ -37,8 +36,8 @@ export default function SwitchListSecondary() {
 
   return (
     <List
-      sx={{ width: "100%", bgcolor: "background.paper" }}
-      subheader={<ListSubheader>{t("setting")}</ListSubheader>}
+      sx={{width: '100%', bgcolor: 'background.paper'}}
+      subheader={<ListSubheader>{t('setting')}</ListSubheader>}
     >
       {/* Hide Opensea Warning */}
       {/* <ListItem>
@@ -54,27 +53,25 @@ export default function SwitchListSecondary() {
       <ListItem>
         <ListItemText
           id="switch-list-label-bluetooth"
-          primary={t("scam_detection")}
+          primary={t('scam_detection')}
         />
         <Switch
           edge="end"
-          onChange={handleToggle("webpage")}
-          checked={checked.indexOf("webpage") === -1}
-          inputProps={{
-          }}
+          onChange={handleToggle('webpage')}
+          checked={checked.indexOf('webpage') === -1}
+          inputProps={{}}
         />
       </ListItem>
       <ListItem>
         <ListItemText
           id="switch-list-label-bluetooth"
-          primary={t("firewall_check")}
+          primary={t('firewall_check')}
         />
         <Switch
           edge="end"
-          onChange={handleToggle("firewall")}
-          checked={checked.indexOf("firewall") === -1}
-          inputProps={{
-          }}
+          onChange={handleToggle('firewall')}
+          checked={checked.indexOf('firewall') === -1}
+          inputProps={{}}
         />
       </ListItem>
     </List>

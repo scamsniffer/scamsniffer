@@ -1,16 +1,12 @@
-import {browser} from 'webextension-polyfill-ts';
 import {
   WebExtensionMessage,
-  printEnvironment,
   isEnvironment,
   Environment,
   MessageTarget,
 } from '@holoflows/kit';
-import {AsyncCall} from 'async-call-rpc';
-import * as server from './api';
+import {browser} from 'webextension-polyfill-ts';
 
-Object.assign(globalThis, {browser});
-
+Object.assign(global, {browser});
 const message = new WebExtensionMessage();
 const channel = (message.events as any).rpc;
 
@@ -19,8 +15,4 @@ const options = {
   channel: channel.bind(MessageTarget.Broadcast),
   preferLocalImplementation: isBackground,
 };
-
-export const RPC = AsyncCall<typeof server>(
-  !isBackground ? {} : server,
-  options
-);
+export default options;

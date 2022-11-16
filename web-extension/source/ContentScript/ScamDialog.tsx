@@ -1,14 +1,18 @@
-import { useTranslation } from "react-i18next";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
-import { styled } from "@mui/material";
-import Grid from "@mui/material/Grid";
-import ButtonBase from "@mui/material/ButtonBase";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { createShadowRootForwardedComponent } from "../core/ShadowRoot/Portal";
-import { useState, useCallback, useRef, useEffect } from "react";
-import { getMyTabId } from "../core/tab";
+import {useTranslation} from 'react-i18next';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import {styled} from '@mui/material';
+import Grid from '@mui/material/Grid';
+import ButtonBase from '@mui/material/ButtonBase';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import {useState, useCallback, useRef, useEffect} from 'react';
+
+import {ScamResult} from '@scamsniffer/detector';
+import {createShadowRootForwardedComponent} from '../core/ShadowRoot/Portal';
+import ScamAlert from './ScamAlert';
+import {RPC} from '../core/message/client';
+import {clientQueryTabId} from '../core/tab/idQuery';
 
 export const ShadowRootDialog: typeof Dialog =
   createShadowRootForwardedComponent(Dialog) as any;
@@ -21,37 +25,33 @@ const WarringDialog = styled(ShadowRootDialog)`
 
 const darkModeTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: 'dark',
   },
 });
 
-import { ScamResult } from "@scamsniffer/detector";
-import { useAsync } from "react-use";
-import ScamAlert from "./ScamAlert";
-import { RPC } from "../core/message";
-
 function getPageMeta() {
-  const metaHeads = Array.from(document.querySelectorAll("meta")).reduce(
-    (all: any, item: any) => {
-      const metaName = item.name || item.getAttribute("property");
+  const metaHeads = Array.from(document.querySelectorAll('meta')).reduce(
+    (all: Record<string, string>, item: HTMLMetaElement) => {
+      const metaName = item.name || item.getAttribute('property');
       if (metaName) all[metaName] = item.content;
       return all;
     },
     {}
   );
 
-  const canonicalEl = document.querySelectorAll("link[rel=canonical]")[0];
-  const canonicalLink = canonicalEl ? (canonicalEl as any).href : null;
-  const topSourceDomains = Array.from(document.querySelectorAll("img"))
-    .map((img: any) => {
-      const a = document.createElement("a");
+  const canonicalEl = document.querySelectorAll<HTMLLinkElement>(
+    'link[rel=canonical]'
+  )[0];
+  const canonicalLink = canonicalEl ? canonicalEl.href : null;
+  const topSourceDomains = Array.from(document.querySelectorAll('img'))
+    .map((img: HTMLImageElement) => {
+      const a = document.createElement('a');
       a.href = img.src;
       return a.hostname;
     })
     .filter((_) => _)
-    .reduce((all: any, domain: string) => {
-      all[domain] = all[domain] || 0;
-      all[domain]++;
+    .reduce((all: Record<string, number>, domain: string) => {
+      all[domain] = (all[domain] || 0) + 1;
       return all;
     }, {});
 
@@ -71,6 +71,8 @@ function getPageMeta() {
 }
 
 const ScamDialog = () => {
+  const [open, setOpen] = useState(false);
+  const {t} = useTranslation();
   const [scamProject, setScamProject] = useState<ScamResult | null>(null);
   const checked = useRef(false);
   const doDetectScam = useCallback(async () => {
@@ -79,45 +81,28 @@ const ScamDialog = () => {
     let pageDetails = null;
     try {
       pageDetails = getPageMeta();
-    } catch (e) {}
+    } catch {
+      pageDetails = null;
+    }
     const postDetail = {
       links: [window.location.href],
       pageDetails,
     };
 
-    const tabId = await getMyTabId();
-
-    const [
-      result,
-      isBlocked,
-      mismatchCardInfo
-    ] = await Promise.all([
-      RPC.detectScam(postDetail),
-      RPC.checkUrlInBlacklist(postDetail.links[0]),
-      RPC.checkTabIsMismatch(tabId, window.location.href)
-    ]);
-    if (result) {
-      setScamProject(result);
-      setOpen(true);
-    } else if (isBlocked) {
-      setScamProject({
-        slug: 'blocked',
-        name: 'blocked',
-        matchType: 'domain-blocked',
-        externalUrl:  null,
-        twitterUsername:  null,
-        post: postDetail
-      });
-      setOpen(true);
-    } else if (mismatchCardInfo) {
+    const tabId = await clientQueryTabId();
+    const mismatchCardInfo = await RPC.checkTabIsMismatch(
+      tabId,
+      window.location.href
+    );
+    if (mismatchCardInfo) {
       setScamProject({
         slug: 'mismatch',
         name: 'mismatch',
         matchType: 'mismatch-card',
-        externalUrl:  null,
-        twitterUsername:  null,
+        externalUrl: null,
+        twitterUsername: null,
         ...mismatchCardInfo,
-        post: postDetail
+        post: postDetail,
       });
       setOpen(true);
     }
@@ -126,9 +111,6 @@ const ScamDialog = () => {
   useEffect(() => {
     doDetectScam();
   });
-
-  const [open, setOpen] = useState(false);
-  const { t, i18n } = useTranslation();
 
   const handleReject = () => {
     setOpen(false);
@@ -144,9 +126,9 @@ const ScamDialog = () => {
         maxWidth="sm"
         style={{}}
       >
-        <DialogTitle id="alert-dialog-title" style={{ color: "white" }}>
-          <Grid container spacing={2} style={{ paddingBottom: "8px" }}>
-            <Grid item>{t("alertTitle")}</Grid>
+        <DialogTitle id="alert-dialog-title" style={{color: 'white'}}>
+          <Grid container spacing={2} style={{paddingBottom: '8px'}}>
+            <Grid item>{t('alertTitle')}</Grid>
             <Grid
               container
               item
@@ -157,17 +139,18 @@ const ScamDialog = () => {
               justifyContent="flex-end"
             >
               <ButtonBase
-                sx={{ width: 144, height: 24 }}
+                sx={{width: 144, height: 24}}
                 onClick={() =>
                   window.open(
-                    "https://scamsniffer.io?utm_source=extension-alert-logo"
+                    'https://scamsniffer.io?utm_source=extension-alert-logo'
                   )
                 }
-                style={{ marginRight: "-20px", marginTop: "10px" }}
+                style={{marginRight: '-20px', marginTop: '10px'}}
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/scamsniffer/landingpage@main/assets/logo-light.svg"
                   height={21}
+                  alt="logo"
                 />
               </ButtonBase>
             </Grid>

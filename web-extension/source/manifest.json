@@ -12,7 +12,9 @@
   "description": "Help people against with the crypto scammers",
   "homepage_url": "https://scamsniffer.io?utm_source=plugin",
   "short_name": "Scam Sniffer",
-
+  "host_permissions": [
+    "https://domain-api.scamsniffer.io/*"
+  ],
   "permissions": [
     "storage",
     "tabs"

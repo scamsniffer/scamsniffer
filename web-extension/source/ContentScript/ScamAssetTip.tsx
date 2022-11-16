@@ -1,17 +1,16 @@
-import { useTranslation } from "react-i18next";
-import Button from "@mui/material/Button";
-import DialogTitle from "@mui/material/DialogTitle";
-import ButtonBase from "@mui/material/ButtonBase";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { createShadowRootForwardedComponent } from "../core/ShadowRoot/Portal";
-import { useState, useRef } from "react";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
+import {useTranslation} from 'react-i18next';
+import Button from '@mui/material/Button';
+import DialogTitle from '@mui/material/DialogTitle';
+import ButtonBase from '@mui/material/ButtonBase';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import {useState, useRef} from 'react';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
-
-import { NFTCheckResult } from "@scamsniffer/detector";
-import { useAsync } from "react-use";
-import { RPC } from "../core/message";
+import {NFTCheckResult} from '@scamsniffer/detector';
+import {useAsync} from 'react-use';
+import {createShadowRootForwardedComponent} from '../core/ShadowRoot/Portal';
+import {RPC} from '../core/message/client';
 
 function SingleTip({
   result,
@@ -24,22 +23,21 @@ function SingleTip({
   contract: any;
   tokenId: any;
 }) {
-
-  const { t, i18n } = useTranslation();
+  const {t, i18n} = useTranslation();
   const detailLink = `https://explorer.scamsniffer.io/assets/${contract}/${tokenId}?utm_source=opensea-alert-link`;
   return (
     <Alert
       severity="error"
       style={{
-        padding: "16px 30px",
-        margin: "20px 20px 8px",
-        fontSize: "16px",
+        padding: '16px 30px',
+        margin: '20px 20px 8px',
+        fontSize: '16px',
       }}
       action={
         <ButtonBase
-          sx={{ width: 150, height: 27 }}
+          sx={{width: 150, height: 27}}
           onClick={() =>
-            window.open("https://scamsniffer.io?utm_source=opensea-alert-logo")
+            window.open('https://scamsniffer.io?utm_source=opensea-alert-logo')
           }
         >
           <img
@@ -49,14 +47,15 @@ function SingleTip({
         </ButtonBase>
       }
     >
-      {t("phishing_top")},{" "}
+      {t('phishing_top')},{' '}
       <a
         href={detailLink}
         target="_blank"
-        style={{ color: "rgb(32, 129, 226)" }}
+        style={{color: 'rgb(32, 129, 226)'}}
+        rel="noreferrer"
       >
-        {" "}
-        <strong>{t("details_here")}</strong>
+        {' '}
+        <strong>{t('details_here')}</strong>
       </a>
     </Alert>
   );
@@ -73,16 +72,16 @@ function ListTip({
   contract: any;
   tokenId: any;
 }) {
-  const { t, i18n } = useTranslation();
+  const {t, i18n} = useTranslation();
   const detailLink = `https://explorer.scamsniffer.io/assets/${contract}/${tokenId}?utm_source=opensea-alert-link`;
   return (
     <Alert
       severity="error"
       action={
         <ButtonBase
-          sx={{ width: 62, height: 45 }}
+          sx={{width: 62, height: 45}}
           onClick={() =>
-            window.open("https://scamsniffer.io?utm_source=opensea-alert-logo")
+            window.open('https://scamsniffer.io?utm_source=opensea-alert-logo')
           }
         >
           <img
@@ -92,25 +91,26 @@ function ListTip({
         </ButtonBase>
       }
     >
-      <AlertTitle>{t("scam_act")}</AlertTitle>
+      <AlertTitle>{t('scam_act')}</AlertTitle>
       <a
         href={detailLink}
         target="_blank"
-        style={{ color: "rgb(32, 129, 226)" }}
+        style={{color: 'rgb(32, 129, 226)'}}
+        rel="noreferrer"
       >
-        {" "}
-        <strong>{t("details_here")}</strong>
+        {' '}
+        <strong>{t('details_here')}</strong>
       </a>
     </Alert>
   );
 }
 
-export default function ScamAssetTip({ context }: { context: any }) {
-  const { type, contract, tokenId } = context;
+export default function ScamAssetTip({context}: {context: any}) {
+  const {type, contract, tokenId} = context;
   const [scamToken, setScamToken] = useState<NFTCheckResult | null>(null);
-  const checked = useRef(false)
+  const checked = useRef(false);
   useAsync(async () => {
-    if (checked.current) return
+    if (checked.current) return;
     checked.current = true;
     const result = await RPC.checkNFT(contract, tokenId);
     if (result) {
@@ -120,7 +120,7 @@ export default function ScamAssetTip({ context }: { context: any }) {
 
   return (
     scamToken &&
-    (type === "single" ? (
+    (type === 'single' ? (
       <SingleTip
         result={scamToken}
         type={type}
