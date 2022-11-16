@@ -122,6 +122,12 @@
   ],
   "ProjectList": [
     {
+      "slug": "aopanda-party",
+      "name": "Aopanda Party",
+      "externalUrl": "https://nft.aopanda.ainy-llc.com/site/",
+      "twitterUsername": "APP_PANDAO_NFT"
+    },
+    {
       "slug": "kprverse",
       "name": "KPR",
       "externalUrl": "http://kprverse.com",
@@ -3068,24 +3074,6 @@
       "twitterUsername": "NdamukongSuh"
     },
     {
-      "slug": "arbitrum.io",
-      "name": "Arbitrum",
-      "externalUrl": "https://arbitrum.io/",
-      "twitterUsername": null
-    },
-    {
-      "slug": "zksync.io",
-      "name": "zkSync",
-      "externalUrl": "https://zksync.io/",
-      "twitterUsername": null
-    },
-    {
-      "slug": "nansen.ai",
-      "name": "Nansen",
-      "externalUrl": "https://nansen.ai/",
-      "twitterUsername": "NFsTev_e"
-    },
-    {
       "slug": "gate.io",
       "name": "Gate.io",
       "externalUrl": "https://gate.io/",
@@ -3450,12 +3438,6 @@
       "name": "Blvck Paris",
       "externalUrl": "https://blvck.com/",
       "twitterUsername": "BlvckParis"
-    },
-    {
-      "slug": "mirror.xyz",
-      "name": "Mirror",
-      "externalUrl": "https://mirror.xyz/",
-      "twitterUsername": "viamirror"
     },
     {
       "slug": "tokenproof.xyz",
@@ -9881,5 +9863,5 @@
       "twitterUsername": "SwapdexO"
     }
   ],
-  "genTime": 1667431279725
+  "genTime": 1667913763905
 }
