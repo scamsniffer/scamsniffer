@@ -1,0 +1,283 @@
+{
+    "ABIList": [
+        "function setApprovalForAll(address operator, bool approved)",
+        "function transferFrom(address from, address to, uint256 tokenId)",
+        "function safeTransferFrom(address from, address to, uint256 tokenId)",
+        "function approve(address to, uint256 tokenId)",
+        "function balanceOf(address _owner) external view returns (uint256)",
+        "function ownerOf(uint256 _tokenId) external view returns (address)",
+        "function getApproved(uint256 _tokenId) external view returns (address)",
+        "function name() public view returns (string)",
+        "function symbol() public view returns (string)",
+        "function decimals() public view returns (uint8)",
+        "function totalSupply() public view returns (uint256)",
+        "function allowance(address _owner, address _spender) public view returns (uint256 remaining)",
+        "function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids) external view returns (uint256[] memory)",
+        "function isApprovedForAll(address _owner, address _operator) external view returns (bool)",
+        "function safeBatchTransferFrom(address _from, address _to, uint256[] calldata _ids, uint256[] calldata _values, bytes calldata _data) external",
+        "function safeTransferFrom(address from, address to, uint256 tokenId, uint256 _value, bytes calldata _data) external",
+        "function upgradeTo(address implementation) public",
+        "function SecurityUpdate()",
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "internalType": "address",
+                                    "name": "offerer",
+                                    "type": "address"
+                                },
+                                {
+                                    "internalType": "address",
+                                    "name": "zone",
+                                    "type": "address"
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "enum ItemType",
+                                            "name": "itemType",
+                                            "type": "uint8"
+                                        },
+                                        {
+                                            "internalType": "address",
+                                            "name": "token",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "identifierOrCriteria",
+                                            "type": "uint256"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "startAmount",
+                                            "type": "uint256"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "endAmount",
+                                            "type": "uint256"
+                                        }
+                                    ],
+                                    "internalType": "struct OfferItem[]",
+                                    "name": "offer",
+                                    "type": "tuple[]"
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "enum ItemType",
+                                            "name": "itemType",
+                                            "type": "uint8"
+                                        },
+                                        {
+                                            "internalType": "address",
+                                            "name": "token",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "identifierOrCriteria",
+                                            "type": "uint256"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "startAmount",
+                                            "type": "uint256"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "endAmount",
+                                            "type": "uint256"
+                                        },
+                                        {
+                                            "internalType": "address payable",
+                                            "name": "recipient",
+                                            "type": "address"
+                                        }
+                                    ],
+                                    "internalType": "struct ConsiderationItem[]",
+                                    "name": "consideration",
+                                    "type": "tuple[]"
+                                },
+                                {
+                                    "internalType": "enum OrderType",
+                                    "name": "orderType",
+                                    "type": "uint8"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "startTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "endTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "bytes32",
+                                    "name": "zoneHash",
+                                    "type": "bytes32"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "salt",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "bytes32",
+                                    "name": "conduitKey",
+                                    "type": "bytes32"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "totalOriginalConsiderationItems",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct OrderParameters",
+                            "name": "parameters",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "signature",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct Order[]",
+                    "name": "orders",
+                    "type": "tuple[]"
+                }
+            ],
+            "name": "validate",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "validated",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "ActionFormatter": {
+        "approve": {
+            "en-US": {
+                "short": "Approve authority",
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "Operator",
+                        "display": "address"
+                    }
+                ],
+                "description": "Once you approve this transaction,\nOperator can transfer NFTs from your wallet,\nMake sure to verify the operator address"
+            },
+            "zh-CN": {
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "授权方",
+                        "display": "address"
+                    }
+                ],
+                "short": "NFT资产授权",
+                "description": "一旦你签名了此次请求,\n授权方便可以转移走你的NFT,\n请仔细检查授权方地址"
+            }
+        },
+        "setApprovalForAll": {
+            "en-US": {
+                "short": "Approve authority",
+                "args": [
+                    {
+                        "field": "operator",
+                        "name": "Operator",
+                        "display": "address"
+                    }
+                ],
+                "description": "Once you approve this transaction,\nOperator can transfer NFTs from your wallet,\nMake sure to verify the operator address"
+            },
+            "zh-CN": {
+                "args": [
+                    {
+                        "field": "operator",
+                        "name": "授权方",
+                        "display": "address"
+                    }
+                ],
+                "short": "NFT资产授权",
+                "description": "一旦你签名了此次请求,\n授权方便可以转移走你的NFT,\n请仔细检查授权方地址"
+            }
+        },
+        "transferFrom": {
+            "en-US": {
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "Receiver",
+                        "display": "address"
+                    },
+                    {
+                        "field": "tokenId",
+                        "name": "Token ID",
+                        "display": "tokenId"
+                    }
+                ],
+                "short": "NFT转账"
+            },
+            "zh-CN": {
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "接收方",
+                        "display": "address"
+                    },
+                    {
+                        "field": "tokenId",
+                        "name": "Token ID",
+                        "display": "tokenId"
+                    }
+                ],
+                "short": "NFT转账"
+            }
+        },
+        "safeTransferFrom": {
+            "en-US": {
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "Receiver",
+                        "display": "address"
+                    },
+                    {
+                        "field": "tokenId",
+                        "name": "Token ID",
+                        "display": "tokenId"
+                    }
+                ],
+                "short": "NFT转账"
+            },
+            "zh-CN": {
+                "args": [
+                    {
+                        "field": "to",
+                        "name": "接收方",
+                        "display": "address"
+                    },
+                    {
+                        "field": "tokenId",
+                        "name": "Token ID",
+                        "display": "tokenId"
+                    }
+                ],
+                "short": "NFT转账"
+            }
+        }
+    }
+}

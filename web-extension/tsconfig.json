@@ -1,0 +1,28 @@
+{
+	"extends": "@abhijithvijayan/tsconfig",
+	"compilerOptions": {
+		 // Modules
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"declaration": false,
+		"isolatedModules": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		/* Additional Checks */
+		"useDefineForClassFields": true,
+		"skipLibCheck": true,
+
+		"jsx": "react-jsx",
+		"target": "esnext"
+	},
+	"include": [
+		"source",
+		"webpack.config.js"
+	]
+}

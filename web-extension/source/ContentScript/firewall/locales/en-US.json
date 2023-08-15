@@ -1,0 +1,26 @@
+{
+    "warning": "Warning",
+    "wallet_firewall": "Wallet Firewall",
+    "traffic": "Traffic",
+    "rules": "Rules",
+    "approve": "Continue",
+    "reject": "Cancel",
+    "method": "Method",
+    "timestamp": "Timestamp",
+    "action": "Action",
+    "params": "Params",
+    "type": "Type",
+    "name": "Name",
+
+    "report": "Report",
+
+    "detail": "Detail",
+    "rule_type_pass": "Pass",
+    "rule_type_block": "Block",
+    "rule_type_ask": "Ask",
+    "kind": "Match Type",
+    "kind_siteDomain": "Site Domain",
+    "kind_action": "Action",
+    "rule_name_default-whitelist": "Default domain whitelist",
+    "rule_name_default-sensitive-operations": "Default sensitive operations"
+}
