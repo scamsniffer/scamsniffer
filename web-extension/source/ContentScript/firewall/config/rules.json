@@ -1,0 +1,10 @@
+[
+   
+    {
+        "id": "default-sensitive-operations",
+        "name": "Default sensitive operations",
+        "type": "ask",
+        "kind": "all",
+        "values": []
+    }
+]

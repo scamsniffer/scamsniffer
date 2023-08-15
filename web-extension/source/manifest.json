@@ -1,0 +1,78 @@
+{
+  "manifest_version": 3,
+  "name": "Scam Sniffer",
+  "version": "0.0.1",
+
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "48": "assets/icons/48.png",
+    "128": "assets/icons/128.png"
+  },
+  "description": "Help people against with the crypto scammers",
+  "homepage_url": "https://scamsniffer.io?utm_source=plugin",
+  "short_name": "Scam Sniffer",
+  "host_permissions": [
+    "https://domain-api.scamsniffer.io/*"
+  ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "__chrome|firefox__author": "fun",
+  "__opera__developer": {
+    "name": "fun"
+  },
+
+  "__firefox__applications": {
+    "gecko": {
+      "id": "{754FB1AD-CC3B-4856-B6A0-7786F8CA9D17}"
+    }
+  },
+
+  "__chrome__minimum_chrome_version": "88",
+  "__opera__minimum_opera_version": "36",
+
+  "action": {
+    "default_icon": "assets/icons/48.png",
+    "default_title": "Scam Sniffer",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "js/background.bundle.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "assets/js/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "js/firewall.bundle.js"
+      ]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/contentScript.bundle.js"
+      ]
+    }
+  ]
+
+}
